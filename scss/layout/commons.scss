@@ -13,7 +13,9 @@ body{
 .tone-white{
   color: $tone-white;
 }
-
+a{
+  text-decoration: none;
+}
 
 .nav{
    display: table;

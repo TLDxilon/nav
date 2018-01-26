@@ -1115,6 +1115,9 @@ body {
 .tone-white {
   color: #ffffff; }
 
+a {
+  text-decoration: none; }
+
 .nav {
   display: table;
   table-layout: fixed;
