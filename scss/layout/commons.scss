@@ -6,11 +6,20 @@ $tone-dark: #222222;
 body{
   font-family: $font-family-base;
   color: $tone-dark;
+  margin: 0;
 }
-.tone-dark{
+.fg-dark{
   color: $tone-dark;
 }
-.tone-white{
+.fg-white{
+  color: $tone-white;
+}
+.bg-dark{
+  background: $tone-dark;
+  color: $tone-white;
+}
+.bg-white{
+  background: $tone-white;
   color: $tone-white;
 }
 a{
@@ -36,6 +45,21 @@ a{
 .padding-l{
   padding: 20px;
 }
+
+.padding-tb-s{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.padding-tb-m{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.padding-tb-l{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
 
 .nav{
    display: table;
