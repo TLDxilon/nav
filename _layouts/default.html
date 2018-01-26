@@ -5,32 +5,24 @@
 <body>
 
 <header>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            {% include logo.html %}
-            <!--Botón de bootstrap para la versión responsive-->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav class="nav">
+        <div class="nav-item nav-logo">
+            <a href="/"><img class="branding-logo" src="" alt="Alt logo"></a>
+            <h1 class="nav-item branding-title"><a class="nav-link" href="/" title="">Title Logo</a></h1>
+        </div>
+        <ul class="nav-item nav-menu">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        </ul>
+        <div class="nav-item nav-button">
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+        </div>
+    </nav>
 
-                    {% include nav-item.html item="Home" %}
-                    {% include nav-item.html item="Portfolio" %}
-                    {% include nav-item.html item="Blog" %}
-                    {% include nav-item.html item="Services" %}
-                    {% include nav-item.html item="Contact" %}
-
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="wo-input-search form-control input-search-invisible mr-sm-2" placeholder="Search">
-                    <a class="wo-btn-search" href=""><i class="icon icon-search"> <span class="icon-magnifying-glass"></span></i></a>
-                </form>
-            </div>
-        </nav>
-
-    </div>
+    {% include hero.html %}
 </header>
 
 
@@ -40,107 +32,12 @@
 <section class="content">
     <!--Slider-->
 
-    <section class="wo-slider">
-        <!-- Owl -->
-        <div id="owl-slider" class="owl-carousel owl-theme">
-            {% include slider-item.html  image="img/slide2.jpg" pretitle="AMAZING NEW" title="DESIGN AGENCY" subtitle="TO CREATE YOUR PROJECT" %}
-            {% include slider-item.html  image="img/slide1.jpg" pretitle="LOREM IPSUM" title="CONSEUR ADISPING" subtitle="BIBENDUM TORTOR" %}
-            {% include slider-item.html  image="img/slide3.jpg" pretitle="DOLOR SIT MET" title="DONEC CONDIMUM" subtitle="QUSQUE CURSUS NISI" %}
-        </div>
-    </section>
-
-
-
-    <section class="wo-height-med">
-        <div class="container">
-            <div class="row">
-                {% include icon-title-text.html icon="brush" title="Web Design" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi bibendum tortor ac mi facilisis varius. "%}
-                {% include icon-title-text.html icon="camera" title="Graphic Design" text="Fusce orci ligula, dignissim sit amet tincidunt non, tristique varius nulla."%}
-                {% include icon-title-text.html icon="heart" title="UI Design" text="Cras sagittis semper erat. Donec condimentum pellentesque mi in laoreet. Quisque cuel odio dapibus."%}
-                {% include icon-title-text.html icon="tablet" title="Copywritting" text="Non pharetra sem ultrices. Vivamus cursus risus sit amet volutpat cursus."%}
-
-            </div>
-        </div>
-    </section>
-
-
-
-    <section class="wo-section-newsletter wo-height-med">
-        <div class="container">
-            <div class="wo-title"><h3>SUSCRIBE TO OUR NEWSLETTER</h3></div>
-            <div class="wo-form">
-                {% include form-news.html %}
-            </div>
-
-        </div>
-    </section>
-
-    <section class="wo-height-big">
-        <div class="container-fluid">
-        <div class="row">
-                {% include overlay-effect.html image="img/overlay1.jpg" title="ALWAYS ON TIME" text="Lorem ipsum dolor sit amet"  %}
-
-                {% include overlay-effect.html image="img/overlay2.jpg" title="THE SECRET OF THE BEAR" text="Lorem ipsum dolor sit amet" %}
-
-                {% include overlay-effect.html image="img/overlay3.jpg" title="ONE DAY IN LIFE" text="Lorem ipsum dolor sit amet" %}
-
-                {% include overlay-effect.html image="img/overlay4.jpg" title="WE BUILD" text="Lorem ipsum dolor sit amet" %}
-            </div>
-        </div>
-        </div>
-
-    </section>
-
-    <section class="wo-carousel wo-height-med">
-        <div class="container">
-            <div class="wo-title wo-center"><h2>MEET OUR TEAM</h2></div>
-            <div class="wo-text wo-center"><p>We are a very young, but very passionate design agency based in London, UK. Let us help you width your next proyect, today.</p>
-            </div>
-            <div id="owl-carousel" class="owl-carousel owl-theme">
-                {% include carousel-overlay-effect.html image="img/car1.jpg" title="JAMES HEWIT" social1="instagram" social2="pinterest" social3="twitter" %}
-                {% include carousel-overlay-effect.html image="img/car2.jpg" title="SANDRA GARCÍA" social1="instagram" social2="pinterest" social3="twitter" %}
-                {% include carousel-overlay-effect.html image="img/car3.jpg" title="JOHN SNOW" social1="instagram" social2="" social3="twitter" %}
-                {% include carousel-overlay-effect.html image="img/car4.jpg" title="ANNE LEWIS" social1="instagram" social2="pinterest" social3="twitter" %}
-                {% include carousel-overlay-effect.html image="img/car1.jpg" title="ALEX JACKSON" social1="instagram" social2="pinterest" social3="" %}
-                {% include carousel-overlay-effect.html image="img/car2.jpg" title="MARÍA LOPEZ" social1="instagram" social2="pinterest" social3="twitter" %}
-                {% include carousel-overlay-effect.html image="img/car3.jpg" title="WILLIAM BLUE" social1="instagram" social2="pinterest" social3="twitter" %}
-                {% include carousel-overlay-effect.html image="img/car4.jpg" title="ELLE SHEERAN" social1="" social2="pinterest" social3="twitter" %}
-
-            </div>
-        </div>
-
-
-    </section>
-
-    <section class="wo-section-testimonial wo-height-big wo-center">
-        <div class="container">
-            <i class="icon"><a href="#"><span class="icon-facebook-with-circle"></span></a></i>
-            <div class="wo-text wo-center"><p>These guys are just incredible! I was able to get my project done in just 7 days.<br>I mean AMAZING service! Highly recomended.</p></div>
-            <div class="wo-text wo-center"><p>@Annie_Wrong</p></div>
-        </div>
-    </section>
-
-    <section class="wo-prices wo-height-big">
-        <div class="container">
-            <div class="row">
-                {% include prices.html title="BASIC" price="25$/ Month" %}
-                {% include prices.html title="STANDARD" price="35$/ Month" class="blue" %}
-                {% include prices.html title="PROFESSIONAL" price="45$/ Month" %}
-            </div>
-        </div>
-    </section>
-   <section class="wo-section-map-form">
-       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830926684!2d-74.1197636697327!3d40.69766374854729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNueva+York%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1516392534460" width="100%" height="650" frameborder="0" style="border:0" allowfullscreen></iframe>
-       <div class="wo-form-contact">
-           {% include form-contact.html %}
-       </div>
-   </section>
 
 </section>
 
 <div class="footer">
     <div class="container">
-            {% include footer.html %}
+        {% include footer.html %}
     </div>
 </div>
 
@@ -149,37 +46,6 @@
 <script>
 
 
-
-    $('.wo-btn-search').hover(function() {
-        $('.wo-input-search').removeClass('input-search-invisible');
-    });
-
-    $(document).ready(function() {
-        $('#owl-slider').owlCarousel({
-            items: 1,
-            loop:true,
-            dots: false,
-            margin:10,
-            nav:true,
-            navText : ["<span class='icon-chevron-thin-left'></span>","<span class='icon-chevron-thin-right'></span>"]
-
-        });
-        $('#owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:4
-                }
-            }
-        })
-    })
 
 </script>
 
