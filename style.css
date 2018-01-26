@@ -1146,12 +1146,12 @@ a {
     vertical-align: middle; }
   .nav-menu {
     list-style: none;
-    width: 50%; }
+    width: 70%; }
     .nav-menu-item {
       display: inline-block; }
   .nav-logo {
-    width: 25%; }
+    width: 15%; }
   .nav-button {
-    width: 25%; }
+    width: 20%; }
 
 /*# sourceMappingURL=style.css.map */
