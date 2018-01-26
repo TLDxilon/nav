@@ -17,6 +17,26 @@ a{
   text-decoration: none;
 }
 
+.text-align-center{
+  text-align: center;
+}
+.text-align-left{
+  text-align: left;
+}
+.text-align-right{
+  text-align: right;
+}
+
+.padding-s{
+  padding: 10px;
+}
+.padding-m{
+  padding: 15px;
+}
+.padding-l{
+  padding: 20px;
+}
+
 .nav{
    display: table;
    table-layout: fixed;
@@ -28,10 +48,18 @@ a{
   }
   &-menu{
     list-style: none;
+    width:50%;
+    &-item{
+      display: inline-block;
+    }
   }
-  &-menu-item{
-    display: inline-block;
+  &-logo{
+    width:25%;
   }
+  &-button{
+    width:25%;
+  }
+
   &-link{
     @extend .tone-dark;
   }

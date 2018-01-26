@@ -1118,6 +1118,24 @@ body {
 a {
   text-decoration: none; }
 
+.text-align-center {
+  text-align: center; }
+
+.text-align-left {
+  text-align: left; }
+
+.text-align-right {
+  text-align: right; }
+
+.padding-s {
+  padding: 10px; }
+
+.padding-m {
+  padding: 15px; }
+
+.padding-l {
+  padding: 20px; }
+
 .nav {
   display: table;
   table-layout: fixed;
@@ -1127,8 +1145,13 @@ a {
     display: table-cell;
     vertical-align: middle; }
   .nav-menu {
-    list-style: none; }
-  .nav-menu-item {
-    display: inline-block; }
+    list-style: none;
+    width: 50%; }
+    .nav-menu-item {
+      display: inline-block; }
+  .nav-logo {
+    width: 25%; }
+  .nav-button {
+    width: 25%; }
 
 /*# sourceMappingURL=style.css.map */
