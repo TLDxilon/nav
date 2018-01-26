@@ -1,3 +1,14 @@
+
+$font-family-base: 'Open Sans', sans-serif;
+$tone-white: #ffffff;
+$tone-dark: #222222;
+
+body{
+  font-family: $font-family-base;
+  color: $tone-dark;
+}
+
+
 .nav{
    display: table;
    table-layout: fixed;
@@ -7,4 +18,5 @@
      display: table-cell;
      vertical-align: middle;
   }
+
 }
