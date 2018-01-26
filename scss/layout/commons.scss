@@ -7,6 +7,12 @@ body{
   font-family: $font-family-base;
   color: $tone-dark;
 }
+.tone-dark{
+  color: $tone-dark;
+}
+.tone-white{
+  color: $tone-white;
+}
 
 
 .nav{
@@ -18,5 +24,13 @@ body{
      display: table-cell;
      vertical-align: middle;
   }
-
+  &-menu{
+    list-style: none;
+  }
+  &-menu-item{
+    display: inline-block;
+  }
+  &-link{
+    @extend .tone-dark;
+  }
 }

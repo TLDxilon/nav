@@ -5,6 +5,12 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #222222; }
 
+.tone-dark, .nav-link {
+  color: #222222; }
+
+.tone-white {
+  color: #ffffff; }
+
 .nav {
   display: table;
   table-layout: fixed;
@@ -13,5 +19,9 @@ body {
     float: none;
     display: table-cell;
     vertical-align: middle; }
+  .nav-menu {
+    list-style: none; }
+  .nav-menu-item {
+    display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */
