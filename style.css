@@ -1157,6 +1157,15 @@ a {
   padding-top: 20px;
   padding-bottom: 20px; }
 
+logo-width-s {
+  width: 100px; }
+
+logo-width-m {
+  width: 150px; }
+
+logo-width-l {
+  width: 200px; }
+
 .nav {
   display: table;
   table-layout: fixed;
@@ -1174,5 +1183,7 @@ a {
     width: 15%; }
   .nav-button {
     width: 15%; }
+  .nav .branding-logo {
+    width: 200px; }
 
 /*# sourceMappingURL=style.css.map */

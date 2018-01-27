@@ -60,6 +60,19 @@ a{
 }
 
 
+logo-width-s{
+  width: 100px;
+}
+
+logo-width-m{
+  width: 150px;
+}
+
+logo-width-l{
+  width: 200px;
+}
+
+
 
 .nav{
    display: table;
@@ -86,5 +99,8 @@ a{
 
   &-link{
 
+  }
+  .branding-logo{
+    width:200px;
   }
 }
