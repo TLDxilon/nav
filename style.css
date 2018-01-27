@@ -1,6 +1,6 @@
 /*
-Error: Undefined variable: "$icomoon-font-path".
-        on line 3 of scss/component/iconmoon.scss
+Error: File to import not found or unreadable: variables.
+        on line 1 of scss/component/iconmoon.scss
         from line 3 of style.scss
 
 1: /*Aquí están los estilos bootstrap originales y los míos sustituidos*\/
@@ -9,36 +9,15 @@ Error: Undefined variable: "$icomoon-font-path".
 4: 
 5: 
 6: 
-7: /*Éstos son mis estilos*\/
-8: @import "scss/layout/commons.scss";
 
 Backtrace:
-scss/component/iconmoon.scss:3
+scss/component/iconmoon.scss:1
 style.scss:3
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/script/tree/variable.rb:49:in `_perform'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/script/tree/string_interpolation.rb:93:in `_perform'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/script/tree/funcall.rb:186:in `perform_arg'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/script/tree/funcall.rb:133:in `block in _perform'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/script/tree/funcall.rb:133:in `each'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/script/tree/funcall.rb:133:in `each_with_index'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/script/tree/funcall.rb:133:in `each'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/script/tree/funcall.rb:133:in `map'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/script/tree/funcall.rb:133:in `_perform'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:517:in `block (2 levels) in visit_directive'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:517:in `map'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:517:in `block in visit_directive'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:516:in `visit_directive'
+/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/import_node.rb:45:in `import'
+/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
 /Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Users/Toya/.rvm/gems/ruby-2.4.2/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
@@ -89,4 +68,4 @@ style.scss:3
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$icomoon-font-path\".\A         on line 3 of scss/component/iconmoon.scss\A         from line 3 of style.scss\A \A 1: /*Aquí están los estilos bootstrap originales y los míos sustituidos*/\A 2: @import \"scss/layout/custom.scss\";\A 3: @import \"scss/component/iconmoon.scss\";\A 4: \A 5: \A 6: \A 7: /*Éstos son mis estilos*/\A 8: @import \"scss/layout/commons.scss\";"; }
+  content: "Error: File to import not found or unreadable: variables.\A         on line 1 of scss/component/iconmoon.scss\A         from line 3 of style.scss\A \A 1: /*Aquí están los estilos bootstrap originales y los míos sustituidos*/\A 2: @import \"scss/layout/custom.scss\";\A 3: @import \"scss/component/iconmoon.scss\";\A 4: \A 5: \A 6: "; }

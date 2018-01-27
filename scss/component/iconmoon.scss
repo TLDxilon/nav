@@ -1,3 +1,5 @@
+@import "variables";
+
 @font-face {
   font-family: 'icomoon';
   src:  url('#{$icomoon-font-path}/icomoon.eot?i9sjhk');
@@ -8,9 +10,6 @@
   font-weight: normal;
   font-style: normal;
 }
-$icomoon-font-path: "fonts" !default;
-$icon-menu: "\e900";
-
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
