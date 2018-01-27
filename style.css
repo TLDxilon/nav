@@ -1136,6 +1136,9 @@ a {
 .text-align-right {
   text-align: right; }
 
+.font-weight-bold, .nav-link {
+  font-weight: bold; }
+
 .padding-s {
   padding: 10px; }
 

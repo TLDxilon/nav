@@ -36,6 +36,10 @@ a{
   text-align: right;
 }
 
+.font-weight-bold{
+  font-weight: bold;
+}
+
 .padding-s{
   padding: 10px;
 }
@@ -93,6 +97,7 @@ a{
     width:70%;
     &-item{
       display: inline-block;
+
     }
   }
   &-logo{
@@ -101,9 +106,8 @@ a{
   &-button{
     width:15%;
   }
-
   &-link{
-
+    @extend .font-weight-bold;
   }
 
 }
