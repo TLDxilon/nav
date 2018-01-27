@@ -1124,6 +1124,9 @@ body {
   background: #ffffff;
   color: #ffffff; }
 
+.bg-main {
+  background: #BE86B9; }
+
 a {
   text-decoration: none; }
 

@@ -3,7 +3,7 @@ $font-family-base: 'Open Sans', sans-serif;
 $tone-white: #ffffff;
 $tone-dark: #222222;
 $tone-gray: #969696;
-
+$tone-main: #BE86B9;
 body{
   font-family: $font-family-base;
   color: $tone-dark;
@@ -23,6 +23,10 @@ body{
   background: $tone-white;
   color: $tone-white;
 }
+.bg-main{
+  background: $tone-main;
+}
+
 a{
   text-decoration: none;
 }
