@@ -2,6 +2,7 @@
 $font-family-base: 'Open Sans', sans-serif;
 $tone-white: #ffffff;
 $tone-dark: #222222;
+$tone-gray: #969696;
 
 body{
   font-family: $font-family-base;
@@ -9,7 +10,7 @@ body{
   margin: 0;
 }
 .fg-dark{
-  color: $tone-dark;
+  color: $tone-gray;
 }
 .fg-white{
   color: $tone-white;
