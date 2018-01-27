@@ -3,27 +3,10 @@
 {% include head.html %}
 
 <body>
-<script type="text/javascript">
-    $(function() {
-        $('nav#menu').mmenu({
-            drag 		: true,
-            pageScroll 	: {
-                scroll 		: true,
-                update		: true
-            },
-            // extensions: {
-            // 	'all': ['pagedim-white'],
-            // 	'(min-width: 400px)' : ['pagedim-black']
-            // },
-            sidebar 	: {
-                expanded 	: 800
-            }
-        });
-    });
-</script>
+
 <header class="header padding-tb-s">
     <div class="container">
-        <nav class="nav" id="menu">
+        <nav class="nav collapse navbar-collaps" id="navbarSupportedContent">
             <div class="nav-item nav-logo text-align-left">
             {% include {{ site.logo }} image="img/logo2.png" size="m" %}
             </div>
@@ -37,8 +20,10 @@
             </ul>
             <div class="nav-item nav-button text-align-right">
                 <button type="button" class="btn bg-main fg-white">Login</button>
-                <li><a class="cd-nav-trigger" href="#nav-menu">Menu<span></span></a></li>
-                <a href="#menu"><span></span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
             </div>
         </nav>
 
@@ -53,8 +38,14 @@
 
 
 <section class="content">
-    <!--Slider-->
+   <div class="container">
+       <h1>Lorem ipsum dolor sit amet</h1>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis ligula eu enim accumsan ultrices non porta nisi. Donec turpis enim, mollis iaculis ultricies id, placerat et nisl. Aenean vel felis rutrum est pellentesque cursus. Duis lorem erat, cursus nec viverra porta, hendrerit non mi. Duis non urna neque. Etiam ullamcorper velit et dolor pulvinar, at efficitur arcu condimentum. Quisque et nisi sit amet diam sagittis dictum. Aenean elementum rutrum blandit.</p>
 
+       <p>   Nam sed eros et justo rhoncus tempus. Fusce dignissim ac quam non varius. Mauris quis nunc erat. Cras quam ex, mattis non ullamcorper vel, venenatis vel mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sit amet sollicitudin libero. Praesent maximus elit dolor, a aliquam tortor mollis ac. Praesent ac dignissim ante, eget venenatis eros. Mauris tempus elementum ante quis porta. Vivamus faucibus tellus erat, in tristique metus feugiat ut. Donec gravida nibh venenatis felis mattis viverra.</p>
+
+         <p>  Nullam tincidunt varius sollicitudin. Mauris cursus nisi dui, at vehicula nunc malesuada quis. Sed sollicitudin nibh sit amet mi fermentum, ac laoreet nisi mollis. Sed facilisis vestibulum dui, eget tincidunt enim condimentum sit amet. Integer suscipit nisl venenatis purus ullamcorper finibus. Duis vitae leo dapibus, congue mauris sit amet, facilisis leo. Suspendisse bibendum pulvinar felis, sit amet euismod metus convallis non. Proin in tellus a lorem cursus luctus et sodales orci. Donec at congue magna.</p>
+   </div>
 
 </section>
 
