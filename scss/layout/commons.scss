@@ -1,5 +1,11 @@
+/*Breakpoints*/
+$smartphones:"only screen and (max-width: 479px)";
+$tablets:"only screen and (max-width: 780px)";
+
 
 $font-family-base: 'Open Sans', sans-serif;
+
+
 $tone-white: #ffffff;
 $tone-dark: #222222;
 $tone-gray: #969696;
@@ -100,6 +106,9 @@ a{
   &-menu{
     list-style: none;
     width:70%;
+    @media #{$smartphones}{
+      width:100%;
+    }
     &-item{
       display: inline-block;
 
@@ -107,6 +116,9 @@ a{
   }
   &-logo{
     width:15%;
+    @media #{$smartphones}{
+      width:100%;
+    }
   }
   &-button{
     width:15%;
