@@ -1439,7 +1439,7 @@ input[type="button"].btn-block {
 @font-face {
   font-family: 'icomoon';
   src: url("fonts/icomoon.eot?i9sjhk");
-  src: url("fonts/icomoon.eot?i9sjhk#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?i9sjhk") format("truetype"), url("fonts/icomoon.woff?i9sjhk") format("woff"), url("fonts/icomoon.svg?i9sjhk#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?i9sjhk#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?i9sjhk") format("truetype"), url("fonts/icomoon.woff?i9sjhk") format("woff"), url("font/icomoon.svg?i9sjhk#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
