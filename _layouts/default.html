@@ -3,7 +3,24 @@
 {% include head.html %}
 
 <body>
-
+<script type="text/javascript">
+    $(function() {
+        $('nav#menu').mmenu({
+            drag 		: true,
+            pageScroll 	: {
+                scroll 		: true,
+                update		: true
+            },
+            // extensions: {
+            // 	'all': ['pagedim-white'],
+            // 	'(min-width: 400px)' : ['pagedim-black']
+            // },
+            sidebar 	: {
+                expanded 	: 800
+            }
+        });
+    });
+</script>
 <header class="header padding-tb-s">
     <div class="container">
         <nav class="nav" id="menu">
@@ -50,12 +67,6 @@
 
 
 
-
-<script type="text/javascript">
-    $(function() {
-        $('nav#menu').mmenu();
-    });
-</script>
 
 </body>
 </html>
