@@ -1157,14 +1157,20 @@ a {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-.logo-size-s {
+.logo-size-xs {
   width: 100px; }
 
+.logo-size-s {
+  width: 200px; }
+
 .logo-size-m {
-  width: 150px; }
+  width: 250px; }
 
 .logo-size-l {
-  width: 200px; }
+  width: 300px; }
+
+.logo-size-xl {
+  width: 350px; }
 
 .nav {
   display: table;
