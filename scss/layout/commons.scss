@@ -107,7 +107,7 @@ a{
     list-style: none;
     width:70%;
     @media #{$smartphones}{
-      width:100%;
+      display: none;
     }
     &-item{
       display: inline-block;
@@ -117,7 +117,7 @@ a{
   &-logo{
     width:15%;
     @media #{$smartphones}{
-      width:100%;
+      width:50%;
     }
   }
   &-button{
