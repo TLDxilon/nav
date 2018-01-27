@@ -1157,13 +1157,13 @@ a {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-logo-size-s {
+.logo-size-s {
   width: 100px; }
 
-logo-size-m {
+.logo-size-m {
   width: 150px; }
 
-logo-size-l {
+.logo-size-l {
   width: 200px; }
 
 .nav {
@@ -1183,7 +1183,5 @@ logo-size-l {
     width: 15%; }
   .nav-button {
     width: 15%; }
-  .nav .branding-logo {
-    width: 200px; }
 
 /*# sourceMappingURL=style.css.map */

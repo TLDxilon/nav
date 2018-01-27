@@ -60,15 +60,15 @@ a{
 }
 
 
-logo-size-s{
+.logo-size-s{
   width: 100px;
 }
 
-logo-size-m{
+.logo-size-m{
   width: 150px;
 }
 
-logo-size-l{
+.logo-size-l{
   width: 200px;
 }
 
@@ -100,7 +100,5 @@ logo-size-l{
   &-link{
 
   }
-  .branding-logo{
-    width:200px;
-  }
+
 }
