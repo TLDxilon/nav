@@ -6,7 +6,7 @@
 
 <header class="header padding-tb-s">
     <div class="container">
-        <nav class="nav">
+        <nav class="nav" id="menu">
             <div class="nav-item nav-logo text-align-left">
             {% include {{ site.logo }} image="img/logo2.png" size="m" %}
             </div>
@@ -21,6 +21,7 @@
             <div class="nav-item nav-button text-align-right">
                 <button type="button" class="btn bg-main fg-white">Login</button>
                 <li><a class="cd-nav-trigger" href="#nav-menu">Menu<span></span></a></li>
+                <a href="#menu"><span></span></a>
             </div>
         </nav>
 
@@ -50,10 +51,11 @@
 
 
 
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/jquery.mobile.custom.min.js"></script>
-
-
+<script type="text/javascript">
+    $(function() {
+        $('nav#menu').mmenu();
+    });
+</script>
 
 </body>
 </html>
