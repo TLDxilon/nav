@@ -1440,8 +1440,13 @@ input[type="button"].btn-block {
 /*Breakpoints*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #222222;
-  margin: 0; }
+  color: #222222; }
+  @media only screen and (max-width: 780px) {
+    body {
+      margin: 0 20px; } }
+  @media only screen and (max-width: 479px) {
+    body {
+      margin: 0 20px; } }
 
 .fg-dark {
   color: #969696; }
@@ -1469,12 +1474,10 @@ a {
   margin: 0 auto; }
   @media only screen and (max-width: 780px) {
     .max-width {
-      max-width: 960px;
-      padding: 0 20px; } }
+      max-width: 960px; } }
   @media only screen and (max-width: 479px) {
     .max-width {
-      max-width: 720px;
-      padding: 0 20px; } }
+      max-width: 720px; } }
 
 .text-align-center {
   text-align: center; }

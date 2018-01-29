@@ -13,7 +13,12 @@ $tone-main: #BE86B9;
 body{
   font-family: $font-family-base;
   color: $tone-dark;
-  margin: 0;
+  @media #{$tablets}{
+    margin: 0 20px;
+  }
+  @media #{$smartphones}{
+    margin: 0 20px;
+  }
 }
 .fg-dark{
   color: $tone-gray;
@@ -43,11 +48,9 @@ a{
   margin: 0 auto;
   @media #{$tablets}{
     max-width: 960px;
-    padding: 0 20px;
   }
   @media #{$smartphones}{
     max-width: 720px;
-    padding: 0 20px;
   }
 
 }
