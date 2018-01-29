@@ -160,6 +160,7 @@ a{
   &-button{
     width:15%;
     .btn-ham{
+      @extend .padding-s;
       @media #{$big}{
         display: none;
       }
