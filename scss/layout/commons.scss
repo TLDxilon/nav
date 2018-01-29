@@ -1,8 +1,8 @@
 /*Breakpoints*/
 $smartphones:"only screen and (max-width: 479px)";
 $tablets:"only screen and (min-device-width : 480px) and (max-device-width : 768px)";
-$screen:"only screen and (min-device-width : 768px) and (max-device-width : 960px)";
-$bigscreen:"only screen and (min-width: 960px)";
+$laptop:"only screen and (min-device-width : 768px) and (max-device-width : 960px)";
+$big:"only screen and (min-width: 960px)";
 
 
 
@@ -153,10 +153,10 @@ a{
   &-button{
     width:15%;
     .btn-ham{
-      @media #{$bigscreen}{
+      @media #{$big}{
         display: none;
       }
-      @media #{$screen}{
+      @media #{$laptop}{
         display: none;
       }
     }
