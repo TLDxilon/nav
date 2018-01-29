@@ -43,10 +43,13 @@ a{
   margin: 0 auto;
   @media #{$tablets}{
     max-width: 960px;
+    padding: 0 20px;
   }
   @media #{$smartphones}{
     max-width: 720px;
+    padding: 0 20px;
   }
+
 }
 
 
