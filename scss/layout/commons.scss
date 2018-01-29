@@ -37,6 +37,19 @@ a{
   text-decoration: none;
 }
 
+.max-width{
+  max-width: 1140px;
+  width:100%;
+  margin: 0 auto;
+  @media #{$tablets}{
+    max-width: 960px;
+  }
+  @media #{$smartphones}{
+    max-width: 720px;
+  }
+}
+
+
 .text-align-center{
   text-align: center;
 }
