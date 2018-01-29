@@ -1,6 +1,8 @@
 /*Breakpoints*/
 $smartphones:"only screen and (max-width: 479px)";
 $tablets:"only screen and (max-width: 780px)";
+$screen:"only screen and (min-width: 960px)";
+
 
 
 $font-family-base: 'Open Sans', sans-serif;
@@ -144,6 +146,11 @@ a{
   }
   &-button{
     width:15%;
+    .btn-ham{
+      @media #{$screen}{
+        display: none;
+      }
+    }
   }
   &-link{
     @extend .font-weight-bold;

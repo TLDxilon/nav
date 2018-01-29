@@ -1554,5 +1554,8 @@ a {
         width: 50%; } }
   .nav-button {
     width: 15%; }
+    @media only screen and (min-width: 960px) {
+      .nav-button .btn-ham {
+        display: none; } }
 
 /*# sourceMappingURL=style.css.map */
