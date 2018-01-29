@@ -1196,6 +1196,12 @@ a {
 .logo-size-xl {
   width: 350px; }
 
+.relative {
+  position: relative; }
+
+.absolute {
+  position: absolute; }
+
 .nav {
   display: table;
   table-layout: fixed;
