@@ -1549,9 +1549,6 @@ a {
       display: inline-block; }
   .nav-logo {
     width: 15%; }
-    @media only screen and (max-width: 479px) {
-      .nav-logo {
-        width: 50%; } }
   .nav-button {
     width: 15%; }
     @media only screen and (min-width: 960px) {
