@@ -159,6 +159,9 @@ a{
       @media #{$laptop}{
         display: none;
       }
+      @media #{$tablets}{
+        display: none;
+      }
     }
   }
   &-link{

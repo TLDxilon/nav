@@ -1231,6 +1231,9 @@ a {
     @media only screen and (min-device-width: 768px) and (max-device-width: 960px) {
       .nav-button .btn-ham {
         display: none; } }
+    @media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
+      .nav-button .btn-ham {
+        display: none; } }
 
 .background {
   z-index: -1;
