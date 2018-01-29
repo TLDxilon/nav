@@ -1134,15 +1134,17 @@ a {
 
 .max-width {
   max-width: 1140px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 20px; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 960px) {
+    .max-width {
+      max-width: 960px; } }
   @media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
     .max-width {
-      max-width: 960px;
-      padding: 0 20px; } }
+      max-width: 768px; } }
   @media only screen and (max-width: 479px) {
     .max-width {
-      max-width: 720px;
-      padding: 0 20px; } }
+      max-width: 479px; } }
 
 .text-align-center {
   text-align: center; }

@@ -43,13 +43,17 @@ a{
 .max-width{
   max-width: 1140px;
   margin: 0 auto;
-  @media #{$tablets}{
+  padding: 0 20px;
+  @media #{$laptop}{
     max-width: 960px;
-    padding: 0 20px;
+
+  }
+  @media #{$tablets}{
+    max-width: 768px;
+
   }
   @media #{$smartphones}{
-    max-width: 720px;
-    padding: 0 20px;
+    max-width: 479px;
   }
 
 }
