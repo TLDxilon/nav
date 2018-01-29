@@ -1109,7 +1109,8 @@ input[type="button"].btn-block {
 /*Breakpoints*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #222222; }
+  color: #222222;
+  margin: 0; }
   @media only screen and (max-width: 780px) {
     body {
       margin: 0 20px; } }
@@ -1174,12 +1175,16 @@ a {
   padding-bottom: 10px; }
 
 .padding-tb-m {
-  padding-top: 15px;
-  padding-bottom: 15px; }
-
-.padding-tb-l {
   padding-top: 20px;
   padding-bottom: 20px; }
+
+.padding-tb-l {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.padding-tb-xl {
+  padding-top: 80px;
+  padding-bottom: 80px; }
 
 .logo-size-xs {
   width: 100px; }

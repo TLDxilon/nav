@@ -15,6 +15,7 @@ $tone-main: #BE86B9;
 body{
   font-family: $font-family-base;
   color: $tone-dark;
+  margin: 0;
   @media #{$tablets}{
     margin: 0 20px;
   }
@@ -87,14 +88,17 @@ a{
   padding-bottom: 10px;
 }
 .padding-tb-m{
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-.padding-tb-l{
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
+.padding-tb-l{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.padding-tb-xl{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 .logo-size-xs{
   width: 100px;
 }
