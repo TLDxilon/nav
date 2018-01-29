@@ -1221,6 +1221,9 @@ a {
     @media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
       .nav-menu {
         display: none; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 960px) {
+      .nav-menu {
+        display: none; } }
     .nav-menu-item {
       display: inline-block; }
   .nav-logo {
@@ -1228,12 +1231,6 @@ a {
   .nav-button {
     width: 15%; }
     @media only screen and (min-width: 960px) {
-      .nav-button .btn-ham {
-        display: none; } }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 960px) {
-      .nav-button .btn-ham {
-        display: none; } }
-    @media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
       .nav-button .btn-ham {
         display: none; } }
 

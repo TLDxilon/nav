@@ -143,6 +143,9 @@ a{
     @media #{$tablets}{
       display: none;
     }
+    @media #{$laptop}{
+      display: none;
+    }
     &-item{
       display: inline-block;
 
@@ -160,12 +163,7 @@ a{
       @media #{$big}{
         display: none;
       }
-      @media #{$laptop}{
-        display: none;
-      }
-      @media #{$tablets}{
-        display: none;
-      }
+
     }
   }
   &-link{
