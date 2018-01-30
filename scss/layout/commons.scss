@@ -214,10 +214,15 @@ a{
 
 .menu--simple {
     .nav-link{
-      &:hover, &.active{
+      &:hover{
         @extend .fg-main;
         transition: color 0.3s ease 0s;
         -moz-transition: color 0.3s ease 0s;
+      }
+    }
+    .active{
+      .nav-link {
+        @extend .nav-link:hover;
       }
     }
 }
@@ -241,9 +246,14 @@ a{
       -moz-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
       transform: translateY(20px);
     }
-    &:hover:after, &.active{
+    &:hover:after{
       opacity:1;
       transform: translateY(15px)
+    }
+  }
+  .active{
+    .nav-link{
+
     }
   }
 }
