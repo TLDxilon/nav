@@ -1198,7 +1198,10 @@ a {
 .font-weight-bold, .nav-link {
   font-weight: bold; }
 
-.padding-s, .nav-button .btn-ham, .nav-button .btn-shop {
+.padding-xs, .nav-button .btn-ham, .nav-button .btn-shop {
+  padding: 5px; }
+
+.padding-s {
   padding: 10px; }
 
 .padding-m {
@@ -1351,7 +1354,7 @@ a {
 .hero .background {
   z-index: -5; }
 
-icon {
+.icon {
   font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */
