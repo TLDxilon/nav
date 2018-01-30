@@ -108,13 +108,22 @@ a{
 
 .logo-size-m{
   width: 250px;
+  @media #{$smartphones}{
+    width: 200px;
+  }
 }
 
 .logo-size-l{
   width: 300px;
+  @media #{$smartphones}{
+    width: 200px;
+  }
 }
 .logo-size-xl{
   width: 350px;
+  @media #{$smartphones}{
+    width: 200px;
+  }
 }
 
 .relative{

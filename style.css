@@ -1191,9 +1191,15 @@ a {
 
 .logo-size-m {
   width: 250px; }
+  @media only screen and (max-width: 479px) {
+    .logo-size-m {
+      width: 200px; } }
 
 .logo-size-l {
   width: 300px; }
+  @media only screen and (max-width: 479px) {
+    .logo-size-l {
+      width: 200px; } }
 
 .logo-size-xl {
   width: 350px; }
