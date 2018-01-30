@@ -1136,7 +1136,7 @@ body {
   background: #ffffff;
   color: #222222; }
 
-.bg-main, .menu--line .nav-link:after {
+.bg-main, .menu--line .nav-link:after, .menu--back .nav-menu-item:hover {
   background: #BE86B9;
   color: #ffffff; }
 
@@ -1286,6 +1286,10 @@ a {
   .menu--line .nav-link:hover:after {
     opacity: 1;
     transform: translateY(15px); }
+
+.menu--back .nav-menu-item:hover {
+  transition: color 0.3s ease 0s;
+  -moz-transition: color 0.3s ease 0s; }
 
 .background {
   z-index: -1;

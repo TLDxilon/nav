@@ -248,7 +248,15 @@ a{
   }
 }
 
-
+.menu--back {
+  .nav-menu-item{
+    &:hover{
+      @extend .bg-main;
+      transition: color 0.3s ease 0s;
+      -moz-transition: color 0.3s ease 0s;
+    }
+  }
+}
 .background{
   z-index: -1;
   position: absolute;
