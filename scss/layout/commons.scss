@@ -262,8 +262,8 @@ a{
   .nav-menu-item{
     &:hover, &.active{
       @extend .bg-main;
-      transition: color 0.3s ease 0s;
-      -moz-transition: color 0.3s ease 0s;
+      transition: background 0.3s ease 0s;
+      -moz-transition: background 0.3s ease 0s;
     }
   }
 }

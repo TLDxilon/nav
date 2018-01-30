@@ -1288,8 +1288,8 @@ a {
     transform: translateY(15px); }
 
 .menu--back .nav-menu-item:hover, .menu--back .nav-menu-item.active {
-  transition: color 0.3s ease 0s;
-  -moz-transition: color 0.3s ease 0s; }
+  transition: background 0.3s ease 0s;
+  -moz-transition: background 0.3s ease 0s; }
 
 .background {
   z-index: -1;
