@@ -1121,7 +1121,7 @@ body {
 .fg-white {
   color: #ffffff; }
 
-.fg-main, .menu--simple .nav-link:hover {
+.fg-main, .menu--simple .nav-link:hover, .menu--simple .nav-link.active {
   color: #BE86B9; }
 
 .bg-dark {
@@ -1136,7 +1136,7 @@ body {
   background: #ffffff;
   color: #222222; }
 
-.bg-main, .menu--line .nav-link:after, .menu--back .nav-menu-item:hover {
+.bg-main, .menu--line .nav-link:after, .menu--back .nav-menu-item:hover, .menu--back .nav-menu-item.active {
   background: #BE86B9;
   color: #ffffff; }
 
@@ -1265,7 +1265,7 @@ a {
         display: none; } }
 
 /*estilos del menú*/
-.menu--simple .nav-link:hover {
+.menu--simple .nav-link:hover, .menu--simple .nav-link.active {
   transition: color 0.3s ease 0s;
   -moz-transition: color 0.3s ease 0s; }
 
@@ -1283,11 +1283,11 @@ a {
     transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
     -moz-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
     transform: translateY(20px); }
-  .menu--line .nav-link:hover:after {
+  .menu--line .nav-link:hover:after, .menu--line .nav-link.active {
     opacity: 1;
     transform: translateY(15px); }
 
-.menu--back .nav-menu-item:hover {
+.menu--back .nav-menu-item:hover, .menu--back .nav-menu-item.active {
   transition: color 0.3s ease 0s;
   -moz-transition: color 0.3s ease 0s; }
 

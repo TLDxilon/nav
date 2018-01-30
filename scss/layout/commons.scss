@@ -214,7 +214,7 @@ a{
 
 .menu--simple {
     .nav-link{
-      &:hover{
+      &:hover, &.active{
         @extend .fg-main;
         transition: color 0.3s ease 0s;
         -moz-transition: color 0.3s ease 0s;
@@ -241,7 +241,7 @@ a{
       -moz-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
       transform: translateY(20px);
     }
-    &:hover:after{
+    &:hover:after, &.active{
       opacity:1;
       transform: translateY(15px)
     }
@@ -250,7 +250,7 @@ a{
 
 .menu--back {
   .nav-menu-item{
-    &:hover{
+    &:hover, &.active{
       @extend .bg-main;
       transition: color 0.3s ease 0s;
       -moz-transition: color 0.3s ease 0s;
