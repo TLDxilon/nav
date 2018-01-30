@@ -303,4 +303,7 @@ a{
 
 .hero{
   @extend .pre-background;
+  .background {
+    z-index: -5;
+  }
 }

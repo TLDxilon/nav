@@ -1319,4 +1319,7 @@ a {
     z-index: -3;
     position: absolute; }
 
+.hero .background {
+  z-index: -5; }
+
 /*# sourceMappingURL=style.css.map */
