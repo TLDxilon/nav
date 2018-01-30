@@ -1158,7 +1158,8 @@ a {
       max-width: 479px; } }
 
 .border-bottom {
-  border-bottom: 1px;
+  border-width: 0 0 1px 0;
+  border-bottom-style: solid;
   border-color: #bcbcbc; }
 
 .text-align-center {
