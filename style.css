@@ -1160,7 +1160,7 @@ a {
 .border-bottom {
   border-width: 0 0 1px 0;
   border-style: solid;
-  border-color: rgba(255, 255, 255, 0.85); }
+  border-color: rgba(255, 255, 255, 0.15); }
 
 .text-align-center {
   text-align: center; }
