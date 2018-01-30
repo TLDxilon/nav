@@ -1121,6 +1121,9 @@ body {
 .fg-white {
   color: #ffffff; }
 
+.fg-main, .menu--simple .nav-link {
+  color: #BE86B9; }
+
 .bg-dark {
   background: #222222;
   color: #ffffff; }
@@ -1134,7 +1137,8 @@ body {
   color: #222222; }
 
 .bg-main {
-  background: #BE86B9; }
+  background: #BE86B9;
+  color: #ffffff; }
 
 a {
   text-decoration: none; }
@@ -1200,19 +1204,25 @@ a {
   width: 250px; }
   @media only screen and (max-width: 479px) {
     .logo-size-m {
-      width: 200px; } }
+      width: 200px;
+      transition: width .25s linear;
+      -moz-transition: width .25s linear; } }
 
 .logo-size-l {
   width: 300px; }
   @media only screen and (max-width: 479px) {
     .logo-size-l {
-      width: 200px; } }
+      width: 200px;
+      transition: width .25s linear;
+      -moz-transition: width .25s linear; } }
 
 .logo-size-xl {
   width: 350px; }
   @media only screen and (max-width: 479px) {
     .logo-size-xl {
-      width: 200px; } }
+      width: 200px;
+      transition: width .25s linear;
+      -moz-transition: width .25s linear; } }
 
 .relative {
   position: relative; }
@@ -1255,6 +1265,26 @@ a {
     @media only screen and (min-width: 960px) {
       .nav-button .btn-ham {
         display: none; } }
+
+/*estilos del menú*/
+.menu--simple .nav-link {
+  position: relative;
+  font-weight: bold; }
+  .menu--simple .nav-link:after {
+    position: absolute;
+    bottom: 7px;
+    left: 0px;
+    width: 100%;
+    height: 4px;
+    background-color: #FFD743;
+    content: "";
+    opacity: 0;
+    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+    -moz-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+    transform: translateY(20px); }
+  .menu--simple .nav-link:hover:after {
+    opacity: 1;
+    transform: translateY(15px); }
 
 .background {
   z-index: -1;

@@ -10,14 +10,8 @@
             <div class="nav-item nav-logo text-align-left">
             {% include {{ site.logo }} image="img/logo2.png" size="m" %}
             </div>
-            <ul class="nav-item nav-menu text-align-right" id="nav-menu">
-                <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">Home</a></li>
-                <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">About</a></li>
-                <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">Products</a></li>
-                <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">News</a></li>
-                <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">Contact</a></li>
+            {% include menu.html position="center" style="menu--simple" %}
 
-            </ul>
             <div class="nav-item nav-button text-align-right">
                 <button type="button" class="btn bg-main fg-white">Login</button>
                 <a class="btn-ham" href=""><span class="icon-menu fg-gray"></span></a>
