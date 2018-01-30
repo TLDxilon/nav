@@ -154,11 +154,14 @@ a{
   &-logo{
     width:15%;
     @media #{$smartphones}{
-
+      width:50%;
     }
   }
   &-button{
     width:15%;
+    @media #{$smartphones}{
+      width:50%;
+    }
     .btn-ham{
       @extend .padding-s;
       @media #{$big}{
