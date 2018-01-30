@@ -214,17 +214,10 @@ a{
 
 .menu--simple {
     .nav-link{
-      @extend .relative;
-      overflow: hidden;
-      &::before{
-        @extend .fg-white;
-        position: absolute;
-        transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
-        -moz-transition:  transform 0.3s ease 0s, opacity 0.3s ease 0s;
-      }
-      &:hover::before{
-        transform: scale(0.9);
-        opacity: 0;
+      &:hover{
+        @extend .fg-main;
+        transition: color 0.3s ease 0s;
+        -moz-transition: color 0.3s ease 0s;
       }
     }
 }

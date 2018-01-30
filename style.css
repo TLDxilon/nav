@@ -1118,10 +1118,10 @@ body {
 .fg-gray, .menu--line .nav-link {
   color: #bcbcbc; }
 
-.fg-white, .menu--simple .nav-link::before {
+.fg-white {
   color: #ffffff; }
 
-.fg-main {
+.fg-main, .menu--simple .nav-link:hover {
   color: #BE86B9; }
 
 .bg-dark {
@@ -1222,7 +1222,7 @@ a {
     .logo-size-xl {
       width: 200px; } }
 
-.relative, .menu--simple .nav-link {
+.relative {
   position: relative; }
 
 .absolute {
@@ -1265,15 +1265,9 @@ a {
         display: none; } }
 
 /*estilos del menú*/
-.menu--simple .nav-link {
-  overflow: hidden; }
-  .menu--simple .nav-link::before {
-    position: absolute;
-    transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
-    -moz-transition: transform 0.3s ease 0s, opacity 0.3s ease 0s; }
-  .menu--simple .nav-link:hover::before {
-    transform: scale(0.9);
-    opacity: 0; }
+.menu--simple .nav-link:hover {
+  transition: color 0.3s ease 0s;
+  -moz-transition: color 0.3s ease 0s; }
 
 .menu--line .nav-link {
   position: relative;
