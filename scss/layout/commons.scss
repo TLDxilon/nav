@@ -213,6 +213,9 @@ a{
         display: none;
       }
     }
+    .btn-shop{
+      @extend .padding-s;
+    }
   }
   &-link{
     @extend .font-weight-bold;
