@@ -1115,13 +1115,13 @@ body {
 .fg-dark {
   color: #222222; }
 
-.fg-gray {
+.fg-gray, .menu--simple .nav-link {
   color: #bcbcbc; }
 
 .fg-white {
   color: #ffffff; }
 
-.fg-main, .menu--simple .nav-link {
+.fg-main {
   color: #BE86B9; }
 
 .bg-dark {
@@ -1136,7 +1136,7 @@ body {
   background: #ffffff;
   color: #222222; }
 
-.bg-main {
+.bg-main, .menu--simple .nav-link:after {
   background: #BE86B9;
   color: #ffffff; }
 
@@ -1275,8 +1275,7 @@ a {
     bottom: 7px;
     left: 0px;
     width: 100%;
-    height: 4px;
-    background-color: #FFD743;
+    height: 2px;
     content: "";
     opacity: 0;
     transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
