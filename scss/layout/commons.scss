@@ -158,11 +158,18 @@ a{
   position: absolute;
 }
 
+.pre-background{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
 
 .nav{
    display: table;
    table-layout: fixed;
    width:100%;
+  @extend .pre-background;
    &-item{
      float: none;
      display: table-cell;
@@ -293,9 +300,7 @@ a{
 }
 
 
+
 .hero{
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  @extend .pre-background;
 }

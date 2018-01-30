@@ -1228,6 +1228,12 @@ a {
 .absolute {
   position: absolute; }
 
+.pre-background, .nav, .hero {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
 .nav {
   display: table;
   table-layout: fixed;
@@ -1312,11 +1318,5 @@ a {
     height: 100%;
     z-index: -3;
     position: absolute; }
-
-.hero {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0; }
 
 /*# sourceMappingURL=style.css.map */
