@@ -1115,10 +1115,10 @@ body {
 .fg-dark {
   color: #222222; }
 
-.fg-gray, .menu--simple .nav-link {
+.fg-gray, .menu--line .nav-link {
   color: #bcbcbc; }
 
-.fg-white {
+.fg-white, .menu--simple .nav-link::before {
   color: #ffffff; }
 
 .fg-main {
@@ -1136,7 +1136,7 @@ body {
   background: #ffffff;
   color: #222222; }
 
-.bg-main, .menu--simple .nav-link:after {
+.bg-main, .menu--line .nav-link:after {
   background: #BE86B9;
   color: #ffffff; }
 
@@ -1222,7 +1222,7 @@ a {
     .logo-size-xl {
       width: 200px; } }
 
-.relative {
+.relative, .menu--simple .nav-link {
   position: relative; }
 
 .absolute {
@@ -1266,9 +1266,19 @@ a {
 
 /*estilos del menú*/
 .menu--simple .nav-link {
+  overflow: hidden; }
+  .menu--simple .nav-link::before {
+    position: absolute;
+    transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+    -moz-transition: transform 0.3s ease 0s, opacity 0.3s ease 0s; }
+  .menu--simple .nav-link:hover::before {
+    transform: scale(0.9);
+    opacity: 0; }
+
+.menu--line .nav-link {
   position: relative;
   font-weight: bold; }
-  .menu--simple .nav-link:after {
+  .menu--line .nav-link:after {
     position: absolute;
     bottom: 7px;
     left: 0px;
@@ -1279,7 +1289,7 @@ a {
     transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
     -moz-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
     transform: translateY(20px); }
-  .menu--simple .nav-link:hover:after {
+  .menu--line .nav-link:hover:after {
     opacity: 1;
     transform: translateY(15px); }
 
