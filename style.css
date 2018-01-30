@@ -1113,7 +1113,10 @@ body {
   margin: 0; }
 
 .fg-dark {
-  color: #969696; }
+  color: #222222; }
+
+.fg-gray {
+  color: #bcbcbc; }
 
 .fg-white {
   color: #ffffff; }
@@ -1122,9 +1125,13 @@ body {
   background: #222222;
   color: #ffffff; }
 
+.bg-gray {
+  background: #bcbcbc;
+  color: #ffffff; }
+
 .bg-white {
   background: #ffffff;
-  color: #ffffff; }
+  color: #222222; }
 
 .bg-main {
   background: #BE86B9; }

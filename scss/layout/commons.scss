@@ -11,14 +11,19 @@ $font-family-base: 'Open Sans', sans-serif;
 
 $tone-white: #ffffff;
 $tone-dark: #222222;
-$tone-gray: #969696;
+$tone-gray: #bcbcbc;
 $tone-main: #BE86B9;
+
+
 body{
   font-family: $font-family-base;
   color: $tone-dark;
   margin: 0;
 }
 .fg-dark{
+  color: $tone-dark;
+}
+.fg-gray{
   color: $tone-gray;
 }
 .fg-white{
@@ -28,9 +33,13 @@ body{
   background: $tone-dark;
   color: $tone-white;
 }
+.bg-gray{
+  background: $tone-gray;
+  color: $tone-white;
+}
 .bg-white{
   background: $tone-white;
-  color: $tone-white;
+  color: $tone-dark;
 }
 .bg-main{
   background: $tone-main;
@@ -176,7 +185,6 @@ a{
       @media #{$big}{
         display: none;
       }
-
     }
   }
   &-link{
