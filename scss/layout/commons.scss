@@ -74,8 +74,8 @@ a{
 }
 .border-bottom{
   border-width: 0 0 1px 0;
-  border-bottom-style: solid;
-  border-color: $tone-gray;
+  border-style: solid;
+  border-color: transparentize($tone-gray, 0.5);
 }
 
 .text-align-center{

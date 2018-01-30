@@ -1159,8 +1159,8 @@ a {
 
 .border-bottom {
   border-width: 0 0 1px 0;
-  border-bottom-style: solid;
-  border-color: #bcbcbc; }
+  border-style: solid;
+  border-color: rgba(188, 188, 188, 0.5); }
 
 .text-align-center {
   text-align: center; }
