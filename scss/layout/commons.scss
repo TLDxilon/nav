@@ -121,29 +121,33 @@ a{
   width: 200px;
 }
 
+.transition-breakpoints{
+  transition: width .25s linear;
+  -moz-transition:  width .25s linear;
+}
+
 .logo-size-m{
   width: 250px;
+  @extend .transition-breakpoints;
   @media #{$smartphones}{
     width: 200px;
-    transition: width .25s linear;
-    -moz-transition:  width .25s linear;
+
   }
 }
 
 .logo-size-l{
   width: 300px;
+  @extend .transition-breakpoints;
   @media #{$smartphones}{
     width: 200px;
-    transition: width .25s linear;
-    -moz-transition:  width .25s linear;
   }
 }
 .logo-size-xl{
   width: 350px;
+  @extend .transition-breakpoints;
   @media #{$smartphones}{
     width: 200px;
-    transition: width .25s linear;
-    -moz-transition:  width .25s linear;
+
   }
 }
 

@@ -1200,29 +1200,27 @@ a {
 .logo-size-s {
   width: 200px; }
 
+.transition-breakpoints, .logo-size-m, .logo-size-l, .logo-size-xl {
+  transition: width .25s linear;
+  -moz-transition: width .25s linear; }
+
 .logo-size-m {
   width: 250px; }
   @media only screen and (max-width: 479px) {
     .logo-size-m {
-      width: 200px;
-      transition: width .25s linear;
-      -moz-transition: width .25s linear; } }
+      width: 200px; } }
 
 .logo-size-l {
   width: 300px; }
   @media only screen and (max-width: 479px) {
     .logo-size-l {
-      width: 200px;
-      transition: width .25s linear;
-      -moz-transition: width .25s linear; } }
+      width: 200px; } }
 
 .logo-size-xl {
   width: 350px; }
   @media only screen and (max-width: 479px) {
     .logo-size-xl {
-      width: 200px;
-      transition: width .25s linear;
-      -moz-transition: width .25s linear; } }
+      width: 200px; } }
 
 .relative {
   position: relative; }
