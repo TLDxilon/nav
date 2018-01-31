@@ -313,8 +313,8 @@ ul {
     .nav-button .nav-button-item {
       vertical-align: middle;
       display: inline-block;
-      height: 20px;
-      margin: auto; }
+      height: 18px;
+      margin: 0 5px; }
     @media only screen and (min-width: 960px) {
       .nav-button .btn-ham {
         display: none; } }
@@ -379,7 +379,7 @@ ul {
   z-index: -5; }
 
 .icon {
-  font-size: 20px; }
+  font-size: 18px; }
 
 .navbar-fixed {
   position: fixed;
