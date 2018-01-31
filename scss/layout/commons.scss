@@ -345,6 +345,7 @@ ul{
       vertical-align: middle;
       display: inline-block;
       height: $icon-size;
+      margin: auto 5px;
     }
     .btn-ham{
       @media #{$big}{

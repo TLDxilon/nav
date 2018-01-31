@@ -313,7 +313,8 @@ ul {
     .nav-button .nav-button-item {
       vertical-align: middle;
       display: inline-block;
-      height: 20px; }
+      height: 20px;
+      margin: auto; }
     @media only screen and (min-width: 960px) {
       .nav-button .btn-ham {
         display: none; } }
