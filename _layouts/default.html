@@ -61,15 +61,20 @@
 
 
 <script>
-    var mainbottom = $('.navbar').offset().top + $('.navbar').height();
+    (document).ready(function() {
 
-    $(window).on('scroll',function(){
-        stop = Math.round($(window).scrollTop());
-        if (stop > mainbottom) {
-            $('.navbar').addClass('navbar-fixed');
-        } else {
-            $('.navbar').removeClass('navbar-fixed');
-        }
+        $(window).scroll(function () {
+
+            console.log($(window).scrollTop());
+
+            if ($(window).scrollTop() > 550) {
+                $('.navbar').addClass('navbar-fixed');
+            }
+
+            if ($(window).scrollTop() < 551) {
+                $('.navbar').removeClass('navbar-fixed');
+            }
+        });
     });
 </script>
 
