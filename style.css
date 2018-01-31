@@ -35,7 +35,7 @@ body {
 .fg-dark {
   color: #222222; }
 
-.fg-gray, .menu--line .nav-link {
+.fg-gray, .menu--line .nav-link, .navbar-fixed .nav-link {
   color: #bcbcbc; }
 
 .fg-white {

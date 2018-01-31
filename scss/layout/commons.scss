@@ -462,6 +462,9 @@ ul{
   -moz-transition: padding 0.3s ease 0s, background 0.3s ease 0s;
   -webkit-transition: padding 0.3s ease 0s, background 0.3s ease 0s;
   -o-transition: padding 0.3s ease 0s, background 0.3s ease 0s;
+  .nav-link{
+    @extend .fg-gray;
+  }
   .branding-logo{
     width: 130px;
   }
