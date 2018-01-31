@@ -256,6 +256,8 @@ ul {
   -moz-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
+  justify-content: center;
+  align-items: center;
   justify-content: center; }
   .nav-item {
     float: left; }
