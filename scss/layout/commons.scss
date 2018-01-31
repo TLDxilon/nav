@@ -202,8 +202,8 @@ ul{
     background: darken($tone-main, 20%);
   }
 }
-
-.nav{
+/* Menú con display:table */
+/*.nav{
    display: table;
    table-layout: fixed;
    width:100%;
@@ -256,6 +256,80 @@ ul{
   }
 
 }
+*/
+
+/* Menú con flexblox */
+
+.nav{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+
+
+  @extend .pre-background;
+  &-item{
+    float: left;
+
+  }
+  &-menu{
+    align-self: stretch;
+    width:70%;
+    @media #{$smartphones}{
+      display: none;
+    }
+    @media #{$tablets}{
+      display: none;
+    }
+    @media #{$laptop}{
+      display: none;
+    }
+    &-item{
+      display: inline-block;
+
+    }
+  }
+  &-logo{
+    align-self: stretch;
+    width:15%;
+    @media #{$smartphones}{
+      width:50%;
+    }
+  }
+  &-button{
+    align-self: stretch;
+    width:15%;
+    @media #{$smartphones}{
+      width:50%;
+    }
+    .btn-ham{
+      @extend .padding-xs;
+      @media #{$big}{
+        display: none;
+      }
+    }
+    .btn-shop{
+      @extend .padding-xs;
+    }
+  }
+  &-link{
+    @extend .font-weight-bold;
+  }
+
+}
+
+
+
+
 
 /*estilos del menú*/
 
@@ -275,8 +349,6 @@ ul{
       }
     }
 }
-
-
 .menu--line{
   .nav-link{
     position: relative;
@@ -307,7 +379,6 @@ ul{
     }
   }
 }
-
 .menu--back {
   .nav-menu-item{
     &:hover, &.active{
@@ -318,6 +389,10 @@ ul{
     }
   }
 }
+
+
+
+
 .background{
   z-index: -1;
   position: absolute;
