@@ -273,7 +273,7 @@ ul {
         display: none; } }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
       .nav-menu {
-        visibility: hidden; } }
+        display: none; } }
     .nav-menu-item {
       display: inline-block; }
   .nav-logo {
