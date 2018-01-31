@@ -186,13 +186,15 @@ ul {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: 3px 8px;
-  font-size: 15px;
+  padding: 8px 20px;
+  font-size: 12px;
+  text-tranform: uppercase;
   line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+  border-radius: 20px;
+  letter-spacing: 2px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out; }
   .btn:hover {
     background: #904e8a; }
 
@@ -308,7 +310,9 @@ ul {
       .nav-button .btn-ham {
         display: none; } }
   .nav-link {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px; }
 
 /*estilos del menú*/
 .menu--simple .nav-link:hover, .menu--simple .active .nav-link {
