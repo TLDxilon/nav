@@ -1313,7 +1313,7 @@ a {
   .menu--line .nav-link:after {
     position: absolute;
     bottom: 7px;
-    left: 0z;
+    left: 0;
     width: 100%;
     height: 2px;
     content: "";
