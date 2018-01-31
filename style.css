@@ -188,7 +188,7 @@ ul {
     background: darken #BE86B9, 20%; }
 
 .nav {
-  display: table-cell;
+  display: table;
   table-layout: fixed;
   width: 100%; }
   .nav-item {
