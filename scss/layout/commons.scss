@@ -135,6 +135,10 @@ ul{
   -webkit-transition:  width .25s linear;
 }
 
+
+.branding-logo{
+  max-width: 100%;
+}
 .logo-size-xs{
   width: 100px;
 }
@@ -146,7 +150,6 @@ ul{
 
   }
 }
-
 .logo-size-m{
   width: 250px;
   @extend .transition-breakpoints;
@@ -307,6 +310,9 @@ ul{
     @media #{$tablets}{
       width:50%;
     }
+    @media #{$laptop}{
+      width:50%;
+    }
   }
   &-button{
     width:15%;
@@ -314,6 +320,9 @@ ul{
       width:50%;
     }
     @media #{$tablets}{
+      width:50%;
+    }
+    @media #{$laptop}{
       width:50%;
     }
     .btn-ham{

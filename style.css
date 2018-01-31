@@ -134,6 +134,9 @@ ul {
   -moz-transition: width .25s linear;
   -webkit-transition: width .25s linear; }
 
+.branding-logo {
+  max-width: 100%; }
+
 .logo-size-xs {
   width: 100px; }
 
@@ -281,12 +284,18 @@ ul {
     @media only screen and (min-width: 480px) and (max-width: 768px) {
       .nav-logo {
         width: 50%; } }
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+      .nav-logo {
+        width: 50%; } }
   .nav-button {
     width: 15%; }
     @media only screen and (max-width: 479px) {
       .nav-button {
         width: 50%; } }
     @media only screen and (min-width: 480px) and (max-width: 768px) {
+      .nav-button {
+        width: 50%; } }
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
       .nav-button {
         width: 50%; } }
     @media only screen and (min-width: 960px) {
