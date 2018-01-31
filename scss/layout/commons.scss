@@ -342,6 +342,7 @@ ul{
     }
     nav-buttom-item{
       vertical-align: middle;
+      display: inline-block;
     }
     .btn-ham{
       @media #{$big}{

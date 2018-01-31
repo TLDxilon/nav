@@ -311,7 +311,8 @@ ul {
       .nav-button {
         width: 50%; } }
     .nav-button nav-buttom-item {
-      vertical-align: middle; }
+      vertical-align: middle;
+      display: inline-block; }
     @media only screen and (min-width: 960px) {
       .nav-button .btn-ham {
         display: none; } }
