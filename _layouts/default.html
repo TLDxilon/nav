@@ -60,20 +60,17 @@
 
 
 
+
 <script>
 
-    $(document).ready(function() {
-
-        var aboveHeight = $('.navbar').outerHeight();
-        $(window).scroll(function(){
-            if ($(window).scrollTop() > aboveHeight){
-                $('s.navbar').addClass('navbar-fixed');
-            } else {
-                $('.navbar').removeClass('navbar-fixed');
-            }
-        });
+    $(window).scroll(function() {
+        if ($(window).scrollTop() >= 0){
+            $('.navbar').addClass('navbar-fixed');
+        } else {
+            $('.navbar').removeClass('navbar-fixed');
+        }
     });
-</script>
 
+</script>
 </body>
 </html>
