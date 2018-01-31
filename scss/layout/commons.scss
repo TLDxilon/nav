@@ -326,13 +326,13 @@ ul{
       width:50%;
     }
     .btn-ham{
-      @extend .padding-xs;
+      vertical-align: middle;
       @media #{$big}{
         display: none;
       }
     }
     .btn-shop{
-      @extend .padding-xs;
+      vertical-align: middle;
     }
   }
   &-link{
