@@ -20,6 +20,10 @@ body{
   color: $tone-dark;
   margin: 0;
 }
+h1{
+  font-size: 60px;
+}
+
 .fg-dark{
   color: $tone-dark;
 }
@@ -99,6 +103,11 @@ ul{
 .font-weight-bold{
   font-weight: bold;
 }
+.text-transform-uppercase{
+   text-transform: uppercase;
+
+}
+
 .padding-xs{
   padding: 5px;
 }
