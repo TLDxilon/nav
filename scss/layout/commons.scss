@@ -289,7 +289,7 @@ ul{
   &-menu{
     width:60%;
     @media #{$smartphones}{
-      visibility: hidden;
+      display: none;
     }
     @media #{$tablets}{
       visibility: hidden;
