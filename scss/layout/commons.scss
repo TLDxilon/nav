@@ -292,10 +292,10 @@ ul{
       display: none;
     }
     @media #{$tablets}{
-      visibility: hidden;
+      display: none;
     }
     @media #{$laptop}{
-      visibility: hidden;
+      display: none;
     }
     &-item{
       display: inline-block;
