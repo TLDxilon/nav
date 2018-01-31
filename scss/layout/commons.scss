@@ -75,7 +75,7 @@ a{
 .border-bottom{
   border-width: 0 0 1px 0;
   border-style: solid;
-  border-color: transparentize($tone-white, 0.85);
+  border-color: transparentize($tone-gray, 0.5);
 }
 
 .text-align-center{
@@ -252,7 +252,7 @@ a{
     &:after{
       position: absolute;
       bottom: 7px;
-      left: 0;
+      left: 0z;
       width: 100%;
       height: 2px;
       @extend .bg-main;
