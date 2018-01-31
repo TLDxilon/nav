@@ -126,12 +126,6 @@ ul{
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.logo-size-xs{
-  width: 100px;
-}
-.logo-size-s{
-  width: 200px;
-}
 
 .transition-breakpoints{
   transition: width .25s linear;
@@ -139,11 +133,23 @@ ul{
   -webkit-transition:  width .25s linear;
 }
 
+.logo-size-xs{
+  width: 100px;
+}
+.logo-size-s{
+  width: 200px;
+  @extend .transition-breakpoints;
+  @media #{$smartphones}{
+    width: 160px;
+
+  }
+}
+
 .logo-size-m{
   width: 250px;
   @extend .transition-breakpoints;
   @media #{$smartphones}{
-    width: 200px;
+    width: 160px;
 
   }
 }
@@ -152,7 +158,7 @@ ul{
   width: 300px;
   @extend .transition-breakpoints;
   @media #{$smartphones}{
-    width: 200px;
+    width: 160px;
   }
 }
 .logo-size-xl{
@@ -176,6 +182,25 @@ ul{
   height: 100%;
   top: 0;
   left: 0;
+}
+
+
+.btn{
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 3px 8px;
+  font-size: 15px;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:hover{
+    background: darken ($tone-main, 20%);
+  }
 }
 
 .nav{
