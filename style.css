@@ -298,13 +298,11 @@ ul {
     @media only screen and (min-width: 768px) and (max-width: 960px) {
       .nav-button {
         width: 50%; } }
-    .nav-button .btn-ham {
+    .nav-button nav-buttom-item {
       vertical-align: middle; }
-      @media only screen and (min-width: 960px) {
-        .nav-button .btn-ham {
-          display: none; } }
-    .nav-button .btn-shop {
-      vertical-align: middle; }
+    @media only screen and (min-width: 960px) {
+      .nav-button .btn-ham {
+        display: none; } }
 
 /*estilos del menú*/
 .menu--simple .nav-link:hover, .menu--simple .active .nav-link {

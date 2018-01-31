@@ -325,14 +325,13 @@ ul{
     @media #{$laptop}{
       width:50%;
     }
-    .btn-ham{
+    nav-buttom-item{
       vertical-align: middle;
+    }
+    .btn-ham{
       @media #{$big}{
         display: none;
       }
-    }
-    .btn-shop{
-      vertical-align: middle;
     }
   }
   &-link{
