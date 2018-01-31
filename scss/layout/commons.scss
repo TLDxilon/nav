@@ -6,7 +6,7 @@ $big:"only screen and (min-width: 960px)";
 
 
 
-$font-family-base: 'Open Sans', sans-serif;
+$font-family-base: 'Poppins', sans-serif;;
 
 
 $tone-white: #ffffff;
@@ -338,7 +338,7 @@ ul{
     }
   }
   &-link{
-    @extend .font-weight-bold;
+    text-transform: uppercase;
   }
 
 }

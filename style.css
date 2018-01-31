@@ -28,7 +28,7 @@
 /* Éstos son mis estilos */
 /*Breakpoints*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #222222;
   margin: 0; }
 
@@ -98,7 +98,7 @@ ul {
 .text-align-right {
   text-align: right; }
 
-.font-weight-bold, .nav-link {
+.font-weight-bold {
   font-weight: bold; }
 
 .padding-xs {
@@ -307,6 +307,8 @@ ul {
     @media only screen and (min-width: 960px) {
       .nav-button .btn-ham {
         display: none; } }
+  .nav-link {
+    text-transform: uppercase; }
 
 /*estilos del menú*/
 .menu--simple .nav-link:hover, .menu--simple .active .nav-link {
