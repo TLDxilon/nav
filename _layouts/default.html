@@ -60,7 +60,18 @@
 
 
 
+<script>
+    var mainbottom = $('#navbar').offset().top + $('#navbar').height();
 
+    $(window).on('scroll',function(){
+        stop = Math.round($(window).scrollTop());
+        if (stop > mainbottom) {
+            $('.navbar').addClass('navbar-fixed');
+        } else {
+            $('.navbar').removeClass('navbar-fixed');
+        }
+    });
+</script>
 
 </body>
 </html>
