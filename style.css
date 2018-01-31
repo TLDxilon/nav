@@ -66,7 +66,9 @@ a {
 ul {
   padding-left: 0;
   padding-start: 0;
-  -webkit-padding-start: 0; }
+  -webkit-padding-start: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0; }
 
 .max-width {
   max-width: 1140px;
@@ -257,8 +259,7 @@ ul {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  align-items: center;
-  justify-content: center; }
+  align-items: center; }
   .nav-item {
     float: left; }
   .nav-menu {
