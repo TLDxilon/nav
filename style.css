@@ -167,7 +167,7 @@ ul {
 .absolute {
   position: absolute; }
 
-.pre-background, .nav, .hero {
+.pre-background, .hero {
   width: 100%;
   height: 100%;
   top: 0;
@@ -260,15 +260,6 @@ ul {
   -webkit-justify-content: center;
   justify-content: center;
   align-items: center; }
-  .nav-item {
-    -ms-flex-item-align: center;
-    -webkit-align-self: center;
-    align-self: center;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center; }
   .nav-menu {
     width: 60%; }
     @media only screen and (max-width: 479px) {
