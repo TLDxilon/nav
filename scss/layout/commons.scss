@@ -54,6 +54,12 @@ body{
 a{
   text-decoration: none;
 }
+ul{
+  padding-left: 0;
+  padding-start: 0;
+  -webkit-padding-start: 0;
+}
+
 
 .max-width{
   max-width: 1140px;
@@ -130,6 +136,7 @@ a{
 .transition-breakpoints{
   transition: width .25s linear;
   -moz-transition:  width .25s linear;
+  -webkit-transition:  width .25s linear;
 }
 
 .logo-size-m{
@@ -172,7 +179,7 @@ a{
 }
 
 .nav{
-   display: table;
+   display: table-cell;
    table-layout: fixed;
    width:100%;
   @extend .pre-background;
@@ -234,6 +241,7 @@ a{
         @extend .fg-main;
         transition: color 0.3s ease 0s;
         -moz-transition: color 0.3s ease 0s;
+        -webkit-transition: color 0.3s ease 0s;
       }
     }
     .active{
@@ -260,6 +268,7 @@ a{
       opacity: 0;
       transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
       -moz-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+      -webkit-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
       transform: translateY(20px);
     }
     &:hover:after{
@@ -280,6 +289,7 @@ a{
       @extend .bg-main;
       transition: background 0.3s ease 0s;
       -moz-transition: background 0.3s ease 0s;
+      -webkit-transition: background 0.3s ease 0s;
     }
   }
 }

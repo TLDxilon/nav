@@ -1167,6 +1167,11 @@ body {
 a {
   text-decoration: none; }
 
+ul {
+  padding-left: 0;
+  padding-start: 0;
+  -webkit-padding-start: 0; }
+
 .max-width {
   max-width: 1140px;
   margin: 0 auto;
@@ -1234,7 +1239,8 @@ a {
 
 .transition-breakpoints, .logo-size-m, .logo-size-l, .logo-size-xl {
   transition: width .25s linear;
-  -moz-transition: width .25s linear; }
+  -moz-transition: width .25s linear;
+  -webkit-transition: width .25s linear; }
 
 .logo-size-m {
   width: 250px; }
@@ -1267,7 +1273,7 @@ a {
   left: 0; }
 
 .nav {
-  display: table;
+  display: table-cell;
   table-layout: fixed;
   width: 100%; }
   .nav-item {
@@ -1305,7 +1311,8 @@ a {
 /*estilos del menú*/
 .menu--simple .nav-link:hover, .menu--simple .active .nav-link {
   transition: color 0.3s ease 0s;
-  -moz-transition: color 0.3s ease 0s; }
+  -moz-transition: color 0.3s ease 0s;
+  -webkit-transition: color 0.3s ease 0s; }
 
 .menu--line .nav-link {
   position: relative;
@@ -1320,6 +1327,7 @@ a {
     opacity: 0;
     transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
     -moz-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+    -webkit-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
     transform: translateY(20px); }
   .menu--line .nav-link:hover:after, .menu--line .menu--simple .active .nav-link:after, .menu--simple .active .menu--line .nav-link:after {
     opacity: 1;
@@ -1327,7 +1335,8 @@ a {
 
 .menu--back .nav-menu-item:hover, .menu--back .nav-menu-item.active {
   transition: background 0.3s ease 0s;
-  -moz-transition: background 0.3s ease 0s; }
+  -moz-transition: background 0.3s ease 0s;
+  -webkit-transition: background 0.3s ease 0s; }
 
 .background {
   z-index: -1;
