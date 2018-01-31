@@ -199,7 +199,7 @@ ul{
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   &:hover{
-    background: darken ($tone-main, 20%);
+    background: darken($tone-main, 20%);
   }
 }
 

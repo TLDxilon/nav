@@ -185,7 +185,7 @@ ul {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   .btn:hover {
-    background: darken #BE86B9, 20%; }
+    background: #904e8a; }
 
 .nav {
   display: table;
