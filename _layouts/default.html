@@ -61,13 +61,14 @@
 
 
 <script>
-    $(document).ready(function(){
-        $(window).bind('scroll', function() {
-            var navHeight = $( window ).height() - 70;
-            if ($(window).scrollTop() > navHeight) {
-                $('.navbar').addClass('navbar-fixed');
-            }
-            else {
+
+    $(document).ready(function() {
+
+        var aboveHeight = $('.navbar').outerHeight();
+        $(window).scroll(function(){
+            if ($(window).scrollTop() > aboveHeight){
+                $('s.navbar').addClass('navbar-fixed');
+            } else {
                 $('.navbar').removeClass('navbar-fixed');
             }
         });
