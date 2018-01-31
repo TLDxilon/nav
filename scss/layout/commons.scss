@@ -289,13 +289,13 @@ ul{
   &-menu{
     width:60%;
     @media #{$smartphones}{
-      display: none;
+      visibility: hidden;
     }
     @media #{$tablets}{
-      display: none;
+      visibility: hidden;
     }
     @media #{$laptop}{
-      display: none;
+      visibility: hidden;
     }
     &-item{
       display: inline-block;

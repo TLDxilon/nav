@@ -267,13 +267,13 @@ ul {
     width: 60%; }
     @media only screen and (max-width: 479px) {
       .nav-menu {
-        display: none; } }
+        visibility: hidden; } }
     @media only screen and (min-width: 480px) and (max-width: 768px) {
       .nav-menu {
-        display: none; } }
+        visibility: hidden; } }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
       .nav-menu {
-        display: none; } }
+        visibility: hidden; } }
     .nav-menu-item {
       display: inline-block; }
   .nav-logo {
