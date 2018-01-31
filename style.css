@@ -312,7 +312,8 @@ ul {
         width: 50%; } }
     .nav-button .nav-button-item {
       vertical-align: middle;
-      display: inline-block; }
+      display: inline-block;
+      height: 20px; }
     @media only screen and (min-width: 960px) {
       .nav-button .btn-ham {
         display: none; } }

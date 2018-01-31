@@ -14,6 +14,7 @@ $tone-dark: #222222;
 $tone-gray: #bcbcbc;
 $tone-main: #BE86B9;
 
+$icon-size: 20px;
 
 body{
   font-family: $font-family-base;
@@ -343,6 +344,7 @@ ul{
     .nav-button-item{
       vertical-align: middle;
       display: inline-block;
+      height: $icon-size;
     }
     .btn-ham{
       @media #{$big}{
@@ -459,7 +461,7 @@ ul{
 }
 
 .icon{
-  font-size: 20px;
+  font-size: $icon-size;
 }
 
 
