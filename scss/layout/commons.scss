@@ -224,7 +224,7 @@ ul{
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 
   &:hover{
-    background: darken($tone-main, 20%);
+    background: darken($tone-main, 10%);
   }
 }
 /* Menú con display:table */
