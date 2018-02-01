@@ -3,3 +3,10 @@ description: Web Developer
 logo: logo-i.html
 
 
+nav-icons: 'true'
+
+#Nav icons
+navbutton:  'hola'
+iconshop:  'adios'
+
+
