@@ -65,7 +65,7 @@ h1 {
   background: #ffffff;
   color: #222222; }
 
-.bg-main, .menu--line .nav-link:after, .menu--back .nav-menu-item:hover, .menu--back .nav-menu-item.active {
+.bg-main, .menu--line .nav-link:after, .menu--back .nav-menu-item:hover, .menu--back .nav-menu-item.active, .topbar {
   background: #BE86B9;
   color: #ffffff; }
 
@@ -417,5 +417,8 @@ ul {
   -o-transition: padding 0.3s ease 0s, background 0.3s ease 0s; }
   .navbar-fixed .branding-logo {
     width: 130px; }
+
+.topbar {
+  height: 20px; }
 
 /*# sourceMappingURL=style.css.map */
