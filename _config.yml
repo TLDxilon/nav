@@ -5,7 +5,7 @@ logo: logo-i.html
 
 nav-icons: 'true'
 
-topbar: 'true'
+top-bar: 'true'
 
 #Nav icons
 navbutton:  'http://linkaloquequieras'
