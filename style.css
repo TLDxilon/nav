@@ -27,20 +27,6 @@
 
 /* Éstos son mis estilos */
 /*Breakpoints*/
-body {
-  font-family: "Poppins", sans-serif;
-  color: #222222;
-  margin: 0; }
-
-h1 {
-  font-size: 60px;
-  margin-bottom: 0; }
-
-.branding-title {
-  margin-bottom: 0;
-  margin-top: 0;
-  font-size: 25px; }
-
 .fg-dark {
   color: #222222; }
 
@@ -69,35 +55,12 @@ h1 {
   background: #BE86B9;
   color: #ffffff; }
 
-a {
-  text-decoration: none; }
-
-ul {
-  padding-left: 0;
-  padding-start: 0;
-  -webkit-padding-start: 0;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0; }
-
-.max-width {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 20px; }
-  @media only screen and (min-width: 768px) and (max-width: 960px) {
-    .max-width {
-      max-width: 960px; } }
-  @media only screen and (min-width: 480px) and (max-width: 768px) {
-    .max-width {
-      max-width: 768px; } }
-  @media only screen and (max-width: 479px) {
-    .max-width {
-      max-width: 479px; } }
-
 .border-bottom {
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: rgba(188, 188, 188, 0.5); }
 
+/*CLASES DESCRIPTIVAS TEXTO*/
 .text-align-center {
   text-align: center; }
 
@@ -113,6 +76,7 @@ ul {
 .text-transform-uppercase {
   text-transform: uppercase; }
 
+/*CLASES PADDINGS*/
 .padding-xs {
   padding: 5px; }
 
@@ -149,9 +113,6 @@ ul {
   transition: width .25s linear;
   -moz-transition: width .25s linear;
   -webkit-transition: width .25s linear; }
-
-.branding-logo {
-  max-width: 100%; }
 
 .logo-size-xs {
   width: 100px; }
@@ -200,6 +161,47 @@ ul {
 
 .border-radius-xl {
   border-radius: 30px; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #222222;
+  margin: 0; }
+
+h1 {
+  font-size: 60px;
+  margin-bottom: 0; }
+
+.branding-title {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 25px; }
+
+.branding-logo {
+  max-width: 100%; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  padding-left: 0;
+  padding-start: 0;
+  -webkit-padding-start: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0; }
+
+.max-width {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px; }
+  @media only screen and (min-width: 768px) and (max-width: 960px) {
+    .max-width {
+      max-width: 960px; } }
+  @media only screen and (min-width: 480px) and (max-width: 768px) {
+    .max-width {
+      max-width: 768px; } }
+  @media only screen and (max-width: 479px) {
+    .max-width {
+      max-width: 479px; } }
 
 .btn-simple {
   display: inline-block;
