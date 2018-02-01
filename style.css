@@ -351,8 +351,7 @@ ul {
   -webkit-transition: color 0.3s ease 0s; }
 
 .menu--line .nav-link {
-  position: relative;
-  font-weight: bold; }
+  position: relative; }
   .menu--line .nav-link:after {
     position: absolute;
     bottom: 7px;

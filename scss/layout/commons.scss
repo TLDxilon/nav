@@ -408,7 +408,6 @@ ul{
 .menu--line{
   .nav-link{
     position: relative;
-    font-weight:bold;
     @extend .fg-gray;
     &:after{
       position: absolute;
