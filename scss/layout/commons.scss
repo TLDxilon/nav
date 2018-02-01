@@ -207,17 +207,17 @@ ul{
 .border-radius-l{
   border-radius: 20px;
 }
-
+.border-radius-xl{
+  border-radius: 30px;
+}
 .btn-simple{
   display: inline-block;
   font-weight: 400;
   text-align: center;
-  white-space: nowrap;
   vertical-align: middle;
   padding: 10px 20px;
   font-size: 12px;
   text-tranform: uppercase;
-  line-height: 1.5;
   letter-spacing: 2px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
@@ -227,6 +227,24 @@ ul{
     background: darken($tone-main, 10%);
   }
 }
+.btn-big{
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  padding: 15px 30px;
+  font-size: 15px;
+  text-tranform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+
+  &:hover{
+    background: darken($tone-main, 10%);
+  }
+}
+
 /* Menú con display:table */
 /*.nav{
    display: table;
