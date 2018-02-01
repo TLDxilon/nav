@@ -5,6 +5,8 @@ logo: logo-i.html
 
 nav-icons: 'true'
 
+topbar: 'true'
+
 #Nav icons
 navbutton:  'http://linkaloquequieras'
 iconshop:  'http://linkalacesta'

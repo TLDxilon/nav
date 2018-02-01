@@ -6,7 +6,9 @@
 
 <header class="header relative">
     <div class="navbar">
-        {% include topbar.html %}
+        {% if site.top-bar == 'true' %}
+        {% include top-bar.html %}
+        {% endif %}
         <nav class="padding-tb-s border-bottom">
 
             <div class="max-width">
