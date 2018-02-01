@@ -53,7 +53,7 @@ h1 {
 .fg-main, .menu--simple .nav-link:hover, .menu--simple .active .nav-link {
   color: #BE86B9; }
 
-.bg-dark {
+.bg-dark, .topbar {
   background: #222222;
   color: #ffffff; }
 
@@ -65,7 +65,7 @@ h1 {
   background: #ffffff;
   color: #222222; }
 
-.bg-main, .menu--line .nav-link:after, .menu--back .nav-menu-item:hover, .menu--back .nav-menu-item.active, .topbar {
+.bg-main, .menu--line .nav-link:after, .menu--back .nav-menu-item:hover, .menu--back .nav-menu-item.active {
   background: #BE86B9;
   color: #ffffff; }
 
@@ -419,6 +419,6 @@ ul {
     width: 130px; }
 
 .topbar {
-  height: 20px; }
+  height: 25px; }
 
 /*# sourceMappingURL=style.css.map */
