@@ -84,7 +84,15 @@
             }
         });
 
+var altura = $('.navbar-center .nav-menu').offset().top;
 
+$(window).on('scroll', function(){
+    if ( $(window).scrollTop() > altura ){
+        $('.navbar-center .nav-menu').addClass('navbar-fixed');
+    } else {
+        $('.navbar-center .nav-menu').removeClass('navbar-fixed');
+    }
+});
 </script>
 </body>
 </html>

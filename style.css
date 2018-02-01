@@ -456,6 +456,10 @@ ul {
   .navbar-fixed .branding-logo {
     width: 130px; }
 
+.navbar-center .nav-item {
+  width: 100%;
+  text-align: center; }
+
 .topbar {
   height: 25px; }
 
