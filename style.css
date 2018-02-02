@@ -1649,6 +1649,10 @@ ul {
   flex-flow: row-reverse;
   -webkit-flex-flow: row-reverse; }
 
+.topbar .topbar-item {
+  display: inline-block;
+  /* height: 22px; */
+  vertical-align: middle; }
 .topbar .icon {
   font-size: 22px; }
 

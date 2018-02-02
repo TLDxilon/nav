@@ -439,6 +439,10 @@ ul{
 
 .topbar{
   @extend .bg-dark;
+  .topbar-item{
+    display: inline-block;
+    vertical-align: middle;
+  }
   .icon{
     font-size: 22px;
   }
