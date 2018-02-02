@@ -1674,10 +1674,10 @@ ul {
   -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s; }
-  .page-is-moving .btn-close {
-    display: block; }
-  .page-is-moving .btn-ham {
+  .page-is-moving .nav-button-item {
     display: none; }
+  .page-is-moving .nav-button-item.btn-close {
+    display: block; }
 
 .page-is-static .btn-close {
   display: none; }

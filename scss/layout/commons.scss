@@ -471,11 +471,12 @@ ul{
   -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s;
-  .btn-close{
-     display: block;
-  }
-  .btn-ham{
+
+  .nav-button-item{
     display: none;
+  }
+  .nav-button-item.btn-close{
+    display: block;
   }
 }
 
