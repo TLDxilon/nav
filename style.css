@@ -1649,9 +1649,6 @@ ul {
   flex-flow: row-reverse;
   -webkit-flex-flow: row-reverse; }
 
-.topbar {
-  height: 30px; }
-
 .menu-movil {
   display: none;
   position: fixed;
