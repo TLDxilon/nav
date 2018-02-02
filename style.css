@@ -1677,7 +1677,7 @@ ul {
   .page-is-moving .btn-ham {
     display: none; }
   .page-is-moving .btn-close {
-    display: block; }
+    display: inline-block; }
 
 .page-is-static .btn-close {
   display: none; }
