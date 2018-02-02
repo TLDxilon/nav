@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: 'icomoon';
-    src:  url('fonts/icomoon.eot?dth6t1');
-    src:  url('fonts/icomoon.eot?dth6t1#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?dth6t1') format('truetype'),
-    url('fonts/icomoon.woff?dth6t1') format('woff'),
-    url('fonts/icomoon.svg?dth6t1#icomoon') format('svg');
+    src:  url('#{$icomoon-font-path}/icomoon.eot?qkdiob');
+    src:  url('#{$icomoon-font-path}/icomoon.eot?qkdiob#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/icomoon.ttf?qkdiob') format('truetype'),
+    url('#{$icomoon-font-path}/icomoon.woff?qkdiob') format('woff'),
+    url('#{$icomoon-font-path}/icomoon.svg?qkdiob#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -26,6 +26,21 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-chevron-down {
+    &:before {
+        content: $icon-chevron-down;
+    }
+}
+.icon-chevron-small-down {
+    &:before {
+        content: $icon-chevron-small-down;
+    }
+}
+.icon-magnifying-glass {
+    &:before {
+        content: $icon-magnifying-glass;
+    }
+}
 .icon-menu {
     &:before {
         content: $icon-menu;
@@ -36,4 +51,48 @@
         content: $icon-shopping-cart;
     }
 }
-
+.icon-skype-with-circle {
+    &:before {
+        content: $icon-skype-with-circle;
+    }
+}
+.icon-facebook-with-circle {
+    &:before {
+        content: $icon-facebook-with-circle;
+    }
+}
+.icon-flickr-with-circle {
+    &:before {
+        content: $icon-flickr-with-circle;
+    }
+}
+.icon-google-with-circle {
+    &:before {
+        content: $icon-google-with-circle;
+    }
+}
+.icon-instagram-with-circle {
+    &:before {
+        content: $icon-instagram-with-circle;
+    }
+}
+.icon-linkedin-with-circle {
+    &:before {
+        content: $icon-linkedin-with-circle;
+    }
+}
+.icon-pinterest-with-circle {
+    &:before {
+        content: $icon-pinterest-with-circle;
+    }
+}
+.icon-twitter-with-circle {
+    &:before {
+        content: $icon-twitter-with-circle;
+    }
+}
+.icon-youtube-with-circle {
+    &:before {
+        content: $icon-youtube-with-circle;
+    }
+}

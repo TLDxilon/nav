@@ -2,8 +2,8 @@
 /* Aquí están los estilos bootstrap originales y los míos sustituidos */
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?dth6t1");
-  src: url("fonts/icomoon.eot?dth6t1#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?dth6t1") format("truetype"), url("fonts/icomoon.woff?dth6t1") format("woff"), url("fonts/icomoon.svg?dth6t1#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?qkdiob");
+  src: url("fonts/icomoon.eot?qkdiob#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?qkdiob") format("truetype"), url("fonts/icomoon.woff?qkdiob") format("woff"), url("fonts/icomoon.svg?qkdiob#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
@@ -19,11 +19,47 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-chevron-down:before {
+  content: ""; }
+
+.icon-chevron-small-down:before {
+  content: ""; }
+
+.icon-magnifying-glass:before {
+  content: ""; }
+
 .icon-menu:before {
   content: ""; }
 
 .icon-shopping-cart:before {
   content: ""; }
+
+.icon-skype-with-circle:before {
+  content: ""; }
+
+.icon-facebook-with-circle:before {
+  content: ""; }
+
+.icon-flickr-with-circle:before {
+  content: ""; }
+
+.icon-google-with-circle:before {
+  content: ""; }
+
+.icon-instagram-with-circle:before {
+  content: ""; }
+
+.icon-linkedin-with-circle:before {
+  content: ""; }
+
+.icon-pinterest-with-circle:before {
+  content: ""; }
+
+.icon-twitter-with-circle:before {
+  content: ""; }
+
+.icon-youtube-with-circle:before {
+  content: ""; }
 
 /* Éstos son mis estilos */
 /*Breakpoints*/
@@ -321,10 +357,10 @@ ul {
     width: 20%; }
     @media only screen and (max-width: 479px) {
       .nav-logo {
-        width: 50%; } }
+        width: 40%; } }
     @media only screen and (min-width: 480px) and (max-width: 768px) {
       .nav-logo {
-        width: 50%; } }
+        width: 40%; } }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
       .nav-logo {
         width: 50%; } }
@@ -332,10 +368,10 @@ ul {
     width: 20%; }
     @media only screen and (max-width: 479px) {
       .nav-button {
-        width: 50%; } }
+        width: 60%; } }
     @media only screen and (min-width: 480px) and (max-width: 768px) {
       .nav-button {
-        width: 50%; } }
+        width: 60%; } }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
       .nav-button {
         width: 50%; } }
@@ -419,6 +455,10 @@ ul {
   -o-transition: padding 0.3s ease 0s, background 0.3s ease 0s; }
   .navbar-fixed .branding-logo {
     width: 130px; }
+
+.navbar-center .nav-item {
+  width: 100%;
+  text-align: center; }
 
 .topbar {
   height: 25px; }
