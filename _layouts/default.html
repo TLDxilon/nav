@@ -78,13 +78,14 @@
                 $('.header, .content, .footer').addClass('page-is-moving');
                 $('.header, .content, .footer').removeClass('page-is-static');
                 $('.menu-movil').addClass('display-block');
+                $('body').addClass('overflow-hidden');
 
             });
-            $('.page-is-moving .btn-ham').click(function(){
+            $('.page-is-moving .btn-close').click(function(){
                 $('.header, .content, .footer').removeClass('page-is-moving');
                 $('.header, .content, .footer').addClass('page-is-static');
                 $('.menu-movil').removeClass('display-block');
-
+                $('body').removeClass('overflow-hidden');
             });
         })
 
