@@ -428,7 +428,21 @@ ul{
 
 }
 
+.navbar-logoright{
+  .nav-logo{
+    text-align: right;
+    order: 3;
+  }
+  .nav-menu{
+    order:2;
+  }
+  .nav-button{
+    order: 1;
+    text-align: left;
+  }
 
+
+}
 
 .topbar{
   height: 25px;

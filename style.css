@@ -529,6 +529,15 @@ ul {
       width: 50%;
       order: 2; } }
 
+.navbar-logoright .nav-logo {
+  text-align: right;
+  order: 3; }
+.navbar-logoright .nav-menu {
+  order: 2; }
+.navbar-logoright .nav-button {
+  order: 1;
+  text-align: left; }
+
 .topbar {
   height: 25px; }
 
