@@ -6,7 +6,7 @@
 
 {% include menu-mov.html %}
 
-<header class="header relative">
+<header class="header relative page-is-static">
 
         {% if site.top-bar == 'true' %}
         {% include top-bar.html %}
@@ -32,7 +32,7 @@
 
 </header>
 
-<section class="content">
+<section class="content page-is-static">
 
 
    <div class="max-width">
@@ -51,7 +51,7 @@
 
 </section>
 
-<div class="footer">
+<div class="footer page-is-static">
     <div class="container">
             {% include footer.html %}
     </div>
@@ -74,14 +74,16 @@
         });
 
         $(document).ready(function(){
-            $('.btn-ham').click(function(){
+            $('.page-is-static .btn-ham').click(function(){
                 $('.menu-movil').css("display", "block");
                 $('.header, .content, .footer').addClass('page-is-moving');
+                $('.header, .content, .footer').removeClass('page-is-static');
 
             });
             $('.page-is-moving .btn-ham').click(function(){
                 $('.menu-movil').css("display", "none");
                 $('.header, .content, .footer').removeClass('page-is-moving');
+                $('.header, .content, .footer').addClass('page-is-static');
 
             });
         })
