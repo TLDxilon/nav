@@ -367,7 +367,6 @@ ul{
     text-align: center;
     order:3;
   }
-
   .nav-button{
     width:100%;
     order: 1;
@@ -383,6 +382,47 @@ ul{
     @media #{$laptop}{
       width:50%;
       order: 2;
+    }
+  }
+  &.navbar-fixed{
+    .nav-logo{
+      width:20%;
+      text-align: left;
+      order: 1;
+      @media #{$smartphones}{
+        width:40%;
+        order: 1;
+      }
+      @media #{$tablets}{
+        width:40%;
+        order: 1;
+      }
+      @media #{$laptop}{
+        width:50%;
+        order: 1;
+      }
+    }
+    .nav-menu{
+      width:100%;
+      text-align: center;
+      order:3;
+    }
+    .nav-button{
+      width:100%;
+      order: 1;
+      text-align: right;
+      @media #{$smartphones}{
+        width:60%;
+        order: 2;
+      }
+      @media #{$tablets}{
+        width:60%;
+        order: 2;
+      }
+      @media #{$laptop}{
+        width:50%;
+        order: 2;
+      }
     }
   }
 
