@@ -439,6 +439,9 @@ ul{
 
 .topbar{
   @extend .bg-dark;
+  .icon{
+    font-size: 22px;
+  }
 }
 
 
