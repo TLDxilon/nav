@@ -9,7 +9,7 @@
         {% if site.top-bar == 'true' %}
         {% include top-bar.html %}
         {% endif %}
-        <nav class="navbar padding-tb-s border-bottom">
+        <nav class="navbar navbar-logoleft padding-tb-s border-bottom">
 
             <div class="max-width">
                 <div class="nav">
@@ -74,23 +74,23 @@
     });
 */
 
-        var altura = $('.navbar').offset().top;
+        var altura = $('.navbar-logoleft').offset().top;
 
         $(window).on('scroll', function(){
             if ( $(window).scrollTop() > altura ){
-                $('.navbar').addClass('navbar-fixed');
+                $('.navbar-logoleft').addClass('navbar-fixed');
             } else {
-                $('.navbar').removeClass('navbar-fixed');
+                $('.navbar-logoleft').removeClass('navbar-fixed');
             }
         });
 
-var altura = $('.navbar-center .nav-menu').offset().top;
+var altura = $('.navbar-logocenter .nav-menu').offset().top;
 
 $(window).on('scroll', function(){
     if ( $(window).scrollTop() > altura ){
-        $('.navbar-center .nav-menu').addClass('navbar-fixed');
+        $('.navbar-logocenter .nav-menu').addClass('navbar-fixed');
     } else {
-        $('.navbar-center .nav-menu').removeClass('navbar-fixed');
+        $('.navbar-logocenter .nav-menu').removeClass('navbar-fixed');
     }
 });
 </script>
