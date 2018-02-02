@@ -471,9 +471,22 @@ ul{
   -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s;
+  .btn-close{
+     display: block;
+  }
+  .btn-ham{
+    display: none;
+  }
 }
 
-
+.page-is-static{
+  .btn-close{
+    display: none;
+  }
+  .btn-ham{
+    display: block;
+  }
+}
 
 .display-block{
   display: block;
@@ -481,3 +494,4 @@ ul{
 .display-none{
   display: none;
 }
+
