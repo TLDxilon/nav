@@ -443,7 +443,6 @@ ul{
 }
 
 
-
 .menu-movil{
   display: none;
   position: fixed;
@@ -472,4 +471,13 @@ ul{
   -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s;
+}
+
+
+
+.display-block{
+  display: block;
+}
+.display-none{
+  display: none;
 }
