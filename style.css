@@ -1679,8 +1679,17 @@ ul {
   .page-is-moving .btn-close {
     display: inline-block; }
 
-.page-is-static .btn-close {
-  display: none; }
+.page-is-static {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s; }
+  .page-is-static .btn-close {
+    display: none; }
 
 .display-block {
   display: block; }
