@@ -1674,9 +1674,9 @@ ul {
   -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s; }
-  .page-is-moving .nav-button-item {
+  .page-is-moving .btn-ham {
     display: none; }
-  .page-is-moving .nav-button-item.btn-close {
+  .page-is-moving .btn-close {
     display: block; }
 
 .page-is-static .btn-close {

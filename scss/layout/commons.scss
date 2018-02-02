@@ -472,10 +472,10 @@ ul{
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s;
 
-  .nav-button-item{
+  .btn-ham{
     display: none;
   }
-  .nav-button-item.btn-close{
+  .btn-close{
     display: block;
   }
 }
