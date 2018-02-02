@@ -344,7 +344,7 @@ ul{
   }
 }
 
-.navbar-logocenter{
+.navbar-logo-center{
   .nav-logo{
     width:100%;
     text-align: center;
@@ -428,17 +428,10 @@ ul{
 
 }
 
-.navbar-logoright{
-  .nav-logo{
-    text-align: right;
-    order: 3;
-  }
-  .nav-menu{
-    order:2;
-  }
-  .nav-button{
-    order: 1;
-    text-align: left;
+.navbar-logo-right{
+  .nav{
+     flex-flow: row-reverse;
+    -webkit-flex-flow: row-reverse;
   }
 
 

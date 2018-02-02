@@ -456,87 +456,82 @@ ul {
   .navbar-fixed .branding-logo {
     width: 130px; }
 
-.navbar-logocenter .nav-logo {
+.navbar-logo-center .nav-logo {
   width: 100%;
   text-align: center;
   order: 2; }
   @media only screen and (max-width: 479px) {
-    .navbar-logocenter .nav-logo {
+    .navbar-logo-center .nav-logo {
       width: 40%;
       order: 1; } }
   @media only screen and (min-width: 480px) and (max-width: 768px) {
-    .navbar-logocenter .nav-logo {
+    .navbar-logo-center .nav-logo {
       width: 40%;
       order: 1; } }
   @media only screen and (min-width: 768px) and (max-width: 960px) {
-    .navbar-logocenter .nav-logo {
+    .navbar-logo-center .nav-logo {
       width: 50%;
       order: 1; } }
-.navbar-logocenter .nav-menu {
+.navbar-logo-center .nav-menu {
   width: 100%;
   text-align: center;
   order: 3; }
-.navbar-logocenter .nav-button {
+.navbar-logo-center .nav-button {
   width: 100%;
   order: 1;
   text-align: right; }
   @media only screen and (max-width: 479px) {
-    .navbar-logocenter .nav-button {
+    .navbar-logo-center .nav-button {
       width: 60%;
       order: 2; } }
   @media only screen and (min-width: 480px) and (max-width: 768px) {
-    .navbar-logocenter .nav-button {
+    .navbar-logo-center .nav-button {
       width: 60%;
       order: 2; } }
   @media only screen and (min-width: 768px) and (max-width: 960px) {
-    .navbar-logocenter .nav-button {
+    .navbar-logo-center .nav-button {
       width: 50%;
       order: 2; } }
-.navbar-logocenter.navbar-fixed .nav-logo {
+.navbar-logo-center.navbar-fixed .nav-logo {
   width: 20%;
   text-align: left;
   order: 1; }
   @media only screen and (max-width: 479px) {
-    .navbar-logocenter.navbar-fixed .nav-logo {
+    .navbar-logo-center.navbar-fixed .nav-logo {
       width: 40%;
       order: 1; } }
   @media only screen and (min-width: 480px) and (max-width: 768px) {
-    .navbar-logocenter.navbar-fixed .nav-logo {
+    .navbar-logo-center.navbar-fixed .nav-logo {
       width: 40%;
       order: 1; } }
   @media only screen and (min-width: 768px) and (max-width: 960px) {
-    .navbar-logocenter.navbar-fixed .nav-logo {
+    .navbar-logo-center.navbar-fixed .nav-logo {
       width: 50%;
       order: 1; } }
-.navbar-logocenter.navbar-fixed .nav-menu {
+.navbar-logo-center.navbar-fixed .nav-menu {
   width: 60%;
   text-align: center;
   order: 2; }
-.navbar-logocenter.navbar-fixed .nav-button {
+.navbar-logo-center.navbar-fixed .nav-button {
   width: 20%;
   order: 3;
   text-align: right; }
   @media only screen and (max-width: 479px) {
-    .navbar-logocenter.navbar-fixed .nav-button {
+    .navbar-logo-center.navbar-fixed .nav-button {
       width: 60%;
       order: 2; } }
   @media only screen and (min-width: 480px) and (max-width: 768px) {
-    .navbar-logocenter.navbar-fixed .nav-button {
+    .navbar-logo-center.navbar-fixed .nav-button {
       width: 60%;
       order: 2; } }
   @media only screen and (min-width: 768px) and (max-width: 960px) {
-    .navbar-logocenter.navbar-fixed .nav-button {
+    .navbar-logo-center.navbar-fixed .nav-button {
       width: 50%;
       order: 2; } }
 
-.navbar-logoright .nav-logo {
-  text-align: right;
-  order: 3; }
-.navbar-logoright .nav-menu {
-  order: 2; }
-.navbar-logoright .nav-button {
-  order: 1;
-  text-align: left; }
+.navbar-logo-right .nav {
+  flex-flow: row-reverse;
+  -webkit-flex-flow: row-reverse; }
 
 .topbar {
   height: 25px; }
