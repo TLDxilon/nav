@@ -5,10 +5,11 @@ logo: logo-i.html
 
 nav-icons: 'true'
 
-top-bar: 'false'
-
 #Nav icons
 navbutton:  'http://linkaloquequieras'
 iconshop:  'http://linkalacesta'
 iconsearch:  'inputsearch'
 
+
+
+top-bar: 'true'
