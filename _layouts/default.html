@@ -79,7 +79,11 @@
                 $('.header, .content, .footer').addClass('page-is-moving');
 
             });
+            $('.page-is-moving .btn-ham').click(function(){
+                $('.menu-movil').css("display", "none");
+                $('.header, .content, .footer').removeClass('page-is-moving');
 
+            });
         })
 </script>
 </body>
