@@ -445,5 +445,20 @@ ul{
 
 
 .menu-movil{
-   display: none;
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 260px;
+  right: 0;
+  height:100%;
+  @extend .bg-main;
+  .nav-menu-item{
+    display: list-item;
+    list-style-type: none;
+    @extend .border-bottom;
+    &:hover{
+      background: darken($tone-main, 10%);
+    }
+  }
+
 }
