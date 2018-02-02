@@ -1665,19 +1665,10 @@ ul {
     .menu-movil .nav-menu-item:hover {
       background: #ac65a6; }
 
-.page-is-moving {
-  -webkit-transform: translateX(-260px);
-  -moz-transform: translateX(-260px);
-  -ms-transform: translateX(-260px);
-  -o-transform: translateX(-260px);
-  transform: translateX(-260px);
-  -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
-  transition: transform 0.3s; }
-  .page-is-moving .btn-ham {
-    display: none; }
-  .page-is-moving .btn-close {
-    display: inline-block; }
+.page-is-moving .btn-ham {
+  display: none; }
+.page-is-moving .btn-close {
+  display: inline-block; }
 
 .page-is-static {
   -webkit-transform: translateX(0);
