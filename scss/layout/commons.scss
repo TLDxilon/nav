@@ -469,4 +469,7 @@ ul{
   -ms-transform: translateX(-260px);
   -o-transform: translateX(-260px);
   transform: translateX(-260px);
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
 }
