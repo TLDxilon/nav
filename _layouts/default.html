@@ -75,13 +75,13 @@
 
         $(document).ready(function(){
             $('.page-is-static .btn-ham').click(function(){
-                $('.header, .content, .footer').addClass('page-is-moving display-block');
+                $('.header, .content, .footer').addClass('page-is-moving');
                 $('.header, .content, .footer').removeClass('page-is-static');
 
             });
             $('.page-is-moving .btn-ham').click(function(){
                 $('.menu-movil').css("display", "none");
-                $('.header, .content, .footer').removeClass('page-is-moving display-none');
+                $('.header, .content, .footer').removeClass('page-is-moving');
                 $('.header, .content, .footer').addClass('page-is-static display-block');
 
             });
