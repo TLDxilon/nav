@@ -456,9 +456,42 @@ ul {
   .navbar-fixed .branding-logo {
     width: 130px; }
 
-.navbar-logocenter .nav-item {
+.navbar-logocenter .nav-logo {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  order: 2; }
+  @media only screen and (max-width: 479px) {
+    .navbar-logocenter .nav-logo {
+      width: 40%;
+      order: 1; } }
+  @media only screen and (min-width: 480px) and (max-width: 768px) {
+    .navbar-logocenter .nav-logo {
+      width: 40%;
+      order: 1; } }
+  @media only screen and (min-width: 768px) and (max-width: 960px) {
+    .navbar-logocenter .nav-logo {
+      width: 50%;
+      order: 1; } }
+.navbar-logocenter .nav-menu {
+  width: 100%;
+  text-align: center;
+  order: 3; }
+.navbar-logocenter .nav-button {
+  width: 100%;
+  order: 1;
+  text-align: right; }
+  @media only screen and (max-width: 479px) {
+    .navbar-logocenter .nav-button {
+      width: 60%;
+      order: 2; } }
+  @media only screen and (min-width: 480px) and (max-width: 768px) {
+    .navbar-logocenter .nav-button {
+      width: 60%;
+      order: 2; } }
+  @media only screen and (min-width: 768px) and (max-width: 960px) {
+    .navbar-logocenter .nav-button {
+      width: 50%;
+      order: 2; } }
 
 .topbar {
   height: 25px; }
