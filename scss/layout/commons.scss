@@ -403,13 +403,13 @@ ul{
       }
     }
     .nav-menu{
-      width:100%;
+      width:60%;
       text-align: center;
-      order:3;
+      order:2;
     }
     .nav-button{
-      width:100%;
-      order: 1;
+      width:20%;
+      order: 3;
       text-align: right;
       @media #{$smartphones}{
         width:60%;

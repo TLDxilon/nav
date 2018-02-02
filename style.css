@@ -509,12 +509,12 @@ ul {
       width: 50%;
       order: 1; } }
 .navbar-logocenter.navbar-fixed .nav-menu {
-  width: 100%;
+  width: 60%;
   text-align: center;
-  order: 3; }
+  order: 2; }
 .navbar-logocenter.navbar-fixed .nav-button {
-  width: 100%;
-  order: 1;
+  width: 20%;
+  order: 3;
   text-align: right; }
   @media only screen and (max-width: 479px) {
     .navbar-logocenter.navbar-fixed .nav-button {
