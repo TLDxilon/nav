@@ -549,4 +549,11 @@ ul {
     .menu-movil .nav-menu-item:hover {
       background: #ac65a6; }
 
+.page-is-moving {
+  -webkit-transform: translateX(-260px);
+  -moz-transform: translateX(-260px);
+  -ms-transform: translateX(-260px);
+  -o-transform: translateX(-260px);
+  transform: translateX(-260px); }
+
 /*# sourceMappingURL=style.css.map */

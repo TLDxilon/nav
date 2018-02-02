@@ -462,3 +462,11 @@ ul{
   }
 
 }
+
+.page-is-moving{
+  -webkit-transform: translateX(-260px);
+  -moz-transform: translateX(-260px);
+  -ms-transform: translateX(-260px);
+  -o-transform: translateX(-260px);
+  transform: translateX(-260px);
+}
