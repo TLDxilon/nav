@@ -25,11 +25,9 @@
 
         </nav>
 
-
-
-
     {% include hero.html %}
 
+    {% include menu-mov.html %}
 </header>
 
 <section class="content">
@@ -73,6 +71,11 @@
             }
         });
 
+        $(document).ready(function(){
+            $('.btn-ham').click(function(){
+                $('.menu-movil').css("display", "block");
+            });
+        })
 
 </script>
 </body>
