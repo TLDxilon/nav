@@ -91,7 +91,6 @@ ul{
    display: table;
    table-layout: fixed;
    width:100%;
-  @extend .pre-background;
    &-item{
      float: none;
      display: table-cell;
@@ -317,7 +316,6 @@ ul{
 
 
 .hero{
-  @extend .pre-background;
   .background {
     z-index: -5;
   }
