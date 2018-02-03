@@ -6,7 +6,7 @@
 
 {% include menu-mov.html %}
 
-<header class="header relative">
+<header class="header relative page-is-static">
 
         {% if site.top-bar == 'true' %}
         {% include top-bar.html %}
@@ -32,7 +32,7 @@
 
 </header>
 
-<section class="content">
+<section class="content page-is-static">
 
 
    <div class="max-width">
@@ -73,12 +73,14 @@
         $(document).ready(function(){
             $('.page-is-static .btn-ham').click(function(){
                 $('.header, .content, .footer').addClass('page-is-moving');
+                $('.header, .content, .footer').removeClass('page-is-static');
                 $('.menu-movil').addClass('display-block');
                 $('body').addClass('overflow-hidden');
 
             });
             $('.page-is-moving .btn-close').click(function(){
                 $('.header, .content, .footer').removeClass('page-is-moving');
+                $('.header, .content, .footer').addClass('page-is-static');
                 $('.menu-movil').removeClass('display-block');
                 $('body').removeClass('overflow-hidden');
             });
