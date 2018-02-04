@@ -91,12 +91,12 @@ ul{
    display: table;
    table-layout: fixed;
    width:100%;
-   &-item{
+   .nav-item{
      float: none;
      display: table-cell;
      vertical-align: middle;
   }
-  &-menu{
+  .nav-menu{
     list-style: none;
     width:70%;
     @media #{$smartphones}{
@@ -113,7 +113,7 @@ ul{
 
     }
   }
-  &-logo{
+  .nav-logo{
     width:15%;
     @media #{$smartphones}{
       width:50%;

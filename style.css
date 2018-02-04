@@ -1389,28 +1389,28 @@ ul {
   display: table;
   table-layout: fixed;
   width: 100%; }
-  .nav-table-item {
+  .nav-table .nav-item {
     float: none;
     display: table-cell;
     vertical-align: middle; }
-  .nav-table-menu {
+  .nav-table .nav-menu {
     list-style: none;
     width: 70%; }
     @media only screen and (max-width: 479px) {
-      .nav-table-menu {
+      .nav-table .nav-menu {
         display: none; } }
     @media only screen and (min-width: 480px) and (max-width: 768px) {
-      .nav-table-menu {
+      .nav-table .nav-menu {
         display: none; } }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
-      .nav-table-menu {
+      .nav-table .nav-menu {
         display: none; } }
-    .nav-table-menu-item {
+    .nav-table .nav-menu-item {
       display: inline-block; }
-  .nav-table-logo {
+  .nav-table .nav-logo {
     width: 15%; }
     @media only screen and (max-width: 479px) {
-      .nav-table-logo {
+      .nav-table .nav-logo {
         width: 50%; } }
   .nav-table-button {
     width: 15%; }
