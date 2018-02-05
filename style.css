@@ -1328,7 +1328,8 @@ h1 {
   font-size: 25px; }
 
 .branding-logo {
-  max-width: 100%; }
+  max-width: 100%;
+  vertical-align: middle; }
 
 a {
   text-decoration: none; }
@@ -1548,6 +1549,7 @@ ul {
   width: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
+  vertical-align: middle;
   transition: padding 0.3s ease 0s, background 0.3s ease 0s;
   -moz-transition: padding 0.3s ease 0s, background 0.3s ease 0s;
   -webkit-transition: padding 0.3s ease 0s, background 0.3s ease 0s;

@@ -19,6 +19,7 @@ h1{
 
 .branding-logo{
   max-width: 100%;
+  vertical-align: middle;
 }
 
 a{
@@ -332,6 +333,7 @@ ul{
   width:100%;
   padding-top: 5px;
   padding-bottom:5px;
+  vertical-align: middle;
   @extend .bg-white;
   transition: padding 0.3s ease 0s, background 0.3s ease 0s;
   -moz-transition: padding 0.3s ease 0s, background 0.3s ease 0s;
