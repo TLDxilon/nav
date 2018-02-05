@@ -12,7 +12,7 @@ iconsearch:  'inputsearch'
 
 
 
-top-bar: 'true'
+top-bar: 'false'
 hero: 'true'
 
 
