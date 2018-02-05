@@ -330,6 +330,8 @@ ul{
   position: fixed;
   top:0;
   width:100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
   @extend .bg-white;
   transition: padding 0.3s ease 0s, background 0.3s ease 0s;
   -moz-transition: padding 0.3s ease 0s, background 0.3s ease 0s;
