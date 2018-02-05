@@ -13,6 +13,9 @@ iconsearch:  'inputsearch'
 
 
 top-bar: 'false'
+hero: 'true'
+
+
 
 icontwitter: '#'
 iconyoutube: '#'
