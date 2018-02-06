@@ -72,7 +72,7 @@
 
 
 <script>
-/*
+
 
         var altura = $('.navbar').offset().top;
 
@@ -91,52 +91,10 @@
             } else {
                 $('.navbar-logo--left').removeClass('is-hide');
             }
-        });
-        */
-jQuery(document).ready(function($){
-    var mainHeader = $('.navbar-logo--left'),
-
-        headerHeight = mainHeader.height();
-
-    //set scrolling variables
-    var scrolling = false,
-        previousTop = 0,
-        currentTop = 1;
-        scrollDelta = 10,
-        scrollOffset = 150;
 
 
-        $(window).on('scroll', function(){
-            if( !scrolling ) {
-                scrolling = true;
-                (!window.requestAnimationFrame)
-                    ? setTimeout(autoHideHeader, 250)
-                    : requestAnimationFrame(autoHideHeader);
-            }
         });
 
-
-
-        function autoHideHeader() {
-            var currentTop = $(window).scrollTop();
-
-
-            previousTop = currentTop;
-            scrolling = false;
-        }
-
-        function checkNavigation(currentTop) {
-            //there's no secondary nav or secondary nav is below primary nav
-            if (previousTop - currentTop > scrollDelta) {
-                //if scrolling up...
-                mainHeader.removeClass('is-hide');
-            } else if( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
-                //if scrolling down...
-                mainHeader.addClass('is-hide');
-            }
-        }
-
-});
         $(document).ready(function(){
             $('.page-is-static .btn-ham').click(function(){
                 $('.header, .content, .footer').addClass('page-is-moving');
