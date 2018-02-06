@@ -1213,7 +1213,7 @@
 .font-weight-bold, .navbar-inner-table .nav-link {
   font-weight: bold; }
 
-.text-transform-uppercase {
+.text-transform-uppercase, .btn {
   text-transform: uppercase; }
 
 /*CLASES PADDINGS*/
@@ -1290,6 +1290,7 @@
   -moz-transition: width .25s linear;
   -webkit-transition: width .25s linear; }
 
+/* @include transition(all,2s,ease-out); */
 body {
   font-family: "Poppins", sans-serif;
   color: #222222;
@@ -1333,35 +1334,30 @@ ul {
     .max-width {
       max-width: 479px; } }
 
-.btn-simple {
+.btn {
+  -webkit-transition: color 0.15s ease-in-out;
+  -moz-transition: color 0.15s ease-in-out;
+  -ms-transition: color 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -ms-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+  letter-spacing: 2px;
   display: inline-block;
   font-weight: 400;
   text-align: center;
-  vertical-align: middle;
-  padding: 10px 20px;
-  font-size: 12px;
-  text-tranform: uppercase;
-  letter-spacing: 2px;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-  -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out; }
-  .btn-simple:hover {
+  vertical-align: middle; }
+  .btn:hover {
     background: #ac65a6; }
-
-.btn-big {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  padding: 15px 30px;
-  font-size: 15px;
-  text-tranform: uppercase;
-  letter-spacing: 2px;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-  -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out; }
-  .btn-big:hover {
-    background: #ac65a6; }
+  .btn-simple {
+    padding: 10px 20px;
+    font-size: 12px; }
+  .btn-big {
+    padding: 15px 30px;
+    font-size: 15px; }
 
 /* Menú con display:table */
 .navbar-inner-table {
@@ -1487,17 +1483,32 @@ ul {
     height: 2px;
     content: "";
     opacity: 0;
-    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-    -moz-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-    -webkit-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-    transform: translateY(20px); }
+    -webkit-transition: opacity 0.3s ease 0s;
+    -moz-transition: opacity 0.3s ease 0s;
+    -ms-transition: opacity 0.3s ease 0s;
+    -o-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+    -webkit-transition: transform 0.3s ease 0s;
+    -moz-transition: transform 0.3s ease 0s;
+    -ms-transition: transform 0.3s ease 0s;
+    -o-transition: transform 0.3s ease 0s;
+    transition: transform 0.3s ease 0s;
+    -webkit-transform: translate(0, 20px);
+    -moz-transform: translate(0, 20px);
+    -ms-transform: translate(0, 20px);
+    transform: translate(0, 20px); }
   .navbar-menu--line .nav-link:hover:after, .navbar-menu--line .navbar-menu--simple .active .nav-link:after, .navbar-menu--simple .active .navbar-menu--line .nav-link:after {
     opacity: 1;
-    transform: translateY(15px); }
+    -webkit-transform: translate(0, 15px);
+    -moz-transform: translate(0, 15px);
+    -ms-transform: translate(0, 15px);
+    transform: translate(0, 15px); }
 .navbar-menu--back .nav-menu-item:hover, .navbar-menu--back .nav-menu-item.active {
-  transition: background 0.3s ease 0s;
+  -webkit-transition: background 0.3s ease 0s;
   -moz-transition: background 0.3s ease 0s;
-  -webkit-transition: background 0.3s ease 0s; }
+  -ms-transition: background 0.3s ease 0s;
+  -o-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s; }
 
 .background {
   z-index: -1;
@@ -1534,10 +1545,16 @@ ul {
   padding-top: 10px;
   padding-bottom: 10px;
   vertical-align: middle;
-  transition: padding 0.3s ease 0s, background 0.3s ease 0s;
-  -moz-transition: padding 0.3s ease 0s, background 0.3s ease 0s;
-  -webkit-transition: padding 0.3s ease 0s, background 0.3s ease 0s;
-  -o-transition: padding 0.3s ease 0s, background 0.3s ease 0s; }
+  -webkit-transition: padding 0.3s ease 0s;
+  -moz-transition: padding 0.3s ease 0s;
+  -ms-transition: padding 0.3s ease 0s;
+  -o-transition: padding 0.3s ease 0s;
+  transition: padding 0.3s ease 0s;
+  -webkit-transition: background 0.3s ease 0s;
+  -moz-transition: background 0.3s ease 0s;
+  -ms-transition: background 0.3s ease 0s;
+  -o-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s; }
   .navbar-fixed .branding-logo {
     width: 180px; }
 
@@ -1637,14 +1654,15 @@ ul {
       background: #ac65a6; }
 
 .page-is-moving {
-  -webkit-transform: translateX(-260px);
-  -moz-transform: translateX(-260px);
-  -ms-transform: translateX(-260px);
-  -o-transform: translateX(-260px);
-  transform: translateX(-260px);
-  -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
-  transition: transform 0.3s; }
+  -webkit-transform: translate(-260px, 0);
+  -moz-transform: translate(-260px, 0);
+  -ms-transform: translate(-260px, 0);
+  transform: translate(-260px, 0);
+  -webkit-transition: transform 0.3s ease 0s;
+  -moz-transition: transform 0.3s ease 0s;
+  -ms-transition: transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s; }
   .page-is-moving .btn-ham {
     display: none; }
   .page-is-moving .btn-close {

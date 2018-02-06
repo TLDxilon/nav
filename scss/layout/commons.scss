@@ -53,40 +53,31 @@ ul{
 
 }
 
-.btn-simple{
+
+.btn{
+  @include transition(color,0.15s,ease-in-out);
+  @include transition(background-color,0.15s,ease-in-out);
+  @extend .text-transform-uppercase;
+  letter-spacing: 2px;
   display: inline-block;
   font-weight: 400;
   text-align: center;
   vertical-align: middle;
-  padding: 10px 20px;
-  font-size: 12px;
-  text-tranform: uppercase;
-  letter-spacing: 2px;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-  -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-
   &:hover{
     background: darken($tone-main, 10%);
   }
-}
-.btn-big{
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  padding: 15px 30px;
-  font-size: 15px;
-  text-tranform: uppercase;
-  letter-spacing: 2px;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-  -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  &-simple{
+    padding: 10px 20px;
+    font-size: 12px;
 
-  &:hover{
-    background: darken($tone-main, 10%);
   }
+  &-big{
+    padding: 15px 30px;
+    font-size: 15px;
+  }
+
 }
+
 
 /* Menú con display:table */
 .navbar-inner-table{
@@ -251,14 +242,13 @@ ul{
         @extend .bg-main;
         content: "";
         opacity: 0;
-        transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-        -moz-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-        -webkit-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-        transform: translateY(20px);
+        @include transition(opacity, 0.3s, ease 0s);
+        @include transition(transform, 0.3s, ease 0s);
+        @include transform(translate(0, 20px));
       }
       &:hover:after{
         opacity:1;
-        transform: translateY(15px)
+        @include transform(translate(0, 15px));
       }
     }
     .active{
@@ -271,9 +261,7 @@ ul{
     .nav-menu-item{
       &:hover, &.active{
         @extend .bg-main;
-        transition: background 0.3s ease 0s;
-        -moz-transition: background 0.3s ease 0s;
-        -webkit-transition: background 0.3s ease 0s;
+        @include transition(background,0.3s,ease 0s);
       }
     }
   }
@@ -329,10 +317,9 @@ ul{
   padding-bottom:10px;
   vertical-align: middle;
   @extend .bg-white;
-  transition: padding 0.3s ease 0s, background 0.3s ease 0s;
-  -moz-transition: padding 0.3s ease 0s, background 0.3s ease 0s;
-  -webkit-transition: padding 0.3s ease 0s, background 0.3s ease 0s;
-  -o-transition: padding 0.3s ease 0s, background 0.3s ease 0s;
+  @include transition(padding, 0.3s, ease 0s);
+  @include transition(background, 0.3s, ease 0s);
+
   .nav-link{
     @extend .fg-gray;
   }
@@ -477,14 +464,9 @@ ul{
 }
 
 .page-is-moving{
-  -webkit-transform: translateX(-260px);
-  -moz-transform: translateX(-260px);
-  -ms-transform: translateX(-260px);
-  -o-transform: translateX(-260px);
-  transform: translateX(-260px);
-  -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
-  transition: transform 0.3s;
+  @include transform(translate(-260px, 0));
+  @include transition(transform, 0.3s, ease 0s);
+
 
   .btn-ham{
     display: none;
