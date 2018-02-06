@@ -1281,7 +1281,7 @@
   border-radius: 10px; }
 .border-radius-l {
   border-radius: 20px; }
-.border-radiusxl {
+.border-radius-xl {
   border-radius: 30px; }
 
 .transition-breakpoints, .logo-size-s, .logo-size-m, .logo-size-l, .logo-size-xl {
@@ -1426,7 +1426,7 @@ ul {
     @media only screen and (min-width: 768px) and (max-width: 960px) {
       .navbar-inner .navbar-menu {
         display: none; } }
-    .navbar-inner .navbar-menu-item {
+    .navbar-inner .navbar-menu .nav-menu-item {
       display: inline-block; }
   .navbar-inner .navbar-logo {
     width: 20%; }

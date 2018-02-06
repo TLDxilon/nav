@@ -176,7 +176,7 @@ ul{
     @media #{$laptop}{
       display: none;
     }
-    &-item{
+    .nav-menu-item{
       display: inline-block;
 
     }
