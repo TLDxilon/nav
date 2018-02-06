@@ -204,7 +204,7 @@ ul{
     @media #{$laptop}{
       width:50%;
     }
-    .nav-button-item{
+    &-item{
       vertical-align: middle;
       display: inline-block;
       height: $icon-size;
