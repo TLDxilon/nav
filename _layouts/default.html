@@ -11,7 +11,7 @@
         {% if site.top-bar == 'true' %}
         {% include top-bar.html %}
         {% endif %}
-        <div class="navbar navbar-logo--left padding-tb-s border-bottom">
+        <div class="navbar navbar-logo--left padding-tb-s border-bottom" id="navbar">
 
             <div class="max-width">
                 <div class="navbar-inner">
@@ -34,7 +34,7 @@
 
 </header>
 
-<main class="content page-is-static">
+<main class="content page-is-static" id="main">
 
 
    <div class="max-width">
@@ -100,20 +100,24 @@
             // Posición Scroll
             window.onscroll = function()
             {
-                var contenedor = document.getElementById("marcador-posicion");
+                var contenedor = document.getElementById("navbar");
                 // Es importante introducir las dos condiciones
                 // para que funcione correctamente en cualquier
                 // navegador
                 var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-                contenedor.innerHTML = "Top: " + scroll;
+                main.innerHTML = "Top: " + scroll;
             }
-            // scrollTo
-            var subir = document.getElementById("subir");
-            subir.onclick = function()
-            {
-                window.scrollTo(0,0);
-            }
+
         }
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop() > 450) {
+                $('.navbar-logo--left').addClass('is-hide');
+            } else {
+                $('.navbar-logo--left').removeClass('is-hide');
+            }
+
+
+        });
 
 
         $(document).ready(function(){
