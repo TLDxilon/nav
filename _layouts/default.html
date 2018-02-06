@@ -88,13 +88,11 @@
         $(window).on('scroll', function() {
             if ($(window).scrollTop() > 600) {
                 $('.navbar-logo--left').addClass('is-hide');
-            }
-        });
-        $(window).on('scroll', function() {
-            if ($(window).scrollTop() > -1) {
+            } else {
                 $('.navbar-logo--left').removeClass('is-hide');
             }
         });
+
         $(document).ready(function(){
             $('.page-is-static .btn-ham').click(function(){
                 $('.header, .content, .footer').addClass('page-is-moving');
