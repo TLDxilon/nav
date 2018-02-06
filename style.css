@@ -1439,24 +1439,24 @@ ul {
     @media only screen and (min-width: 768px) and (max-width: 960px) {
       .navbar-inner .navbar-logo {
         width: 50%; } }
-  .navbar-inner .navbar-button {
+  .navbar-inner .navbar-utiles {
     width: 20%; }
     @media only screen and (max-width: 479px) {
-      .navbar-inner .navbar-button {
+      .navbar-inner .navbar-utiles {
         width: 60%; } }
     @media only screen and (min-width: 480px) and (max-width: 768px) {
-      .navbar-inner .navbar-button {
+      .navbar-inner .navbar-utiles {
         width: 60%; } }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
-      .navbar-inner .navbar-button {
+      .navbar-inner .navbar-utiles {
         width: 50%; } }
-    .navbar-inner .navbar-button .nav-button-item {
+    .navbar-inner .navbar-utiles .nav-button-item {
       vertical-align: middle;
       display: inline-block;
       height: 18px;
       margin: 0 5px; }
     @media only screen and (min-width: 960px) {
-      .navbar-inner .navbar-button .btn-ham {
+      .navbar-inner .navbar-utiles .btn-ham {
         display: none; } }
   .navbar-inner .navbar-link {
     text-transform: uppercase;
