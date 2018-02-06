@@ -1207,11 +1207,11 @@
   border-color: rgba(188, 188, 188, 0.5); }
 
 /*CLASES DESCRIPTIVAS TEXTO*/
-.tex-align-center {
+.text-align-center {
   text-align: center; }
-.tex-align-left {
+.text-align-left {
   text-align: left; }
-.tex-align-right {
+.text-align-right {
   text-align: right; }
 
 .font-weight-bold, .navbar-inner-table-link {
