@@ -92,7 +92,13 @@
                 $('.navbar-logo--left').removeClass('is-hide');
             }
         });
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop() > -5) {
+                $('.navbar-logo--left').removeClass('is-hide');
+            } else {
 
+            }
+        });
         $(document).ready(function(){
             $('.page-is-static .btn-ham').click(function(){
                 $('.header, .content, .footer').addClass('page-is-moving');
