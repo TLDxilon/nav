@@ -95,6 +95,27 @@
 
         });
 
+        window.onload = function()
+        {
+            // Posición Scroll
+            window.onscroll = function()
+            {
+                var contenedor = document.getElementById("marcador-posicion");
+                // Es importante introducir las dos condiciones
+                // para que funcione correctamente en cualquier
+                // navegador
+                var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+                contenedor.innerHTML = "Top: " + scroll;
+            }
+            // scrollTo
+            var subir = document.getElementById("subir");
+            subir.onclick = function()
+            {
+                window.scrollTo(0,0);
+            }
+        }
+
+
         $(document).ready(function(){
             $('.page-is-static .btn-ham').click(function(){
                 $('.header, .content, .footer').addClass('page-is-moving');
