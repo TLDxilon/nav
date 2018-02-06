@@ -332,6 +332,8 @@ ul{
      position: fixed;
      top:0;
      width: 100%;
+    @include transform(translate(0, -100%));
+    @include transition(transform, 0.3s, ease 0s);
     &.is-hide{
       @include transform(translate(0, -100%));
       @include transition(transform, 0.3s, ease 0s);
