@@ -1558,7 +1558,8 @@ ul {
 
 .navbar-logo--left {
   position: fixed;
-  top: 0; }
+  top: 0;
+  width: 100%; }
   .navbar-logo--left.is-hide {
     -webkit-transform: translate(0, -100%);
     -moz-transform: translate(0, -100%);
