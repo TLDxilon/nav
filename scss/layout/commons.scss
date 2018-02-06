@@ -1,4 +1,5 @@
 @import "variables";
+@import "flexbox";
 
 
 body{
@@ -92,12 +93,12 @@ ul{
    display: table;
    table-layout: fixed;
    width:100%;
-   .nav-item{
+   .navbar-item{
      float: none;
      display: table-cell;
      vertical-align: middle;
   }
-  .nav-menu{
+  .navbar-menu{
     list-style: none;
     width:70%;
     @media #{$smartphones}{
@@ -114,13 +115,13 @@ ul{
 
     }
   }
-  .nav-logo{
+  .navbar-logo{
     width:15%;
     @media #{$smartphones}{
       width:50%;
     }
   }
-  &-button{
+  .navbar-utiles{
     width:15%;
     @media #{$smartphones}{
       width:50%;
@@ -135,7 +136,7 @@ ul{
       @extend .padding-xs;
     }
   }
-  &-link{
+  .nav-link{
     @extend .font-weight-bold;
   }
 
@@ -230,8 +231,8 @@ ul{
 
 /* estilos del menú */
 
-
-.menu--simple {
+.navbar-menu{
+  &--simple {
     .nav-link{
       &:hover{
         @extend .fg-main;
@@ -245,47 +246,49 @@ ul{
         @extend .nav-link:hover;
       }
     }
-}
-.menu--line{
-  .nav-link{
-    position: relative;
-    @extend .fg-gray;
-    &:after{
-      position: absolute;
-      bottom: 7px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      @extend .bg-main;
-      content: "";
-      opacity: 0;
-      transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-      -moz-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-      -webkit-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-      transform: translateY(20px);
-    }
-    &:hover:after{
-      opacity:1;
-      transform: translateY(15px)
-    }
   }
-  .active{
+  &--line{
     .nav-link{
+      position: relative;
+      @extend .fg-gray;
+      &:after{
+        position: absolute;
+        bottom: 7px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        @extend .bg-main;
+        content: "";
+        opacity: 0;
+        transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+        -moz-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+        -webkit-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+        transform: translateY(20px);
+      }
+      &:hover:after{
+        opacity:1;
+        transform: translateY(15px)
+      }
+    }
+    .active{
+      .nav-link{
 
+      }
     }
   }
-}
-.menu--back {
-  .nav-menu-item{
-    &:hover, &.active{
-      @extend .bg-main;
-      transition: background 0.3s ease 0s;
-      -moz-transition: background 0.3s ease 0s;
-      -webkit-transition: background 0.3s ease 0s;
+  &--back {
+    .nav-menu-item{
+      &:hover, &.active{
+        @extend .bg-main;
+        transition: background 0.3s ease 0s;
+        -moz-transition: background 0.3s ease 0s;
+        -webkit-transition: background 0.3s ease 0s;
+      }
     }
   }
-}
 
+
+}
 
 
 
@@ -347,51 +350,13 @@ ul{
   }
 }
 
-.navbar-logo-center{
-  .nav-logo{
-    width:100%;
-    text-align: center;
-    order: 2;
-    @media #{$smartphones}{
-      width:40%;
-      order: 1;
-    }
-    @media #{$tablets}{
-      width:40%;
-      order: 1;
-    }
-    @media #{$laptop}{
-      width:50%;
-      order: 1;
-    }
-  }
-  .nav-menu{
-    width:100%;
-    text-align: center;
-    order:3;
-  }
-  .nav-button{
-    width:100%;
-    order: 1;
-    text-align: right;
-    @media #{$smartphones}{
-      width:60%;
-      order: 2;
-    }
-    @media #{$tablets}{
-      width:60%;
-      order: 2;
-    }
-    @media #{$laptop}{
-      width:50%;
-      order: 2;
-    }
-  }
-  &.navbar-fixed{
+
+.navbar-logo{
+  &--center{
     .nav-logo{
-      width:20%;
-      text-align: left;
-      order: 1;
+      width:100%;
+      text-align: center;
+      order: 2;
       @media #{$smartphones}{
         width:40%;
         order: 1;
@@ -406,13 +371,13 @@ ul{
       }
     }
     .nav-menu{
-      width:60%;
+      width:100%;
       text-align: center;
-      order:2;
+      order:3;
     }
     .nav-button{
-      width:20%;
-      order: 3;
+      width:100%;
+      order: 1;
       text-align: right;
       @media #{$smartphones}{
         width:60%;
@@ -427,18 +392,64 @@ ul{
         order: 2;
       }
     }
+    &.navbar-fixed{
+      .nav-logo{
+        width:20%;
+        text-align: left;
+        order: 1;
+        @media #{$smartphones}{
+          width:40%;
+          order: 1;
+        }
+        @media #{$tablets}{
+          width:40%;
+          order: 1;
+        }
+        @media #{$laptop}{
+          width:50%;
+          order: 1;
+        }
+      }
+      .nav-menu{
+        width:60%;
+        text-align: center;
+        order:2;
+      }
+      .nav-button{
+        width:20%;
+        order: 3;
+        text-align: right;
+        @media #{$smartphones}{
+          width:60%;
+          order: 2;
+        }
+        @media #{$tablets}{
+          width:60%;
+          order: 2;
+        }
+        @media #{$laptop}{
+          width:50%;
+          order: 2;
+        }
+      }
+    }
+
   }
+  &--right{
+    .navbar-inner{
+      flex-flow: row-reverse;
+      -webkit-flex-flow: row-reverse;
+    }
+
+
+  }
+
 
 }
 
-.navbar-logo-right{
-  .nav{
-     flex-flow: row-reverse;
-    -webkit-flex-flow: row-reverse;
-  }
 
 
-}
+
 
 .topbar{
   @extend .bg-dark;
