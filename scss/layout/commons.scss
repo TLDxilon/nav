@@ -310,8 +310,6 @@ ul{
 
 
 .navbar-fixed{
-  position: fixed;
-  top:0;
   width:100%;
   padding-top: 10px;
   padding-bottom:10px;
@@ -330,6 +328,13 @@ ul{
 
 
 .navbar-logo{
+  &--left {
+     position: fixed;
+     top:0;
+    &.is-hide{
+      @include transform(translate(0, -100%));
+    }
+  }
   &--center{
     .nav-logo{
       width:100%;

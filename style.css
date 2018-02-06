@@ -1539,8 +1539,6 @@ ul {
   font-size: 18px; }
 
 .navbar-fixed {
-  position: fixed;
-  top: 0;
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1558,6 +1556,14 @@ ul {
   .navbar-fixed .branding-logo {
     width: 180px; }
 
+.navbar-logo--left {
+  position: fixed;
+  top: 0; }
+  .navbar-logo--left.is-hide {
+    -webkit-transform: translate(0, -100%);
+    -moz-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    transform: translate(0, -100%); }
 .navbar-logo--center .nav-logo {
   width: 100%;
   text-align: center;
