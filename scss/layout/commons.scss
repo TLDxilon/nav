@@ -334,6 +334,7 @@ ul{
      width: 100%;
     &.is-hide{
       @include transform(translate(0, -100%));
+      @include transition(transform, 0.3s, ease 0s);
     }
   }
   &--center{
