@@ -1543,6 +1543,8 @@ ul {
   padding-top: 10px;
   padding-bottom: 10px;
   vertical-align: middle;
+  position: fixed;
+  top: 0;
   -webkit-transition: padding 0.3s ease 0s;
   -moz-transition: padding 0.3s ease 0s;
   -ms-transition: padding 0.3s ease 0s;
@@ -1557,14 +1559,11 @@ ul {
     width: 200px; }
 
 .navbar-logo--left {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  -webkit-transition: transform 0.3s ease 0s;
-  -moz-transition: transform 0.3s ease 0s;
-  -ms-transition: transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s; }
+  -webkit-transition: transform 0.5s ease 0s;
+  -moz-transition: transform 0.5s ease 0s;
+  -ms-transition: transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s; }
   .navbar-logo--left.is-hide {
     -webkit-transform: translate(0, -100%);
     -moz-transform: translate(0, -100%);

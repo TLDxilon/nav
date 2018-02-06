@@ -314,6 +314,8 @@ ul{
   padding-top: 10px;
   padding-bottom:10px;
   vertical-align: middle;
+  position: fixed;
+  top: 0;
   @extend .bg-white;
   @include transition(padding, 0.3s, ease 0s);
   @include transition(background, 0.3s, ease 0s);
@@ -329,9 +331,6 @@ ul{
 
 .navbar-logo{
   &--left {
-     position: fixed;
-     top:0;
-     width: 100%;
     @include transition(transform, 0.5s, ease 0s);
     &.is-hide{
       @include transform(translate(0, -100%));
