@@ -1352,7 +1352,7 @@ ul {
   vertical-align: middle; }
   .btn:hover {
     background: #ac65a6; }
-  .btn-simple {
+  .btn--simple {
     padding: 10px 20px;
     font-size: 12px; }
   .btn-big {

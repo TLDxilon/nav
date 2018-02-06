@@ -66,12 +66,12 @@ ul{
   &:hover{
     background: darken($tone-main, 10%);
   }
-  &-simple{
+  &--simple{
     padding: 10px 20px;
     font-size: 12px;
 
   }
-  &-big{
+  &--big{
     padding: 15px 30px;
     font-size: 15px;
   }
