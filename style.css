@@ -1560,10 +1560,10 @@ ul {
   position: fixed;
   top: 0;
   width: 100%;
-  -webkit-transform: translate(0, -100%);
-  -moz-transform: translate(0, -100%);
-  -ms-transform: translate(0, -100%);
-  transform: translate(0, -100%);
+  -webkit-transform: translate(0, 100%);
+  -moz-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  transform: translate(0, 100%);
   -webkit-transition: transform 0.3s ease 0s;
   -moz-transition: transform 0.3s ease 0s;
   -ms-transition: transform 0.3s ease 0s;
