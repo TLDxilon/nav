@@ -11,14 +11,14 @@
         {% if site.top-bar == 'true' %}
         {% include top-bar.html %}
         {% endif %}
-        <div class="navbar navbar-logo-left padding-tb-s border-bottom">
+        <div class="navbar navbar-logo--left padding-tb-s border-bottom">
 
             <div class="max-width">
                 <div class="navbar-inner">
                     <div class="navbar-item navbar-logo text-align-left">
                         {% include {{ site.logo }} image="img/logo2.png" size="s" %}
                     </div>
-                    {% include menu.html position="center" style="menu--line" %}
+                    {% include menu.html position="center" style="navbar-menu--line" %}
                     {% include nav-button.html %}
                 </div>
 
