@@ -17,6 +17,9 @@ $tone-main: #BE86B9;
 
 $icon-size: 18px;
 
+
+/* COLORES */
+
 .fg{
   &-dark{
     color: $tone-dark;
@@ -52,18 +55,11 @@ $icon-size: 18px;
   }
 }
 
-.border{
-  &-bottom{
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: transparentize($tone-gray, 0.5);
-  }
-}
 
 
 
 
-/*CLASES DESCRIPTIVAS TEXTO*/
+/* CLASES DESCRIPTIVAS TEXTO */
 
 .text-align{
   &-center{
@@ -91,7 +87,6 @@ $icon-size: 18px;
 
 /*CLASES PADDINGS*/
 
-
 .padding{
   &-xs{
     padding: 5px;
@@ -108,7 +103,6 @@ $icon-size: 18px;
 }
 
 .padding-tb{
-
   &-xs{
     padding-top: 5px;
     padding-bottom: 5px;
@@ -138,7 +132,6 @@ $icon-size: 18px;
 
 
 .logo-size{
-
   &-xs{
     width: 100px;
   }
@@ -185,18 +178,30 @@ $icon-size: 18px;
   }
 }
 
-.border-radius{
 
-  &-m{
-    border-radius: 10px;
+/* BORDE */
+
+.border {
+  &-bottom {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: transparentize($tone-gray, 0.5);
   }
-  &-l{
-    border-radius: 20px;
-  }
-  &-xl{
-    border-radius: 30px;
+  &-radius {
+
+    &-m {
+      border-radius: 10px;
+    }
+    &-l {
+      border-radius: 20px;
+    }
+    &-xl {
+      border-radius: 30px;
+    }
   }
 }
+
+
 
 
 

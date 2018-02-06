@@ -1179,6 +1179,7 @@
 
 /* Éstos son mis estilos */
 /*Breakpoints*/
+/* COLORES */
 .fg-dark {
   color: #222222; }
 .fg-gray, .navbar-menu--line .nav-link, .navbar-fixed .nav-link {
@@ -1201,12 +1202,7 @@
   background: #BE86B9;
   color: #ffffff; }
 
-.border-bottom, .menu-movil .nav-menu-item {
-  border-width: 0 0 1px 0;
-  border-style: solid;
-  border-color: rgba(188, 188, 188, 0.5); }
-
-/*CLASES DESCRIPTIVAS TEXTO*/
+/* CLASES DESCRIPTIVAS TEXTO */
 .text-align-center {
   text-align: center; }
 .text-align-left {
@@ -1277,6 +1273,11 @@
 .position-absolute {
   position: absolute; }
 
+/* BORDE */
+.border-bottom, .menu-movil .nav-menu-item {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: rgba(188, 188, 188, 0.5); }
 .border-radius-m {
   border-radius: 10px; }
 .border-radius-l {
