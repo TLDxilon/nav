@@ -331,6 +331,7 @@ ul{
   &--left {
      position: fixed;
      top:0;
+     width: 100%;
     &.is-hide{
       @include transform(translate(0, -100%));
     }
