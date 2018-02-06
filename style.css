@@ -1433,6 +1433,10 @@ ul {
         display: none; } }
     .navbar-inner .navbar-menu .nav-menu-item {
       display: inline-block; }
+      .navbar-inner .navbar-menu .nav-menu-item .nav-link {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 14px; }
   .navbar-inner .navbar-logo {
     width: 20%; }
     @media only screen and (max-width: 479px) {
@@ -1463,10 +1467,6 @@ ul {
     @media only screen and (min-width: 960px) {
       .navbar-inner .navbar-utiles .btn-ham {
         display: none; } }
-  .navbar-inner .navbar-link {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 14px; }
 
 /* estilos del menú */
 .navbar-menu--simple .nav-link:hover, .navbar-menu--simple .active .nav-link {

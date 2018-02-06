@@ -161,7 +161,11 @@ ul{
     }
     .nav-menu-item{
       display: inline-block;
-
+      .nav-link{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 14px;
+      }
     }
   }
   .navbar-logo{
@@ -199,11 +203,7 @@ ul{
       }
     }
   }
-  .navbar-link{
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 14px;
-  }
+
 
 }
 
