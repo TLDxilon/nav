@@ -161,11 +161,11 @@ ul{
   align-items: center;
 
 
-  &-item{
+  .navbar-item{
 
 
   }
-  &-menu{
+  .navbar-menu{
     width:60%;
     @media #{$smartphones}{
       display: none;
@@ -181,7 +181,7 @@ ul{
 
     }
   }
-  &-logo{
+  .navbar-logo{
     width:20%;
     @media #{$smartphones}{
       width:40%;
@@ -193,7 +193,7 @@ ul{
       width:50%;
     }
   }
-  &-button{
+  .navbar-button{
     width:20%;
     @media #{$smartphones}{
       width:60%;
@@ -216,7 +216,7 @@ ul{
       }
     }
   }
-  &-link{
+  .navbar-link{
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 14px;

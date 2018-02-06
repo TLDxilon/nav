@@ -1415,50 +1415,50 @@ ul {
   -webkit-justify-content: center;
   justify-content: center;
   align-items: center; }
-  .navbar-inner-menu {
+  .navbar-inner .navbar-menu {
     width: 60%; }
     @media only screen and (max-width: 479px) {
-      .navbar-inner-menu {
+      .navbar-inner .navbar-menu {
         display: none; } }
     @media only screen and (min-width: 480px) and (max-width: 768px) {
-      .navbar-inner-menu {
+      .navbar-inner .navbar-menu {
         display: none; } }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
-      .navbar-inner-menu {
+      .navbar-inner .navbar-menu {
         display: none; } }
-    .navbar-inner-menu-item {
+    .navbar-inner .navbar-menu-item {
       display: inline-block; }
-  .navbar-inner-logo {
+  .navbar-inner .navbar-logo {
     width: 20%; }
     @media only screen and (max-width: 479px) {
-      .navbar-inner-logo {
+      .navbar-inner .navbar-logo {
         width: 40%; } }
     @media only screen and (min-width: 480px) and (max-width: 768px) {
-      .navbar-inner-logo {
+      .navbar-inner .navbar-logo {
         width: 40%; } }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
-      .navbar-inner-logo {
+      .navbar-inner .navbar-logo {
         width: 50%; } }
-  .navbar-inner-button {
+  .navbar-inner .navbar-button {
     width: 20%; }
     @media only screen and (max-width: 479px) {
-      .navbar-inner-button {
+      .navbar-inner .navbar-button {
         width: 60%; } }
     @media only screen and (min-width: 480px) and (max-width: 768px) {
-      .navbar-inner-button {
+      .navbar-inner .navbar-button {
         width: 60%; } }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
-      .navbar-inner-button {
+      .navbar-inner .navbar-button {
         width: 50%; } }
-    .navbar-inner-button .nav-button-item {
+    .navbar-inner .navbar-button .nav-button-item {
       vertical-align: middle;
       display: inline-block;
       height: 18px;
       margin: 0 5px; }
     @media only screen and (min-width: 960px) {
-      .navbar-inner-button .btn-ham {
+      .navbar-inner .navbar-button .btn-ham {
         display: none; } }
-  .navbar-inner-link {
+  .navbar-inner .navbar-link {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 14px; }
