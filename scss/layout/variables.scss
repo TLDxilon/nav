@@ -17,108 +17,185 @@ $tone-main: #BE86B9;
 
 $icon-size: 18px;
 
-
-.fg-dark{
-  color: $tone-dark;
-}
-.fg-gray{
-  color: $tone-gray;
-}
-.fg-white{
-  color: $tone-white;
-}
-.fg-main{
-  color: $tone-main;
-}
-
-
-.bg-dark{
-  background: $tone-dark;
-  color: $tone-white;
-}
-.bg-gray{
-  background: $tone-gray;
-  color: $tone-white;
-}
-.bg-white{
-  background: $tone-white;
-  color: $tone-dark;
-}
-.bg-main{
-  background: $tone-main;
-  color: $tone-white;
+.fg-{
+  &dark{
+    color: $tone-dark;
+  }
+  &gray{
+    color: $tone-gray;
+  }
+  &white{
+    color: $tone-white;
+  }
+  &main{
+    color: $tone-main;
+  }
 }
 
 
-
-.border-bottom{
-  border-width: 0 0 1px 0;
-  border-style: solid;
-  border-color: transparentize($tone-gray, 0.5);
+.bg-{
+  &dark{
+    background: $tone-dark;
+    color: $tone-white;
+  }
+  &gray{
+    background: $tone-gray;
+    color: $tone-white;
+  }
+  &white{
+    background: $tone-white;
+    color: $tone-dark;
+  }
+  &main{
+    background: $tone-main;
+    color: $tone-white;
+  }
 }
+
+.border-{
+  &bottom{
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: transparentize($tone-gray, 0.5);
+  }
+}
+
 
 
 
 /*CLASES DESCRIPTIVAS TEXTO*/
 
-.text-align-center{
-  text-align: center;
-}
-.text-align-left{
-  text-align: left;
-}
-.text-align-right{
-  text-align: right;
+.tex-align-{
+  &center{
+    text-align: center;
+  }
+  &left{
+    text-align: left;
+  }
+  &right{
+    text-align: right;
+  }
 }
 
-.font-weight-bold{
-  font-weight: bold;
+.font-weight-{
+  &bold{
+    font-weight: bold;
+  }
 }
-.text-transform-uppercase{
-  text-transform: uppercase;
-
+.text-transform-{
+  &uppercase {
+    text-transform: uppercase;
+  }
 }
 
 
 /*CLASES PADDINGS*/
 
-.padding-xs{
-  padding: 5px;
+
+.padding-{
+  &xs{
+    padding: 5px;
+  }
+  &s{
+    padding: 10px;
+  }
+  &m{
+    padding: 15px;
+  }
+  &l{
+    padding: 20px;
+  }
 }
-.padding-s{
-  padding: 10px;
-}
-.padding-m{
-  padding: 15px;
-}
-.padding-l{
-  padding: 20px;
+
+.padding-tb-{
+
+  &xs{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  &s{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  &m{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &l{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &xl{
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  &xxl{
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+
 }
 
 
-.padding-tb-xs{
-  padding-top: 5px;
-  padding-bottom: 5px;
+.logo-size-{
+
+  &xs{
+    width: 100px;
+  }
+  &s{
+    width: 200px;
+    @extend .transition-breakpoints;
+    @media #{$smartphones}{
+      width: 160px;
+
+    }
+  }
+  &m{
+    width: 250px;
+    @extend .transition-breakpoints;
+    @media #{$smartphones}{
+      width: 160px;
+
+    }
+  }
+
+  &l{
+    width: 300px;
+    @extend .transition-breakpoints;
+    @media #{$smartphones}{
+      width: 160px;
+    }
+  }
+  &xl{
+    width: 350px;
+    @extend .transition-breakpoints;
+    @media #{$smartphones}{
+      width: 200px;
+
+    }
+  }
 }
-.padding-tb-s{
-  padding-top: 10px;
-  padding-bottom: 10px;
+
+.position-{
+  &relative{
+    position: relative;
+  }
+  &absolute{
+    position: absolute;
+  }
 }
-.padding-tb-m{
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.padding-tb-l{
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-.padding-tb-xl{
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-.padding-tb-xxl{
-  padding-top: 160px;
-  padding-bottom: 160px;
+
+.border-radius-{
+
+  &m{
+    border-radius: 10px;
+  }
+  &l{
+    border-radius: 20px;
+  }
+  &xl{
+    border-radius: 30px;
+  }
 }
 
 
@@ -128,58 +205,4 @@ $icon-size: 18px;
   transition: width .25s linear;
   -moz-transition:  width .25s linear;
   -webkit-transition:  width .25s linear;
-}
-
-
-.logo-size-xs{
-  width: 100px;
-}
-.logo-size-s{
-  width: 200px;
-  @extend .transition-breakpoints;
-  @media #{$smartphones}{
-    width: 160px;
-
-  }
-}
-.logo-size-m{
-  width: 250px;
-  @extend .transition-breakpoints;
-  @media #{$smartphones}{
-    width: 160px;
-
-  }
-}
-
-.logo-size-l{
-  width: 300px;
-  @extend .transition-breakpoints;
-  @media #{$smartphones}{
-    width: 160px;
-  }
-}
-.logo-size-xl{
-  width: 350px;
-  @extend .transition-breakpoints;
-  @media #{$smartphones}{
-    width: 200px;
-
-  }
-}
-
-.relative{
-  position: relative;
-}
-.absolute{
-  position: absolute;
-}
-
-.border-radius-m{
-  border-radius: 10px;
-}
-.border-radius-l{
-  border-radius: 20px;
-}
-.border-radius-xl{
-  border-radius: 30px;
 }

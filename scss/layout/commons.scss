@@ -88,7 +88,7 @@ ul{
 }
 
 /* Menú con display:table */
-.nav-table{
+.navbar-inner-table{
    display: table;
    table-layout: fixed;
    width:100%;
@@ -144,7 +144,7 @@ ul{
 
 /* Menú con flexblox */
 
-.nav{
+.navbar-inner{
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
