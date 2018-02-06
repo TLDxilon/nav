@@ -101,7 +101,7 @@ jQuery(document).ready(function($){
     //set scrolling variables
     var scrolling = false,
         previousTop = 0,
-        currentTop = 0,
+        currentTop = 1;
         scrollDelta = 10,
         scrollOffset = 150;
 
@@ -115,15 +115,11 @@ jQuery(document).ready(function($){
             }
         });
 
-        $(window).on('resize', function(){
-            headerHeight = mainHeader.height();
-        });
+
 
         function autoHideHeader() {
             var currentTop = $(window).scrollTop();
 
-            ( belowNavHeroContent.length > 0 )
-                : checkNavigation(currentTop);
 
             previousTop = currentTop;
             scrolling = false;
@@ -140,7 +136,7 @@ jQuery(document).ready(function($){
             }
         }
 
-})
+});
         $(document).ready(function(){
             $('.page-is-static .btn-ham').click(function(){
                 $('.header, .content, .footer').addClass('page-is-moving');
