@@ -148,7 +148,14 @@
   -o-transition:      $what $time $how;
   transition:         $what $time $how;
 }
-
+/* @include transition-delay(0.2s); */
+@mixin transition-delay($time: 0s) {
+  -webkit-transition-delay: $time;
+  -moz-transition-delay:    $time;
+  -ms-transition-delay:     $time;
+  -o-transition-delay:      $time;
+  transition-delay:         $time;
+}
 
 // Browser Prefixes
 @mixin transform($transforms) {

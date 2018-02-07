@@ -347,24 +347,21 @@ ul{
       position: relative;
       .navbar-logo{
         width:100%;
-        @extend .text-align-center;
-        @extend .padding-tb-l;
         @media #{$smartphones}{
           width:40%;
-          @extend .text-align-left;
+
         }
         @media #{$tablets}{
           width:40%;
-          @extend .text-align-left;
+
         }
         @media #{$laptop}{
           width:50%;
-          @extend .text-align-left;
+
         }
       }
       .navbar-menu{
         width:100%;
-        @extend .text-align-center;
         padding: 10px 20px;
         &.navbar-fixed{
         }
