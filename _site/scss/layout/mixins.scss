@@ -140,7 +140,7 @@
 
 // Transitions
 
-/* @include transition(all,2s,ease-out); */
+/* @include transition(all 2s ease-out); */
 @mixin transition($transition...) {
   -webkit-transition: $transition;
   -moz-transition:    $transition;

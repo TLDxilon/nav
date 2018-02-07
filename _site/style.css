@@ -1178,7 +1178,7 @@
   content: ""; }
 
 /* Éstos son mis estilos */
-/* @include transition(all,2s,ease-out); */
+/* @include transition(all 2s ease-out); */
 /* @include transition-delay(0.2s); */
 /*Breakpoints*/
 /* COLORES */
@@ -1422,16 +1422,11 @@ ul {
   -moz-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
-  -webkit-transition: transform 0.6s ease 0s;
-  -moz-transition: transform 0.6s ease 0s;
-  -ms-transition: transform 0.6s ease 0s;
-  -o-transition: transform 0.6s ease 0s;
-  transition: transform 0.6s ease 0s;
-  -webkit-transition: padding 0.3s ease 0, background 0.5s ease 0.3;
-  -moz-transition: padding 0.3s ease 0, background 0.5s ease 0.3;
-  -ms-transition: padding 0.3s ease 0, background 0.5s ease 0.3;
-  -o-transition: padding 0.3s ease 0, background 0.5s ease 0.3;
-  transition: padding 0.3s ease 0, background 0.5s ease 0.3; }
+  -webkit-transition: transform 0.6s ease 0s, padding 0.3s ease 0, background 0.5s ease 0.3;
+  -moz-transition: transform 0.6s ease 0s, padding 0.3s ease 0, background 0.5s ease 0.3;
+  -ms-transition: transform 0.6s ease 0s, padding 0.3s ease 0, background 0.5s ease 0.3;
+  -o-transition: transform 0.6s ease 0s, padding 0.3s ease 0, background 0.5s ease 0.3;
+  transition: transform 0.6s ease 0s, padding 0.3s ease 0, background 0.5s ease 0.3; }
   .navbar .navbar-inner {
     display: -webkit-box;
     display: -moz-box;
@@ -1532,9 +1527,11 @@ ul {
 
 /* estilos del menú */
 .navbar-menu--simple .nav-link:hover, .navbar-menu--simple .active .nav-link {
-  transition: color 0.3s ease 0s;
+  -webkit-transition: color 0.3s ease 0s;
   -moz-transition: color 0.3s ease 0s;
-  -webkit-transition: color 0.3s ease 0s; }
+  -ms-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s; }
 .navbar-menu--line .nav-link {
   position: relative; }
   .navbar-menu--line .nav-link:after {
@@ -1545,16 +1542,11 @@ ul {
     height: 2px;
     content: "";
     opacity: 0;
-    -webkit-transition: opacity, 0.3s, ease 0s;
-    -moz-transition: opacity, 0.3s, ease 0s;
-    -ms-transition: opacity, 0.3s, ease 0s;
-    -o-transition: opacity, 0.3s, ease 0s;
-    transition: opacity, 0.3s, ease 0s;
-    -webkit-transition: transform, 0.3s, ease 0s;
-    -moz-transition: transform, 0.3s, ease 0s;
-    -ms-transition: transform, 0.3s, ease 0s;
-    -o-transition: transform, 0.3s, ease 0s;
-    transition: transform, 0.3s, ease 0s;
+    -webkit-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+    -moz-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+    -ms-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+    -o-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
     -webkit-transform: translate(0, 20px);
     -moz-transform: translate(0, 20px);
     -ms-transform: translate(0, 20px);
@@ -1607,19 +1599,19 @@ ul {
   vertical-align: middle;
   position: fixed;
   top: 0;
-  -webkit-transition: padding 0.3s ease 0, background 0.5s ease 0.3;
-  -moz-transition: padding 0.3s ease 0, background 0.5s ease 0.3;
-  -ms-transition: padding 0.3s ease 0, background 0.5s ease 0.3;
-  -o-transition: padding 0.3s ease 0, background 0.5s ease 0.3;
-  transition: padding 0.3s ease 0, background 0.5s ease 0.3; }
+  -webkit-transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out;
+  -moz-transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out;
+  -ms-transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out;
+  -o-transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out;
+  transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out; }
   .navbar-fixed .branding-logo {
     width: 200px; }
   .navbar-fixed.bg-white-nav {
-    -webkit-transition: background 0.5s ease 0.3;
-    -moz-transition: background 0.5s ease 0.3;
-    -ms-transition: background 0.5s ease 0.3;
-    -o-transition: background 0.5s ease 0.3;
-    transition: background 0.5s ease 0.3; }
+    -webkit-transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out;
+    -moz-transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out;
+    -ms-transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out;
+    -o-transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out;
+    transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out; }
 
 .topbar .topbar-item {
   display: inline-block;
@@ -1660,11 +1652,11 @@ ul {
   -moz-transform: translate(0, -100%);
   -ms-transform: translate(0, -100%);
   transform: translate(0, -100%);
-  -webkit-transition: transform 0.6s ease 0s;
-  -moz-transition: transform 0.6s ease 0s;
-  -ms-transition: transform 0.6s ease 0s;
-  -o-transition: transform 0.6s ease 0s;
-  transition: transform 0.6s ease 0s; }
+  -webkit-transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out;
+  -moz-transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out;
+  -ms-transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out;
+  -o-transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out;
+  transition: padding 0.3s ease, background 0.4s ease, transform 0.5s ease-out; }
 
 .page-is-static .btn-close {
   display: none !important; }

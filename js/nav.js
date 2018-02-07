@@ -12,7 +12,7 @@ $(window).on('scroll', function() {
     if ($(window).scrollTop() > 100) {
         $('.navbar-logo--left').addClass('bg-white-nav');
     } else  {
-        $('.navbar-logo--left').removeClass('bg-white');
+        $('.navbar-logo--left').removeClass('bg-white-nav');
     }
 
 
