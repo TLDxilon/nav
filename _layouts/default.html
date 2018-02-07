@@ -11,11 +11,11 @@
         {% if site.top-bar == 'true' %}
         {% include top-bar.html %}
         {% endif %}
-        <div class="navbar navbar-logo--{{ include.logo-position }} padding-tb-s border-bottom" id="navbar">
+        <div class="navbar navbar-logo--{{ include.logo.position }} padding-tb-s border-bottom" id="navbar">
 
             <div class="max-width">
 
-                {% if site.logo-position == 'center' %}
+                {% if site.logo.position == 'center' %}
                 <div class="navbar-item navbar-logo">
                     {% include {{ site.logo }} image="img/logo2.png" size="m" %}
                 </div>
@@ -23,7 +23,7 @@
 
                 <div class="navbar-inner">
 
-                    {% unless site.logo-position == 'left' %}
+                    {% unless site.logo.position == 'left' %}
                     <div class="navbar-item navbar-logo text-align-left">
                         {% include {{ site.logo }} image="img/logo2.png" size="s" %}
                     </div>
