@@ -1,25 +1,5 @@
-/*
-var premenu= $(".navbar-logo--left").offset().top
 
-$(window).on('scroll', function(){
-    if ( $(window).scrollTop() > premenu){
-        $('.navbar-logo--left, .navbar-logo--right').addClass('navbar-fixed');
-    } else {
-        $('.navbar-logo--left, .navbar-logo--right').removeClass('navbar-fixed');
-    }
-});
 
-/*
-
-$(window).on('scroll', function(){
-    if ( $(window).scrollTop() > altura2 ){
-        $('.navbar-logo--center .navbar-inner').addClass('navbar-fixed');
-    } else {
-        $('.navbar-logo--center .navbar-inner').removeClass('navbar-fixed');
-    }
-});
-
-*/
 $(window).on('scroll', function() {
     if ($(window).scrollTop() > 100) {
         $('.navbar-logo--left, .navbar-logo--right').addClass('bg-white-nav');
@@ -40,7 +20,7 @@ $(window).on('scroll', function() {
 
 //bajo el menú cuando subo el scroll
 var lastScrollPosition = 0;
-window.onscroll = function() {
+$(window).on('scroll', function() {
     var newScrollPosition = window.scrollY;
 
     if (newScrollPosition < lastScrollPosition){
@@ -49,7 +29,7 @@ window.onscroll = function() {
 
     }
     lastScrollPosition = newScrollPosition;
-}
+});
 
 
 

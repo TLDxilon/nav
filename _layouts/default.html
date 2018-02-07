@@ -21,7 +21,7 @@
             </div>
             {% endif %}
 
-            <div class="navbar-inner">
+            <div class="navbar-inner {% if site.header.logo.position == 'center' %}container{% elsif site.header.logo.position == 'left' %}container-fluid{% endif %}">
 
                 {% unless site.logo.position == 'left' %}
                 <div class="navbar-item navbar-item-logo text-align-left">
@@ -99,7 +99,6 @@
 
 
 <script>
-
     var premenu= $(".navbar-logo--left").offset().top
 
     $(window).on('scroll', function(){
@@ -109,6 +108,7 @@
             $('.navbar-logo--left, .navbar-logo--right').removeClass('navbar-fixed');
         }
     });
+
 </script>
 
 </body>
