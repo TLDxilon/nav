@@ -338,10 +338,9 @@ ul{
     }
   }
   &--center{
-    .nav-logo{
+    .navbar-logo{
       width:100%;
       text-align: center;
-      order: 2;
       @media #{$smartphones}{
         width:40%;
         order: 1;
@@ -355,14 +354,12 @@ ul{
         order: 1;
       }
     }
-    .nav-menu{
+    .navbar-menu{
       width:100%;
       text-align: center;
-      order:3;
     }
-    .nav-button{
+    .nav-utiles{
       width:100%;
-      order: 1;
       text-align: right;
       @media #{$smartphones}{
         width:60%;
@@ -378,7 +375,7 @@ ul{
       }
     }
     &.navbar-fixed{
-      .nav-logo{
+      .navbar-logo{
         width:20%;
         text-align: left;
         order: 1;
