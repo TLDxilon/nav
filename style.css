@@ -1581,34 +1581,32 @@ ul {
     text-align: center; }
     @media only screen and (max-width: 479px) {
       .navbar-logo--center .navbar-inner .navbar-logo {
-        width: 40%;
-        order: 1; } }
+        width: 40%; } }
     @media only screen and (min-width: 480px) and (max-width: 768px) {
       .navbar-logo--center .navbar-inner .navbar-logo {
-        width: 40%;
-        order: 1; } }
+        width: 40%; } }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
       .navbar-logo--center .navbar-inner .navbar-logo {
         width: 50%; } }
   .navbar-logo--center .navbar-inner .navbar-menu {
     width: 100%;
     text-align: center; }
-  .navbar-logo--center .navbar-inner .nav-utiles {
+  .navbar-logo--center .navbar-inner .navbar-utiles {
     width: 20%;
     position: absolute;
     bottom: 0;
     right: 0;
     text-align: right; }
     @media only screen and (max-width: 479px) {
-      .navbar-logo--center .navbar-inner .nav-utiles {
+      .navbar-logo--center .navbar-inner .navbar-utiles {
         width: 60%;
         position: relative; } }
     @media only screen and (min-width: 480px) and (max-width: 768px) {
-      .navbar-logo--center .navbar-inner .nav-utiles {
+      .navbar-logo--center .navbar-inner .navbar-utiles {
         width: 60%;
         position: relative; } }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
-      .navbar-logo--center .navbar-inner .nav-utiles {
+      .navbar-logo--center .navbar-inner .navbar-utiles {
         width: 50%;
         position: relative; } }
 .navbar-logo--right .navbar-inner {
