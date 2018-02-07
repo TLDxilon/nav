@@ -1336,16 +1336,11 @@ ul {
       max-width: 479px; } }
 
 .btn {
-  -webkit-transition: color 0.15s ease-in-out;
-  -moz-transition: color 0.15s ease-in-out;
-  -ms-transition: color 0.15s ease-in-out;
-  -o-transition: color 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out;
-  -webkit-transition: background-color 0.15s ease-in-out;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -ms-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  -ms-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   letter-spacing: 2px;
   display: inline-block;
   font-weight: 400;
@@ -1484,16 +1479,16 @@ ul {
     height: 2px;
     content: "";
     opacity: 0;
-    -webkit-transition: opacity 0.3s ease 0s;
-    -moz-transition: opacity 0.3s ease 0s;
-    -ms-transition: opacity 0.3s ease 0s;
-    -o-transition: opacity 0.3s ease 0s;
-    transition: opacity 0.3s ease 0s;
-    -webkit-transition: transform 0.3s ease 0s;
-    -moz-transition: transform 0.3s ease 0s;
-    -ms-transition: transform 0.3s ease 0s;
-    -o-transition: transform 0.3s ease 0s;
-    transition: transform 0.3s ease 0s;
+    -webkit-transition: opacity, 0.3s, ease 0s;
+    -moz-transition: opacity, 0.3s, ease 0s;
+    -ms-transition: opacity, 0.3s, ease 0s;
+    -o-transition: opacity, 0.3s, ease 0s;
+    transition: opacity, 0.3s, ease 0s;
+    -webkit-transition: transform, 0.3s, ease 0s;
+    -moz-transition: transform, 0.3s, ease 0s;
+    -ms-transition: transform, 0.3s, ease 0s;
+    -o-transition: transform, 0.3s, ease 0s;
+    transition: transform, 0.3s, ease 0s;
     -webkit-transform: translate(0, 20px);
     -moz-transform: translate(0, 20px);
     -ms-transform: translate(0, 20px);
@@ -1505,11 +1500,11 @@ ul {
     -ms-transform: translate(0, 15px);
     transform: translate(0, 15px); }
 .navbar-menu--back .nav-menu-item:hover, .navbar-menu--back .nav-menu-item.active {
-  -webkit-transition: background 0.3s ease 0s;
-  -moz-transition: background 0.3s ease 0s;
-  -ms-transition: background 0.3s ease 0s;
-  -o-transition: background 0.3s ease 0s;
-  transition: background 0.3s ease 0s; }
+  -webkit-transition: background, 0.3s, ease 0s;
+  -moz-transition: background, 0.3s, ease 0s;
+  -ms-transition: background, 0.3s, ease 0s;
+  -o-transition: background, 0.3s, ease 0s;
+  transition: background, 0.3s, ease 0s; }
 
 .background {
   z-index: -1;
@@ -1546,20 +1541,15 @@ ul {
   vertical-align: middle;
   position: fixed;
   top: 0;
-  -webkit-transition: padding 0.3s ease 0s;
-  -moz-transition: padding 0.3s ease 0s;
-  -ms-transition: padding 0.3s ease 0s;
-  -o-transition: padding 0.3s ease 0s;
-  transition: padding 0.3s ease 0s;
-  -webkit-transition: background 0.5s ease 0s;
-  -moz-transition: background 0.5s ease 0s;
-  -ms-transition: background 0.5s ease 0s;
-  -o-transition: background 0.5s ease 0s;
-  transition: background 0.5s ease 0s; }
+  -webkit-transition: padding 0.3s ease 0, background 0.5s ease 0;
+  -moz-transition: padding 0.3s ease 0, background 0.5s ease 0;
+  -ms-transition: padding 0.3s ease 0, background 0.5s ease 0;
+  -o-transition: padding 0.3s ease 0, background 0.5s ease 0;
+  transition: padding 0.3s ease 0, background 0.5s ease 0; }
   .navbar-fixed .branding-logo {
     width: 200px; }
 
-.navbar-logo--left {
+.navbar-logo {
   -webkit-transition: transform 0.5s ease 0s;
   -moz-transition: transform 0.5s ease 0s;
   -ms-transition: transform 0.5s ease 0s;
@@ -1569,106 +1559,101 @@ ul {
     -webkit-transform: translate(0, -100%);
     -moz-transform: translate(0, -100%);
     -ms-transform: translate(0, -100%);
-    transform: translate(0, -100%);
-    -webkit-transition: transform 0.5s ease 0s;
-    -moz-transition: transform 0.5s ease 0s;
-    -ms-transition: transform 0.5s ease 0s;
-    -o-transition: transform 0.5s ease 0s;
-    transition: transform 0.5s ease 0s; }
-.navbar-logo--center {
-  padding: 0; }
-  @media only screen and (max-width: 479px) {
-    .navbar-logo--center {
-      padding-top: 10px;
-      padding-bottom: 10px; } }
-  @media only screen and (min-width: 480px) and (max-width: 768px) {
-    .navbar-logo--center {
-      padding-top: 10px;
-      padding-bottom: 10px; } }
-  @media only screen and (min-width: 768px) and (max-width: 960px) {
-    .navbar-logo--center {
-      padding-top: 10px;
-      padding-bottom: 10px; } }
-  .navbar-logo--center .max-width {
-    max-width: 100%;
+    transform: translate(0, -100%); }
+  .navbar-logo--center {
     padding: 0; }
-  .navbar-logo--center .navbar-inner {
-    position: relative; }
-    .navbar-logo--center .navbar-inner .navbar-logo {
-      width: 100%; }
-      @media only screen and (max-width: 479px) {
-        .navbar-logo--center .navbar-inner .navbar-logo {
-          width: 40%;
-          padding: 0;
-          text-align-left: left; } }
-      @media only screen and (min-width: 480px) and (max-width: 768px) {
-        .navbar-logo--center .navbar-inner .navbar-logo {
-          width: 40%;
-          padding: 0;
-          text-align-left: left; } }
-      @media only screen and (min-width: 768px) and (max-width: 960px) {
-        .navbar-logo--center .navbar-inner .navbar-logo {
-          width: 50%;
-          padding: 0;
-          text-align-left: left; } }
-    .navbar-logo--center .navbar-inner .navbar-menu {
-      width: 100%;
-      padding: 10px 20px; }
-      .navbar-logo--center .navbar-inner .navbar-menu.is-hide {
-        -webkit-transform: translate(0, -100%);
-        -moz-transform: translate(0, -100%);
-        -ms-transform: translate(0, -100%);
-        transform: translate(0, -100%);
-        -webkit-transition: transform 0.5s ease 0s;
-        -moz-transition: transform 0.5s ease 0s;
-        -ms-transition: transform 0.5s ease 0s;
-        -o-transition: transform 0.5s ease 0s;
-        transition: transform 0.5s ease 0s; }
-    .navbar-logo--center .navbar-inner .navbar-utiles {
-      width: 20%;
-      position: absolute;
-      bottom: 4px;
-      right: 0;
-      padding: 10px 20px;
-      text-align: right; }
-      @media only screen and (max-width: 479px) {
-        .navbar-logo--center .navbar-inner .navbar-utiles {
-          width: 60%; } }
-      @media only screen and (min-width: 480px) and (max-width: 768px) {
-        .navbar-logo--center .navbar-inner .navbar-utiles {
-          width: 60%; } }
-      @media only screen and (min-width: 768px) and (max-width: 960px) {
-        .navbar-logo--center .navbar-inner .navbar-utiles {
-          width: 50%; } }
-      .navbar-logo--center .navbar-inner .navbar-utiles.is-hide {
-        -webkit-transform: translate(0, -100%);
-        -moz-transform: translate(0, -100%);
-        -ms-transform: translate(0, -100%);
-        transform: translate(0, -100%);
-        -webkit-transition: transform 0.5s ease 0s;
-        -moz-transition: transform 0.5s ease 0s;
-        -ms-transition: transform 0.5s ease 0s;
-        -o-transition: transform 0.5s ease 0s;
-        transition: transform 0.5s ease 0s; }
-      .navbar-logo--center .navbar-inner .navbar-utiles.navbar-fixed {
-        position: fixed;
+    @media only screen and (max-width: 479px) {
+      .navbar-logo--center {
+        padding-top: 10px;
+        padding-bottom: 10px; } }
+    @media only screen and (min-width: 480px) and (max-width: 768px) {
+      .navbar-logo--center {
+        padding-top: 10px;
+        padding-bottom: 10px; } }
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+      .navbar-logo--center {
+        padding-top: 10px;
+        padding-bottom: 10px; } }
+    .navbar-logo--center .max-width {
+      max-width: 100%;
+      padding: 0; }
+    .navbar-logo--center .navbar-inner {
+      position: relative; }
+      .navbar-logo--center .navbar-inner .navbar-logo {
+        width: 100%; }
+        @media only screen and (max-width: 479px) {
+          .navbar-logo--center .navbar-inner .navbar-logo {
+            width: 40%;
+            padding: 0;
+            text-align-left: left; } }
+        @media only screen and (min-width: 480px) and (max-width: 768px) {
+          .navbar-logo--center .navbar-inner .navbar-logo {
+            width: 40%;
+            padding: 0;
+            text-align-left: left; } }
+        @media only screen and (min-width: 768px) and (max-width: 960px) {
+          .navbar-logo--center .navbar-inner .navbar-logo {
+            width: 50%;
+            padding: 0;
+            text-align-left: left; } }
+      .navbar-logo--center .navbar-inner .navbar-menu {
         width: 100%;
-        top: 4px;
-        bottom: inherit;
-        background: none; }
-.navbar-logo--right .navbar-inner {
-  flex-flow: row-reverse;
-  -webkit-flex-flow: row-reverse; }
-.navbar-logo--right.is-hide {
-  -webkit-transform: translate(0, -100%);
-  -moz-transform: translate(0, -100%);
-  -ms-transform: translate(0, -100%);
-  transform: translate(0, -100%);
-  -webkit-transition: transform 0.5s ease 0s;
-  -moz-transition: transform 0.5s ease 0s;
-  -ms-transition: transform 0.5s ease 0s;
-  -o-transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s; }
+        padding: 10px 20px; }
+        .navbar-logo--center .navbar-inner .navbar-menu.is-hide {
+          -webkit-transform: translate(0, -100%);
+          -moz-transform: translate(0, -100%);
+          -ms-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+          -webkit-transition: transform, 0.5s, ease 0s;
+          -moz-transition: transform, 0.5s, ease 0s;
+          -ms-transition: transform, 0.5s, ease 0s;
+          -o-transition: transform, 0.5s, ease 0s;
+          transition: transform, 0.5s, ease 0s; }
+      .navbar-logo--center .navbar-inner .navbar-utiles {
+        width: 20%;
+        position: absolute;
+        bottom: 4px;
+        right: 0;
+        padding: 10px 20px;
+        text-align: right; }
+        @media only screen and (max-width: 479px) {
+          .navbar-logo--center .navbar-inner .navbar-utiles {
+            width: 60%; } }
+        @media only screen and (min-width: 480px) and (max-width: 768px) {
+          .navbar-logo--center .navbar-inner .navbar-utiles {
+            width: 60%; } }
+        @media only screen and (min-width: 768px) and (max-width: 960px) {
+          .navbar-logo--center .navbar-inner .navbar-utiles {
+            width: 50%; } }
+        .navbar-logo--center .navbar-inner .navbar-utiles.is-hide {
+          -webkit-transform: translate(0, -100%);
+          -moz-transform: translate(0, -100%);
+          -ms-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+          -webkit-transition: transform, 0.5s, ease 0s;
+          -moz-transition: transform, 0.5s, ease 0s;
+          -ms-transition: transform, 0.5s, ease 0s;
+          -o-transition: transform, 0.5s, ease 0s;
+          transition: transform, 0.5s, ease 0s; }
+        .navbar-logo--center .navbar-inner .navbar-utiles.navbar-fixed {
+          position: fixed;
+          width: 100%;
+          top: 4px;
+          bottom: inherit;
+          background: none; }
+  .navbar-logo--right .navbar-inner {
+    flex-flow: row-reverse;
+    -webkit-flex-flow: row-reverse; }
+  .navbar-logo--right.is-hide {
+    -webkit-transform: translate(0, -100%);
+    -moz-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    -webkit-transition: transform, 0.5s, ease 0s;
+    -moz-transition: transform, 0.5s, ease 0s;
+    -ms-transition: transform, 0.5s, ease 0s;
+    -o-transition: transform, 0.5s, ease 0s;
+    transition: transform, 0.5s, ease 0s; }
 
 .topbar .topbar-item {
   display: inline-block;
@@ -1694,11 +1679,11 @@ ul {
   -moz-transform: translate(-260px, 0);
   -ms-transform: translate(-260px, 0);
   transform: translate(-260px, 0);
-  -webkit-transition: transform 0.3s ease 0s;
-  -moz-transition: transform 0.3s ease 0s;
-  -ms-transition: transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s; }
+  -webkit-transition: transform, 0.3s, ease 0s;
+  -moz-transition: transform, 0.3s, ease 0s;
+  -ms-transition: transform, 0.3s, ease 0s;
+  -o-transition: transform, 0.3s, ease 0s;
+  transition: transform, 0.3s, ease 0s; }
   .page-is-moving .btn-ham {
     display: none; }
   .page-is-moving .btn-close {

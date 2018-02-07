@@ -55,8 +55,7 @@ ul{
 
 
 .btn{
-  @include transition(color,0.15s,ease-in-out);
-  @include transition(background-color,0.15s,ease-in-out);
+  @include transition(color 0.15s ease-in-out, background-color .15s ease-in-out);
   @extend .text-transform-uppercase;
   letter-spacing: 2px;
   display: inline-block;
@@ -317,8 +316,7 @@ ul{
   position: fixed;
   top: 0;
   @extend .bg-white;
-  @include transition(padding, 0.3s, ease 0s);
-  @include transition(background, 0.5s, ease 0s);
+  @include transition(padding .3s ease 0, background .5s ease 0);
 
   .nav-link{
     @extend .fg-gray;
@@ -330,11 +328,11 @@ ul{
 
 
 .navbar-logo{
+  @include transition(transform 0.5s ease 0s);
+
   &--left {
-    @include transition(transform, 0.5s, ease 0s);
     &.is-hide{
       @include transform(translate(0, -100%));
-      @include transition(transform, 0.5s, ease 0s);
     }
   }
   &--center{

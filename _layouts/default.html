@@ -14,10 +14,21 @@
         <div class="navbar navbar-logo--center padding-tb-s border-bottom" id="navbar">
 
             <div class="max-width">
+
+                {% if site.logo.position == center %}
+                <div class="navbar-item navbar-logo">
+                    {% include {{ site.logo }} image="img/logo2.png" size="m" %}
+                </div>
+                {% endif %}
+
                 <div class="navbar-inner">
+
+                    {% unless site.logo.position == left %}
                     <div class="navbar-item navbar-logo text-align-left">
                         {% include {{ site.logo }} image="img/logo2.png" size="s" %}
                     </div>
+                    {% endunless %}
+
                     {% include menu.html position="center" style="navbar-menu--line" %}
                     {% include nav-button.html %}
                 </div>
