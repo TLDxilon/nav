@@ -1596,6 +1596,16 @@ ul {
     .navbar-logo--center .navbar-inner .navbar-menu {
       width: 100%;
       padding: 10px 20px; }
+      .navbar-logo--center .navbar-inner .navbar-menu.is-hide {
+        -webkit-transform: translate(0, -100%);
+        -moz-transform: translate(0, -100%);
+        -ms-transform: translate(0, -100%);
+        transform: translate(0, -100%);
+        -webkit-transition: transform 0.5s ease 0s;
+        -moz-transition: transform 0.5s ease 0s;
+        -ms-transition: transform 0.5s ease 0s;
+        -o-transition: transform 0.5s ease 0s;
+        transition: transform 0.5s ease 0s; }
     .navbar-logo--center .navbar-inner .navbar-utiles {
       width: 20%;
       position: absolute;
@@ -1621,6 +1631,16 @@ ul {
 .navbar-logo--right .navbar-inner {
   flex-flow: row-reverse;
   -webkit-flex-flow: row-reverse; }
+.navbar-logo--right.is-hide {
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  -webkit-transition: transform 0.5s ease 0s;
+  -moz-transition: transform 0.5s ease 0s;
+  -ms-transition: transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s; }
 
 .topbar .topbar-item {
   display: inline-block;
