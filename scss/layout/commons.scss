@@ -347,24 +347,24 @@ ul{
       position: relative;
       .navbar-logo{
         width:100%;
-        text-align: center;
+        @extend .text-align-center;
         @extend .padding-tb-l;
         @media #{$smartphones}{
           width:40%;
-
+          @extend .text-align-left;
         }
         @media #{$tablets}{
           width:40%;
-
+          @extend .text-align-left;
         }
         @media #{$laptop}{
           width:50%;
-
+          @extend .text-align-left;
         }
       }
       .navbar-menu{
         width:100%;
-        text-align: center;
+        @extend .text-align-center;
         padding: 10px 20px;
         &.navbar-fixed{
         }
@@ -378,17 +378,17 @@ ul{
         text-align: right;
         @media #{$smartphones}{
           width:60%;
-          position: relative;
+
 
         }
         @media #{$tablets}{
           width:60%;
-          position: relative;
+
 
         }
         @media #{$laptop}{
           width:50%;
-          position: relative;
+
         }
         &.navbar-fixed{
           position: fixed;
