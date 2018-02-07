@@ -1,8 +1,8 @@
 
-var altura = $('.navbar').offset().top;
+//var altura = $('.navbar').offset().top;
 
 $(window).on('scroll', function(){
-    if ( $(window).scrollTop() > altura ){
+    if ( $(window).scrollTop() > 0 ){
         $('.navbar-logo--left').addClass('navbar-fixed');
     } else {
         $('.navbar-logo--left').removeClass('navbar-fixed');
