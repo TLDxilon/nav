@@ -364,8 +364,8 @@ ul{
       .navbar-menu{
         width:100%;
         text-align: center;
+        padding: 10px 20px;
         &.navbar-fixed{
-          padding: 10px 20px;
         }
       }
       .navbar-utiles{
@@ -373,6 +373,7 @@ ul{
         position: absolute;
         bottom: 0;
         right: 0;
+        padding: 10px 20px;
         text-align: right;
         @media #{$smartphones}{
           width:60%;
@@ -394,8 +395,6 @@ ul{
           top:0;
           bottom: inherit;
           background: none;
-          padding: 10px 20px;
-
         }
       }
     }
