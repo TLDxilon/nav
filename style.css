@@ -1551,11 +1551,11 @@ ul {
   -ms-transition: padding 0.3s ease 0s;
   -o-transition: padding 0.3s ease 0s;
   transition: padding 0.3s ease 0s;
-  -webkit-transition: background 0.3s ease 0s;
-  -moz-transition: background 0.3s ease 0s;
-  -ms-transition: background 0.3s ease 0s;
-  -o-transition: background 0.3s ease 0s;
-  transition: background 0.3s ease 0s;
+  -webkit-transition: background 0.5s ease 0s;
+  -moz-transition: background 0.5s ease 0s;
+  -ms-transition: background 0.5s ease 0s;
+  -o-transition: background 0.5s ease 0s;
+  transition: background 0.5s ease 0s;
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   -ms-transition-delay: 0.2s;
