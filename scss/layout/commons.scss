@@ -364,6 +364,9 @@ ul{
       .navbar-menu{
         width:100%;
         text-align: center;
+        &.navbar-fixed{
+          padding: 10px 20px;
+        }
       }
       .navbar-utiles{
         width:20%;
@@ -388,7 +391,10 @@ ul{
         &.navbar-fixed{
           position: fixed;
           width:100%;
+          top:0;
+          bottom: inherit;
           background: none;
+          padding: 10px 20px;
 
         }
       }
