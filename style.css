@@ -1612,6 +1612,7 @@ ul {
           width: 50%;
           position: relative; } }
       .navbar-logo--center .navbar-inner .navbar-utiles.navbar-fixed {
+        position: fixed;
         width: 100%;
         background: none; }
 .navbar-logo--right .navbar-inner {
