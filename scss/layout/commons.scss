@@ -1,5 +1,5 @@
-@import "variables";
 @import "mixins";
+@import "variables";
 
 
 body{
@@ -35,7 +35,7 @@ ul{
 }
 
 
-.max-width{
+.container{
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 20px;
@@ -51,6 +51,11 @@ ul{
     max-width: 479px;
   }
 
+}
+.container-fluid{
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 
@@ -133,78 +138,110 @@ ul{
 }
 
 
-/* Menú con flexblox */
+/* Menú con flexbox */
+.navbar{
+  .navbar-inner{
+    @include flexbox;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    @include align-items(center);
 
-.navbar-inner{
-  @include flexbox;
-  @include flex-direction(row);
-  @include flex-wrap(wrap);
-  @include justify-content(center);
-  @include align-items(center);
+    .navbar-item{
 
 
-  .navbar-item{
-
-
-  }
-  .navbar-menu{
-    width:60%;
-    @media #{$smartphones}{
-      display: none;
     }
-    @media #{$tablets}{
-      display: none;
-    }
-    @media #{$laptop}{
-      display: none;
-    }
-    .nav-menu-item{
-      display: inline-block;
-      .nav-link{
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 14px;
-      }
-    }
-  }
-  .navbar-logo{
-    width:20%;
-    @media #{$smartphones}{
-      width:40%;
-    }
-    @media #{$tablets}{
-      width:40%;
-    }
-    @media #{$laptop}{
-      width:50%;
-    }
-  }
-  .navbar-utiles{
-    width:20%;
-    @media #{$smartphones}{
-      width:60%;
-    }
-    @media #{$tablets}{
-      width:60%;
-    }
-    @media #{$laptop}{
-      width:50%;
-    }
-    &-item{
-      vertical-align: middle;
-      display: inline-block;
-      height: $icon-size;
-      margin: 0 5px;
-    }
-    .btn-ham{
-      @media #{$big}{
+    .navbar-item-menu{
+      @media #{$smartphones}{
         display: none;
       }
+      @media #{$tablets}{
+        display: none;
+      }
+      @media #{$laptop}{
+        display: none;
+      }
+      .nav-menu-item{
+        display: inline-block;
+        .nav-link{
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 14px;
+        }
+      }
     }
+    .navbar-item-logo{
+      @media #{$smartphones}{
+
+      }
+      @media #{$tablets}{
+
+      }
+      @media #{$laptop}{
+
+      }
+    }
+    .navbar-item-utiles{
+      @media #{$smartphones}{
+
+      }
+      @media #{$tablets}{
+
+      }
+      @media #{$laptop}{
+
+      }
+      .utiles-item{
+        vertical-align: middle;
+        display: inline-block;
+        height: $icon-size;
+        margin: 0 5px;
+      }
+      .btn-ham{
+        @media #{$big}{
+          display: none;
+        }
+      }
+    }
+
+
   }
 
+  &.navbar-logo{
+   &--left{
+     .navbar-item-logo {
+       @include flex-basis(20%);
+       @media #{$smartphones}{
+         @include flex-basis(40%);
+       }
+       @media #{$tablets}{
+         @include flex-basis(40%);
+       }
+       @media #{$laptop}{
+         @include flex-basis(40%);
+       }
+     }
+     .navbar-item-menu {
+       @include flex-basis(60%);
+     }
+     .navbar-item-utiles {
+       @include flex-basis(20%);
+       @media #{$smartphones}{
+         @include flex-basis(60%);
+       }
+       @media #{$tablets}{
+         @include flex-basis(60%);
+       }
+       @media #{$laptop}{
+         @include flex-basis(60%);
+       }
+     }
+   }
 
+
+  }
 }
+
 
 
 
@@ -327,117 +364,6 @@ ul{
 }
 
 
-.navbar-logo{
-  @include transition(transform 0.5s ease 0s);
-
-  &--left {
-    &.is-hide{
-      @include transform(translate(0, -100%));
-    }
-  }
-  &--center{
-    padding: 0;
-    @media #{$smartphones}{
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    @media #{$tablets}{
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    @media #{$laptop}{
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    .max-width{
-      max-width:100%;
-      padding: 0;
-    }
-    .navbar-inner{
-      position: relative;
-      .navbar-logo{
-        width:100%;
-        @extend .text-align-center;
-        @extend .padding-tb-l;
-        @media #{$smartphones}{
-          width:40%;
-          padding:0;
-          text-align-left: left;
-        }
-        @media #{$tablets}{
-          width:40%;
-          padding:0;
-          text-align-left: left;
-        }
-        @media #{$laptop}{
-          width:50%;
-          padding:0;
-          text-align-left: left;
-        }
-      }
-      .navbar-menu{
-        width:100%;
-        padding: 10px 20px;
-        &.is-hide{
-          @include transform(translate(0, -100%));
-          @include transition(transform, 0.5s, ease 0s);
-        }
-      }
-      .navbar-utiles{
-        width:20%;
-        position: absolute;
-        bottom: 4px;
-        right: 0;
-        padding: 10px 20px;
-        text-align: right;
-        @media #{$smartphones}{
-          width:60%;
-
-
-        }
-        @media #{$tablets}{
-          width:60%;
-
-
-        }
-        @media #{$laptop}{
-          width:50%;
-
-        }
-        &.is-hide{
-          @include transform(translate(0, -100%));
-          @include transition(transform, 0.5s, ease 0s);
-        }
-        &.navbar-fixed{
-          position: fixed;
-          width:100%;
-          top:4px;
-          bottom: inherit;
-          background: none;
-        }
-      }
-    }
-
-
-
-  }
-  &--right{
-    .navbar-inner{
-      flex-flow: row-reverse;
-      -webkit-flex-flow: row-reverse;
-    }
-    &.is-hide{
-      @include transform(translate(0, -100%));
-      @include transition(transform, 0.5s, ease 0s);
-    }
-
-  }
-
-
-}
-
-
-
 
 
 .topbar{
@@ -489,7 +415,7 @@ ul{
 
 .page-is-static{
   .btn-close{
-    display: none;
+    display: none !important;
   }
 }
 

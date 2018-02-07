@@ -1,8 +1,14 @@
 name: Toya Llorca
 description: Web Developer
-logo:
-  logo: logo-i.html
-  position: 'center'
+logo: logo-i.html
+
+title: "Mi sitio"
+
+header:
+  logo:
+    file: http://dominio.es/milogo.png
+    position: 'left'
+  width: '-fluid'
 
 
 nav-icons: 'true'
