@@ -319,6 +319,7 @@ ul{
   @extend .bg-white;
   @include transition(padding, 0.3s, ease 0s);
   @include transition(background, 0.3s, ease 0s);
+  @include transition-delay(0.2s);
 
   .nav-link{
     @extend .fg-gray;
@@ -347,9 +348,10 @@ ul{
       position: relative;
       .navbar-logo{
         width:100%;
+        @extend .text-align-center;
+        @extend .padding-tb-l;
         @media #{$smartphones}{
           width:40%;
-
         }
         @media #{$tablets}{
           width:40%;

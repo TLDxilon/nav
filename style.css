@@ -1203,7 +1203,7 @@
   color: #ffffff; }
 
 /* CLASES DESCRIPTIVAS TEXTO */
-.text-align-center {
+.text-align-center, .navbar-logo--center .navbar-inner .navbar-logo {
   text-align: center; }
 .text-align-left {
   text-align: left; }
@@ -1235,7 +1235,7 @@
 .padding-tb-m {
   padding-top: 20px;
   padding-bottom: 20px; }
-.padding-tb-l {
+.padding-tb-l, .navbar-logo--center .navbar-inner .navbar-logo {
   padding-top: 40px;
   padding-bottom: 40px; }
 .padding-tb-xl {
@@ -1555,7 +1555,12 @@ ul {
   -moz-transition: background 0.3s ease 0s;
   -ms-transition: background 0.3s ease 0s;
   -o-transition: background 0.3s ease 0s;
-  transition: background 0.3s ease 0s; }
+  transition: background 0.3s ease 0s;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s; }
   .navbar-fixed .branding-logo {
     width: 200px; }
 
