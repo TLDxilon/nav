@@ -88,9 +88,9 @@
 
         $(window).on('scroll', function(){
             if ( $(window).scrollTop() > altura2 ){
-                $('.navbar-logo--center').addClass('navbar-fixed');
+                $('.navbar-logo--center .navbar-menu, .navbar-logo--center .navbar-utiles').addClass('navbar-fixed');
             } else {
-                $('.navbar-logo--center').removeClass('navbar-fixed');
+                $('.navbar-logo--center .navbar-menu, .navbar-logo--center .navbar-utiles').removeClass('navbar-fixed');
             }
         });
 
