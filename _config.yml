@@ -1,7 +1,7 @@
 name: Toya Llorca
 description: Web Developer
 logo: logo-i.html
-
+hola: center
 
 nav-icons: 'true'
 
@@ -15,7 +15,7 @@ iconsearch:  'inputsearch'
 top-bar: 'false'
 hero: 'true'
 logo.position: 'center'
-hola: 'center'
+
 
 icontwitter: '#'
 iconyoutube: '#'
