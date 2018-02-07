@@ -341,6 +341,7 @@ ul{
     padding: 0;
     .max-width{
       max-width:100%;
+      padding: 0;
     }
     .navbar-inner{
       position: relative;
@@ -364,9 +365,8 @@ ul{
       .navbar-menu{
         width:100%;
         text-align: center;
-        padding: 10px 0;
+        padding: 10px 20px;
         &.navbar-fixed{
-          padding: 10px 20px;
         }
       }
       .navbar-utiles{
@@ -374,7 +374,7 @@ ul{
         position: absolute;
         bottom: 0;
         right: 0;
-        padding: 10px 0;
+        padding: 10px 20px;
         text-align: right;
         @media #{$smartphones}{
           width:60%;
@@ -391,7 +391,6 @@ ul{
           position: relative;
         }
         &.navbar-fixed{
-          padding: 10px 20px;
           position: fixed;
           width:100%;
           top:0;
