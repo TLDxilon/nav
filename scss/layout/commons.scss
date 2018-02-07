@@ -140,6 +140,9 @@ ul{
 
 /* Menú con flexbox */
 .navbar{
+  @include transform(translate(0, 0));
+  @include transition(transform 0.6s ease 0s);
+  @include transition(padding .3s ease 0, background .5s ease 0.3);
   .navbar-inner{
     @include flexbox;
     @include flex-direction(row);
@@ -353,7 +356,7 @@ ul{
   position: fixed;
   top: 0;
   @extend .bg-white;
-  @include transition(padding .3s ease 0, background .5s ease 0);
+  @include transition(padding .3s ease 0, background .5s ease 0.3);
 
   .nav-link{
     @extend .fg-gray;
@@ -402,7 +405,7 @@ ul{
 
 .page-is-moving{
   @include transform(translate(-260px, 0));
-  @include transition(transform, 0.3s, ease 0s);
+  @include transition(transform 0.3s ease 0s);
 
 
   .btn-ham{
@@ -411,6 +414,11 @@ ul{
   .btn-close{
     display: inline-block;
   }
+}
+
+.is-hide{
+  @include transform(translate(0, -100%));
+  @include transition(transform 0.6s ease 0s);
 }
 
 .page-is-static{
