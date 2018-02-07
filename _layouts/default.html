@@ -84,6 +84,15 @@
             }
         });
 
+        var altura2 = $('.navbar-menu').offset().top;
+
+        $(window).on('scroll', function(){
+            if ( $(window).scrollTop() > altura2 ){
+                $('.navbar-logo--center').addClass('navbar-fixed');
+            } else {
+                $('.navbar-logo--center').removeClass('navbar-fixed');
+            }
+        });
 
         $(window).on('scroll', function() {
             if ($(window).scrollTop() > 450) {
