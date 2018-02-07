@@ -1555,12 +1555,7 @@ ul {
   -moz-transition: background 0.5s ease 0s;
   -ms-transition: background 0.5s ease 0s;
   -o-transition: background 0.5s ease 0s;
-  transition: background 0.5s ease 0s;
-  -webkit-transition-delay: 0.2s;
-  -moz-transition-delay: 0.2s;
-  -ms-transition-delay: 0.2s;
-  -o-transition-delay: 0.2s;
-  transition-delay: 0.2s; }
+  transition: background 0.5s ease 0s; }
   .navbar-fixed .branding-logo {
     width: 200px; }
 

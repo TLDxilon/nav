@@ -319,7 +319,6 @@ ul{
   @extend .bg-white;
   @include transition(padding, 0.3s, ease 0s);
   @include transition(background, 0.5s, ease 0s);
-  @include transition-delay(0.1s);
 
   .nav-link{
     @extend .fg-gray;
