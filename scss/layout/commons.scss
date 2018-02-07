@@ -372,7 +372,7 @@ ul{
       .navbar-utiles{
         width:20%;
         position: absolute;
-        bottom: 0;
+        bottom: 4px;
         right: 0;
         padding: 10px 20px;
         text-align: right;
@@ -393,7 +393,7 @@ ul{
         &.navbar-fixed{
           position: fixed;
           width:100%;
-          top:0;
+          top:4px;
           bottom: inherit;
           background: none;
         }
