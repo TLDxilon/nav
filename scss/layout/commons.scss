@@ -343,6 +343,7 @@ ul{
       .navbar-logo{
         width:100%;
         text-align: center;
+        @extend .padding-tb-l;
         @media #{$smartphones}{
           width:40%;
           order: 1;
