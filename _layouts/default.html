@@ -8,42 +8,43 @@
 
 <header class="header position-relative page-is-static">
 
-        {% if site.top-bar == 'true' %}
-        {% include top-bar.html %}
-        {% endif %}
-        <div class="navbar navbar-logo--{{ site.header.logo.position}} padding-tb-s border-bottom" id="navbar">
+    {% if site.top-bar == 'true' %}
+    {% include top-bar.html %}
+    {% endif %}
+    <div class="navbar navbar-logo--{{ site.header.logo.position}} padding-tb-s border-bottom" id="navbar">
 
-            <div class="container{% if site.header.logo.position == 'center' %}-fluid{% elsif site.header.logo.position == 'left' %}{% endif %}">
+        <div class="container{% if site.header.logo.position == 'center' %}-fluid{% elsif site.header.logo.position == 'left' %}{% endif %}">
 
-                {% if site.logo.position == 'center' %}
-                <div class="navbar-item navbar-item-logo text-align-center">
-                    {% include {{ site.logo }} image="img/logo2.png" size="m" %}
-                </div>
-                {% endif %}
-
-                <div class="navbar-inner">
-
-                    {% unless site.logo.position == 'left' %}
-                    <div class="navbar-item navbar-item-logo text-align-left">
-                        {% include {{ site.logo }} image="img/logo2.png" size="s" %}
-                    </div>
-                    {% endunless %}
-
-                    {% include menu.html position="center" style="navbar-menu--line" %}
-                    {% include utiles.html %}
-                </div>
-
-
+            {% if site.logo.position == 'center' %}
+            <div class="navbar-item navbar-item-logo text-align-center">
+                {% include {{ site.logo }} image="img/logo2.png" size="m" %}
             </div>
+            {% endif %}
+
+            <div class="navbar-inner">
+
+                {% unless site.logo.position == 'left' %}
+                <div class="navbar-item navbar-item-logo text-align-left">
+                    {% include {{ site.logo }} image="img/logo2.png" size="s" %}
+                </div>
+                {% endunless %}
+
+                {% include menu.html position="center" style="navbar-menu--line" %}
+                {% include utiles.html %}
+            </div>
+
 
         </div>
 
-    {% if site.hero == 'true' %}
+    </div>
+
+    {% if site.header.hero == 'true' %}
     {% include hero.html %}
     {% endif %}
 
 
 </header>
+
 
 <main class="content page-is-static" id="main">
 
@@ -97,7 +98,18 @@
 
 
 
+<script>
 
+    var premenu= $(".navbar-logo--left").offset().top
+
+    $(window).on('scroll', function(){
+        if ( $(window).scrollTop() > premenu){
+            $('.navbar-logo--left, .navbar-logo--right').addClass('navbar-fixed');
+        } else {
+            $('.navbar-logo--left, .navbar-logo--right').removeClass('navbar-fixed');
+        }
+    });
+</script>
 
 </body>
 </html>

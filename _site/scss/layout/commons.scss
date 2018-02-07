@@ -239,8 +239,27 @@ ul{
        }
      }
    }
-
-
+   &--right{}
+   &--center{
+     padding: 0;
+     .navbar-inner{
+       @extend .padding-tb-xs;
+       .navbar-item-menu {
+          padding-right: 50px;
+       }
+       .navbar-item-utiles {
+         @media #{$laptop}{
+           padding: 5px 0;
+         }
+         @media #{$tablets}{
+           padding: 5px 0;
+         }
+         @media #{$smartphones}{
+           padding: 5px 0;
+         }
+       }
+     }
+   }
   }
 }
 
@@ -296,7 +315,7 @@ ul{
     .nav-menu-item{
       &:hover, &.active{
         @extend .bg-main;
-        @include transition(background,0.3s,ease 0s);
+        @include transition(background 0.3s ease 0s);
       }
     }
   }

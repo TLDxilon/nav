@@ -34,25 +34,25 @@
 
 <header class="header position-relative page-is-static">
 
-        
-        <div class="navbar navbar-logo--left padding-tb-s border-bottom" id="navbar">
+    
+    <div class="navbar navbar-logo--left padding-tb-s border-bottom" id="navbar">
 
-            <div class="container">
+        <div class="container">
+
+            
+
+            <div class="navbar-inner">
 
                 
-
-                <div class="navbar-inner">
-
+                <div class="navbar-item navbar-item-logo text-align-left">
                     
-                    <div class="navbar-item navbar-item-logo text-align-left">
-                        
     <a href="/"><img class="branding-logo logo-size-s" src="img/logo2.png">
 
     </a>
-                    </div>
-                    
+                </div>
+                
 
-                    
+                
 <nav class="navbar-item navbar-item-menu text-align-center navbar-menu--line">
     <li class="nav-menu-item padding-s active"><a class="nav-link fg-gray" href="#">Home</a></li>
     <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">About</a></li>
@@ -60,7 +60,7 @@
     <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">News </a></li>
     <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">Contact</a></li>
 </nav>
-                    <div class="navbar-item navbar-item-utiles text-align-right">
+                <div class="navbar-item navbar-item-utiles text-align-right">
     
     <a class="utiles-item btn btn--simple border-radius-l bg-main fg-white" href="http://linkaloquequieras" >Login</a>
 <a class="utiles-item btn-search" href="inputsearch"><span class="icon icon-magnifying-glass fg-gray"></span></a>
@@ -71,12 +71,12 @@
     
 
 </div>
-                </div>
-
-
             </div>
 
+
         </div>
+
+    </div>
 
     
     <div class="hero padding-tb-xxl">
@@ -97,13 +97,14 @@
 
 </header>
 
+
 <main class="content page-is-static" id="main">
 
 
    <div class="container">
        <div class="padding-l">
 
-           {"logo"=>{"file"=>"http://dominio.es/milogo.png", "position"=>"left"}, "width"=>"-fluid"}<br/>
+           {"logo"=>{"file"=>"http://dominio.es/milogo.png", "position"=>"left"}, "width"=>"-fluid", "hero"=>"true"}<br/>
            {"file"=>"http://dominio.es/milogo.png", "position"=>"left"}<br/>
            left<br/>
 
@@ -151,7 +152,18 @@ Lorem Ipsum dolor sit amet. 989 556 443. info@tldxilon.github.io
 
 
 
+<script>
 
+    var premenu= $(".navbar-logo--left").offset().top
+
+    $(window).on('scroll', function(){
+        if ( $(window).scrollTop() > premenu){
+            $('.navbar-logo--left, .navbar-logo--right').addClass('navbar-fixed');
+        } else {
+            $('.navbar-logo--left, .navbar-logo--right').removeClass('navbar-fixed');
+        }
+    });
+</script>
 
 </body>
 </html>

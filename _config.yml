@@ -9,7 +9,7 @@ header:
     file: http://dominio.es/milogo.png
     position: 'left'
   width: '-fluid'
-
+  hero: 'true'
 
 nav-icons: 'true'
 
@@ -21,7 +21,7 @@ iconsearch:  'inputsearch'
 
 
 top-bar: 'false'
-hero: 'true'
+
 
 
 icontwitter: '#'

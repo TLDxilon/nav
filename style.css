@@ -1228,7 +1228,7 @@
 .padding-l {
   padding: 20px; }
 
-.padding-tb-xs {
+.padding-tb-xs, .navbar.navbar-logo--center .navbar-inner {
   padding-top: 5px;
   padding-bottom: 5px; }
 .padding-tb-s {
@@ -1524,6 +1524,19 @@ ul {
         -moz-flex-basis: 60%;
         -ms-flex-basis: 60%;
         flex-basis: 60%; } }
+  .navbar.navbar-logo--center {
+    padding: 0; }
+    .navbar.navbar-logo--center .navbar-inner .navbar-item-menu {
+      padding-right: 50px; }
+    @media only screen and (min-width: 768px) and (max-width: 960px) {
+      .navbar.navbar-logo--center .navbar-inner .navbar-item-utiles {
+        padding: 5px 0; } }
+    @media only screen and (min-width: 480px) and (max-width: 768px) {
+      .navbar.navbar-logo--center .navbar-inner .navbar-item-utiles {
+        padding: 5px 0; } }
+    @media only screen and (max-width: 479px) {
+      .navbar.navbar-logo--center .navbar-inner .navbar-item-utiles {
+        padding: 5px 0; } }
 
 /* estilos del menú */
 .navbar-menu--simple .nav-link:hover, .navbar-menu--simple .active .nav-link {
@@ -1558,11 +1571,11 @@ ul {
     -ms-transform: translate(0, 15px);
     transform: translate(0, 15px); }
 .navbar-menu--back .nav-menu-item:hover, .navbar-menu--back .nav-menu-item.active {
-  -webkit-transition: background, 0.3s, ease 0s;
-  -moz-transition: background, 0.3s, ease 0s;
-  -ms-transition: background, 0.3s, ease 0s;
-  -o-transition: background, 0.3s, ease 0s;
-  transition: background, 0.3s, ease 0s; }
+  -webkit-transition: background 0.3s ease 0s;
+  -moz-transition: background 0.3s ease 0s;
+  -ms-transition: background 0.3s ease 0s;
+  -o-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s; }
 
 .background {
   z-index: -1;
