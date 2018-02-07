@@ -1197,7 +1197,7 @@
 .bg-gray {
   background: #bcbcbc;
   color: #ffffff; }
-.bg-white, .navbar-fixed {
+.bg-white, .navbar-fixed.bg-white-nav {
   background: #ffffff;
   color: #222222; }
 .bg-main, .navbar-menu--line .nav-link:after, .navbar-menu--back .nav-menu-item:hover, .navbar-menu--back .nav-menu-item.active, .menu-movil {
@@ -1614,6 +1614,12 @@ ul {
   transition: padding 0.3s ease 0, background 0.5s ease 0.3; }
   .navbar-fixed .branding-logo {
     width: 200px; }
+  .navbar-fixed.bg-white-nav {
+    -webkit-transition: background 0.5s ease 0.3;
+    -moz-transition: background 0.5s ease 0.3;
+    -ms-transition: background 0.5s ease 0.3;
+    -o-transition: background 0.5s ease 0.3;
+    transition: background 0.5s ease 0.3; }
 
 .topbar .topbar-item {
   display: inline-block;

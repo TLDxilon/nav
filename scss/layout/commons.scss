@@ -355,7 +355,6 @@ ul{
   vertical-align: middle;
   position: fixed;
   top: 0;
-  @extend .bg-white;
   @include transition(padding .3s ease 0, background .5s ease 0.3);
 
   .nav-link{
@@ -363,6 +362,10 @@ ul{
   }
   .branding-logo{
     width: 200px;
+  }
+  &.bg-white-nav{
+    @extend .bg-white;
+    @include transition(background .5s ease 0.3);
   }
 }
 
