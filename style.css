@@ -1576,6 +1576,8 @@ ul {
     transition: transform 0.5s ease 0s; }
 .navbar-logo--center {
   padding: 0; }
+  .navbar-logo--center .max-width {
+    max-width: 100%; }
   .navbar-logo--center .navbar-inner {
     position: relative; }
     .navbar-logo--center .navbar-inner .navbar-logo {

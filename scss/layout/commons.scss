@@ -339,6 +339,9 @@ ul{
   }
   &--center{
     padding: 0;
+    .max-width{
+      max-width:100%;
+    }
     .navbar-inner{
       position: relative;
       .navbar-logo{

@@ -89,8 +89,10 @@
         $(window).on('scroll', function(){
             if ( $(window).scrollTop() > altura2 ){
                 $('.navbar-logo--center .navbar-menu, .navbar-logo--center .navbar-utiles').addClass('navbar-fixed');
+                $('.navbar-logo--center').removeClass('border-bottom');
             } else {
                 $('.navbar-logo--center .navbar-menu, .navbar-logo--center .navbar-utiles').removeClass('navbar-fixed');
+                $('.navbar-logo--center').addClass('border-bottom');
             }
         });
 
