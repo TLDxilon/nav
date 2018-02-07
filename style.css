@@ -1589,8 +1589,7 @@ ul {
         order: 1; } }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
       .navbar-logo--center .navbar-inner .navbar-logo {
-        width: 50%;
-        order: 1; } }
+        width: 50%; } }
   .navbar-logo--center .navbar-inner .navbar-menu {
     width: 100%;
     text-align: center; }

@@ -346,15 +346,15 @@ ul{
         @extend .padding-tb-l;
         @media #{$smartphones}{
           width:40%;
-          order: 1;
+
         }
         @media #{$tablets}{
           width:40%;
-          order: 1;
+
         }
         @media #{$laptop}{
           width:50%;
-          order: 1;
+
         }
       }
       .navbar-menu{
