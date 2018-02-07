@@ -1,0 +1,442 @@
+@import "mixins";
+@import "variables";
+
+
+body{
+  font-family: $font-family-base;
+  color: $tone-dark;
+  margin: 0;
+}
+h1{
+  font-size: 60px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.branding-title{
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size:25px;
+}
+
+.branding-logo{
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a{
+  text-decoration: none;
+}
+ul{
+  padding-left: 0;
+  padding-start: 0;
+  -webkit-padding-start: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media #{$laptop}{
+    max-width: 960px;
+
+  }
+  @media #{$tablets}{
+    max-width: 768px;
+
+  }
+  @media #{$smartphones}{
+    max-width: 479px;
+  }
+
+}
+.container-fluid{
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.btn{
+  @include transition(color 0.15s ease-in-out, background-color .15s ease-in-out);
+  @extend .text-transform-uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  &:hover{
+    background: darken($tone-main, 10%);
+  }
+  &--simple{
+    padding: 10px 20px;
+    font-size: 12px;
+
+  }
+  &--big{
+    padding: 15px 30px;
+    font-size: 15px;
+  }
+
+}
+
+
+/* Menú con display:table */
+.navbar-inner-table{
+   display: table;
+   table-layout: fixed;
+   width:100%;
+   .navbar-item{
+     float: none;
+     display: table-cell;
+     vertical-align: middle;
+  }
+  .navbar-menu{
+    list-style: none;
+    width:70%;
+    @media #{$smartphones}{
+      display: none;
+    }
+    @media #{$tablets}{
+      display: none;
+    }
+    @media #{$laptop}{
+      display: none;
+    }
+    &-item{
+      display: inline-block;
+
+    }
+  }
+  .navbar-logo{
+    width:15%;
+    @media #{$smartphones}{
+      width:50%;
+    }
+  }
+  .navbar-utiles{
+    width:15%;
+    @media #{$smartphones}{
+      width:50%;
+    }
+    .btn-ham{
+      @extend .padding-xs;
+      @media #{$big}{
+        display: none;
+      }
+    }
+    .btn-shop{
+      @extend .padding-xs;
+    }
+  }
+  .nav-link{
+    @extend .font-weight-bold;
+  }
+
+}
+
+
+/* Menú con flexbox */
+.navbar{
+  @include transform(translate(0, 0));
+  @include transition(transform 0.6s ease 0s);
+  @include transition(padding .3s ease 0, background .5s ease 0.3);
+  .navbar-inner{
+    @include flexbox;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    @include align-items(center);
+
+    .navbar-item{
+
+
+    }
+    .navbar-item-menu{
+      @media #{$smartphones}{
+        display: none;
+      }
+      @media #{$tablets}{
+        display: none;
+      }
+      @media #{$laptop}{
+        display: none;
+      }
+      .nav-menu-item{
+        display: inline-block;
+        .nav-link{
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 14px;
+        }
+      }
+    }
+    .navbar-item-logo{
+      @media #{$smartphones}{
+
+      }
+      @media #{$tablets}{
+
+      }
+      @media #{$laptop}{
+
+      }
+    }
+    .navbar-item-utiles{
+      @media #{$smartphones}{
+
+      }
+      @media #{$tablets}{
+
+      }
+      @media #{$laptop}{
+
+      }
+      .utiles-item{
+        vertical-align: middle;
+        display: inline-block;
+        height: $icon-size;
+        margin: 0 5px;
+      }
+      .btn-ham{
+        @media #{$big}{
+          display: none;
+        }
+      }
+    }
+
+
+  }
+
+  &.navbar-logo{
+   &--left{
+     .navbar-item-logo {
+       @include flex-basis(20%);
+       @media #{$smartphones}{
+         @include flex-basis(40%);
+       }
+       @media #{$tablets}{
+         @include flex-basis(40%);
+       }
+       @media #{$laptop}{
+         @include flex-basis(40%);
+       }
+     }
+     .navbar-item-menu {
+       @include flex-basis(60%);
+     }
+     .navbar-item-utiles {
+       @include flex-basis(20%);
+       @media #{$smartphones}{
+         @include flex-basis(60%);
+       }
+       @media #{$tablets}{
+         @include flex-basis(60%);
+       }
+       @media #{$laptop}{
+         @include flex-basis(60%);
+       }
+     }
+   }
+
+
+  }
+}
+
+
+
+
+
+
+/* estilos del menú */
+
+.navbar-menu{
+  &--simple {
+    .nav-link{
+      &:hover{
+        @extend .fg-main;
+        transition: color 0.3s ease 0s;
+        -moz-transition: color 0.3s ease 0s;
+        -webkit-transition: color 0.3s ease 0s;
+      }
+    }
+    .active{
+      .nav-link {
+        @extend .nav-link:hover;
+      }
+    }
+  }
+  &--line{
+    .nav-link{
+      position: relative;
+      @extend .fg-gray;
+      &:after{
+        position: absolute;
+        bottom: 7px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        @extend .bg-main;
+        content: "";
+        opacity: 0;
+        @include transition(opacity, 0.3s, ease 0s);
+        @include transition(transform, 0.3s, ease 0s);
+        @include transform(translate(0, 20px));
+      }
+      &:hover:after{
+        opacity:1;
+        @include transform(translate(0, 15px));
+      }
+    }
+    .active{
+      .nav-link{
+
+      }
+    }
+  }
+  &--back {
+    .nav-menu-item{
+      &:hover, &.active{
+        @extend .bg-main;
+        @include transition(background,0.3s,ease 0s);
+      }
+    }
+  }
+
+
+}
+
+
+
+.background{
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  .bg-image{
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+  }
+  .bg-color{
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    position: absolute;
+  }
+}
+
+
+
+.hero{
+  .background {
+    z-index: -5;
+  }
+}
+
+.icon{
+  font-size: $icon-size;
+}
+
+
+.navbar-fixed{
+  width:100%;
+  padding-top: 10px;
+  padding-bottom:10px;
+  vertical-align: middle;
+  position: fixed;
+  top: 0;
+  @include transition(padding .3s ease 0, background .5s ease 0.3);
+
+  .nav-link{
+    @extend .fg-gray;
+  }
+  .branding-logo{
+    width: 200px;
+  }
+  &.bg-white-nav{
+    @extend .bg-white;
+    @include transition(background .5s ease 0.3);
+  }
+}
+
+
+
+
+.topbar{
+  @extend .bg-dark;
+  .topbar-item{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .icon{
+    font-size: 22px;
+  }
+  .social{
+
+  }
+}
+
+
+.menu-movil{
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 260px;
+  right: 0;
+  height:100%;
+  @extend .bg-main;
+  .nav-menu-item{
+    display: list-item;
+    list-style-type: none;
+    @extend .border-bottom;
+    &:hover{
+      background: darken($tone-main, 10%);
+    }
+  }
+
+}
+
+.page-is-moving{
+  @include transform(translate(-260px, 0));
+  @include transition(transform 0.3s ease 0s);
+
+
+  .btn-ham{
+    display: none;
+  }
+  .btn-close{
+    display: inline-block;
+  }
+}
+
+.is-hide{
+  @include transform(translate(0, -100%));
+  @include transition(transform 0.6s ease 0s);
+}
+
+.page-is-static{
+  .btn-close{
+    display: none !important;
+  }
+}
+
+.display-block{
+  display: block;
+}
+.display-none{
+  display: none;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
