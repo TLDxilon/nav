@@ -351,14 +351,18 @@ ul{
         @extend .padding-tb-l;
         @media #{$smartphones}{
           width:40%;
+          padding:0;
+          text-align-left: left;
         }
         @media #{$tablets}{
           width:40%;
-
+          padding:0;
+          text-align-left: left;
         }
         @media #{$laptop}{
           width:50%;
-
+          padding:0;
+          text-align-left: left;
         }
       }
       .navbar-menu{
