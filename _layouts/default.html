@@ -78,9 +78,9 @@
 
         $(window).on('scroll', function(){
             if ( $(window).scrollTop() > altura ){
-                $('.navbar').addClass('navbar-fixed');
+                $('.navbar-logo--left, .navbar-logo--right').addClass('navbar-fixed');
             } else {
-                $('.navbar').removeClass('navbar-fixed');
+                $('.navbar-logo--left, .navbar-logo--right').removeClass('navbar-fixed');
             }
         });
 
