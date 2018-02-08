@@ -1200,7 +1200,7 @@
 .bg-white {
   background: #ffffff;
   color: #222222; }
-.bg-main, .navbar-menu--line .nav-link:after, .navbar-menu--back .nav-menu-item:hover, .navbar-menu--back .nav-menu-item.active, .menu-movil {
+.bg-main, .navbar-menu--line .nav-link:after, .navbar-menu--back .nav-menu-item:hover, .navbar-menu--back .nav-menu-item.active, .menu-movil, .search-bar:after, .options {
   background: #BE86B9;
   color: #ffffff; }
 
@@ -1223,7 +1223,7 @@
   padding: 5px; }
 .padding-s, .search-bar .input-search, .search-bar .icon {
   padding: 10px; }
-.padding-m {
+.padding-m, .options {
   padding: 15px; }
 .padding-l {
   padding: 20px; }
@@ -1470,12 +1470,18 @@ ul {
       display: inline-block;
       height: 30px;
       margin: 0 5px; }
+      @media only screen and (max-width: 479px) {
+        .navbar .navbar-inner .navbar-item-utiles .utiles-item {
+          height: 20px; } }
       .navbar .navbar-inner .navbar-item-utiles .utiles-item.btn {
         height: auto; }
     .navbar .navbar-inner .navbar-item-utiles .btn-ham {
       position: relative;
       overflow: hidden;
       width: 30px; }
+      @media only screen and (max-width: 479px) {
+        .navbar .navbar-inner .navbar-item-utiles .btn-ham {
+          width: 20px; } }
       @media only screen and (min-width: 960px) {
         .navbar .navbar-inner .navbar-item-utiles .btn-ham {
           display: none; } }
@@ -1486,6 +1492,9 @@ ul {
       position: relative;
       overflow: hidden;
       width: 30px; }
+      @media only screen and (max-width: 479px) {
+        .navbar .navbar-inner .navbar-item-utiles .btn-search {
+          width: 20px; } }
       .navbar .navbar-inner .navbar-item-utiles .btn-search .btn-open-search, .navbar .navbar-inner .navbar-item-utiles .btn-search .btn-close-search {
         position: absolute;
         left: 0; }
@@ -1620,6 +1629,9 @@ ul {
 
 .icon {
   font-size: 30px; }
+  @media only screen and (max-width: 479px) {
+    .icon {
+      font-size: 20px; } }
 
 .navbar-fixed {
   width: 100%;
@@ -1734,5 +1746,18 @@ ul {
         width: 50%; } }
   .search-bar .icon {
     font-size: 30px; }
+  .search-bar:after {
+    content: "";
+    height: -webkit-fill-available;
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: fixed;
+    opacity: 0.8; }
+
+.options {
+  position: absolute;
+  left: 0;
+  top: 200px; }
 
 /*# sourceMappingURL=style.css.map */

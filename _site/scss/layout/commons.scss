@@ -198,6 +198,9 @@ ul{
         vertical-align: middle;
         display: inline-block;
         height: $utiles-icon-size;
+        @media #{$smartphones}{
+          height: $utiles-icon-size-small;
+        }
         margin: 0 5px;
         &.btn{
            height: auto;
@@ -207,6 +210,9 @@ ul{
         position: relative;
         overflow: hidden;
         width: $utiles-icon-size;
+        @media #{$smartphones}{
+          width: $utiles-icon-size-small;
+        }
         @media #{$big}{
           display: none;
         }
@@ -219,6 +225,9 @@ ul{
         position: relative;
         overflow: hidden;
         width: $utiles-icon-size;
+        @media #{$smartphones}{
+          width: $utiles-icon-size-small;
+        }
         .btn-open-search, .btn-close-search{
           position: absolute;
           left:0;
@@ -381,6 +390,10 @@ ul{
 
 .icon{
   font-size: $utiles-icon-size;
+  @media #{$smartphones}{
+    font-size: $utiles-icon-size-small;
+  }
+
 }
 
 
@@ -519,5 +532,24 @@ ul{
     font-size: 30px;
     @extend .padding-s;
   }
+  &:after{
+    content:"";
+    @extend .bg-main;
+    height: -webkit-fill-available;
+    left: 0;
+    right: 0;
+    width: 100%;
+    position:fixed;
+    opacity: 0.8;
+  }
+}
+
+.options{
+  position: absolute;
+  @extend .bg-main;
+  @extend .padding-m;
+  left: 0;
+  top: 200px;
 
 }
+

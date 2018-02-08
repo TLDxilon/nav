@@ -11,7 +11,7 @@ $(window).on('scroll', function(){
 
 
 $(window).on('scroll', function() {
-    if ($(window).scrollTop() > 5) {
+    if ($(window).scrollTop() > 2) {
         $('.navbar-logo--left, .search-bar').addClass('bg-white');
 
     } else  {
@@ -56,10 +56,12 @@ $(document).ready(function(){
         $('.menu-movil').removeClass('display-block');
         $('body').removeClass('overflow-hidden');
     });
+
+
     $('.btn-search').click(function(){
     $( ".search-bar" ).fadeToggle(
         function() {
-            $('.btn-open-search').addClass( "opacity1" );
+            $('.navbar').addClass( "bg-white" );
 
         }, function() {
             $('.btn-close-search').removeClass( "opacity0" );

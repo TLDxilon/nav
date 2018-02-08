@@ -11,24 +11,24 @@
     {% if site.top-bar == 'true' %}
     {% include top-bar.html %}
     {% endif %}
-    <div class="navbar navbar-logo--{{ site.no-hero.header.logo.position }}" id="navbar">
+    <div class="navbar navbar-logo--{{ site.logo-center.header.logo.position }}" id="navbar">
         <div class="navbar-content border-bottom  padding-tb-s">
-            <div class="container{% if site.no-hero.header.logo.position == 'center' %}-fluid{% elsif site.no-hero.header.logo.position == 'left' %}{% endif %}">
+            <div class="container{% if site.logo-center.header.logo.position == 'center' %}-fluid{% elsif site.logo-center.header.logo.position == 'left' %}{% endif %}">
 
-                {% if site.no-hero.header.logo.position == 'center' %}
+                {% if site.logo-center.header.logo.position == 'center' %}
                 <div class="navbar-item navbar-item-logo text-align-center padding-tb-m">
                     {% include {{ site.logo }} image="img/logo2.png" size="m" %}
                 </div>
-                {% elsif site.no-hero.header.logo.position == 'left' %}
+                {% elsif site.logo-center.header.logo.position == 'left' %}
                 {% endif %}
 
                 <div class="navbar-inner">
 
-                    {% if site.no-hero.header.logo.position == 'left' %}
+                    {% if site.logo-center.header.logo.position == 'left' %}
                     <div class="navbar-item navbar-item-logo text-align-left">
                         {% include {{ site.logo }} image="img/logo2.png" size="s" %}
                     </div>
-                    {% elsif site.no-hero.header.logo.position == 'center' %}
+                    {% elsif site.logo-center.header.logo.position == 'center' %}
                     {% endif %}
 
                     {% include menu.html position-menu="center" style="navbar-menu--line" %}
@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    {% if site.no-hero.header.hero == 'true' %}
+    {% if site.logo-center.header.hero == 'true' %}
     {% include hero.html %}
     {% endif %}
 
@@ -66,12 +66,12 @@
             <br>
             {% include content.html %}
             <br>
-            {{ site.no-hero.header }}<br/>
-            {{ site.no-hero.header.logo }}<br/>
-            {{ site.no-hero.logo }}<br/>
-            {{ site.no-hero.header.logo.position }}<br/>
-            {{ site.no-hero.header.hero }}<br/>
-            {{ site.no-hero.logo.position }}<br/>
+            {{ site.logo-center.header }}<br/>
+            {{ site.logo-center.header.logo }}<br/>
+            {{ site.logo-center.logo }}<br/>
+            {{ site.logo-center.header.logo.position }}<br/>
+            {{ site.logo-center.header.hero }}<br/>
+            {{ site.logo-center.logo.position }}<br/>
         </div>
 
     </div>
@@ -82,12 +82,12 @@
 {% include footer.html %}
 
 <script>
-    var altura = $('.navbar').offset().top;
+    var altura = $('.navbar-logo--center .navbar-inner').offset().top;
     $(window).on('scroll', function(){
         if ( $(window).scrollTop() > altura ){
-            $('.navbar-logo--left').addClass('navbar-fixed');
+            $('.navbar-logo--center .navbar-inner').addClass('navbar-fixed');
         } else {
-            $('.navbar-logo--left').removeClass('navbar-fixed');
+            $('.navbar-logo--center .navbar-inner').removeClass('navbar-fixed');
         }
     });
 </script>

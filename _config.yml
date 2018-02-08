@@ -4,13 +4,6 @@ logo: logo-i.html
 
 title: "Mi sitio"
 
-header:
-  logo:
-    file: http://dominio.es/milogo.png
-    position: 'left'
-  hero: 'true'
-  top-bar: 'false'
-
 
 nav-icons: 'true'
 
@@ -25,6 +18,34 @@ icontwitter: '#'
 iconyoutube: '#'
 iconpinterest: '#'
 iconlinkedin: '#'
+
+
+
+header:
+  logo:
+    position: 'left'
+  menu:
+    position: 'fixed'
+  hero: 'true'
+  top-bar: 'false'
+
+no-hero:
+  header:
+    logo:
+      position: 'left'
+    menu:
+      position: 'fixed'
+    hero: 'false'
+    top-bar: 'false'
+
+logo-center:
+  header:
+    logo:
+      position: 'center'
+    hero: 'true'
+    top-bar: 'true'
+
+
 
 
 
