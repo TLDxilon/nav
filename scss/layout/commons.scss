@@ -463,6 +463,8 @@ ul{
 
 
 .page-is-static{
+  @include transform(translate(0, 0));
+  @include transition(transform 0.3s ease 0s);
   .btn-close{
     visibility: hidden;
     @include transition(opacity 15s linear);

@@ -1692,13 +1692,23 @@ ul {
     -o-transition: opacity 1s linear;
     transition: opacity 1s linear; }
 
-.page-is-static .btn-close {
-  visibility: hidden;
-  -webkit-transition: opacity 15s linear;
-  -moz-transition: opacity 15s linear;
-  -ms-transition: opacity 15s linear;
-  -o-transition: opacity 15s linear;
-  transition: opacity 15s linear; }
+.page-is-static {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: transform 0.3s ease 0s;
+  -moz-transition: transform 0.3s ease 0s;
+  -ms-transition: transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s; }
+  .page-is-static .btn-close {
+    visibility: hidden;
+    -webkit-transition: opacity 15s linear;
+    -moz-transition: opacity 15s linear;
+    -ms-transition: opacity 15s linear;
+    -o-transition: opacity 15s linear;
+    transition: opacity 15s linear; }
 
 .is-hide {
   -webkit-transform: translate(0, -100%);
