@@ -11,7 +11,7 @@ $(window).on('scroll', function(){
 
 
 $(window).on('scroll', function() {
-    if ($(window).scrollTop() > 10) {
+    if ($(window).scrollTop() > 5) {
         $('.navbar-logo--left, .search-bar').addClass('bg-white-nav');
 
     } else  {
@@ -57,7 +57,6 @@ $(document).ready(function(){
         $('body').removeClass('overflow-hidden');
     });
     $('.btn-search').click(function(){
-        $('.btn-close-search').removeClass( "opacity0" );
     $( ".search-bar" ).slideToggle(
         function() {
             $('.btn-open-search').addClass( "opacity1" );

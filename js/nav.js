@@ -11,7 +11,7 @@ $(window).on('scroll', function(){
 
 
 $(window).on('scroll', function() {
-    if ($(window).scrollTop() > 10) {
+    if ($(window).scrollTop() > 5) {
         $('.navbar-logo--left, .search-bar').addClass('bg-white-nav');
 
     } else  {
