@@ -8,43 +8,52 @@
 
 <header class="header position-relative page-is-static">
 
-    {% if site.top-bar == 'true' %}
-    {% include top-bar.html %}
-    {% endif %}
-    <div class="navbar navbar-logo--{{ site.header.logo.position}} padding-tb-s border-bottom" id="navbar">
+        {% if site.top-bar == 'true' %}
+        {% include top-bar.html %}
+        {% endif %}
+        <div class="navbar navbar-logo--{{ site.header.logo.position}}" id="navbar">
+         <div class="border-bottom  padding-tb-s">
+             <div class="container{% if site.header.logo.position == 'center' %}-fluid{% elsif site.header.logo.position == 'left' %}{% endif %}">
 
-        <div class="container{% if site.header.logo.position == 'center' %}-fluid{% elsif site.header.logo.position == 'left' %}{% endif %}">
+                 {% if site.logo.position == 'center' %}
+                 <div class="navbar-item navbar-item-logo text-align-center">
+                     {% include {{ site.logo }} image="img/logo2.png" size="m" %}
+                 </div>
+                 {% endif %}
 
-            {% if site.logo.position == 'center' %}
-            <div class="navbar-item navbar-item-logo text-align-center">
-                {% include {{ site.logo }} image="img/logo2.png" size="m" %}
-            </div>
-            {% endif %}
+                 <div class="navbar-inner">
 
-            <div class="navbar-inner">
+                     {% unless site.logo.position == 'left' %}
+                     <div class="navbar-item navbar-item-logo text-align-left">
+                         {% include {{ site.logo }} image="img/logo2.png" size="s" %}
+                     </div>
+                     {% endunless %}
 
-                {% unless site.logo.position == 'left' %}
-                <div class="navbar-item navbar-item-logo text-align-left">
-                    {% include {{ site.logo }} image="img/logo2.png" size="s" %}
-                </div>
-                {% endunless %}
-
-                {% include menu.html position="center" style="navbar-menu--line" %}
-                {% include utiles.html %}
-            </div>
+                     {% include menu.html position="center" style="navbar-menu--line" %}
+                     {% include utiles.html %}
+                 </div>
 
 
+             </div>
         </div>
 
-    </div>
+            <div class="search-bar padding-tb-s border-bottom" id="search-bar">
+                <div class="container">
+                    <form>
+                        <span class="form-search-item icon icon-magnifying-glass fg-gray"></span>
+                        <input class="form-search-item input-search" type="text" placeholder="¿Qué estás buscando?">
+                    </form>
 
-    {% if site.header.hero == 'true' %}
+                </div>
+            </div>
+        </div>
+
+    {% if site.hero == 'true' %}
     {% include hero.html %}
     {% endif %}
 
 
 </header>
-
 
 <main class="content page-is-static" id="main">
 
@@ -98,18 +107,18 @@
 
 
 
+
 <script>
 
-    var premenu= $(".navbar-logo--left").offset().top
+    var altura = $('.navbar').offset().top;
 
     $(window).on('scroll', function(){
-        if ( $(window).scrollTop() > premenu){
-            $('.navbar-logo--left, .navbar-logo--right').addClass('navbar-fixed');
+        if ( $(window).scrollTop() > altura ){
+            $('.navbar-logo--left').addClass('navbar-fixed');
         } else {
-            $('.navbar-logo--left, .navbar-logo--right').removeClass('navbar-fixed');
+            $('.navbar-logo--left').removeClass('navbar-fixed');
         }
     });
 </script>
-
 </body>
 </html>

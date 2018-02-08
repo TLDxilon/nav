@@ -34,25 +34,25 @@
 
 <header class="header position-relative page-is-static">
 
-    
-    <div class="navbar navbar-logo--left padding-tb-s border-bottom" id="navbar">
+        
+        <div class="navbar navbar-logo--left" id="navbar">
+         <div class="border-bottom  padding-tb-s">
+             <div class="container">
 
-        <div class="container">
+                 
 
-            
+                 <div class="navbar-inner">
 
-            <div class="navbar-inner">
-
-                
-                <div class="navbar-item navbar-item-logo text-align-left">
-                    
+                     
+                     <div class="navbar-item navbar-item-logo text-align-left">
+                         
     <a href="/"><img class="branding-logo logo-size-s" src="img/logo2.png">
 
     </a>
-                </div>
-                
+                     </div>
+                     
 
-                
+                     
 <nav class="navbar-item navbar-item-menu text-align-center navbar-menu--line">
     <li class="nav-menu-item padding-s active"><a class="nav-link fg-gray" href="#">Home</a></li>
     <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">About</a></li>
@@ -60,10 +60,10 @@
     <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">News </a></li>
     <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">Contact</a></li>
 </nav>
-                <div class="navbar-item navbar-item-utiles text-align-right">
+                     <div class="navbar-item navbar-item-utiles text-align-right">
     
     <a class="utiles-item btn btn--simple border-radius-l bg-main fg-white" href="http://linkaloquequieras" >Login</a>
-<a class="utiles-item btn-search" href="inputsearch"><span class="icon icon-magnifying-glass fg-gray"></span></a>
+<a class="utiles-item btn-search" href="#searchbar"><span class="icon icon-magnifying-glass fg-gray"></span></a>
 <a class="utiles-item btn-shop" href="http://linkalacesta"><span class="icon icon-shopping-cart fg-gray"></span></a>
 <a class="utiles-item btn-ham" href="#menu-movil"><span class="icon icon-menu fg-gray"></span></a>
 <a class="utiles-item btn-close" href=""><span class="icon icon-cross fg-gray"></span></a>
@@ -71,12 +71,22 @@
     
 
 </div>
-            </div>
+                 </div>
 
 
+             </div>
         </div>
 
-    </div>
+            <div class="search-bar padding-tb-s border-bottom" id="search-bar">
+                <div class="container">
+                    <form>
+                        <span class="form-search-item icon icon-magnifying-glass fg-gray"></span>
+                        <input class="form-search-item input-search" type="text" placeholder="¿Qué estás buscando?">
+                    </form>
+
+                </div>
+            </div>
+        </div>
 
     
     <div class="hero padding-tb-xxl">
@@ -97,14 +107,13 @@
 
 </header>
 
-
 <main class="content page-is-static" id="main">
 
 
    <div class="container">
        <div class="padding-l">
 
-           {"logo"=>{"file"=>"http://dominio.es/milogo.png", "position"=>"left"}, "width"=>"-fluid", "hero"=>"true"}<br/>
+           {"logo"=>{"file"=>"http://dominio.es/milogo.png", "position"=>"left"}, "width"=>"-fluid"}<br/>
            {"file"=>"http://dominio.es/milogo.png", "position"=>"left"}<br/>
            left<br/>
 
@@ -152,18 +161,18 @@ Lorem Ipsum dolor sit amet. 989 556 443. info@tldxilon.github.io
 
 
 
+
 <script>
 
-    var premenu= $(".navbar-logo--left").offset().top
+    var altura = $('.navbar').offset().top;
 
     $(window).on('scroll', function(){
-        if ( $(window).scrollTop() > premenu){
-            $('.navbar-logo--left, .navbar-logo--right').addClass('navbar-fixed');
+        if ( $(window).scrollTop() > altura ){
+            $('.navbar-logo--left').addClass('navbar-fixed');
         } else {
-            $('.navbar-logo--left, .navbar-logo--right').removeClass('navbar-fixed');
+            $('.navbar-logo--left').removeClass('navbar-fixed');
         }
     });
 </script>
-
 </body>
 </html>

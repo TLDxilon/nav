@@ -16,7 +16,7 @@ nav-icons: 'true'
 #Nav icons
 navbutton:  'http://linkaloquequieras'
 iconshop:  'http://linkalacesta'
-iconsearch:  'inputsearch'
+iconsearch:  '#searchbar'
 
 
 

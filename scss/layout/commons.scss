@@ -141,7 +141,8 @@ ul{
 /* Menú con flexbox */
 .navbar{
   @include transform(translate(0, 0));
-  @include transition(transform 0.6s ease 0s, padding .3s ease 0, background .5s ease 0.3);
+  @include transition(background 0.4s ease-out);
+
   .navbar-inner{
     @include flexbox;
     @include flex-direction(row);
@@ -239,27 +240,8 @@ ul{
        }
      }
    }
-   &--right{}
-   &--center{
-     padding: 0;
-     .navbar-inner{
-       @extend .padding-tb-xs;
-       .navbar-item-menu {
-          padding-right: 50px;
-       }
-       .navbar-item-utiles {
-         @media #{$laptop}{
-           padding: 5px 0;
-         }
-         @media #{$tablets}{
-           padding: 5px 0;
-         }
-         @media #{$smartphones}{
-           padding: 5px 0;
-         }
-       }
-     }
-   }
+
+
   }
 }
 
@@ -275,7 +257,9 @@ ul{
     .nav-link{
       &:hover{
         @extend .fg-main;
-        @include transition(color 0.3s ease 0s);
+        transition: color 0.3s ease 0s;
+        -moz-transition: color 0.3s ease 0s;
+        -webkit-transition: color 0.3s ease 0s;
       }
     }
     .active{
@@ -297,7 +281,8 @@ ul{
         @extend .bg-main;
         content: "";
         opacity: 0;
-        @include transition(opacity 0.3s ease 0s, transform 0.3s ease 0s);
+        @include transition(opacity, 0.3s, ease 0s);
+        @include transition(transform, 0.3s, ease 0s);
         @include transform(translate(0, 20px));
       }
       &:hover:after{
@@ -315,7 +300,7 @@ ul{
     .nav-menu-item{
       &:hover, &.active{
         @extend .bg-main;
-        @include transition(background 0.3s ease 0s);
+        @include transition(background,0.3s,ease 0s);
       }
     }
   }
@@ -365,12 +350,11 @@ ul{
 
 .navbar-fixed{
   width:100%;
-  padding-top: 10px;
-  padding-bottom:10px;
   vertical-align: middle;
   position: fixed;
   top: 0;
-  @include transition(padding .3s ease, background .4s ease, transform .5s ease-out);
+  background: transparentize($tone-white, 0.7);
+  @include transition(background 0.4s ease-out);
 
   .nav-link{
     @extend .fg-gray;
@@ -380,8 +364,7 @@ ul{
   }
   &.bg-white-nav{
     @extend .bg-white;
-    @include transition(padding .3s ease, background .4s ease, transform .5s ease-out);
-
+    @include transition(transform 0.6s ease-out, background 0.4s ease-out);
   }
 }
 
@@ -437,8 +420,7 @@ ul{
 
 .is-hide{
   @include transform(translate(0, -100%));
-  @include transition(padding .3s ease, background .4s ease, transform .5s ease-out);
-
+  @include transition(transform 0.6s ease-out);
 }
 
 .page-is-static{
@@ -456,4 +438,36 @@ ul{
 
 .overflow-hidden{
   overflow: hidden;
+}
+
+
+.search-bar{
+  display: none;
+  .form-search-item{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .input-search{
+    background: transparent;
+    border: 1px solid transparentize($tone-white, 0.8);
+    @extend .padding-s;
+    font-size: 14px;
+    width: 25%;
+    font-family: $font-family-base;
+    letter-spacing: 1px;
+    @media #{$smartphones}{
+      width: 70%;
+    }
+    @media #{$tablets}{
+      width: 70%;
+    }
+    @media #{$laptop}{
+      width: 50%;
+    }
+  }
+  .icon{
+    font-size: 30px;
+    @extend .padding-s;
+  }
+
 }
