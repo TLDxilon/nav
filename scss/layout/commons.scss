@@ -197,12 +197,37 @@ ul{
       .utiles-item{
         vertical-align: middle;
         display: inline-block;
-        height: $icon-size;
+        height: $utiles-icon-size;
         margin: 0 5px;
+        &.btn{
+           height: auto;
+        }
       }
-      .btn-ham{
+      .btn-ham {
+        position: relative;
+        overflow: hidden;
+        width: $utiles-icon-size;
         @media #{$big}{
           display: none;
+        }
+        .btn-open, .btn-close{
+           position: absolute;
+          left:0;
+        }
+      }
+      .btn-search {
+        position: relative;
+        overflow: hidden;
+        width: $utiles-icon-size;
+        .btn-open-search, .btn-close-search{
+          position: absolute;
+          left:0;
+        }
+        .btn-open-search {
+          opacity: 1;
+        }
+        .btn-close-search {
+          opacity: 0;
         }
       }
     }
@@ -240,6 +265,19 @@ ul{
        }
      }
    }
+   &--center{
+     .navbar-item-logo-center{
+
+     }
+     .navbar-inner{
+       .navbar-item-logo{
+         display: none;
+       }
+       .navbar-item-menu{
+         margin-right:25px;
+       }
+     }
+   }
 
 
   }
@@ -257,9 +295,7 @@ ul{
     .nav-link{
       &:hover{
         @extend .fg-main;
-        transition: color 0.3s ease 0s;
-        -moz-transition: color 0.3s ease 0s;
-        -webkit-transition: color 0.3s ease 0s;
+        @include transition(color 0.3s ease 0s);
       }
     }
     .active{
@@ -281,8 +317,8 @@ ul{
         @extend .bg-main;
         content: "";
         opacity: 0;
-        @include transition(opacity, 0.3s, ease 0s);
-        @include transition(transform, 0.3s, ease 0s);
+        @include transition(opacity 0.3s ease 0s);
+        @include transition(transform 0.3s ease 0s);
         @include transform(translate(0, 20px));
       }
       &:hover:after{
@@ -300,7 +336,7 @@ ul{
     .nav-menu-item{
       &:hover, &.active{
         @extend .bg-main;
-        @include transition(background,0.3s,ease 0s);
+        @include transition(background 0.3s ease 0s);
       }
     }
   }
@@ -344,7 +380,7 @@ ul{
 }
 
 .icon{
-  font-size: $icon-size;
+  font-size: $utiles-icon-size;
 }
 
 
@@ -368,7 +404,10 @@ ul{
   }
 }
 
-
+.bg-white-nav{
+  @extend .bg-white;
+  @include transition(transform 0.6s ease-out, background 0.4s ease-out);
+}
 
 
 .topbar{
@@ -409,24 +448,32 @@ ul{
   @include transform(translate(-260px, 0));
   @include transition(transform 0.3s ease 0s);
 
-
   .btn-ham{
-    display: none;
+    .btn-open{
+      visibility: hidden;
+      @include transition(opacity 1s linear);
+    }
+
   }
   .btn-close{
     display: inline-block;
+    @include transition(opacity 1s linear);
   }
+}
+
+
+.page-is-static{
+  .btn-close{
+    visibility: hidden;
+    @include transition(opacity 15s linear);
+  }
+
+
 }
 
 .is-hide{
   @include transform(translate(0, -100%));
   @include transition(transform 0.6s ease-out);
-}
-
-.page-is-static{
-  .btn-close{
-    display: none !important;
-  }
 }
 
 .display-block{
@@ -443,18 +490,28 @@ ul{
 
 .search-bar{
   display: none;
+  position: absolute;
+  width: 100%;
   .form-search-item{
     display: inline-block;
     vertical-align: middle;
   }
   .input-search{
     background: transparent;
-    border: 1px solid transparentize($tone-white, 0.8);
+    border: none;
     @extend .padding-s;
-    font-size: 14px;
-    width: 25%;
+    font-size: 30px;
+    width: 80%;
     font-family: $font-family-base;
     letter-spacing: 1px;
+    opacity: 0.6;
+    @extend .fg-gray;
+     &:focus{
+       outline: none;
+       @extend .fg-gray;
+     }
+
+
     @media #{$smartphones}{
       width: 70%;
     }
