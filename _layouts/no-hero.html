@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+
+{% include menu-mov.html %}
+
+<header class="header position-relative page-is-static">
+
+    {% if site.top-bar == 'true' %}
+    {% include top-bar.html %}
+    {% endif %}
+    <div class="navbar navbar-logo--{{ site.header.logo.position }}" id="navbar">
+        <div class="navbar-content border-bottom  padding-tb-s">
+            <div class="container{% if site.no-hero.header.logo.position == 'center' %}-fluid{% elsif site.no-hero.header.logo.position == 'left' %}{% endif %}">
+
+                {% if site.no-hero.header.logo.position == 'center' %}
+                <div class="navbar-item navbar-item-logo text-align-center padding-tb-m">
+                    {% include {{ site.logo }} image="img/logo2.png" size="m" %}
+                </div>
+                {% elsif site.no-hero.header.logo.position == 'left' %}
+                {% endif %}
+
+                <div class="navbar-inner">
+
+                    {% if site.no-hero.header.logo.position == 'left' %}
+                    <div class="navbar-item navbar-item-logo text-align-left">
+                        {% include {{ site.logo }} image="img/logo2.png" size="s" %}
+                    </div>
+                    {% elsif site.no-hero.header.logo.position == 'center' %}
+                    {% endif %}
+
+                    {% include menu.html position-menu="center" style="navbar-menu--line" %}
+                    {% include utiles.html %}
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="search-bar padding-tb-s border-bottom" id="search-bar">
+            <div class="container">
+                <form>
+                    <span class="form-search-item icon icon-magnifying-glass fg-gray"></span>
+                    <input class="form-search-item input-search" type="text" placeholder="¿Qué estás buscando?">
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    {% if site.header.hero == 'true' %}
+    {% include hero.html %}
+    {% endif %}
+
+
+</header>
+
+<main class="content page-is-static" id="main">
+
+
+    <div class="container">
+        <div class="padding-l">
+            {% include options.html %}
+            <br>
+            {% include content.html %}
+            <br>
+            {{ site.header }}<br/>
+            {{ site.header.logo }}<br/>
+            {{ site.logo }}<br/>
+            {{ site.header.logo.position }}<br/>
+            {{ site.header.hero }}<br/>
+            {{ site.logo.position }}<br/>
+        </div>
+
+    </div>
+
+</main>
+
+
+{% include footer.html %}
+
+
+
+</body>
+</html>

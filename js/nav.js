@@ -1,39 +1,46 @@
 
+//var altura = $('.navbar').offset().top;
+/*
+$(window).on('scroll', function(){
+    if ( $(window).scrollTop() > 0 ){
+        $('.navbar-logo--left').addClass('navbar-fixed');
+    } else {
+        $('.navbar-logo--left').removeClass('navbar-fixed');
+    }
+});*/
+
 
 $(window).on('scroll', function() {
-    if ($(window).scrollTop() > 100) {
-        $('.navbar-logo--left, .navbar-logo--right').addClass('bg-white-nav');
+    if ($(window).scrollTop() > 5) {
+        $('.navbar-logo--left, .search-bar').addClass('bg-white');
+
     } else  {
-        $('.navbar-logo--left, .navbar-logo--right').removeClass('bg-white-nav');
+        $('.navbar-logo--left, .search-bar').removeClass('bg-white');
     }
 
 
 });
-//subo el menú cuando llego a 600 de scroll
+
 $(window).on('scroll', function() {
     if ($(window).scrollTop() > 600) {
-        $('.navbar-logo--left, .navbar-logo--right').addClass('is-hide');
+        $('.navbar-logo--left').addClass('is-hide');
     } else  {
 
     }
-});
 
-//bajo el menú cuando subo el scroll
+
+});
 var lastScrollPosition = 0;
-$(window).on('scroll', function() {
+window.onscroll = function() {
     var newScrollPosition = window.scrollY;
 
     if (newScrollPosition < lastScrollPosition){
-        $('.navbar-logo--left, .navbar-logo--right').removeClass('is-hide');
+        $('.navbar-logo--left').removeClass('is-hide');
     }else{
 
     }
     lastScrollPosition = newScrollPosition;
-});
-
-
-
-
+}
 
 $(document).ready(function(){
     $('.page-is-static .btn-ham').click(function(){
@@ -48,5 +55,15 @@ $(document).ready(function(){
         $('.header, .content, .footer').addClass('page-is-static');
         $('.menu-movil').removeClass('display-block');
         $('body').removeClass('overflow-hidden');
+    });
+    $('.btn-search').click(function(){
+    $( ".search-bar" ).fadeToggle(
+        function() {
+            $('.btn-open-search').addClass( "opacity1" );
+
+        }, function() {
+            $('.btn-close-search').removeClass( "opacity0" );
+        }
+    );
     });
 })

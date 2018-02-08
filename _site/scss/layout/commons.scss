@@ -141,7 +141,8 @@ ul{
 /* Menú con flexbox */
 .navbar{
   @include transform(translate(0, 0));
-  @include transition(transform 0.6s ease 0s, padding .3s ease 0, background .5s ease 0.3);
+  @include transition(transform 0.6s ease-out, background 0.4s ease-out);
+
   .navbar-inner{
     @include flexbox;
     @include flex-direction(row);
@@ -196,12 +197,37 @@ ul{
       .utiles-item{
         vertical-align: middle;
         display: inline-block;
-        height: $icon-size;
+        height: $utiles-icon-size;
         margin: 0 5px;
+        &.btn{
+           height: auto;
+        }
       }
-      .btn-ham{
+      .btn-ham {
+        position: relative;
+        overflow: hidden;
+        width: $utiles-icon-size;
         @media #{$big}{
           display: none;
+        }
+        .btn-open, .btn-close{
+          position: absolute;
+          left:0;
+        }
+      }
+      .btn-search {
+        position: relative;
+        overflow: hidden;
+        width: $utiles-icon-size;
+        .btn-open-search, .btn-close-search{
+          position: absolute;
+          left:0;
+        }
+        .btn-open-search {
+          opacity: 1;
+        }
+        .btn-close-search {
+          opacity: 0;
         }
       }
     }
@@ -239,27 +265,21 @@ ul{
        }
      }
    }
-   &--right{}
    &--center{
-     padding: 0;
+     .navbar-item-logo-center{
+
+     }
      .navbar-inner{
-       @extend .padding-tb-xs;
-       .navbar-item-menu {
-          padding-right: 50px;
+       .navbar-item-logo{
+         display: none;
        }
-       .navbar-item-utiles {
-         @media #{$laptop}{
-           padding: 5px 0;
-         }
-         @media #{$tablets}{
-           padding: 5px 0;
-         }
-         @media #{$smartphones}{
-           padding: 5px 0;
-         }
+       .navbar-item-menu{
+         margin-right:25px;
        }
      }
    }
+
+
   }
 }
 
@@ -297,7 +317,8 @@ ul{
         @extend .bg-main;
         content: "";
         opacity: 0;
-        @include transition(opacity 0.3s ease 0s, transform 0.3s ease 0s);
+        @include transition(opacity 0.3s ease 0s);
+        @include transition(transform 0.3s ease 0s);
         @include transform(translate(0, 20px));
       }
       &:hover:after{
@@ -359,18 +380,16 @@ ul{
 }
 
 .icon{
-  font-size: $icon-size;
+  font-size: $utiles-icon-size;
 }
 
 
 .navbar-fixed{
   width:100%;
-  padding-top: 10px;
-  padding-bottom:10px;
   vertical-align: middle;
   position: fixed;
   top: 0;
-  @include transition(padding .3s ease, background .4s ease, transform .5s ease-out);
+  @include transition(background 0.4s ease-out, transform 0.6s ease-out);
 
   .nav-link{
     @extend .fg-gray;
@@ -378,11 +397,7 @@ ul{
   .branding-logo{
     width: 200px;
   }
-  &.bg-white-nav{
-    @extend .bg-white;
-    @include transition(padding .3s ease, background .4s ease, transform .5s ease-out);
 
-  }
 }
 
 
@@ -426,25 +441,32 @@ ul{
   @include transform(translate(-260px, 0));
   @include transition(transform 0.3s ease 0s);
 
-
   .btn-ham{
-    display: none;
+    .btn-open{
+      visibility: hidden;
+      @include transition(opacity 1s linear);
+    }
+
   }
   .btn-close{
     display: inline-block;
+    @include transition(opacity 1s linear);
   }
+}
+
+
+.page-is-static{
+  .btn-close{
+    visibility: hidden;
+    @include transition(opacity 15s linear);
+  }
+
+
 }
 
 .is-hide{
   @include transform(translate(0, -100%));
-  @include transition(padding .3s ease, background .4s ease, transform .5s ease-out);
-
-}
-
-.page-is-static{
-  .btn-close{
-    display: none !important;
-  }
+  @include transition(transform 0.6s ease-out);
 }
 
 .display-block{
@@ -456,4 +478,46 @@ ul{
 
 .overflow-hidden{
   overflow: hidden;
+}
+
+
+.search-bar{
+  display: none;
+  position: absolute;
+  width: 100%;
+  .form-search-item{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .input-search{
+    background: transparent;
+    border: none;
+    @extend .padding-s;
+    font-size: 30px;
+    width: 80%;
+    font-family: $font-family-base;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    @extend .fg-gray;
+     &:focus{
+       outline: none;
+       @extend .fg-gray;
+     }
+
+
+    @media #{$smartphones}{
+      width: 70%;
+    }
+    @media #{$tablets}{
+      width: 70%;
+    }
+    @media #{$laptop}{
+      width: 50%;
+    }
+  }
+  .icon{
+    font-size: 30px;
+    @extend .padding-s;
+  }
+
 }
