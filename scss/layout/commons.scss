@@ -141,7 +141,7 @@ ul{
 /* Menú con flexbox */
 .navbar{
   @include transform(translate(0, 0));
-  @include transition(background 0.4s ease-out);
+  @include transition(transform 0.6s ease-out, background 0.4s ease-out);
 
   .navbar-inner{
     @include flexbox;
@@ -389,8 +389,7 @@ ul{
   vertical-align: middle;
   position: fixed;
   top: 0;
-  background: transparentize($tone-white, 0.7);
-  @include transition(background 0.4s ease-out);
+  @include transition(background 0.4s ease-out, transform 0.6s ease-out);
 
   .nav-link{
     @extend .fg-gray;
@@ -398,16 +397,10 @@ ul{
   .branding-logo{
     width: 200px;
   }
-  &.bg-white-nav{
-    @extend .bg-white;
-    @include transition(transform 0.6s ease-out, background 0.4s ease-out);
-  }
+
 }
 
-.bg-white-nav{
-  @extend .bg-white;
-  @include transition(transform 0.6s ease-out, background 0.4s ease-out);
-}
+
 
 
 .topbar{

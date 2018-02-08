@@ -12,10 +12,10 @@ $(window).on('scroll', function(){
 
 $(window).on('scroll', function() {
     if ($(window).scrollTop() > 5) {
-        $('.navbar-logo--left, .search-bar').addClass('bg-white-nav');
+        $('.navbar-logo--left, .search-bar').addClass('bg-white');
 
     } else  {
-        $('.navbar-logo--left, .search-bar').removeClass('bg-white-nav');
+        $('.navbar-logo--left, .search-bar').removeClass('bg-white');
     }
 
 
@@ -57,7 +57,7 @@ $(document).ready(function(){
         $('body').removeClass('overflow-hidden');
     });
     $('.btn-search').click(function(){
-    $( ".search-bar" ).slideToggle(
+    $( ".search-bar" ).fadeToggle(
         function() {
             $('.btn-open-search').addClass( "opacity1" );
 
