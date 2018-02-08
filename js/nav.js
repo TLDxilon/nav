@@ -57,7 +57,6 @@ $(document).ready(function(){
         $('body').removeClass('overflow-hidden');
     });
     $('.btn-search').click(function(){
-        $('.btn-close-search').removeClass( "opacity0" );
     $( ".search-bar" ).slideToggle(
         function() {
             $('.btn-open-search').addClass( "opacity1" );
