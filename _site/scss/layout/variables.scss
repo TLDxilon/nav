@@ -11,6 +11,7 @@ $font-family-base: 'Poppins', sans-serif;
 
 
 $tone-white: #ffffff;
+$tone-clear: #ECECEC;
 $tone-dark: #222222;
 $tone-gray: #bcbcbc;
 $tone-main: #BE86B9;
@@ -27,6 +28,9 @@ $utiles-icon-size-small: 20px;
   }
   &-gray{
     color: $tone-gray;
+  }
+  &-clear{
+    color: $tone-clear;
   }
   &-white{
     color: $tone-white;
@@ -45,6 +49,10 @@ $utiles-icon-size-small: 20px;
   &-gray{
     background: $tone-gray;
     color: $tone-white;
+  }
+  &-clear{
+    background: $tone-clear;
+    color: $tone-dark;
   }
   &-white{
     background: $tone-white;

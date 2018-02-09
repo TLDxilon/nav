@@ -12,15 +12,15 @@
     {% include top-bar.html %}
     {% endif %}
     <div class="navbar navbar-logo--{{ site.no-hero.header.logo.position }} {% if site.no-hero.header.menu.position == 'fixed' %}navbar-fixed{% elsif site.no-hero.header.menu.position == 'static' %}{% endif %}" id="navbar">
+        {% if site.no-hero.header.logo.position == 'center' %}
+        <div class="navbar-item navbar-item-logo text-align-center padding-tb-m">
+            {% include {{ site.logo }} image="img/logo2.png" size="m" %}
+        </div>
+        {% elsif site.no-hero.header.logo.position == 'left' %}
+        {% endif %}
         <div class="navbar-content border-bottom  padding-tb-s">
             <div class="container{% if site.no-hero.header.logo.position == 'center' %}-fluid{% elsif site.no-hero.header.logo.position == 'left' %}{% endif %}">
 
-                {% if site.no-hero.header.logo.position == 'center' %}
-                <div class="navbar-item navbar-item-logo text-align-center padding-tb-m">
-                    {% include {{ site.logo }} image="img/logo2.png" size="m" %}
-                </div>
-                {% elsif site.no-hero.header.logo.position == 'left' %}
-                {% endif %}
 
                 <div class="navbar-inner">
 
@@ -39,15 +39,7 @@
             </div>
         </div>
 
-        <div class="search-bar padding-tb-s border-bottom" id="search-bar">
-            <div class="container">
-                <form>
-                    <span class="form-search-item icon icon-magnifying-glass fg-gray"></span>
-                    <input class="form-search-item input-search" type="text" placeholder="¿Qué estás buscando?">
-                </form>
-
-            </div>
-        </div>
+        {% include search-bar.html %}
     </div>
 
     {% if site.no-hero.header.hero == 'true' %}

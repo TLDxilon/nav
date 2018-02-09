@@ -12,37 +12,41 @@ $(window).on('scroll', function(){
 
 $(window).on('scroll', function() {
     if ($(window).scrollTop() > 2) {
-        $('.navbar-logo--left, .navbar-logo--right, .search-bar').addClass('bg-white');
+        $('.navbar, .search-bar').addClass('bg-white');
 
     } else  {
-        $('.navbar-logo--left, .navbar-logo--right, .search-bar').removeClass('bg-white');
+        $('.navbar, .search-bar').removeClass('bg-white');
     }
 
 
 });
+
 
 $(window).on('scroll', function() {
     if ($(window).scrollTop() > 600) {
-        $('.navbar-logo--left, .navbar-logo--right').addClass('is-hide');
+        $('.navbar').addClass('is-hide');
     } else  {
 
     }
-
-
 });
+
+
 var lastScrollPosition = 0;
 window.onscroll = function() {
     var newScrollPosition = window.scrollY;
 
     if (newScrollPosition < lastScrollPosition){
-        $('.navbar-logo--left, .navbar-logo--right').removeClass('is-hide');
+        $('.navbar').removeClass('is-hide');
     }else{
 
     }
     lastScrollPosition = newScrollPosition;
 }
 
+
+
 $(document).ready(function(){
+
     $('.page-is-static .btn-ham').click(function(){
         $('.header, .content, .footer').addClass('page-is-moving');
         $('.header, .content, .footer').removeClass('page-is-static');
@@ -57,28 +61,34 @@ $(document).ready(function(){
         $('body').removeClass('overflow-hidden');
     });
 
+    var _searchBar = $('.search-bar');
+    var _navBar = $('.navbar');
+    var _body = $('body');
 
-    $('.btn-search').click(function(){
-    $( ".search-bar" ).fadeToggle(
-        function() {
 
+    var toogleSearch = function(){
 
-        }, function() {
+        _navBar.toggleClass('search-is-open');
 
+        if (_navBar.hasClass('search-is-open')) {
+            _navBar.find('input').focus();
+            $('.backdrop').addClass('display-block');
+        } else{
+            $('.backdrop').removeClass('display-block');
         }
-    );
+        //_searchBar.toggleClass('is-open');
+        //_body.toggleClass('overflow-hidden');
+
+    };
 
 
+
+    $('.btn-search').on('click', function(){
+
+       //_searchBar.toggleClass('is-open');
+        toogleSearch();
 
     });
-
-    $('.btn-search').click(
-        function() {
-            $('.navbar, .search-bar').addClass('bg-white');
-            $('body').addClass('overflow-hidden');
-            $('.btn-search .btn-open-search').css('opacity','0');
-            $('.btn-search .btn-close-search').css('opacity','1');
-        });
 
 
 })
