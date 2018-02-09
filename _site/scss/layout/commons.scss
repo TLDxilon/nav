@@ -245,7 +245,7 @@ ul{
   }
 
   &.navbar-logo{
-   &--left{
+   &--left, &--right{
      .navbar-item-logo {
        @include flex-basis(20%);
        @media #{$smartphones}{
@@ -279,12 +279,14 @@ ul{
 
      }
      .navbar-inner{
-       .navbar-item-logo{
-         display: none;
-       }
        .navbar-item-menu{
-         margin-right:25px;
+         margin-right: 25px;
        }
+     }
+   }
+   &--right{
+     .navbar-inner{
+        @include flex-direction(row-reverse);
      }
    }
 
@@ -534,13 +536,13 @@ ul{
   }
   &:after{
     content:"";
-    @extend .bg-main;
+    @extend .bg-dark;
     height: -webkit-fill-available;
     left: 0;
     right: 0;
     width: 100%;
     position:fixed;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 
@@ -549,7 +551,7 @@ ul{
   @extend .bg-main;
   @extend .padding-m;
   left: 0;
-  top: 200px;
+  top: 400px;
 
 }
 

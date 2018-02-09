@@ -1191,7 +1191,7 @@
 .fg-main, .navbar-menu--simple .nav-link:hover, .navbar-menu--simple .active .nav-link {
   color: #BE86B9; }
 
-.bg-dark, .topbar {
+.bg-dark, .topbar, .search-bar:after {
   background: #222222;
   color: #ffffff; }
 .bg-gray {
@@ -1200,7 +1200,7 @@
 .bg-white {
   background: #ffffff;
   color: #222222; }
-.bg-main, .navbar-menu--line .nav-link:after, .navbar-menu--back .nav-menu-item:hover, .navbar-menu--back .nav-menu-item.active, .menu-movil, .search-bar:after, .options {
+.bg-main, .navbar-menu--line .nav-link:after, .navbar-menu--back .nav-menu-item:hover, .navbar-menu--back .nav-menu-item.active, .menu-movil, .options {
   background: #BE86B9;
   color: #ffffff; }
 
@@ -1502,61 +1502,64 @@ ul {
         opacity: 1; }
       .navbar .navbar-inner .navbar-item-utiles .btn-search .btn-close-search {
         opacity: 0; }
-  .navbar.navbar-logo--left .navbar-item-logo {
+  .navbar.navbar-logo--left .navbar-item-logo, .navbar.navbar-logo--right .navbar-item-logo {
     -webkit-flex-basis: 20%;
     -moz-flex-basis: 20%;
     -ms-flex-basis: 20%;
     flex-basis: 20%; }
     @media only screen and (max-width: 479px) {
-      .navbar.navbar-logo--left .navbar-item-logo {
+      .navbar.navbar-logo--left .navbar-item-logo, .navbar.navbar-logo--right .navbar-item-logo {
         -webkit-flex-basis: 40%;
         -moz-flex-basis: 40%;
         -ms-flex-basis: 40%;
         flex-basis: 40%; } }
     @media only screen and (min-width: 480px) and (max-width: 768px) {
-      .navbar.navbar-logo--left .navbar-item-logo {
+      .navbar.navbar-logo--left .navbar-item-logo, .navbar.navbar-logo--right .navbar-item-logo {
         -webkit-flex-basis: 40%;
         -moz-flex-basis: 40%;
         -ms-flex-basis: 40%;
         flex-basis: 40%; } }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
-      .navbar.navbar-logo--left .navbar-item-logo {
+      .navbar.navbar-logo--left .navbar-item-logo, .navbar.navbar-logo--right .navbar-item-logo {
         -webkit-flex-basis: 40%;
         -moz-flex-basis: 40%;
         -ms-flex-basis: 40%;
         flex-basis: 40%; } }
-  .navbar.navbar-logo--left .navbar-item-menu {
+  .navbar.navbar-logo--left .navbar-item-menu, .navbar.navbar-logo--right .navbar-item-menu {
     -webkit-flex-basis: 60%;
     -moz-flex-basis: 60%;
     -ms-flex-basis: 60%;
     flex-basis: 60%; }
-  .navbar.navbar-logo--left .navbar-item-utiles {
+  .navbar.navbar-logo--left .navbar-item-utiles, .navbar.navbar-logo--right .navbar-item-utiles {
     -webkit-flex-basis: 20%;
     -moz-flex-basis: 20%;
     -ms-flex-basis: 20%;
     flex-basis: 20%; }
     @media only screen and (max-width: 479px) {
-      .navbar.navbar-logo--left .navbar-item-utiles {
+      .navbar.navbar-logo--left .navbar-item-utiles, .navbar.navbar-logo--right .navbar-item-utiles {
         -webkit-flex-basis: 60%;
         -moz-flex-basis: 60%;
         -ms-flex-basis: 60%;
         flex-basis: 60%; } }
     @media only screen and (min-width: 480px) and (max-width: 768px) {
-      .navbar.navbar-logo--left .navbar-item-utiles {
+      .navbar.navbar-logo--left .navbar-item-utiles, .navbar.navbar-logo--right .navbar-item-utiles {
         -webkit-flex-basis: 60%;
         -moz-flex-basis: 60%;
         -ms-flex-basis: 60%;
         flex-basis: 60%; } }
     @media only screen and (min-width: 768px) and (max-width: 960px) {
-      .navbar.navbar-logo--left .navbar-item-utiles {
+      .navbar.navbar-logo--left .navbar-item-utiles, .navbar.navbar-logo--right .navbar-item-utiles {
         -webkit-flex-basis: 60%;
         -moz-flex-basis: 60%;
         -ms-flex-basis: 60%;
         flex-basis: 60%; } }
-  .navbar.navbar-logo--center .navbar-inner .navbar-item-logo {
-    display: none; }
   .navbar.navbar-logo--center .navbar-inner .navbar-item-menu {
     margin-right: 25px; }
+  .navbar.navbar-logo--right .navbar-inner {
+    -webkit-flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse; }
 
 /* estilos del menú */
 .navbar-menu--simple .nav-link:hover, .navbar-menu--simple .active .nav-link {
@@ -1753,11 +1756,11 @@ ul {
     right: 0;
     width: 100%;
     position: fixed;
-    opacity: 0.8; }
+    opacity: 0.9; }
 
 .options {
   position: absolute;
   left: 0;
-  top: 200px; }
+  top: 400px; }
 
 /*# sourceMappingURL=style.css.map */

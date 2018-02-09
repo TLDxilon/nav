@@ -8,27 +8,27 @@
 
 <header class="header position-relative page-is-static">
 
-    {% if site.header.top-bar == 'true' %}
+    {% if site.logo-right.header.top-bar == 'true' %}
     {% include top-bar.html %}
     {% endif %}
-    <div class="navbar navbar-logo--{{ site.header.logo.position }} {% if site.header.menu.position == 'fixed' %}navbar-fixed{% elsif site.header.menu.position == 'static' %}{% endif %}" id="navbar">
+    <div class="navbar navbar-logo--{{ site.logo-right.header.logo.position }} {% if site.logo-right.header.menu.position == 'fixed' %}navbar-fixed{% elsif site.logo-right.header.menu.position == 'static' %}{% endif %}" id="navbar">
         <div class="navbar-content border-bottom  padding-tb-s">
-            <div class="container{% if site.header.logo.position == 'center' %}-fluid{% elsif site.header.logo.position == 'left' or site.header.logo.position == 'right' %}{% endif %}">
+            <div class="container{% if site.logo-right.header.logo.position == 'center' %}-fluid{% elsif site.logo-right.header.logo.position == 'left' or site.logo-right.header.logo.position == 'right' %}{% endif %}">
 
-                {% if site.header.logo.position == 'center' %}
+                {% if site.logo-right.header.logo.position == 'center' %}
                 <div class="navbar-item navbar-item-logo text-align-center padding-tb-m">
                     {% include {{ site.logo }} image="img/logo2.png" size="m" %}
                 </div>
-                {% elsif site.header.logo.position == 'left' %}
+                {% elsif site.logo-right.header.logo.position == 'left' or  site.logo-right.header.logo.position == 'right' %}
                 {% endif %}
 
                 <div class="navbar-inner">
 
-                    {% if site.header.logo.position == 'left' or site.header.logo.position == 'right' %}
+                    {% if site.logo-right.header.logo.position == 'left' or site.logo-right.header.logo.position == 'right' %}
                     <div class="navbar-item navbar-item-logo text-align-left">
                         {% include {{ site.logo }} image="img/logo2.png" size="s" %}
                     </div>
-                    {% elsif site.header.logo.position == 'center' %}
+                    {% elsif site.logo-right.header.logo.position == 'center' %}
                     {% endif %}
 
                     {% include menu.html position-menu="center" style="navbar-menu--line" %}
@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    {% if site.header.hero == 'true' %}
+    {% if site.logo-right.header.hero == 'true' %}
     {% include hero.html %}
     {% endif %}
 
@@ -58,24 +58,39 @@
 </header>
 
 <main class="content page-is-static" id="main">
+
+
     <div class="container">
         <div class="padding-l">
             {% include options.html %}
             <br>
             {% include content.html %}
             <br>
-            {{ site.header }}<br/>
-            {{ site.header.logo }}<br/>
-            {{ site.logo }}<br/>
-            {{ site.header.logo.position }}<br/>
-            {{ site.header.hero }}<br/>
-            {{ site.logo.position }}<br/>
+            {{ site.logo-right.header }}<br/>
+            {{ site.logo-right.header.logo }}<br/>
+            {{ site.logo-right.logo }}<br/>
+            {{ site.logo-right.header.logo.position }}<br/>
+            {{ site.logo-right.header.hero }}<br/>
+            {{ site.logo-right.logo.position }}<br/>
         </div>
+
     </div>
+
 </main>
 
 
 {% include footer.html %}
+
+<script>
+    var altura_del_menu = $('.navbar').outerHeight(true);
+
+    $('.content').css('padding-top', (altura_del_menu) + 'px');
+
+
+
+
+
+</script>
 
 
 </body>

@@ -21,7 +21,6 @@ iconpinterest: '#'
 iconlinkedin: '#'
 
 
-
 header:
   logo:
     position: 'left'
@@ -43,10 +42,20 @@ logo-center:
   header:
     logo:
       position: 'center'
+    menu:
+        position: 'fixed'
     hero: 'true'
-    top-bar: 'true'
+    top-bar: 'false'
 
 
+logo-right:
+  header:
+    logo:
+      position: 'right'
+    menu:
+      position: 'fixed'
+    hero: 'true'
+    top-bar: 'false'
 
 
 
