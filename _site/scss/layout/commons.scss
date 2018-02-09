@@ -255,6 +255,13 @@
           @include transition(transform 0.6s ease-out, background 0.4s ease-out);
        }
      }
+     &.is-hide{
+       .navbar-content{
+         @include transform(translate(0, -100%));
+         @include transition(transform 0.6s ease-out);
+       }
+
+     }
 
 
 
