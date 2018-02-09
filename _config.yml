@@ -47,6 +47,14 @@ logo-center:
     hero: 'true'
     top-bar: 'false'
 
+logo-center-no-hero:
+  header:
+    logo:
+      position: 'center'
+    menu:
+        position: 'fixed'
+    hero: 'false'
+    top-bar: 'false'
 
 logo-right:
   header:

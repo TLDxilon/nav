@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+
+{% include menu-mov.html %}
+
+<header class="header position-relative page-is-static">
+
+    {% if site.logo-center-no-hero.header.top-bar == 'true' %}
+    {% include top-bar.html %}
+    {% endif %}
+    <div class="navbar navbar-logo--{{ site.logo-center-no-hero.header.logo.position }}" id="navbar">
+
+        {% if site.logo-center-no-hero.header.logo.position == 'center' %}
+        <div class="navbar-item navbar-item-logo text-align-center padding-tb-m">
+            {% include {{ site.logo }} image="img/logo2.png" size="m" %}
+        </div>
+        {% elsif site.logo-center-no-hero.header.logo.position == 'left' %}
+        {% endif %}
+
+        <div class="navbar-content border-bottom  padding-tb-s">
+            <div class="container{% if site.logo-center-no-hero.header.logo.position == 'center' %}-fluid{% elsif site.logo-center-no-hero.header.logo.position == 'left' %}{% endif %}">
+
+                <div class="navbar-inner">
+
+                    {% if site.logo-center-no-hero.header.logo.position == 'left' %}
+                    <div class="navbar-item navbar-item-logo text-align-left">
+                        {% include {{ site.logo }} image="img/logo2.png" size="s" %}
+                    </div>
+                    {% elsif site.logo-center-no-hero.header.logo.position == 'center' %}
+                    {% endif %}
+
+                    {% include menu.html position-menu="center" style="navbar-menu--line" %}
+                    {% include utiles.html %}
+                </div>
+
+
+            </div>
+        </div>
+
+        {% include search-bar.html %}
+    </div>
+
+    {% if site.logo-center-no-hero.header.hero == 'true' %}
+    {% include hero.html %}
+    {% endif %}
+
+
+</header>
+
+<main class="content page-is-static" id="main">
+
+
+    <div class="container">
+        <div class="padding-l">
+            {% include options.html %}
+            <br>
+            {% include content.html %}
+            <br>
+            {{ site.logo-center-no-hero.header }}<br/>
+            {{ site.logo-center-no-hero.header.logo }}<br/>
+            {{ site.logo-center-no-hero.logo }}<br/>
+            {{ site.logo-center-no-hero.header.logo.position }}<br/>
+            {{ site.logo-center-no-hero.header.hero }}<br/>
+            {{ site.logo-center-no-hero.logo.position }}<br/>
+        </div>
+
+    </div>
+
+</main>
+
+
+{% include footer.html %}
+
+
+
+<script>
+    var altura_del_logo = $('.navbar-item-logo').outerHeight(true);
+    var altura = $('.navbar-content').offset().top;
+
+    $(window).on('scroll', function(){
+        if ( $(window).scrollTop() > altura ){
+            $('.navbar').addClass('navbar-fixed bg-white');
+        } else {
+            $('.navbar').removeClass('navbar-fixed bg-white');
+        }
+    });
+
+    $('.hero').css('padding-top', (altura + altura_del_logo) + 'px');
+    $('.content').css('padding-top', (altura + altura_del_logo) + 'px');
+    $('.navbar-fixed .navbar-content').css('top', -(altura) + 'px');
+
+
+
+
+</script>
+
+
+</body>
+</html>
