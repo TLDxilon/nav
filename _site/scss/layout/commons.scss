@@ -62,9 +62,31 @@
 
 /* Menú con flexbox */
 .navbar{
+  .navbar-content{
+  }
+  &.navbar-fixed {
+    .navbar-content {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+  }
+  &.bg-white{
+    .navbar-content{
+      @extend .bg-white;
+    //  @include transform(translate(0, 0));
+      @include transition(transform 0.6s ease-out, background 0.4s ease-out);
+    }
+  }
+  &.is-hide{
+    .navbar-content{
+      @include transform(translate(0, -100%));
+      @include transition(transform 0.6s ease-out);
+    }
+
+  }
  // @include transform(translate(0, 0));
  // @include transition(transform 0.6s ease-out, background 0.4s ease-out);
-
   .navbar-inner{
     @include flexbox;
     @include flex-direction(row);
@@ -72,10 +94,7 @@
     @include justify-content(center);
     @include align-items(center);
 
-    .navbar-item{
 
-
-    }
     .navbar-item-menu{
       @media #{$smartphones}{
         display: none;
@@ -173,16 +192,8 @@
   }
   &.navbar-logo{
    &--left, &--right{
-     &.bg-white{
-       @extend .bg-white;
-       @include transform(translate(0, 0));
-       @include transition(transform 0.6s ease-out, background 0.4s ease-out);
-     }
 
-     &.is-hide{
-       @include transform(translate(0, -100%));
-       @include transition(transform 0.6s ease-out);
-     }
+     /*
      &.navbar-fixed{
        position: fixed;
        top: 0;
@@ -193,6 +204,7 @@
          @extend .fg-gray;
        }
      }
+     */
      .navbar-item-logo {
        @include flex-basis(20%);
        @media #{$smartphones}{
@@ -228,40 +240,12 @@
    &--center{
      position: absolute;
      width:100%;
-     .navbar-content{
-        &.navbar-fixed{
-          position: fixed;
-          top: 0;
-        }
-     }
      .navbar-inner{
        .navbar-item-menu{
          margin-right: 25px;
        }
      }
-     &.navbar-fixed{
-       .navbar-content{
-         position: fixed;
-         width:100%;
-         top:0;
-       }
 
-
-     }
-     &.bg-white{
-       .navbar-content{
-         @extend .bg-white;
-          @include transform(translate(0, 0));
-          @include transition(transform 0.6s ease-out, background 0.4s ease-out);
-       }
-     }
-     &.is-hide{
-       .navbar-content{
-         @include transform(translate(0, -100%));
-         @include transition(transform 0.6s ease-out);
-       }
-
-     }
 
 
 

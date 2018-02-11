@@ -46,10 +46,10 @@
         </div>
         
 
-        <div class="navbar-content border-bottom  padding-tb-s">
+        <div class="navbar-content border-bottom">
             <div class="container-fluid">
 
-                <div class="navbar-inner">
+                <div class="navbar-inner padding-tb-s">
 
                     
                     
@@ -88,9 +88,7 @@
 
 
             </div>
-        </div>
-
-        <div class="search-bar border-bottom bg-white" id="search-bar">
+            <div class="search-bar border-bottom bg-white" id="search-bar">
     <div class="container">
         <form>
             <span class="form-search-item icon icon-magnifying-glass fg-gray"></span>
@@ -100,6 +98,9 @@
     </div>
 
 </div>
+        </div>
+
+
     </div>
 
     
@@ -131,7 +132,7 @@
     <a href="/nav/option1.html">Logo left + no-hero</a><br>
     <a href="/nav/option2.html">Logo center + hero</a><br>
     <a href="/nav/option3.html">Logo right + hero</a><br>
-    <a href="/nav/option4.html">Logo right + no hero</a><br>
+    <a href="/nav/option4.html">Logo center + no hero</a><br>
 </div>
 
             <br>
@@ -187,8 +188,9 @@ Lorem Ipsum dolor sit amet. 989 556 443. info@tldxilon.github.io
 
 
 <script>
-    var altura_del_logo = $('.navbar-item-logo').outerHeight(true);
-   var altura = $('.navbar-content').offset().top;
+
+    var altura = $('.navbar-content').offset().top;
+    var altura_del_nav = $('.navbar-content').outerHeight(true);
 
     $(window).on('scroll', function(){
         if ( $(window).scrollTop() > altura ){
@@ -198,9 +200,10 @@ Lorem Ipsum dolor sit amet. 989 556 443. info@tldxilon.github.io
         }
     });
 
-   $('.hero').css('padding-top', (altura + altura_del_logo) + 'px');
-   $('.content').css('padding-top', (altura + altura_del_logo) + 'px');
-   $('.navbar-fixed .navbar-content').css('top', -(altura) + 'px');
+
+    $('.content').css('padding-top', (altura + altura_del_nav) + 'px');
+
+
 
 
 

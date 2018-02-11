@@ -18,11 +18,11 @@
         </div>
         {% elsif site.no-hero.header.logo.position == 'left' %}
         {% endif %}
-        <div class="navbar-content border-bottom  padding-tb-s">
+        <div class="navbar-content border-bottom">
             <div class="container{% if site.no-hero.header.logo.position == 'center' %}-fluid{% elsif site.no-hero.header.logo.position == 'left' %}{% endif %}">
 
 
-                <div class="navbar-inner">
+                <div class="navbar-inner  padding-tb-s">
 
                     {% if site.no-hero.header.logo.position == 'left' %}
                     <div class="navbar-item navbar-item-logo text-align-left">
@@ -37,9 +37,10 @@
 
 
             </div>
+            {% include search-bar.html %}
         </div>
 
-        {% include search-bar.html %}
+
     </div>
 
     {% if site.no-hero.header.hero == 'true' %}

@@ -20,10 +20,10 @@
         {% elsif site.logo-center.header.logo.position == 'left' %}
         {% endif %}
 
-        <div class="navbar-content border-bottom  padding-tb-s">
+        <div class="navbar-content border-bottom">
             <div class="container{% if site.logo-center.header.logo.position == 'center' %}-fluid{% elsif site.logo-center.header.logo.position == 'left' %}{% endif %}">
 
-                <div class="navbar-inner">
+                <div class="navbar-inner padding-tb-s">
 
                     {% if site.logo-center.header.logo.position == 'left' %}
                     <div class="navbar-item navbar-item-logo text-align-left">
@@ -38,9 +38,10 @@
 
 
             </div>
+            {% include search-bar.html %}
         </div>
 
-        {% include search-bar.html %}
+
     </div>
 
     {% if site.logo-center.header.hero == 'true' %}
@@ -77,8 +78,9 @@
 
 
 <script>
-    var altura_del_logo = $('.navbar-item-logo').outerHeight(true);
-   var altura = $('.navbar-content').offset().top;
+
+    var altura = $('.navbar-content').offset().top;
+    var altura_del_nav = $('.navbar-content').outerHeight(true);
 
     $(window).on('scroll', function(){
         if ( $(window).scrollTop() > altura ){
@@ -88,9 +90,10 @@
         }
     });
 
-   $('.hero').css('padding-top', (altura + altura_del_logo) + 'px');
-   $('.content').css('padding-top', (altura + altura_del_logo) + 'px');
-   $('.navbar-fixed .navbar-content').css('top', -(altura) + 'px');
+
+    $('.content').css('padding-top', (altura + altura_del_nav) + 'px');
+
+
 
 
 
