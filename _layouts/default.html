@@ -7,12 +7,11 @@
 {% include menu-mov.html %}
 
 <header class="header position-relative page-is-static">
-
     {% if site.header.top-bar == 'true' %}
     {% include top-bar.html %}
     {% endif %}
     {% include backdrop.html %}
-    <div class="navbar navbar-logo--{{ site.header.logo.position }} {% if site.header.menu.position == 'fixed' %}navbar-fixed{% elsif site.header.menu.position == 'static' %}{% endif %}" id="navbar">
+    <div class="navbar navbar-logo--{{ site.header.logo.position }}" id="navbar">
 
         {% if site.header.logo.position == 'center' %}
         <div class="navbar-item navbar-item-logo text-align-center padding-tb-m">
@@ -73,6 +72,22 @@
 
 {% include footer.html %}
 
+<script>
+    var altura = $('.navbar-content').offset().top;
+    var altura_del_nav = $('.navbar-content').outerHeight(true);
 
+    $(window).on('scroll', function(){
+        if ( $(window).scrollTop() > altura ){
+            $('.navbar').addClass('navbar-fixed bg-white');
+        } else {
+            $('.navbar').removeClass('navbar-fixed bg-white');
+        }
+    });
+
+
+    $('.content').css('padding-top', (altura + altura_del_nav) + 'px');
+
+
+</script>
 </body>
 </html>

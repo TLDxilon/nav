@@ -1,14 +1,4 @@
 
-//var altura = $('.navbar').offset().top;
-/*
-$(window).on('scroll', function(){
-    if ( $(window).scrollTop() > 0 ){
-        $('.navbar-logo--left').addClass('navbar-fixed');
-    } else {
-        $('.navbar-logo--left').removeClass('navbar-fixed');
-    }
-});*/
-
 
 $(window).on('scroll', function() {
     if ($(window).scrollTop() > 2) {
@@ -20,6 +10,9 @@ $(window).on('scroll', function() {
 
 
 });
+
+
+
 
 
 $(window).on('scroll', function() {
@@ -76,8 +69,7 @@ $(document).ready(function(){
         } else{
             $('.backdrop').removeClass('display-block');
         }
-        //_searchBar.toggleClass('is-open');
-        //_body.toggleClass('overflow-hidden');
+
 
     };
 
@@ -85,7 +77,7 @@ $(document).ready(function(){
 
     $('.btn-search').on('click', function(){
 
-       //_searchBar.toggleClass('is-open');
+
         toogleSearch();
 
     });

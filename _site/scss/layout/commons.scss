@@ -6,6 +6,8 @@
 
 /* Menú con flexbox */
 .navbar{
+  position: absolute;
+  width:100%;
   &.navbar-fixed {
     .navbar-content {
       position: fixed;
@@ -167,8 +169,6 @@
    }
 
    &--center{
-     position: absolute;
-     width:100%;
      .navbar-inner{
        .navbar-item-menu{
          margin-right: 25px;
