@@ -4,66 +4,8 @@
 @import "elements";
 
 
-/* Menú con display:table */
-/*
-.navbar-inner-table{
-   display: table;
-   table-layout: fixed;
-   width:100%;
-   .navbar-item{
-     float: none;
-     display: table-cell;
-     vertical-align: middle;
-  }
-  .navbar-menu{
-    list-style: none;
-    width:70%;
-    @media #{$smartphones}{
-      display: none;
-    }
-    @media #{$tablets}{
-      display: none;
-    }
-    @media #{$laptop}{
-      display: none;
-    }
-    &-item{
-      display: inline-block;
-
-    }
-  }
-  .navbar-logo{
-    width:15%;
-    @media #{$smartphones}{
-      width:50%;
-    }
-  }
-  .navbar-utiles{
-    width:15%;
-    @media #{$smartphones}{
-      width:50%;
-    }
-    .btn-ham{
-      @extend .padding-xs;
-      @media #{$big}{
-        display: none;
-      }
-    }
-    .btn-shop{
-      @extend .padding-xs;
-    }
-  }
-  .nav-link{
-    @extend .font-weight-bold;
-  }
-
-}
-*/
-
 /* Menú con flexbox */
 .navbar{
-  .navbar-content{
-  }
   &.navbar-fixed {
     .navbar-content {
       position: fixed;
@@ -74,7 +16,6 @@
   &.bg-white{
     .navbar-content{
       @extend .bg-white;
-    //  @include transform(translate(0, 0));
       @include transition(transform 0.6s ease-out, background 0.4s ease-out);
     }
   }
@@ -85,8 +26,7 @@
     }
 
   }
- // @include transform(translate(0, 0));
- // @include transition(transform 0.6s ease-out, background 0.4s ease-out);
+
   .navbar-inner{
     @include flexbox;
     @include flex-direction(row);
@@ -186,25 +126,14 @@
   }
   &.search-is-open {
     @extend .bg-white;
+    .navbar-content{
+    @extend .bg-white;
     @include transition(transform 0.6s ease-out, background 0.4s ease-out);
-   // @extend .navbar-fixed;
+    }
 
   }
   &.navbar-logo{
    &--left, &--right{
-
-     /*
-     &.navbar-fixed{
-       position: fixed;
-       top: 0;
-       width: 100%;
-       vertical-align: middle;
-       @include transition(background 0.4s ease-out, transform 0.6s ease-out);
-       .nav-link{
-         @extend .fg-gray;
-       }
-     }
-     */
      .navbar-item-logo {
        @include flex-basis(20%);
        @media #{$smartphones}{
@@ -256,35 +185,10 @@
         @include flex-direction(row-reverse);
      }
    }
-
-
-  }
-
-
+ }
 }
 
 
-
-
-/* Navbar fixed */
-/*
-.navbar-fixed{
-  width:100%;
-  vertical-align: middle;
-  position: fixed;
-  top: 0;
-  @include transition(background 0.4s ease-out, transform 0.6s ease-out);
-
-  .nav-link{
-    @extend .fg-gray;
-  }
-
-  &.navbar-logo--center{
-
-  }
-}
-
-*/
 
 
 .topbar{
@@ -295,9 +199,6 @@
   }
   .icon{
     font-size: 22px;
-  }
-  .social{
-
   }
 }
 
@@ -317,7 +218,6 @@
       background: darken($tone-main, 10%);
     }
   }
-
 }
 
 .page-is-moving{
@@ -329,7 +229,6 @@
       visibility: hidden;
       @include transition(opacity 1s linear);
     }
-
   }
   .btn-close{
     display: inline-block;
@@ -342,8 +241,6 @@
     visibility: hidden;
     @include transition(opacity 15s linear);
   }
-
-
 }
 
 
@@ -351,11 +248,9 @@
 .search-bar{
   display: none;
   width: 100%;
-
   .search-is-open & {
     display: block;
   }
-
   .form-search-item{
     display: inline-block;
     vertical-align: middle;
@@ -376,8 +271,6 @@
     &::placeholder {
       @extend .fg-clear;
     }
-
-
     @media #{$smartphones}{
       width: 75%;
       font-size: 20px;
@@ -405,10 +298,10 @@
 
 }
 
+
 .overflow-hidden{
   overflow: hidden;
 }
-
 .display-none{
   display: none;
 }

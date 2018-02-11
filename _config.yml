@@ -27,7 +27,7 @@ header:
   menu:
     position: 'fixed'
   hero: 'true'
-  top-bar: 'false'
+  top-bar: 'true'
 
 no-hero:
   header:

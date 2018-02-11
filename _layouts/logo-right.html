@@ -11,6 +11,7 @@
     {% if site.logo-right.header.top-bar == 'true' %}
     {% include top-bar.html %}
     {% endif %}
+    {% include backdrop.html %}
     <div class="navbar navbar-logo--{{ site.logo-right.header.logo.position }} {% if site.logo-right.header.menu.position == 'fixed' %}navbar-fixed{% elsif site.logo-right.header.menu.position == 'static' %}{% endif %}" id="navbar">
 
         {% if site.logo-right.header.logo.position == 'center' %}

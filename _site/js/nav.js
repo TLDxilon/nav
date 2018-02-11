@@ -89,6 +89,9 @@ $(document).ready(function(){
         toogleSearch();
 
     });
-
+    $('.backdrop').click(function(){
+        $(this).removeClass('display-block');
+        $('.navbar').removeClass('search-is-open');
+    });
 
 })
