@@ -199,8 +199,9 @@
   //  @extend .bg-white;
     .navbar-content{
     @extend .bg-white;
-     //@include transition(background 0 ease-out);
+      @include transition(none);
     }
+
 
   }
   &.navbar-logo{

@@ -1631,6 +1631,12 @@ ul {
           opacity: 1; }
         .navbar .navbar-inner .navbar-item-utiles .btn-search .btn-close-search {
           opacity: 0; }
+  .navbar.search-is-open .navbar-content {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none; }
   .navbar.navbar-logo--left .navbar-item-logo, .navbar.navbar-logo--right .navbar-item-logo {
     -webkit-flex-basis: 20%;
     -moz-flex-basis: 20%;
