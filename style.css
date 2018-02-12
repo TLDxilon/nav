@@ -1202,7 +1202,7 @@
 .bg-clear {
   background: #ECECEC;
   color: #222222; }
-.bg-white, .navbar.navbar-fixed.bg-white .navbar-content, .navbar.search-is-open .navbar-content, .navbar.navbar-logo--center.search-is-open .navbar-item-logo {
+.bg-white, .navbar.navbar-fixed.bg-white .navbar-content, .navbar.navbar-fixed.bg-white .navbar-item-logo, .navbar.search-is-open .navbar-content, .navbar.navbar-logo--center.search-is-open .navbar-item-logo {
   background: #ffffff;
   color: #222222; }
 .bg-main, .navbar-menu--line .nav-link:after, .navbar-menu--back .nav-menu-item:hover, .navbar-menu--back .nav-menu-item.active, .menu-movil, .options {
