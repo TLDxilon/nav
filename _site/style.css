@@ -1196,7 +1196,7 @@
 .bg-dark, .backdrop, .topbar {
   background: #222222;
   color: #ffffff; }
-.bg-gray, .btn-search::after, .btn-search span::before, .btn-search span::after {
+.bg-gray, .btn-search::after, .btn-search span::before, .btn-search span::after, .linea-ham, .btn-ham span, .btn-ham span::before, .btn-ham span::after {
   background: #bcbcbc;
   color: #ffffff; }
 .bg-clear {
@@ -1561,8 +1561,13 @@ ul {
       transition: opacity 0.3s, transform 0.3s; }
 
 /*botón menú móvil*/
-/*
-.btn-ham{
+.linea-ham, .btn-ham span, .btn-ham span::before, .btn-ham span::after {
+  position: absolute;
+  display: inline-block;
+  height: 3px;
+  width: 24px; }
+
+.btn-ham {
   position: relative;
   display: inline-block;
   width: 30px;
@@ -1570,36 +1575,55 @@ ul {
   overflow: hidden;
   white-space: nowrap;
   color: transparent;
-  z-index: 3;
-  span{
-    position: absolute;
+  z-index: 3; }
+  .btn-ham span {
     top: 50%;
     right: 10px;
     margin-top: -2px;
-    @include transition(background .3s .3s);
-    &::before{
-      top: -6px;
-    }
-    &::after{
-      top: 6px;
-    }
-    &::before, &::after{
-      display: inline-block;
-      height: 3px;
-      width: 24px;
-      @extend .bg-gray;
+    -webkit-transition: background 0.3s 0.3s;
+    -moz-transition: background 0.3s 0.3s;
+    -ms-transition: background 0.3s 0.3s;
+    -o-transition: background 0.3s 0.3s;
+    transition: background 0.3s 0.3s; }
+    .btn-ham span::before {
+      top: -6px; }
+    .btn-ham span::after {
+      top: 6px; }
+    .btn-ham span::before, .btn-ham span::after {
       content: '';
-      @include transform(translateZ(0));
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       right: 0;
-      @include transform-origin(0% 50%);
-      @include transition(background .3s .3s);
+      -webkit-transform-origin: 0% 50%;
+      -moz-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+      transform-origin: 0% 50%;
+      -webkit-transition: transform 0.3s 0.3s;
+      -moz-transition: transform 0.3s 0.3s;
+      -ms-transition: transform 0.3s 0.3s;
+      -o-transition: transform 0.3s 0.3s;
+      transition: transform 0.3s 0.3s; }
+  .page-is-moving .btn-ham span {
+    background: transparent; }
+    .page-is-moving .btn-ham span::before {
+      -webkit-transform: translateX(4px) translateY(-3px) rotate(45deg);
+      -moz-transform: translateX(4px) translateY(-3px) rotate(45deg);
+      -ms-transform: translateX(4px) translateY(-3px) rotate(45deg);
+      transform: translateX(4px) translateY(-3px) rotate(45deg);
+      right: -2px;
+      top: -6px; }
+    .page-is-moving .btn-ham span::after {
+      -webkit-transform: translateX(4px) translateY(-3px) rotate(-45deg);
+      -moz-transform: translateX(4px) translateY(-3px) rotate(-45deg);
+      -ms-transform: translateX(4px) translateY(-3px) rotate(-45deg);
+      transform: translateX(4px) translateY(-3px) rotate(-45deg);
+      right: -2px;
+      top: 10px; }
 
-    }
-  }
-}
-*/
 /* Menú con flexbox */
 .navbar {
   position: absolute;
@@ -1664,6 +1688,24 @@ ul {
         font-size: 14px; }
     .navbar .navbar-inner .navbar-item-utiles {
       /*
+            .btn-ham {
+              position: relative;
+              overflow: hidden;
+              width: $utiles-icon-size;
+              @media only screen and (max-width: 479px){
+                width: $utiles-icon-size-small;
+              }
+              @media only screen and (min-width: 960px){
+                display: none;
+              }
+              .btn-open, .btn-close{
+                position: absolute;
+                left:0;
+              }
+            }
+      
+      */
+      /*
       .btn-search {
         position: relative;
         overflow: hidden;
@@ -1696,19 +1738,6 @@ ul {
             margin: 0 2px; } }
         .navbar .navbar-inner .navbar-item-utiles .utiles-item.btn {
           height: auto; }
-      .navbar .navbar-inner .navbar-item-utiles .btn-ham {
-        position: relative;
-        overflow: hidden;
-        width: 30px; }
-        @media only screen and (max-width: 479px) {
-          .navbar .navbar-inner .navbar-item-utiles .btn-ham {
-            width: 25px; } }
-        @media only screen and (min-width: 960px) {
-          .navbar .navbar-inner .navbar-item-utiles .btn-ham {
-            display: none; } }
-        .navbar .navbar-inner .navbar-item-utiles .btn-ham .btn-open, .navbar .navbar-inner .navbar-item-utiles .btn-ham .btn-close {
-          position: absolute;
-          left: 0; }
   .navbar.search-is-open .navbar-inner .navbar-item-utiles .btn-search::before, .navbar.search-is-open .navbar-inner .navbar-item-utiles .btn-search::after {
     opacity: 0; }
   .navbar.search-is-open .navbar-inner .navbar-item-utiles .btn-search span::before {
