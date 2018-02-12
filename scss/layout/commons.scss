@@ -196,7 +196,7 @@
     @extend .bg-white;
     .navbar-content{
     @extend .bg-white;
-    @include transition(transform 0.6s ease-out, background 0.3s ease-out);
+    @include transition(background 0.3s ease-out);
     }
 
   }
