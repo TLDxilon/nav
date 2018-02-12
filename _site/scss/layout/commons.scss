@@ -323,9 +323,14 @@
 
 .search-bar{
   display: none;
+  opacity: 0;
+  visibility: hidden;
   width: 100%;
+  @include transition(opacity 0.3s 0s, visibility 0s 0s);
   .search-is-open & {
     display: block;
+    opacity: 0.95;
+    visibility: visible;
   }
   .form-search-item{
     display: inline-block;
