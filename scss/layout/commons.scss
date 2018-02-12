@@ -259,7 +259,17 @@
    &--right{
      .navbar-inner{
         @include flex-direction(row-reverse);
+       @media #{$smartphones}{
+         @include flex-direction(row);
+       }
+       @media #{$tablets}{
+         @include flex-direction(row);
+       }
+       @media #{$laptop}{
+         @include flex-direction(row);
+       }
      }
+
    }
  }
 }
