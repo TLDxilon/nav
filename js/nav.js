@@ -66,8 +66,12 @@ $(document).ready(function(){
         if (_navBar.hasClass('search-is-open')) {
             _navBar.find('input').focus();
             $('.backdrop').addClass('display-block');
+            $('.btn-open-search').css('opacity', '0');
+            $('.btn-close-search').css('opacity', '1');
         } else{
             $('.backdrop').removeClass('display-block');
+            $('.btn-open-search').css('opacity', '1');
+            $('.btn-close-search').css('opacity', '0');
         }
 
 
