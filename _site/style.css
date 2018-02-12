@@ -1202,7 +1202,7 @@
 .bg-clear {
   background: #ECECEC;
   color: #222222; }
-.bg-white, .navbar.bg-white .navbar-content, .navbar.search-is-open .navbar-content {
+.bg-white, .navbar.bg-white .navbar-content, .navbar.search-is-open .navbar-content, .navbar.navbar-logo--center.search-is-open .navbar-item-logo {
   background: #ffffff;
   color: #222222; }
 .bg-main, .navbar-menu--line .nav-link:after, .navbar-menu--back .nav-menu-item:hover, .navbar-menu--back .nav-menu-item.active, .menu-movil, .options {
@@ -1690,6 +1690,12 @@ ul {
         -moz-flex-basis: 60%;
         -ms-flex-basis: 60%;
         flex-basis: 60%; } }
+  .navbar.navbar-logo--center.search-is-open .navbar-item-logo {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none; }
   .navbar.navbar-logo--center .navbar-inner .navbar-item-menu {
     margin-right: 25px; }
   .navbar.navbar-logo--right .navbar-inner {

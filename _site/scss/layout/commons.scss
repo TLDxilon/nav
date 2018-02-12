@@ -196,7 +196,6 @@
 
   }
   &.search-is-open {
-  //  @extend .bg-white;
     .navbar-content{
     @extend .bg-white;
       @include transition(none);
@@ -239,6 +238,12 @@
    }
 
    &--center{
+     &.search-is-open{
+       .navbar-item-logo{
+         @extend .bg-white;
+         @include transition(none);
+       }
+     }
      .navbar-inner{
        .navbar-item-menu{
          margin-right: 25px;
