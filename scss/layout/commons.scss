@@ -196,7 +196,8 @@
 
   }
   &.search-is-open {
-  //  @extend .bg-white;
+     @extend .bg-white;
+    @include transition(none);
     .navbar-content{
     @extend .bg-white;
       @include transition(none);

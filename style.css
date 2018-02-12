@@ -1202,7 +1202,7 @@
 .bg-clear {
   background: #ECECEC;
   color: #222222; }
-.bg-white, .navbar.bg-white .navbar-content, .navbar.search-is-open .navbar-content {
+.bg-white, .navbar.bg-white .navbar-content, .navbar.search-is-open, .navbar.search-is-open .navbar-content {
   background: #ffffff;
   color: #222222; }
 .bg-main, .navbar-menu--line .nav-link:after, .navbar-menu--back .nav-menu-item:hover, .navbar-menu--back .nav-menu-item.active, .menu-movil, .options {
