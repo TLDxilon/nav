@@ -1767,19 +1767,24 @@ ul {
   transition: opacity 15s linear; }
 
 .search-bar {
-  display: none;
+  height: 0;
   opacity: 0;
   visibility: hidden;
   width: 100%;
-  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
-  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
-  -ms-transition: opacity 0.3s 0s, visibility 0s 0s;
-  -o-transition: opacity 0.3s 0s, visibility 0s 0s;
-  transition: opacity 0.3s 0s, visibility 0s 0s; }
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s;
+  -ms-transition: opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s;
+  -o-transition: opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s; }
   .search-is-open .search-bar {
-    display: block;
+    height: auto;
     opacity: 0.95;
-    visibility: visible; }
+    visibility: visible;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s;
+    -ms-transition: opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s;
+    -o-transition: opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s; }
   .search-bar .form-search-item {
     display: inline-block;
     vertical-align: middle; }
