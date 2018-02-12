@@ -88,6 +88,8 @@ $(document).ready(function(){
     $('.backdrop').click(function(){
         $(this).removeClass('display-block');
         $('.navbar').removeClass('search-is-open');
+        $('.btn-open-search').css('opacity', '1');
+        $('.btn-close-search').css('opacity', '0');
     });
 
 })
