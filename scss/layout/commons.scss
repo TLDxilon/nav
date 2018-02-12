@@ -274,6 +274,7 @@
   width: 260px;
   right: 0;
   height:100%;
+  z-index:1;
   @extend .bg-main;
   .nav-menu-item{
     display: list-item;

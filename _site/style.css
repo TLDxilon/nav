@@ -1193,7 +1193,7 @@
 .fg-main, .navbar-menu--simple .nav-link:hover, .navbar-menu--simple .active .nav-link {
   color: #BE86B9; }
 
-.bg-dark, .backdrop, .topbar {
+.bg-dark, .backdrop, .backdrop-top, .topbar {
   background: #222222;
   color: #ffffff; }
 .bg-gray, .btn-search::after, .btn-search span::before, .btn-search span::after, .linea-ham, .btn-ham span, .btn-ham span::before, .btn-ham span::after {
@@ -1462,7 +1462,7 @@ ul {
     .icon {
       font-size: 25px; } }
 
-.backdrop {
+.backdrop, .backdrop-top {
   display: none;
   position: fixed;
   opacity: 0.95;
@@ -1854,7 +1854,8 @@ ul {
   top: 0;
   width: 260px;
   right: 0;
-  height: 100%; }
+  height: 100%;
+  z-index: 1; }
   .menu-movil .nav-menu-item {
     display: list-item;
     list-style-type: none; }
