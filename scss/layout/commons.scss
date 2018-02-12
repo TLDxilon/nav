@@ -183,8 +183,8 @@
         color: transparent;
         z-index: 3;
         &::before{
-          top: 2px;
-          left: 2px;
+          top: 4px;
+          left: 4px;
           width: 18px;
           height: 18px;
           border-radius: 50%;
@@ -214,6 +214,7 @@
           width: 100%;
           top: 0;
           left: 0;
+          @include transition(opacity 0.3s, transform 0.3s);
           &::before{
             @include rotate(45);
 
@@ -273,7 +274,7 @@
             }
             &::before, &::after{
               opacity: 1;
-              @include transition (transform 0.3s ease);
+              @include transition(opacity 0.3s, transform 0.3s);
             }
 
           }

@@ -1638,8 +1638,8 @@ ul {
         color: transparent;
         z-index: 3; }
         .navbar .navbar-inner .navbar-item-utiles .btn-search::before {
-          top: 2px;
-          left: 2px;
+          top: 4px;
+          left: 4px;
           width: 18px;
           height: 18px;
           border-radius: 50%;
@@ -1668,7 +1668,12 @@ ul {
           height: 100%;
           width: 100%;
           top: 0;
-          left: 0; }
+          left: 0;
+          -webkit-transition: opacity 0.3s, transform 0.3s;
+          -moz-transition: opacity 0.3s, transform 0.3s;
+          -ms-transition: opacity 0.3s, transform 0.3s;
+          -o-transition: opacity 0.3s, transform 0.3s;
+          transition: opacity 0.3s, transform 0.3s; }
           .navbar .navbar-inner .navbar-item-utiles .btn-search span::before {
             -webkit-transform: rotate(45deg);
             -moz-transform: rotate(45deg);
@@ -1715,11 +1720,11 @@ ul {
     transform: rotate(45deg); }
   .navbar.search-is-open .navbar-inner .navbar-item-utiles .btn-search span::before, .navbar.search-is-open .navbar-inner .navbar-item-utiles .btn-search span::after {
     opacity: 1;
-    -webkit-transition: transform 0.3s ease;
-    -moz-transition: transform 0.3s ease;
-    -ms-transition: transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
-    transition: transform 0.3s ease; }
+    -webkit-transition: opacity 0.3s, transform 0.3s;
+    -moz-transition: opacity 0.3s, transform 0.3s;
+    -ms-transition: opacity 0.3s, transform 0.3s;
+    -o-transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s; }
   .navbar.navbar-logo--left .navbar-item-logo, .navbar.navbar-logo--right .navbar-item-logo {
     -webkit-flex-basis: 15%;
     -moz-flex-basis: 15%;
