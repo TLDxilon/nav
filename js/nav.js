@@ -65,12 +65,14 @@ $(document).ready(function(){
 
         if (_navBar.hasClass('search-is-open')) {
             _navBar.find('input').focus();
-            $('.backdrop').css('opacity', '0.95');
+            $('.backdrop').css('display', 'block');
+            $('.backdrop').addClass('opacity-transition1');
             $('.search-bar').css('opacity', '1');
           //  $('.btn-open-search').css('opacity', '0');
           //  $('.btn-close-search').css('opacity', '1');
         } else{
-            $('.backdrop').css('opacity', '0');
+            $('.backdrop').css('display', 'none');
+            $('.backdrop').removeClass('opacity-transition0');
             $('.search-bar').css('opacity', '0');
           //  $('.btn-open-search').css('opacity', '1');
           //  $('.btn-close-search').css('opacity', '0');
