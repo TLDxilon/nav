@@ -90,6 +90,9 @@
           height: $utiles-icon-size-small;
         }
         margin: 0 5px;
+        @media #{$smartphones}{
+          margin: 0 2px;
+        }
         &.btn{
            height: auto;
         }
