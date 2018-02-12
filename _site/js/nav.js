@@ -66,10 +66,12 @@ $(document).ready(function(){
         if (_navBar.hasClass('search-is-open')) {
             _navBar.find('input').focus();
             $('.backdrop').css('opacity', '0.95');
+            $('.search-bar').css('opacity', '1');
             $('.btn-open-search').css('opacity', '0');
             $('.btn-close-search').css('opacity', '1');
         } else{
             $('.backdrop').css('opacity', '0');
+            $('.search-bar').css('opacity', '0');
             $('.btn-open-search').css('opacity', '1');
             $('.btn-close-search').css('opacity', '0');
         }
@@ -86,7 +88,7 @@ $(document).ready(function(){
 
     });
     $('.backdrop').click(function(){
-        $(this).removeClass('display-block');
+        $(this).css('opacity', '0');
         $('.navbar').removeClass('search-is-open');
         $('.btn-open-search').css('opacity', '1');
         $('.btn-close-search').css('opacity', '0');
