@@ -1196,7 +1196,7 @@
 .bg-dark, .backdrop, .topbar {
   background: #222222;
   color: #ffffff; }
-.bg-gray, .navbar .navbar-inner .navbar-item-utiles .btn-search::after, .navbar .navbar-inner .navbar-item-utiles .btn-search span::before, .navbar .navbar-inner .navbar-item-utiles .btn-search span::after {
+.bg-gray, .btn-search::after, .btn-search span::before, .btn-search span::after {
   background: #bcbcbc;
   color: #ffffff; }
 .bg-clear {
@@ -1475,26 +1475,133 @@ ul {
   -o-transition: opacity 0.3s 0s, visibility 0s 0s;
   transition: opacity 0.3s 0s, visibility 0s 0s; }
 
+/*search*/
+.btn-search {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  color: transparent;
+  z-index: 3; }
+  .btn-search::before {
+    top: 4px;
+    left: 4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid #bcbcbc; }
+  .btn-search::after {
+    height: 3px;
+    width: 10px;
+    right: 4px;
+    bottom: 8px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .btn-search::before, .btn-search::after {
+    content: '';
+    position: absolute;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .btn-search span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transition: opacity 0.3s, transform 0.3s;
+    -moz-transition: opacity 0.3s, transform 0.3s;
+    -ms-transition: opacity 0.3s, transform 0.3s;
+    -o-transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s; }
+    .btn-search span::before {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .btn-search span::after {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    .btn-search span::before, .btn-search span::after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      height: 3px;
+      width: 22px;
+      top: 50%;
+      margin-top: -2px;
+      left: 50%;
+      margin-left: -11px;
+      opacity: 0;
+      -webkit-transition: opacity 0.3s, transform 0.3s;
+      -moz-transition: opacity 0.3s, transform 0.3s;
+      -ms-transition: opacity 0.3s, transform 0.3s;
+      -o-transition: opacity 0.3s, transform 0.3s;
+      transition: opacity 0.3s, transform 0.3s; }
+
+/*botón menú móvil*/
+/*
+.btn-ham{
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  color: transparent;
+  z-index: 3;
+  span{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -2px;
+    @include transition(background .3s .3s);
+    &::before{
+      top: -6px;
+    }
+    &::after{
+      top: 6px;
+    }
+    &::before, &::after{
+      display: inline-block;
+      height: 3px;
+      width: 24px;
+      @extend .bg-gray;
+      content: '';
+      @include transform(translateZ(0));
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      right: 0;
+      @include transform-origin(0% 50%);
+      @include transition(background .3s .3s);
+
+    }
+  }
+}
+*/
 /* Menú con flexbox */
 .navbar {
   position: absolute;
   width: 100%; }
   .navbar .navbar-content {
-    -webkit-transition: transform 0.6s ease-out, background 0.3s ease-out;
-    -moz-transition: transform 0.6s ease-out, background 0.3s ease-out;
-    -ms-transition: transform 0.6s ease-out, background 0.3s ease-out;
-    -o-transition: transform 0.6s ease-out, background 0.3s ease-out;
-    transition: transform 0.6s ease-out, background 0.3s ease-out; }
+    -webkit-transition: transform 0.3s ease, background 0.3s ease;
+    -moz-transition: transform 0.3s ease, background 0.3s ease;
+    -ms-transition: transform 0.3s ease, background 0.3s ease;
+    -o-transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease; }
   .navbar.navbar-fixed .navbar-content {
     position: fixed;
     top: 0;
     width: 100%; }
-  .navbar.navbar-fixed.bg-white .navbar-content, .navbar.search-is-open .navbar.navbar-fixed.navbar-content .navbar-content, .navbar.navbar-logo--center.search-is-open .navbar.navbar-fixed.navbar-item-logo .navbar-content {
-    -webkit-transition: transform 0.6s ease-out, background 0.3s ease-out;
-    -moz-transition: transform 0.6s ease-out, background 0.3s ease-out;
-    -ms-transition: transform 0.6s ease-out, background 0.3s ease-out;
-    -o-transition: transform 0.6s ease-out, background 0.3s ease-out;
-    transition: transform 0.6s ease-out, background 0.3s ease-out; }
   .navbar.is-hide .navbar-content {
     -webkit-transform: translate(0, -100%);
     -moz-transform: translate(0, -100%);
@@ -1545,45 +1652,6 @@ ul {
         font-size: 14px; }
     .navbar .navbar-inner .navbar-item-utiles {
       /*
-      .btn-ham{
-        position: relative;
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        overflow: hidden;
-        white-space: nowrap;
-        color: transparent;
-        z-index: 3;
-        span{
-          position: absolute;
-          top: 50%;
-          right: 10px;
-          margin-top: -2px;
-         //  transition(background 0.3s 0.3s);
-          &::before{
-            top: -6px;
-          }
-          &::after{
-            top: 6px;
-          }
-          &::before, &::after{
-            display: inline-block;
-            height: 3px;
-            width: 24px;
-            @extend .bg-gray;
-            content: '';
-            @include transform(translateZ(0));
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            right: 0;
-            @include transform-origin(0% 50%);
-          //  @include transition(transform 0.3s 0.3s);
-
-          }
-        }
-      }
-*/
-      /*
       .btn-search {
         position: relative;
         overflow: hidden;
@@ -1629,83 +1697,6 @@ ul {
         .navbar .navbar-inner .navbar-item-utiles .btn-ham .btn-open, .navbar .navbar-inner .navbar-item-utiles .btn-ham .btn-close {
           position: absolute;
           left: 0; }
-      .navbar .navbar-inner .navbar-item-utiles .btn-search {
-        position: relative;
-        width: 30px;
-        height: 30px;
-        overflow: hidden;
-        white-space: nowrap;
-        color: transparent;
-        z-index: 3; }
-        .navbar .navbar-inner .navbar-item-utiles .btn-search::before {
-          top: 4px;
-          left: 4px;
-          width: 18px;
-          height: 18px;
-          border-radius: 50%;
-          border: 3px solid #bcbcbc; }
-        .navbar .navbar-inner .navbar-item-utiles .btn-search::after {
-          height: 3px;
-          width: 10px;
-          right: 4px;
-          bottom: 8px;
-          -webkit-transform: rotate(45deg);
-          -moz-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-          transform: rotate(45deg); }
-        .navbar .navbar-inner .navbar-item-utiles .btn-search::before, .navbar .navbar-inner .navbar-item-utiles .btn-search::after {
-          content: '';
-          position: absolute;
-          -webkit-transition: opacity 0.3s;
-          -moz-transition: opacity 0.3s;
-          -ms-transition: opacity 0.3s;
-          -o-transition: opacity 0.3s;
-          transition: opacity 0.3s;
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
-        .navbar .navbar-inner .navbar-item-utiles .btn-search span {
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          top: 0;
-          left: 0;
-          -webkit-transition: opacity 0.3s, transform 0.3s;
-          -moz-transition: opacity 0.3s, transform 0.3s;
-          -ms-transition: opacity 0.3s, transform 0.3s;
-          -o-transition: opacity 0.3s, transform 0.3s;
-          transition: opacity 0.3s, transform 0.3s; }
-          .navbar .navbar-inner .navbar-item-utiles .btn-search span::before {
-            -webkit-transform: rotate(45deg);
-            -moz-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg); }
-          .navbar .navbar-inner .navbar-item-utiles .btn-search span::after {
-            -webkit-transform: rotate(-45deg);
-            -moz-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg); }
-          .navbar .navbar-inner .navbar-item-utiles .btn-search span::before, .navbar .navbar-inner .navbar-item-utiles .btn-search span::after {
-            content: '';
-            position: absolute;
-            display: inline-block;
-            height: 3px;
-            width: 22px;
-            top: 50%;
-            margin-top: -2px;
-            left: 50%;
-            margin-left: -11px;
-            opacity: 0;
-            -webkit-transition: opacity 0.3s, transform 0.3s;
-            -moz-transition: opacity 0.3s, transform 0.3s;
-            -ms-transition: opacity 0.3s, transform 0.3s;
-            -o-transition: opacity 0.3s, transform 0.3s;
-            transition: opacity 0.3s, transform 0.3s; }
-  .navbar.search-is-open .navbar-content {
-    -webkit-transition: transform 0.6s ease-out;
-    -moz-transition: transform 0.6s ease-out;
-    -ms-transition: transform 0.6s ease-out;
-    -o-transition: transform 0.6s ease-out;
-    transition: transform 0.6s ease-out; }
   .navbar.search-is-open .navbar-inner .navbar-item-utiles .btn-search::before, .navbar.search-is-open .navbar-inner .navbar-item-utiles .btn-search::after {
     opacity: 0; }
   .navbar.search-is-open .navbar-inner .navbar-item-utiles .btn-search span::before {
@@ -1778,12 +1769,12 @@ ul {
         -moz-flex-basis: 60%;
         -ms-flex-basis: 60%;
         flex-basis: 60%; } }
-  .navbar.navbar-logo--center.search-is-open .navbar-item-logo {
-    -webkit-transition: transform 0.6s ease-out;
-    -moz-transition: transform 0.6s ease-out;
-    -ms-transition: transform 0.6s ease-out;
-    -o-transition: transform 0.6s ease-out;
-    transition: transform 0.6s ease-out; }
+  .navbar.navbar-logo--center .navbar-item-logo {
+    -webkit-transition: transform 0.3s ease, background 0.3s ease;
+    -moz-transition: transform 0.3s ease, background 0.3s ease;
+    -ms-transition: transform 0.3s ease, background 0.3s ease;
+    -o-transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease; }
   .navbar.navbar-logo--center .navbar-inner .navbar-item-menu {
     margin-right: 25px; }
   .navbar.navbar-logo--right .navbar-inner {

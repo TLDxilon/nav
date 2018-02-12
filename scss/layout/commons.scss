@@ -2,7 +2,7 @@
 @import "variables";
 @import "menu-styles";
 @import "elements";
-
+@import "iconos-css";
 
 /* Menú con flexbox */
 .navbar{
@@ -10,7 +10,7 @@
   width:100%;
  // @include transition(transform 0.6s ease-out, background 0.3s ease-out);
   .navbar-content {
-    @include transition(transform 0.6s ease-out, background 0.3s ease-out);
+    @include transition(transform .3s ease, background .3s ease);
   }
   &.navbar-fixed {
     .navbar-content {
@@ -21,7 +21,7 @@
     &.bg-white{
       .navbar-content{
         @extend .bg-white;
-        @include transition(transform 0.6s ease-out, background 0.3s ease-out);
+       // @include transition(transform 0.6s ease-out, background 0.3s ease-out);
       }
     }
   }
@@ -114,45 +114,9 @@
         }
       }
 
-      /*
-      .btn-ham{
-        position: relative;
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        overflow: hidden;
-        white-space: nowrap;
-        color: transparent;
-        z-index: 3;
-        span{
-          position: absolute;
-          top: 50%;
-          right: 10px;
-          margin-top: -2px;
-         //  transition(background 0.3s 0.3s);
-          &::before{
-            top: -6px;
-          }
-          &::after{
-            top: 6px;
-          }
-          &::before, &::after{
-            display: inline-block;
-            height: 3px;
-            width: 24px;
-            @extend .bg-gray;
-            content: '';
-            @include transform(translateZ(0));
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            right: 0;
-            @include transform-origin(0% 50%);
-          //  @include transition(transform 0.3s 0.3s);
 
-          }
-        }
-      }
-*/
+
+
 
       /*
       .btn-search {
@@ -174,76 +138,7 @@
         }
       }
 */
-      .btn-search{
-        position: relative;
-        width: 30px;
-        height: 30px;
-        overflow: hidden;
-        white-space: nowrap;
-        color: transparent;
-        z-index: 3;
-        &::before{
-          top: 4px;
-          left: 4px;
-          width: 18px;
-          height: 18px;
-          border-radius: 50%;
-          border: 3px solid $tone-gray;
-        }
-        &::after{
-          height: 3px;
-          width: 10px;
-          @extend .bg-gray;
-          right: 4px;
-          bottom: 8px;
-          @include rotate(45);
-        }
-        &::before, &::after{
-          content: '';
-          position: absolute;
-           @include transition(opacity 0.3s);
-         //  @include transform(translateZ(0));
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 
-        }
-
-        span{
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          top: 0;
-          left: 0;
-          @include transition(opacity 0.3s, transform 0.3s);
-          &::before{
-            @include rotate(45);
-
-          }
-
-          &::after{
-            @include rotate(-45);
-
-          }
-
-          &::before, &::after{
-            content: '';
-            position: absolute;
-            display: inline-block;
-            height: 3px;
-            width: 22px;
-            top: 50%;
-            margin-top: -2px;
-            left: 50%;
-            margin-left: -11px;
-            @extend .bg-gray;
-            opacity: 0;
-             @include transition(opacity 0.3s, transform 0.3s);
-            //  @include transform(translateZ(0));
-
-          }
-
-        }
-      }
 
     }
 
@@ -252,7 +147,7 @@
   &.search-is-open {
     .navbar-content{
     @extend .bg-white;
-      @include transition(transform 0.6s ease-out);
+
     }
     .navbar-inner {
       .navbar-item-utiles{
@@ -321,10 +216,13 @@
    }
 
    &--center{
+     .navbar-item-logo{
+       @include transition(transform .3s ease, background .3s ease);
+     }
      &.search-is-open{
        .navbar-item-logo{
          @extend .bg-white;
-         @include transition(transform 0.6s ease-out);
+
        }
      }
      .navbar-inner{

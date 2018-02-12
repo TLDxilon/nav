@@ -73,14 +73,14 @@
 {% include footer.html %}
 
 <script>
-    var altura = $('.navbar-content').offset().top;
+    var altura_del_topbar = $('.topbar').outerHeight(true);
     var altura_del_nav = $('.navbar-content').outerHeight(true);
 
     $(window).on('scroll', function(){
-        if ( $(window).scrollTop() > altura ){
-            $('.navbar').addClass('navbar-fixed bg-white');
+        if ( $(window).scrollTop() > altura_del_topbar ){
+            $('.navbar').addClass('navbar-fixed');
         } else {
-            $('.navbar').removeClass('navbar-fixed bg-white');
+            $('.navbar').removeClass('navbar-fixed');
         }
     });
 
