@@ -94,6 +94,7 @@
            height: auto;
         }
       }
+
       .btn-ham {
         position: relative;
         overflow: hidden;
@@ -110,6 +111,47 @@
         }
       }
 
+      /*
+      .btn-ham{
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        white-space: nowrap;
+        color: transparent;
+        z-index: 3;
+        span{
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          margin-top: -2px;
+         //  transition(background 0.3s 0.3s);
+          &::before{
+            top: -6px;
+          }
+          &::after{
+            top: 6px;
+          }
+          &::before, &::after{
+            display: inline-block;
+            height: 3px;
+            width: 24px;
+            @extend .bg-gray;
+            content: '';
+            @include transform(translateZ(0));
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            right: 0;
+            @include transform-origin(0% 50%);
+          //  @include transition(transform 0.3s 0.3s);
+
+          }
+        }
+      }
+*/
+
+      /*
       .btn-search {
         position: relative;
         overflow: hidden;
@@ -128,40 +170,41 @@
           opacity: 0;
         }
       }
-
-/*
+*/
       .btn-search{
         position: relative;
-        width: 44px;
-        height: 44px;
+        width: 30px;
+        height: 30px;
         overflow: hidden;
         white-space: nowrap;
         color: transparent;
         z-index: 3;
         &::before{
-          top: 11px;
-          left: 11px;
+          top: 2px;
+          left: 2px;
           width: 18px;
           height: 18px;
           border-radius: 50%;
-          border: 3px solid #2e3233;
+          border: 3px solid $tone-gray;
         }
         &::after{
           height: 3px;
-          width: 8px;
-          background: #2e3233;
-          bottom: 14px;
-          right: 11px;
+          width: 10px;
+          @extend .bg-gray;
+          right: 4px;
+          bottom: 8px;
           @include rotate(45);
         }
         &::before, &::after{
           content: '';
           position: absolute;
-          @include transition(opacity 0.3s);
-          @include transform(translateZ(0));
+           @include transition(opacity 0.3s);
+         //  @include transform(translateZ(0));
           -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+
         }
+
         span{
           position: absolute;
           height: 100%;
@@ -170,10 +213,14 @@
           left: 0;
           &::before{
             @include rotate(45);
+
           }
+
           &::after{
             @include rotate(-45);
+
           }
+
           &::before, &::after{
             content: '';
             position: absolute;
@@ -184,14 +231,16 @@
             margin-top: -2px;
             left: 50%;
             margin-left: -11px;
-            background: #2e3233;
+            @extend .bg-gray;
             opacity: 0;
-            @include transition(opacity 0.3s, transform 0.3s);
-            @include transform(translateZ(0));
+             @include transition(opacity 0.3s, transform 0.3s);
+            //  @include transform(translateZ(0));
+
           }
+
         }
       }
-      */
+
     }
 
 
@@ -201,13 +250,42 @@
     @extend .bg-white;
       @include transition(transform 0.6s ease-out);
     }
+    .navbar-inner {
+      .navbar-item-utiles{
+
+        .btn-search{
+          &::after{
+
+          }
+          &::before, &::after{
+            opacity: 0;
+          }
+          span{
+            &::before{
+              @include rotate(135);
+            }
+            &::after{
+              @include rotate(45);
+
+            }
+            &::before, &::after{
+              opacity: 1;
+              @include transition (transform 0.3s ease);
+            }
+
+          }
+        }
+      }
+    }
 
 
-  }
+}
+
+
   &.navbar-logo{
    &--left, &--right{
      .navbar-item-logo {
-       @include flex-basis(20%);
+       @include flex-basis(15%);
        @media #{$smartphones}{
          @include flex-basis(40%);
        }
@@ -225,7 +303,7 @@
        @include flex-basis(60%);
      }
      .navbar-item-utiles {
-       @include flex-basis(20%);
+       @include flex-basis(25%);
        @media #{$smartphones}{
          @include flex-basis(60%);
        }

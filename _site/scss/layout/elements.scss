@@ -8,6 +8,9 @@ h1{
   margin-bottom: 0;
   margin-top: 0;
 }
+*::after, *::before {
+  box-sizing: border-box;
+}
 .branding-title{
   margin-bottom: 0;
   margin-top: 0;

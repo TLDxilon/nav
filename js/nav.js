@@ -67,13 +67,13 @@ $(document).ready(function(){
             _navBar.find('input').focus();
             $('.backdrop').css('opacity', '0.95');
             $('.search-bar').css('opacity', '1');
-            $('.btn-open-search').css('opacity', '0');
-            $('.btn-close-search').css('opacity', '1');
+          //  $('.btn-open-search').css('opacity', '0');
+          //  $('.btn-close-search').css('opacity', '1');
         } else{
             $('.backdrop').css('opacity', '0');
             $('.search-bar').css('opacity', '0');
-            $('.btn-open-search').css('opacity', '1');
-            $('.btn-close-search').css('opacity', '0');
+          //  $('.btn-open-search').css('opacity', '1');
+          //  $('.btn-close-search').css('opacity', '0');
         }
 
 
