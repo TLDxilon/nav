@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     var altura_del_topbar = $('.topbar').outerHeight(true);
-    var altura_del_logo = $('.navbar-logo--center .navbar-item-logo').outerHeight(true);
+    var altura_del_logo = $('.navbar-logo--top .navbar-item-logo').outerHeight(true);
     var altura_del_nav = $('.navbar-content').outerHeight(true);
 
     $(window).on('scroll', function(){
@@ -13,7 +13,7 @@ $(document).ready(function(){
     });
 
 
-    $('.content').css('padding-top', (altura_del_topbar + altura_del_logo + altura_del_nav) + 'px');
+    $('.content, .hero-content').css('padding-top', (altura_del_topbar + altura_del_logo + altura_del_nav) + 'px');
 
 
 
@@ -51,12 +51,17 @@ $(document).ready(function(){
             $('.backdrop-top').addClass('opacity-transition1');
             $('.navbar').removeClass('search-is-open');
             $('.header').addClass('z-index1');
+            $('.btn-open-menu').css('opacity', '0');
+            $('.btn-close-menu').css('opacity', '1');
 
         } else{
+            $('.header, .content, .footer').removeClass('page-is-moving');
             $('.menu-movil').removeClass('display-block');
             $('.backdrop-top').css('display', 'none');
             $('.backdrop-top').removeClass('opacity-transition0');
             $('.header').removeClass('z-index1');
+            $('.btn-open-menu').css('opacity', '1');
+            $('.btn-close-menu').css('opacity', '0');
 
         }
 
@@ -76,14 +81,14 @@ $(document).ready(function(){
             $('.backdrop').css('display', 'block');
             $('.backdrop').addClass('opacity-transition1');
             $('.search-bar').css('opacity', '1');
-          //  $('.btn-open-search').css('opacity', '0');
-          //  $('.btn-close-search').css('opacity', '1');
+            $('.btn-open-search').css('opacity', '0');
+            $('.btn-close-search').css('opacity', '1');
         } else{
             $('.backdrop').css('display', 'none');
             $('.backdrop').removeClass('opacity-transition0');
             $('.search-bar').css('opacity', '0');
-          //  $('.btn-open-search').css('opacity', '1');
-          //  $('.btn-close-search').css('opacity', '0');
+            $('.btn-open-search').css('opacity', '1');
+            $('.btn-close-search').css('opacity', '0');
         }
 
 
@@ -95,7 +100,7 @@ $(document).ready(function(){
         toogleSearch();
     });
 
-    $('.btn-ham').on('click', function(){
+    $('.btn-menu').on('click', function(){
         toogleMenu();
     });
 

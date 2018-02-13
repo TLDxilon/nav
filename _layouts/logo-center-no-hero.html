@@ -4,79 +4,73 @@
 
 <body>
 
-{% include menu-mov.html %}
+<div class="design">
+    {% include menu-mov.html %}
 
-<header class="header position-relative page-is-static">
+    <header class="header position-relative page-is-static">
 
-    {% if site.logo-center-no-hero.header.top-bar == 'true' %}
-    {% include top-bar.html %}
-    {% endif %}
-    {% include backdrop.html %}
-    <div class="navbar navbar-logo--{{ site.logo-center-no-hero.header.logo.position }} logo-size-{{ site.logo-center-no-hero.header.logo.size }}  border-bottom" id="navbar">
-
-        {% if site.logo-center-no-hero.header.logo.position == 'center' %}
-        <div class="navbar-item navbar-item-logo text-align-center padding-tb-m">
-            {% include {{ site.logo }} image="img/logo2.png" %}
-        </div>
-        {% elsif site.logo-center-no-hero.header.logo.position == 'left' %}
+        {% if site.logo-center-no-hero.header.top-bar == 'true' %}
+        {% include top-bar.html %}
         {% endif %}
+        {% include backdrop.html %}
+        <div class="navbar navbar-logo--{{ site.logo-center-no-hero.header.logo.position }} logo-size-{{ site.logo-center-no-hero.header.logo.size }} border-bottom" id="navbar">
 
-        <div class="navbar-content">
-            <div class="container{% if site.logo-center-no-hero.header.logo.position == 'center' %}-fluid{% elsif site.logo-center-no-hero.header.logo.position == 'left' %}{% endif %}">
+            {% if site.logo-center-no-hero.header.logo.position == 'top' %}
+            <div class="navbar-item navbar-item-logo text-align-center">
+                {% include {{ site.logo }} image="img/logo2.png" %}
+            </div>
+            {% else %}
+            {% endif %}
+            <div class="navbar-content">
+                <div class="{{ site.logo-center-no-hero.header.container }}">
+                    <div class="navbar-inner">
 
-                <div class="navbar-inner padding-tb-s">
-
-                    {% if site.logo-center-no-hero.header.logo.position == 'left' %}
-                    <div class="navbar-item navbar-item-logo text-align-left">
-                        {% include {{ site.logo }} image="img/logo2.png" size="s" %}
+                        {% if site.logo-center-no-hero.header.logo.position == 'left' or site.logo-center-no-hero.header.logo.position == 'right' %}
+                        <div class="navbar-item navbar-item-logo text-align-left">
+                            {% include {{ site.logo }} image="img/logo2.png" size="s" %}
+                        </div>
+                        {% else %}
+                        {% endif %}
+                        {% include menu.html position-menu="right" style="navbar-menu--back" %}
+                        {% include utiles.html %}
                     </div>
-                    {% elsif site.logo-center-no-hero.header.logo.position == 'top' %}
-                    {% endif %}
 
-                    {% include menu.html position-menu="center" style="navbar-menu--line" %}
-                    {% include utiles.html %}
+
                 </div>
 
-
+                {% include search-bar.html %}
             </div>
 
-            {% include search-bar.html %}
+
         </div>
 
-    </div>
-
-    {% if site.logo-center-no-hero.header.hero == 'true' %}
-    {% include hero.html %}
-    {% endif %}
+        {% if site.logo-center-no-hero.header.hero == 'true' %}
+        {% include hero.html %}
+        {% endif %}
 
 
-</header>
+    </header>
 
-<main class="content page-is-static" id="main">
-
-
-    <div class="container">
-        <div class="padding-l">
-            {% include options.html %}
-            <br>
-            {% include content.html %}
-            <br>
-            {{ site.logo-center-no-hero.header }}<br/>
-            {{ site.logo-center-no-hero.header.logo }}<br/>
-            {{ site.logo-center-no-hero.logo }}<br/>
-            {{ site.logo-center-no-hero.header.logo.position }}<br/>
-            {{ site.logo-center-no-hero.header.hero }}<br/>
-            {{ site.logo-center-no-hero.logo.position }}<br/>
+    <main class="content page-is-static" id="main">
+        <div class="container">
+            <div class="padding-l">
+                {% include options.html %}
+                <br>
+                {% include content.html %}
+                <br>
+                {{ site.logo-center-no-hero.header }}<br/>
+                {{ site.logo-center-no-hero.header.logo }}<br/>
+                {{ site.logo }}<br/>
+                {{ site.logo-center-no-hero.header.logo.position }}<br/>
+                {{ site.logo-center-no-hero.header.hero }}<br/>
+                {{ site.logo.position }}<br/>
+            </div>
         </div>
-
-    </div>
-
-</main>
+    </main>
 
 
-{% include footer.html %}
-
-
+    {% include footer.html %}
+</div>
 
 
 

@@ -2,7 +2,7 @@
 @import "variables";
 @import "elements";
 @import "menu-styles";
-@import "iconos-css";
+//@import "iconos-css";
 
 
 /* Menú con flexbox */
@@ -43,6 +43,7 @@
 
 
     .navbar-item-menu{
+      @extend .padding-lr-l;
       @media #{$smartphones}{
         display: none;
       }
@@ -83,13 +84,14 @@
 
       }
       .utiles-item{
+        margin:5px;
         vertical-align: middle;
         display: inline-block;
         height: $utiles-icon-size;
         @media #{$smartphones}{
           height: $utiles-icon-size-small;
         }
-        margin: 0 5px;
+
         @media #{$smartphones}{
           margin: 0 2px;
         }
@@ -97,8 +99,8 @@
            height: auto;
         }
       }
-/*
-      .btn-ham {
+      .btn-menu {
+        z-index:99;
         position: relative;
         overflow: hidden;
         width: $utiles-icon-size;
@@ -108,17 +110,23 @@
         @media #{$big}{
           display: none;
         }
-        .btn-open, .btn-close{
+        .btn-open-menu{
+         position: absolute;
+         left: 0;
+        }
+        .btn-close-menu{
           position: absolute;
-          left:0;
+          left: 0;
+          top:0;
+        }
+        .btn-open-menu {
+          opacity: 1;
+        }
+        .btn-close-menu {
+          opacity: 0;
         }
       }
 
-*/
-
-
-
-      /*
       .btn-search {
         position: relative;
         overflow: hidden;
@@ -137,7 +145,7 @@
           opacity: 0;
         }
       }
-*/
+
 
 
     }
@@ -293,22 +301,30 @@
   }
 
   .btn-ham{
-    .btn-open{
-      visibility: hidden;
+    .btn-open-menu{
+      opacity: 0;
+     @include transition(opacity 1s linear);
+     }
+    .btn-close-menu{
+      opacity: 1;
       @include transition(opacity 1s linear);
     }
   }
-  .btn-close{
-    display: inline-block;
-    @include transition(opacity 1s linear);
-  }
+
 }
 
 .page-is-static{
-  .btn-close{
-    visibility: hidden;
-    @include transition(opacity 15s linear);
+  .btn-ham{
+    .btn-open-menu{
+      opacity: 1;
+     @include transition(opacity 1s linear);
+    }
+    .btn-close-menu{
+      opacity: 0;
+      @include transition(opacity 1s linear);
+    }
   }
+
 }
 
 

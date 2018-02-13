@@ -46,6 +46,7 @@ logo-center:
     logo:
       position: 'top'
       size: 'm'
+      padding: 'l'
     menu:
         position: 'fixed'
     hero: 'true'

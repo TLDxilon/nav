@@ -48,15 +48,16 @@
     .nav-menu-item{
       .nav-link{
         display: block;
+        @extend .padding-lr-l;
         @extend .padding-s;
         .logo-size-m &{
-          @extend .padding-m;
+          @extend .padding-tb-m;
         }
         .logo-size-l &{
-          @extend .padding-l;
+          @extend .padding-tb-l;
         }
         .logo-size-xl &{
-          @extend .padding-xl;
+          @extend .padding-tb-xl;
         }
         &:hover{
           @extend .bg-main;
