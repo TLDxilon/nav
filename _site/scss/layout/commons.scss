@@ -1,8 +1,9 @@
 @import "mixins";
 @import "variables";
-@import "menu-styles";
 @import "elements";
+@import "menu-styles";
 @import "iconos-css";
+
 
 /* Menú con flexbox */
 .navbar{
@@ -36,7 +37,7 @@
   .navbar-inner{
     @include flexbox;
     @include flex-direction(row);
-    @include flex-wrap(wrap);
+    @include flex-wrap(nowrap);
     @include justify-content(center);
     @include align-items(center);
 
@@ -183,7 +184,7 @@
   &.navbar-logo{
    &--left, &--right{
      .navbar-item-logo {
-       @include flex-basis(15%);
+
        @media #{$smartphones}{
          @include flex-basis(40%);
        }
@@ -193,15 +194,13 @@
        @media #{$laptop}{
          @include flex-basis(40%);
        }
-       .branding-logo{
-         width: 200px;
-       }
+
      }
      .navbar-item-menu {
-       @include flex-basis(60%);
+       @include flex-grow(1);
      }
      .navbar-item-utiles {
-       @include flex-basis(25%);
+
        @media #{$smartphones}{
          @include flex-basis(60%);
        }
@@ -214,7 +213,7 @@
      }
    }
 
-   &--center{
+   &--top{
      .navbar-item-logo{
        @include transition(transform .3s ease, background .3s ease);
      }
@@ -269,7 +268,7 @@
 
 .menu-movil{
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 260px;
   right: 0;
@@ -289,6 +288,9 @@
 .page-is-moving{
   @include transform(translate(-260px, 0));
   @include transition(transform 0.5s ease 0s);
+  .container &{
+    @include transform(translate(-240px, 0));
+  }
 
   .btn-ham{
     .btn-open{
@@ -362,11 +364,10 @@
 }
 
 .options{
-  position: absolute;
-  @extend .bg-main;
+
+
   @extend .padding-m;
-  left: 0;
-  top: 400px;
+
 
 }
 

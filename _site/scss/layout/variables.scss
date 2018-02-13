@@ -16,8 +16,8 @@ $tone-dark: #222222;
 $tone-gray: #bcbcbc;
 $tone-main: #BE86B9;
 
-$utiles-icon-size: 30px;
-$utiles-icon-size-small: 25px;
+$utiles-icon-size: 25px;
+$utiles-icon-size-small: 22px;
 
 
 /* COLORES */
@@ -109,6 +109,9 @@ $utiles-icon-size-small: 25px;
   &-l{
     padding: 20px;
   }
+  &-xl{
+    padding: 25px;
+  }
 }
 
 .padding-tb{
@@ -142,39 +145,51 @@ $utiles-icon-size-small: 25px;
 
 .logo-size{
   &-xs{
-    width: 100px;
+    .branding-logo{
+      width: 100px;
+    }
+
   }
   &-s{
-    width: 200px;
-    @extend .transition-breakpoints;
-    @media #{$smartphones}{
-      width: 160px;
-
+    .branding-logo{
+      width: 200px;
+      @extend .transition-breakpoints;
+      @media #{$smartphones}{
+        width: 160px;
     }
+   }
   }
   &-m{
-    width: 250px;
-    @extend .transition-breakpoints;
-    @media #{$smartphones}{
-      width: 160px;
-
+    .branding-logo{
+      width: 250px;
+      @extend .transition-breakpoints;
+      @media #{$smartphones}{
+        width: 160px;
+       }
     }
+
   }
 
   &-l{
-    width: 300px;
-    @extend .transition-breakpoints;
-    @media #{$smartphones}{
-      width: 160px;
+    .branding-logo {
+      width: 300px;
+      @extend .transition-breakpoints;
+      @media #{$smartphones}{
+        width: 160px;
+      }
     }
+
   }
   &-xl{
-    width: 350px;
-    @extend .transition-breakpoints;
-    @media #{$smartphones}{
-      width: 200px;
+    .branding-logo {
+      width: 350px;
+      @extend .transition-breakpoints;
+      @media #{$smartphones}{
+        width: 200px;
 
+      }
     }
+
   }
 }
 
@@ -192,9 +207,11 @@ $utiles-icon-size-small: 25px;
 
 .border {
   &-bottom {
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: transparentize($tone-gray, 0.5);
+    .navbar-content{
+      border-width: 0 0 1px 0;
+      border-style: solid;
+      border-color: transparentize($tone-gray, 0.5);
+    }
   }
   &-radius {
 

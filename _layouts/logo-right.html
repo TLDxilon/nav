@@ -12,15 +12,14 @@
     {% include top-bar.html %}
     {% endif %}
     {% include backdrop.html %}
-    <div class="navbar navbar-logo--{{ site.logo-right.header.logo.position }} {% if site.logo-right.header.menu.position == 'fixed' %}navbar-fixed{% elsif site.logo-right.header.menu.position == 'static' %}{% endif %}" id="navbar">
-
+    <div class="navbar navbar-logo--{{ site.logo-right.header.logo.position }} logo-size-{{ site.logo-right.header.logo.size }} border-bottom" id="navbar">
         {% if site.logo-right.header.logo.position == 'center' %}
         <div class="navbar-item navbar-item-logo text-align-center padding-tb-m">
-            {% include {{ site.logo }} image="img/logo2.png" size="m" %}
+            {% include {{ site.logo }} image="img/logo2.png" %}
         </div>
         {% elsif site.logo-right.header.logo.position == 'left' or  site.logo-right.header.logo.position == 'right' %}
         {% endif %}
-        <div class="navbar-content border-bottom">
+        <div class="navbar-content">
             <div class="container{% if site.logo-right.header.logo.position == 'center' %}-fluid{% elsif site.logo-right.header.logo.position == 'left' or site.logo-right.header.logo.position == 'right' %}{% endif %}">
 
 
@@ -30,7 +29,7 @@
                     <div class="navbar-item navbar-item-logo text-align-left">
                         {% include {{ site.logo }} image="img/logo2.png" size="s" %}
                     </div>
-                    {% elsif site.logo-right.header.logo.position == 'center' %}
+                    {% elsif site.logo-right.header.logo.position == 'top' %}
                     {% endif %}
 
                     {% include menu.html position-menu="center" style="navbar-menu--line" %}

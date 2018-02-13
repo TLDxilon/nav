@@ -4,78 +4,75 @@
 
 <body>
 
-{% include menu-mov.html %}
+<div class="design">
+    {% include menu-mov.html %}
 
-<header class="header position-relative page-is-static">
+    <header class="header position-relative page-is-static">
 
-    {% if site.header.top-bar == 'true' %}
-    {% include top-bar.html %}
-    {% endif %}
-    {% include backdrop.html %}
-    <div class="navbar navbar-logo--{{ site.header.logo.position }}" id="navbar">
-
-        {% if site.header.logo.position == 'center' %}
-        <div class="navbar-item navbar-item-logo text-align-center padding-tb-m">
-            {% include {{ site.logo }} image="img/logo2.png" size="m" %}
-        </div>
-        {% elsif site.header.logo.position == 'left' %}
+        {% if site.header.top-bar == 'true' %}
+        {% include top-bar.html %}
         {% endif %}
-        <div class="navbar-content border-bottom">
-            <div class="container{% if site.header.logo.position == 'center' %}-fluid{% elsif site.header.logo.position == 'left' or site.header.logo.position == 'right' %}{% endif %}">
+        {% include backdrop.html %}
+        <div class="navbar navbar-logo--{{ site.header.logo.position }} logo-size-{{ site.header.logo.size }} border-bottom" id="navbar">
 
+            {% if site.header.logo.position == 'top' %}
+            <div class="navbar-item navbar-item-logo text-align-center">
+                {% include {{ site.logo }} image="img/logo2.png" %}
+            </div>
+            {% else %}
+            {% endif %}
+            <div class="navbar-content">
+                <div class="{{ site.header.container }}">
+                    <div class="navbar-inner">
 
-                <div class="navbar-inner padding-tb-s">
-
-                    {% if site.header.logo.position == 'left' or site.header.logo.position == 'right' %}
-                    <div class="navbar-item navbar-item-logo text-align-left">
-                        {% include {{ site.logo }} image="img/logo2.png" size="s" %}
+                        {% if site.header.logo.position == 'left' or site.header.logo.position == 'right' %}
+                        <div class="navbar-item navbar-item-logo text-align-left">
+                            {% include {{ site.logo }} image="img/logo2.png" size="s" %}
+                        </div>
+                        {% else %}
+                        {% endif %}
+                        {% include menu.html position-menu="right" style="navbar-menu--back" %}
+                        {% include utiles.html %}
                     </div>
-                    {% elsif site.header.logo.position == 'center' %}
-                    {% endif %}
 
-                    {% include menu.html position-menu="center" style="navbar-menu--line" %}
-                    {% include utiles.html %}
+
                 </div>
 
-
+                {% include search-bar.html %}
             </div>
 
-            {% include search-bar.html %}
+
         </div>
 
-
-    </div>
-
-    {% if site.header.hero == 'true' %}
-    {% include hero.html %}
-    {% endif %}
+        {% if site.header.hero == 'true' %}
+        {% include hero.html %}
+        {% endif %}
 
 
-</header>
+    </header>
 
-<main class="content page-is-static" id="main">
-    <div class="container">
-        <div class="padding-l">
-            {% include options.html %}
-            <br>
-            {% include content.html %}
-            <br>
-            {{ site.header }}<br/>
-            {{ site.header.logo }}<br/>
-            {{ site.logo }}<br/>
-            {{ site.header.logo.position }}<br/>
-            {{ site.header.hero }}<br/>
-            {{ site.logo.position }}<br/>
+    <main class="content page-is-static" id="main">
+        <div class="container">
+            <div class="padding-l">
+                {% include options.html %}
+                <br>
+                {% include content.html %}
+                <br>
+                {{ site.header }}<br/>
+                {{ site.header.logo }}<br/>
+                {{ site.logo }}<br/>
+                {{ site.header.logo.position }}<br/>
+                {{ site.header.hero }}<br/>
+                {{ site.logo.position }}<br/>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
 
 
-{% include footer.html %}
+    {% include footer.html %}
+</div>
 
-<script>
 
 
-</script>
 </body>
 </html>

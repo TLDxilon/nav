@@ -24,15 +24,18 @@ iconlinkedin: '#'
 header:
   logo:
     position: 'left'
+    size: 's'
   menu:
     position: 'fixed'
   hero: 'true'
   top-bar: 'false'
+  container: ''
 
 no-hero:
   header:
     logo:
       position: 'left'
+      size: 'm'
     menu:
       position: 'fixed'
     hero: 'false'
@@ -41,7 +44,8 @@ no-hero:
 logo-center:
   header:
     logo:
-      position: 'center'
+      position: 'top'
+      size: 'm'
     menu:
         position: 'fixed'
     hero: 'true'
@@ -50,7 +54,8 @@ logo-center:
 logo-center-no-hero:
   header:
     logo:
-      position: 'center'
+      position: 'top'
+      size: 'm'
     menu:
         position: 'fixed'
     hero: 'false'
@@ -60,6 +65,7 @@ logo-right:
   header:
     logo:
       position: 'right'
+      size: 'm'
     menu:
       position: 'fixed'
     hero: 'true'

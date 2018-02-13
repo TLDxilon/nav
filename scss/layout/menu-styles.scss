@@ -46,11 +46,32 @@
   }
   &--back {
     .nav-menu-item{
-      &:hover, &.active{
-        @extend .bg-main;
-        @include transition(background 0.3s ease 0s);
+      .nav-link{
+        display: block;
+        @extend .padding-s;
+        .logo-size-m &{
+          @extend .padding-m;
+        }
+        .logo-size-l &{
+          @extend .padding-l;
+        }
+        .logo-size-xl &{
+          @extend .padding-xl;
+        }
+        &:hover{
+          @extend .bg-main;
+
+          @include transition(background 0.3s ease 0s);
+        }
+      }
+      &.active{
+        .nav-link{
+            @extend .bg-main;
+            @include transition(background 0.3s ease 0s);
+        }
       }
     }
+
   }
 
 

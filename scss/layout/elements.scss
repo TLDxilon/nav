@@ -22,6 +22,10 @@ h1{
   vertical-align: middle;
 }
 
+.design{
+  position: relative;
+}
+
 a{
   text-decoration: none;
 }
@@ -69,14 +73,16 @@ ul{
   &:hover{
     background: darken($tone-main, 10%);
   }
-  &--simple{
-    padding: 10px 20px;
+  &--small{
+    padding: 8px 16px;
     font-size: 12px;
-
   }
   &--big{
     padding: 15px 30px;
     font-size: 15px;
+  }
+  &--flat{
+
   }
 
 }
@@ -119,6 +125,7 @@ ul{
 }
 
 .icon{
+  vertical-align: middle;
   font-size: $utiles-icon-size;
   @media #{$smartphones}{
     font-size: $utiles-icon-size-small;
