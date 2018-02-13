@@ -105,7 +105,7 @@ $(document).ready(function(){
 
     });
     $('.backdrop-top').click(function(){
-        $(this).css('opacity', '0');
+        $(this).css('display', 'none');
         ($('.header, .content, .footer').removeClass('page-is-moving'));
         $('.menu-movil').removeClass('display-block');
 
