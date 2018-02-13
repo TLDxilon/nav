@@ -1228,11 +1228,11 @@
   padding: 5px; }
 .padding-s, .navbar-menu--back .nav-menu-item .nav-link, .search-bar .input-search, .search-bar .icon {
   padding: 10px; }
-.padding-m, .logo-size-m .navbar-menu--back .nav-menu-item .nav-link, .logo-size-xl .navbar-menu--back .nav-menu-item .nav-link, .options {
+.padding-m, .logo-size-m .navbar-menu--back .nav-menu-item .nav-link, .options {
   padding: 15px; }
 .padding-l, .logo-size-l .navbar-menu--back .nav-menu-item .nav-link {
   padding: 20px; }
-.padding-xl {
+.padding-xl, .logo-size-xl .navbar-menu--back .nav-menu-item .nav-link {
   padding: 25px; }
 
 .padding-tb-xs {
@@ -1253,6 +1253,10 @@
 .padding-tb-xxl {
   padding-top: 160px;
   padding-bottom: 160px; }
+
+.padding-lr-s {
+  padding-left: 5px;
+  padding-right: 5px; }
 
 .logo-size-xs .branding-logo {
   width: 100px; }
