@@ -1,16 +1,22 @@
 $(document).ready(function(){
 
+    var altura_del_topbar = $('.topbar').outerHeight(true);
+    var altura_del_logo = $('.navbar-logo--center .navbar-item-logo').outerHeight(true);
+    var altura_del_nav = $('.navbar-content').outerHeight(true);
 
-    $(window).on('scroll', function() {
-        if ($(window).scrollTop() > 2) {
-            $('.navbar, .search-bar').addClass('bg-white');
-
-        } else  {
-            $('.navbar, .search-bar').removeClass('bg-white');
+    $(window).on('scroll', function(){
+        if ( $(window).scrollTop() > altura_del_logo + altura_del_topbar ){
+            $('.navbar').addClass('navbar-fixed bg-white');
+        } else {
+            $('.navbar').removeClass('navbar-fixed bg-white');
         }
-
-
     });
+
+
+    $('.content').css('padding-top', (altura_del_topbar + altura_del_logo + altura_del_nav) + 'px');
+
+
+
 
 
 

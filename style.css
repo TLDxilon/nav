@@ -1469,7 +1469,8 @@ ul {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  z-index: 1; }
 
 .opacity-transition0 {
   opacity: 0;
@@ -1867,11 +1868,11 @@ ul {
   -moz-transform: translate(-260px, 0);
   -ms-transform: translate(-260px, 0);
   transform: translate(-260px, 0);
-  -webkit-transition: transform 0.3s ease 0s;
-  -moz-transition: transform 0.3s ease 0s;
-  -ms-transition: transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s; }
+  -webkit-transition: transform 0.5s ease 0s;
+  -moz-transition: transform 0.5s ease 0s;
+  -ms-transition: transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s; }
   .page-is-moving .btn-ham .btn-open {
     visibility: hidden;
     -webkit-transition: opacity 1s linear;

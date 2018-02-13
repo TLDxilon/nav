@@ -288,7 +288,7 @@
 
 .page-is-moving{
   @include transform(translate(-260px, 0));
-  @include transition(transform 0.3s ease 0s);
+  @include transition(transform 0.5s ease 0s);
 
   .btn-ham{
     .btn-open{
