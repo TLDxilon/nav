@@ -49,11 +49,14 @@ $(document).ready(function(){
             $('.menu-movil').addClass('display-block');
             $('.backdrop-top').css('display', 'block');
             $('.backdrop-top').addClass('opacity-transition1');
+            $('.navbar').removeClass('search-is-open');
+            $('.header').addClass('z-index1');
 
         } else{
             $('.menu-movil').removeClass('display-block');
             $('.backdrop-top').css('display', 'none');
             $('.backdrop-top').removeClass('opacity-transition0');
+            $('.header').removeClass('z-index1');
 
         }
 
@@ -104,10 +107,5 @@ $(document).ready(function(){
         $('.btn-close-search').css('opacity', '0');
 
     });
-    $('.backdrop-top').click(function(){
-        $(this).css('display', 'none');
-        ($('.header, .content, .footer').removeClass('page-is-moving'));
-        $('.menu-movil').removeClass('display-block');
 
-    });
 })

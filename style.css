@@ -1490,6 +1490,9 @@ ul {
   -o-transition: opacity 0.3s 0s, visibility 0s 0s;
   transition: opacity 0.3s 0s, visibility 0s 0s; }
 
+.z-index1 {
+  z-index: 1; }
+
 /*search*/
 .btn-search {
   position: relative;
@@ -1568,7 +1571,7 @@ ul {
   position: absolute;
   display: inline-block;
   height: 3px;
-  width: 24px; }
+  width: 22px; }
 
 .btn-ham {
   position: relative;
@@ -1581,7 +1584,7 @@ ul {
   z-index: 3; }
   .btn-ham span {
     top: 50%;
-    right: 10px;
+    right: 0;
     margin-top: -2px;
     -webkit-transition: background 0.3s 0.3s;
     -moz-transition: background 0.3s 0.3s;
@@ -1617,15 +1620,15 @@ ul {
       -moz-transform: translateX(4px) translateY(-3px) rotate(45deg);
       -ms-transform: translateX(4px) translateY(-3px) rotate(45deg);
       transform: translateX(4px) translateY(-3px) rotate(45deg);
-      right: -2px;
+      right: 0;
       top: -6px; }
     .page-is-moving .btn-ham span::after {
       -webkit-transform: translateX(4px) translateY(-3px) rotate(-45deg);
       -moz-transform: translateX(4px) translateY(-3px) rotate(-45deg);
       -ms-transform: translateX(4px) translateY(-3px) rotate(-45deg);
       transform: translateX(4px) translateY(-3px) rotate(-45deg);
-      right: -2px;
-      top: 10px; }
+      right: 0;
+      top: 9px; }
 
 /* Menú con flexbox */
 .navbar {
