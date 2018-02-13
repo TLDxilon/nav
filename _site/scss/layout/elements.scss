@@ -136,9 +136,11 @@ ul{
   bottom: 0;
   left: 0;
   @extend .bg-dark;
-  z-index:1 ;
-}
 
+}
+.backdrop-top {
+  z-index: 1;
+}
 
 .opacity-transition0{
   opacity: 0;

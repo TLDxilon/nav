@@ -1469,7 +1469,9 @@ ul {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 0; }
+
+.backdrop-top {
   z-index: 1; }
 
 .opacity-transition0 {
