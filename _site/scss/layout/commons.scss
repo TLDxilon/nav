@@ -144,13 +144,11 @@
 
   }
   &.search-is-open {
+
     .navbar-content{
     @extend .bg-white;
 
     }
-    .navbar-inner {
-      .navbar-item-utiles{
-
         .btn-search{
           &::after{
 
@@ -170,10 +168,7 @@
               opacity: 1;
               @include transition(opacity 0.3s, transform 0.3s);
             }
-
-          }
-        }
-      }
+         }
     }
 
 

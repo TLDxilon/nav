@@ -3,7 +3,6 @@
 {% include head.html %}
 
 <body>
-
 <div class="design">
     {% include menu-mov.html %}
 
@@ -16,7 +15,7 @@
         <div class="navbar navbar-logo--{{ site.logo-left.header.logo.position }} logo-size-{{ site.logo-left.header.logo.size }} border-bottom" id="navbar">
 
             {% if site.logo-left.header.logo.position == 'top' %}
-            <div class="navbar-item navbar-item-logo">
+            <div class="navbar-item navbar-item-logo padding-tb-{{ site.logo-left.header.logo.padding }}">
                 {% include {{ site.logo }} image="img/logo2.png" %}
             </div>
             {% else %}
@@ -27,12 +26,12 @@
                     <div class="navbar-inner">
 
                         {% if site.logo-left.header.logo.position == 'left' or site.logo-left.header.logo.position == 'right' %}
-                        <div class="navbar-item navbar-item-logo">
-                            {% include {{ site.logo }} image="img/logo2.png" size="s" %}
+                        <div class="navbar-item navbar-item-logo padding-tb-{{ site.logo-left.header.logo.padding }}">
+                            {% include {{ site.logo }} image="img/logo2.png"  %}
                         </div>
                         {% else %}
                         {% endif %}
-                        {% include menu.html style="navbar-menu--back" height="xs" position="right" %}
+                        {% include menu.html style=site.logo-left.header.menu.style position=site.logo-left.header.menu.position %}
                         {% include utiles.html %}
                     </div>
 
@@ -61,11 +60,9 @@
                 <br>
 
                 {{ site.logo-left.header.logo }}<br/>
-
                 {{ site.logo-left.header.menu }}<br/>
-
-                {{ site.logo-left.header.menu.padding }}<br/>
                 {{ site.logo-left.header.menu.style}}<br/>
+                {{ layout.myvariable }}<br/>
             </div>
         </div>
     </main>

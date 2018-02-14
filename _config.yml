@@ -20,28 +20,27 @@ iconyoutube: '#'
 iconpinterest: '#'
 iconlinkedin: '#'
 
+
+options:
+  logo-left:
+  logo-left-2:
+
+
+
+
 logo-left:
   header:
     logo:
       position: 'left'
-      size: 's'
+      size: 'm'
+      padding: 'xs'
     menu:
       position: 'right'
-      padding: 'm'
       style: 'navbar-menu--back'
     hero: 'true'
     top-bar: 'false'
     container: 'container-fluid'
 
-no-hero:
-  header:
-    logo:
-      position: 'left'
-      size: 'm'
-    menu:
-          position: 'right'
-    hero: 'false'
-    top-bar: 'false'
 
 logo-center:
   header:
@@ -54,15 +53,7 @@ logo-center:
     hero: 'true'
     top-bar: 'false'
 
-logo-center-no-hero:
-  header:
-    logo:
-      position: 'top'
-      size: 'm'
-    menu:
-      position: 'center'
-    hero: 'false'
-    top-bar: 'false'
+
 
 logo-right:
   header:
