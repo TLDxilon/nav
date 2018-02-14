@@ -1034,7 +1034,7 @@
 .bg-white, .navbar.navbar-fixed.bg-white .navbar-content, .navbar.navbar-fixed.bg-white .navbar-item-logo, .navbar.search-is-open .navbar-content, .navbar.navbar-logo--top.search-is-open .navbar-item-logo {
   background: #ffffff;
   color: #222222; }
-.bg-main, .btn--flat, .navbar-menu--line .nav-link:after, .navbar-menu--back .nav-menu-item .nav-link:hover, .navbar-menu--back .nav-menu-item .navbar-menu--simple .active .nav-link, .navbar-menu--simple .active .navbar-menu--back .nav-menu-item .nav-link, .navbar-menu--back .nav-menu-item.active .nav-link, .menu-movil {
+.bg-main, .btn--flat, .navbar-menu--back .nav-link:hover, .navbar-menu--back .navbar-menu--simple .active .nav-link, .navbar-menu--simple .active .navbar-menu--back .nav-link, .navbar-menu--line .nav-link span:after, .menu-movil {
   background: #BE86B9;
   color: #ffffff; }
 
@@ -1055,9 +1055,9 @@
 /*CLASES PADDINGS*/
 .padding-xs {
   padding: 5px; }
-.padding-s, .navbar-menu--back .nav-menu-item .nav-link, .search-bar .input-search, .search-bar .icon {
+.padding-s, .search-bar .input-search, .search-bar .icon {
   padding: 10px; }
-.padding-m, .navbar-menu--line .nav-link, .options {
+.padding-m, .options {
   padding: 15px; }
 .padding-l {
   padding: 20px; }
@@ -1070,13 +1070,13 @@
 .padding-tb-s {
   padding-top: 10px;
   padding-bottom: 10px; }
-.padding-tb-m, .logo-size-m .navbar-menu--back .nav-menu-item .nav-link {
+.padding-tb-m {
   padding-top: 20px;
   padding-bottom: 20px; }
-.padding-tb-l, .logo-size-l .navbar-menu--back .nav-menu-item .nav-link {
+.padding-tb-l {
   padding-top: 40px;
   padding-bottom: 40px; }
-.padding-tb-xl, .logo-size-xl .navbar-menu--back .nav-menu-item .nav-link {
+.padding-tb-xl {
   padding-top: 80px;
   padding-bottom: 80px; }
 .padding-tb-xxl {
@@ -1089,7 +1089,7 @@
 .padding-lr-m {
   padding-left: 10px;
   padding-right: 10px; }
-.padding-lr-l, .navbar-menu--back .nav-menu-item .nav-link, .navbar .navbar-inner .navbar-item-menu, .navbar .navbar-inner .navbar-item-utiles {
+.padding-lr-l, .nav-link, .navbar-menu--line .nav-link, .navbar .navbar-inner .navbar-item-menu, .navbar .navbar-inner .navbar-item-utiles {
   padding-left: 15px;
   padding-right: 15px; }
 
@@ -1122,28 +1122,59 @@
   border-radius: 30px; }
 
 /* PORCENTAJES EN FLEXBOX */
-.col-1-2 {
-  -webkit-flex-basis: 50%;
-  -moz-flex-basis: 50%;
-  -ms-flex-basis: 50%;
-  flex-basis: 50%; }
-
-.col-1-3 {
-  -webkit-flex-basis: 33%;
-  -moz-flex-basis: 33%;
-  -ms-flex-basis: 33%;
-  flex-basis: 33%; }
-
-.col-2-3 {
-  -webkit-flex-basis: 66%;
-  -moz-flex-basis: 66%;
-  -ms-flex-basis: 66%;
-  flex-basis: 66%; }
-
 .transition-breakpoints {
   transition: width .25s linear;
   -moz-transition: width .25s linear;
   -webkit-transition: width .25s linear; }
+
+.flexbox-row-nowrap, .navbar-item-menu ul, .navbar .navbar-inner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
+
+/*ALINEAR IZQUIERDA O DERECHA CON FLEX*/
+.flex-align-left {
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start; }
+
+.flex-align-right {
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: flex-end; }
+
+.flex-align-center {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
+/* alturas barra menú*/
+.height-xs {
+  height: 40px; }
+.height-s {
+  height: 60px; }
+.height-m {
+  height: 80px; }
+.height-l {
+  height: 100px; }
+.height-xl {
+  height: 120px; }
 
 body {
   font-family: "Poppins", sans-serif;
@@ -1290,6 +1321,30 @@ ul {
 .z-index1 {
   z-index: 1; }
 
+.navbar-item-menu ul {
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+  height: 100%; }
+
+.nav-menu-item {
+  display: table;
+  height: 100%; }
+
+.nav-link {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  display: table-cell;
+  vertical-align: middle; }
+  .navbar-menu--back .nav-link:hover, .navbar-menu--back .navbar-menu--simple .active .nav-link, .navbar-menu--simple .active .navbar-menu--back .nav-link {
+    -webkit-transition: background 0.3s ease 0s;
+    -moz-transition: background 0.3s ease 0s;
+    -ms-transition: background 0.3s ease 0s;
+    -o-transition: background 0.3s ease 0s;
+    transition: background 0.3s ease 0s; }
+
 /* estilos del menú */
 .navbar-menu--simple .nav-link:hover, .navbar-menu--simple .active .nav-link {
   -webkit-transition: color 0.3s ease 0s;
@@ -1297,11 +1352,11 @@ ul {
   -ms-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s; }
-.navbar-menu--line .nav-link {
+.navbar-menu--line .nav-link span {
   position: relative; }
-  .navbar-menu--line .nav-link:after {
+  .navbar-menu--line .nav-link span:after {
     position: absolute;
-    bottom: 18px;
+    bottom: 10px;
     left: 0;
     width: 100%;
     height: 2px;
@@ -1321,32 +1376,18 @@ ul {
     -moz-transform: translate(0, 20px);
     -ms-transform: translate(0, 20px);
     transform: translate(0, 20px); }
-  .navbar-menu--line .nav-link:hover:after, .navbar-menu--line .navbar-menu--simple .active .nav-link:after, .navbar-menu--simple .active .navbar-menu--line .nav-link:after {
+  .navbar-menu--line .nav-link span:hover:after {
     opacity: 1;
     -webkit-transform: translate(0, 15px);
     -moz-transform: translate(0, 15px);
     -ms-transform: translate(0, 15px);
     transform: translate(0, 15px); }
-.navbar-menu--line .active .nav-link:after {
+.navbar-menu--line .active span:after {
   opacity: 1;
   -webkit-transform: translate(0, 15px);
   -moz-transform: translate(0, 15px);
   -ms-transform: translate(0, 15px);
   transform: translate(0, 15px); }
-.navbar-menu--back .nav-menu-item .nav-link {
-  display: block; }
-  .navbar-menu--back .nav-menu-item .nav-link:hover, .navbar-menu--back .nav-menu-item .navbar-menu--simple .active .nav-link, .navbar-menu--simple .active .navbar-menu--back .nav-menu-item .nav-link {
-    -webkit-transition: background 0.3s ease 0s;
-    -moz-transition: background 0.3s ease 0s;
-    -ms-transition: background 0.3s ease 0s;
-    -o-transition: background 0.3s ease 0s;
-    transition: background 0.3s ease 0s; }
-.navbar-menu--back .nav-menu-item.active .nav-link {
-  -webkit-transition: background 0.3s ease 0s;
-  -moz-transition: background 0.3s ease 0s;
-  -ms-transition: background 0.3s ease 0s;
-  -o-transition: background 0.3s ease 0s;
-  transition: background 0.3s ease 0s; }
 
 /* Menú con flexbox */
 .navbar {
@@ -1373,19 +1414,6 @@ ul {
     -o-transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out; }
   .navbar .navbar-inner {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-    -moz-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     -ms-justify-content: center;
@@ -1408,12 +1436,6 @@ ul {
     @media only screen and (min-width: 768px) and (max-width: 960px) {
       .navbar .navbar-inner .navbar-item-menu {
         display: none; } }
-    .navbar .navbar-inner .navbar-item-menu .nav-menu-item {
-      display: inline-block; }
-      .navbar .navbar-inner .navbar-item-menu .nav-menu-item .nav-link {
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 14px; }
     @media only screen and (max-width: 479px) {
       .navbar .navbar-inner .navbar-item-utiles {
         padding-left: 0;

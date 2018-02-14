@@ -20,16 +20,18 @@ iconyoutube: '#'
 iconpinterest: '#'
 iconlinkedin: '#'
 
-
-header:
-  logo:
-    position: 'left'
-    size: 's'
-  menu:
-    position: 'right'
-  hero: 'true'
-  top-bar: 'false'
-  container: 'container-fluid'
+logo-left:
+  header:
+    logo:
+      position: 'left'
+      size: 's'
+    menu:
+      position: 'right'
+      padding: 'm'
+      style: 'navbar-menu--back'
+    hero: 'true'
+    top-bar: 'false'
+    container: 'container-fluid'
 
 no-hero:
   header:

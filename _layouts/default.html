@@ -9,29 +9,30 @@
 
     <header class="header position-relative page-is-static">
 
-        {% if site.header.top-bar == 'true' %}
+        {% if site.logo-left.header.top-bar == 'true' %}
         {% include top-bar.html %}
         {% endif %}
         {% include backdrop.html %}
-        <div class="navbar navbar-logo--{{ site.header.logo.position }} logo-size-{{ site.header.logo.size }} border-bottom" id="navbar">
+        <div class="navbar navbar-logo--{{ site.logo-left.header.logo.position }} logo-size-{{ site.logo-left.header.logo.size }} border-bottom" id="navbar">
 
-            {% if site.header.logo.position == 'top' %}
+            {% if site.logo-left.header.logo.position == 'top' %}
             <div class="navbar-item navbar-item-logo">
                 {% include {{ site.logo }} image="img/logo2.png" %}
             </div>
             {% else %}
             {% endif %}
             <div class="navbar-content">
-                <div class="{{ site.header.container }}">
+                <div class="navbar-content-bar">
+                <div class="{{ site.logo-left.header.container }}">
                     <div class="navbar-inner">
 
-                        {% if site.header.logo.position == 'left' or site.header.logo.position == 'right' %}
+                        {% if site.logo-left.header.logo.position == 'left' or site.logo-left.header.logo.position == 'right' %}
                         <div class="navbar-item navbar-item-logo">
                             {% include {{ site.logo }} image="img/logo2.png" size="s" %}
                         </div>
                         {% else %}
                         {% endif %}
-                        {% include menu.html position-menu="right" style="navbar-menu--back" %}
+                        {% include menu.html style="navbar-menu--back" height="xs" position="right" %}
                         {% include utiles.html %}
                     </div>
 
@@ -40,11 +41,11 @@
 
                 {% include search-bar.html %}
             </div>
-
+            </div>
 
         </div>
 
-        {% if site.header.hero == 'true' %}
+        {% if site.logo-left.header.hero == 'true' %}
         {% include hero.html %}
         {% endif %}
 
@@ -58,12 +59,13 @@
                 <br>
                 {% include content.html %}
                 <br>
-                {{ site.header }}<br/>
-                {{ site.header.logo }}<br/>
-                {{ site.logo }}<br/>
-                {{ site.header.logo.position }}<br/>
-                {{ site.header.hero }}<br/>
-                {{ site.logo.position }}<br/>
+
+                {{ site.logo-left.header.logo }}<br/>
+
+                {{ site.logo-left.header.menu }}<br/>
+
+                {{ site.logo-left.header.menu.padding }}<br/>
+                {{ site.logo-left.header.menu.style}}<br/>
             </div>
         </div>
     </main>

@@ -1,81 +1,105 @@
 
+.navbar-item-menu{
+
+  ul{
+    @extend .flexbox-row-nowrap;
+    @include align-items(stretch);
+    height:100%;
+  }
+
+}
+.nav-menu-item{
+  display: table;
+  height: 100%;
+}
+
+.nav-link{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  display: table-cell;
+  vertical-align:middle;
+  @extend .padding-lr-l;
+
+
+  &:hover{
+
+    .navbar-menu--back &{
+
+      @extend .bg-main;
+      @include transition(background 0.3s ease 0s);
+
+    }
+
+  }
+
+}
+
+
 
 /* estilos del menú */
 
 .navbar-menu{
+
   &--simple {
+
     .nav-link{
+
       &:hover{
         @extend .fg-main;
         @include transition(color 0.3s ease 0s);
       }
+
     }
+
     .active{
       .nav-link {
         @extend .nav-link:hover;
       }
     }
+
   }
+
   &--line{
     .nav-link{
-      position: relative;
       @extend .fg-gray;
-      @extend .padding-m;
-      &:after{
-        position: absolute;
-        bottom: 18px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        @extend .bg-main;
-        content: "";
-        opacity: 0;
-        @include transition(opacity 0.3s ease 0s);
-        @include transition(transform 0.3s ease 0s);
-        @include transform(translate(0, 20px));
+      @extend .padding-lr-l;
+      span{
+        position: relative;
+        &:after{
+          position: absolute;
+          bottom: 10px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          @extend .bg-main;
+          content: "";
+          opacity: 0;
+          @include transition(opacity 0.3s ease 0s);
+          @include transition(transform 0.3s ease 0s);
+          @include transform(translate(0, 20px));
+        }
+        &:hover:after{
+          opacity:1;
+          @include transform(translate(0, 15px));
+        }
       }
-      &:hover:after{
-        opacity:1;
-        @include transform(translate(0, 15px));
-      }
+
     }
     .active{
-      .nav-link:after{
-        opacity:1;
-        @include transform(translate(0, 15px));
+      span{
+        &:after{
+          opacity:1;
+          @include transform(translate(0, 15px));
+        }
       }
+
     }
   }
-  &--back {
-    .nav-menu-item{
-      .nav-link{
-        display: block;
-        @extend .padding-lr-l;
-        @extend .padding-s;
-        .logo-size-m &{
-          @extend .padding-tb-m;
-        }
-        .logo-size-l &{
-          @extend .padding-tb-l;
-        }
-        .logo-size-xl &{
-          @extend .padding-tb-xl;
-        }
-        &:hover{
-          @extend .bg-main;
 
-          @include transition(background 0.3s ease 0s);
-        }
-      }
-      &.active{
-        .nav-link{
-            @extend .bg-main;
-            @include transition(background 0.3s ease 0s);
-        }
-      }
-    }
 
-  }
+
 
 
 }
+

@@ -44,6 +44,7 @@
             
             
             <div class="navbar-content">
+                <div class="navbar-content-bar">
                 <div class="container-fluid">
                     <div class="navbar-inner">
 
@@ -56,13 +57,12 @@
                         </div>
                         
                         
-<nav class="navbar-item navbar-item-menu text-align-right navbar-menu--back">
-    <ul>
-        <li class="nav-menu-item active"><a class="nav-link fg-gray" href="#">Home</a></li>
-        <li class="nav-menu-item"><a class="nav-link fg-gray" href="#">About</a></li>
-        <li class="nav-menu-item"><a class="nav-link fg-gray" href="#">Products</a></li>
-        <li class="nav-menu-item"><a class="nav-link fg-gray" href="#">News</a></li>
-        <li class="nav-menu-item"><a class="nav-link fg-gray" href="#">Contact</a></li>
+<nav class="navbar-item navbar-item-menu navbar-menu--back  height-xs">
+    <ul class="flex-align-right" >
+        <li class="nav-menu-item active"><a class="nav-link fg-gray" href="#"><span class="">Home</span></a></li>
+        <li class="nav-menu-item"><a class="nav-link fg-gray" href="#"><span class="">Products</span></a></li>
+        <li class="nav-menu-item"><a class="nav-link fg-gray" href="#"><span class="">News</span></a></li>
+        <li class="nav-menu-item"><a class="nav-link fg-gray" href="#"><span class="">Contact</span></a></li>
     </ul>
 
 </nav>
@@ -108,7 +108,7 @@
 
 </div>
             </div>
-
+            </div>
 
         </div>
 
@@ -137,7 +137,7 @@
                 <div class="options">
     <a class="padding-s bg-main" href="/nav">Logo left + hero</a>
     <a class="padding-s bg-main" href="/nav/option3.html">Logo right + hero</a>
-    <a class="padding-s bg-main" href="/nav/option2.html">Logo center +  hero</a>
+    <a class="padding-s bg-main" href="/nav/option2.html">Logo top +  hero</a>
     <a class="padding-s bg-main" href="https://github.com/TLDxilon/nav" target="_blank">GIT</a>
 
 </div>
@@ -175,12 +175,13 @@
 <p>Nullam tincidunt varius sollicitudin. Mauris cursus nisi dui, at vehicula nunc malesuada quis. Sed sollicitudin nibh sit amet mi fermentum, ac laoreet nisi mollis. Sed facilisis vestibulum dui, eget tincidunt enim condimentum sit amet. Integer suscipit nisl venenatis purus ullamcorper finibus. Duis vitae leo dapibus, congue mauris sit amet, facilisis leo. Suspendisse bibendum pulvinar felis, sit amet euismod metus convallis non. Proin in tellus a lorem cursus luctus et sodales orci. Donec at congue magna.</p>
 
                 <br>
-                {"logo"=>{"position"=>"left", "size"=>"s"}, "menu"=>{"position"=>"right"}, "hero"=>"true", "top-bar"=>"false", "container"=>"container-fluid"}<br/>
+
                 {"position"=>"left", "size"=>"s"}<br/>
-                logo-i.html<br/>
-                left<br/>
-                true<br/>
-                <br/>
+
+                {"position"=>"right", "padding"=>"m", "style"=>"navbar-menu--back"}<br/>
+
+                m<br/>
+                navbar-menu--back<br/>
             </div>
         </div>
     </main>

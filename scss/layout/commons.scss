@@ -35,9 +35,7 @@
   }
 
   .navbar-inner{
-    @include flexbox;
-    @include flex-direction(row);
-    @include flex-wrap(nowrap);
+    @extend .flexbox-row-nowrap;
     @include justify-content(center);
     @include align-items(center);
 
@@ -60,14 +58,7 @@
       @media #{$big}{
 
       }
-      .nav-menu-item{
-        display: inline-block;
-        .nav-link{
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          font-size: 14px;
-        }
-      }
+
     }
     .navbar-item-logo{
       @media #{$smartphones}{
