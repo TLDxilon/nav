@@ -16,7 +16,7 @@
         <div class="navbar navbar-logo--{{ site.logo-right.header.logo.position }} logo-size-{{ site.logo-right.header.logo.size }} border-bottom" id="navbar">
 
             {% if site.logo-right.header.logo.position == 'top' %}
-            <div class="navbar-item navbar-item-logo text-align-center">
+            <div class="navbar-item navbar-item-logo">
                 {% include {{ site.logo }} image="img/logo2.png" %}
             </div>
             {% else %}
@@ -26,12 +26,12 @@
                     <div class="navbar-inner">
 
                         {% if site.logo-right.header.logo.position == 'left' or site.logo-right.header.logo.position == 'right' %}
-                        <div class="navbar-item navbar-item-logo text-align-left">
+                        <div class="navbar-item navbar-item-logo">
                             {% include {{ site.logo }} image="img/logo2.png" size="s" %}
                         </div>
                         {% else %}
                         {% endif %}
-                        {% include menu.html position-menu="right" style="navbar-menu--back" %}
+                        {% include menu.html position-menu="left" style="navbar-menu--back" %}
                         {% include utiles.html %}
                     </div>
 

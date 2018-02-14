@@ -26,12 +26,12 @@
                     <div class="navbar-inner">
 
                         {% if site.logo-center.header.logo.position == 'left' or site.logo-center.header.logo.position == 'right' %}
-                        <div class="navbar-item navbar-item-logo text-align-left">
+                        <div class="navbar-item navbar-item-logo">
                             {% include {{ site.logo }} image="img/logo2.png" size="s" %}
                         </div>
                         {% else %}
                         {% endif %}
-                        {% include menu.html position-menu="right" style="navbar-menu--back" %}
+                        {% include menu.html position-menu="center" style="navbar-menu--back" %}
                         {% include utiles.html %}
                     </div>
 

@@ -20,6 +20,7 @@ h1{
 .branding-logo{
   max-width: 100%;
   vertical-align: middle;
+  @include transition(transform .3s ease, background .3s ease, width .25s linear);
 }
 
 .design{
@@ -139,9 +140,6 @@ ul{
 .icon{
   vertical-align: middle;
   font-size: $utiles-icon-size;
-  @media #{$smartphones}{
-    font-size: $utiles-icon-size-small;
-  }
 
 }
 

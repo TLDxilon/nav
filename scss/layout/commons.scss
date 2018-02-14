@@ -74,6 +74,7 @@
       }
     }
     .navbar-item-utiles{
+      @extend .padding-lr-l;
       @media #{$smartphones}{
 
       }
@@ -84,29 +85,23 @@
 
       }
       .utiles-item{
-        margin:5px;
+        margin: 5px;
         vertical-align: middle;
         display: inline-block;
-        height: 26px;
-        @media #{$smartphones}{
-          height: 26px;
-        }
+        height: 30px;
+
 
         @media #{$smartphones}{
           margin: 0 2px;
         }
-        &.btn{
-           height: auto;
-        }
+
       }
       .btn-menu {
         z-index:99;
         position: relative;
         overflow: hidden;
         width: $utiles-icon-size;
-        @media #{$smartphones}{
-          width: $utiles-icon-size-small;
-        }
+
         @media #{$big}{
           display: none;
         }
@@ -131,9 +126,7 @@
         position: relative;
         overflow: hidden;
         width: $utiles-icon-size;
-        @media #{$smartphones}{
-          width: $utiles-icon-size-small;
-        }
+
         .btn-open-search, .btn-close-search{
           position: absolute;
           left:0;
@@ -194,13 +187,13 @@
      .navbar-item-logo {
 
        @media #{$smartphones}{
-         @include flex-basis(40%);
+         @include flex-basis(50%);
        }
        @media #{$tablets}{
-         @include flex-basis(40%);
+         @include flex-basis(50%);
        }
        @media #{$laptop}{
-         @include flex-basis(40%);
+         @include flex-basis(50%);
        }
 
      }
@@ -210,13 +203,13 @@
      .navbar-item-utiles {
 
        @media #{$smartphones}{
-         @include flex-basis(60%);
+         @include flex-basis(50%);
        }
        @media #{$tablets}{
-         @include flex-basis(60%);
+         @include flex-basis(50%);
        }
        @media #{$laptop}{
-         @include flex-basis(60%);
+         @include flex-basis(50%);
        }
      }
    }
@@ -244,15 +237,8 @@
 
    &--right{
      .navbar-inner{
-        @include flex-direction(row-reverse);
-       @media #{$smartphones}{
-         @include flex-direction(row);
-       }
-       @media #{$tablets}{
-         @include flex-direction(row);
-       }
-       @media #{$laptop}{
-         @include flex-direction(row);
+       .navbar-item-logo{
+         @include order(3);
        }
      }
 

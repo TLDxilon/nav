@@ -26,7 +26,7 @@ header:
     position: 'left'
     size: 's'
   menu:
-    position: 'fixed'
+    position: 'right'
   hero: 'true'
   top-bar: 'false'
   container: 'container-fluid'
@@ -37,7 +37,7 @@ no-hero:
       position: 'left'
       size: 'm'
     menu:
-      position: 'fixed'
+          position: 'right'
     hero: 'false'
     top-bar: 'false'
 
@@ -48,7 +48,7 @@ logo-center:
       size: 'm'
       padding: 'l'
     menu:
-        position: 'fixed'
+      position: 'center'
     hero: 'true'
     top-bar: 'false'
 
@@ -58,7 +58,7 @@ logo-center-no-hero:
       position: 'top'
       size: 'm'
     menu:
-        position: 'fixed'
+      position: 'center'
     hero: 'false'
     top-bar: 'false'
 
@@ -68,9 +68,10 @@ logo-right:
       position: 'right'
       size: 'm'
     menu:
-      position: 'fixed'
+      position: 'left'
     hero: 'true'
     top-bar: 'false'
+    container: 'container'
 
 
 

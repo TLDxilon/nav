@@ -17,7 +17,6 @@ $tone-gray: #bcbcbc;
 $tone-main: #BE86B9;
 
 $utiles-icon-size: 20px;
-$utiles-icon-size-small: 17px;
 
 
 /* COLORES */
@@ -167,19 +166,15 @@ $utiles-icon-size-small: 17px;
   &-s{
     .branding-logo{
       width: 200px;
-      @extend .transition-breakpoints;
-      @media #{$smartphones}{
-        width: 160px;
-    }
+
+
    }
   }
   &-m{
     .branding-logo{
       width: 250px;
-      @extend .transition-breakpoints;
-      @media #{$smartphones}{
-        width: 160px;
-       }
+
+
     }
 
   }
@@ -187,21 +182,16 @@ $utiles-icon-size-small: 17px;
   &-l{
     .branding-logo {
       width: 300px;
-      @extend .transition-breakpoints;
-      @media #{$smartphones}{
-        width: 160px;
-      }
+
+
     }
 
   }
   &-xl{
     .branding-logo {
       width: 350px;
-      @extend .transition-breakpoints;
-      @media #{$smartphones}{
-        width: 200px;
 
-      }
+
     }
 
   }

@@ -16,7 +16,7 @@
         <div class="navbar navbar-logo--{{ site.no-hero.header.logo.position }} logo-size-{{ site.no-hero.header.logo.size }} border-bottom" id="navbar">
 
             {% if site.no-hero.header.logo.position == 'top' %}
-            <div class="navbar-item navbar-item-logo text-align-center">
+            <div class="navbar-item navbar-item-logo">
                 {% include {{ site.logo }} image="img/logo2.png" %}
             </div>
             {% else %}
@@ -26,7 +26,7 @@
                     <div class="navbar-inner">
 
                         {% if site.no-hero.header.logo.position == 'left' or site.no-hero.header.logo.position == 'right' %}
-                        <div class="navbar-item navbar-item-logo text-align-left">
+                        <div class="navbar-item navbar-item-logo">
                             {% include {{ site.logo }} image="img/logo2.png" size="s" %}
                         </div>
                         {% else %}
