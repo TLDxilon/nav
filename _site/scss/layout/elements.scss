@@ -70,11 +70,9 @@ ul{
   font-weight: 400;
   text-align: center;
   vertical-align: middle;
-  &:hover{
-    background: darken($tone-main, 10%);
-  }
+
   &--small{
-    padding: 8px 16px;
+    padding: 6px 12px;
     font-size: 12px;
   }
   &--big{
@@ -82,9 +80,23 @@ ul{
     font-size: 15px;
   }
   &--flat{
-
+    @extend .bg-main;
+    @extend .fg-white;
+    &:hover{
+      background: darken($tone-main, 10%);
+    }
   }
-
+  &--outline{
+    @extend .fg-gray;
+    border-width: 1.5px;
+    border-color: $tone-gray;
+    border-style: solid;
+    &:hover{
+      @extend .bg-gray;
+      border-color: transparent;
+      @extend .fg-gray;
+    }
+  }
 }
 
 

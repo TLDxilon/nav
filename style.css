@@ -2,8 +2,8 @@
 /* Aquí están los estilos bootstrap originales y los míos sustituidos */
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?7mtkdt");
-  src: url("fonts/icomoon.eot?7mtkdt#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?7mtkdt") format("truetype"), url("fonts/icomoon.woff?7mtkdt") format("woff"), url("fonts/icomoon.svg?7mtkdt#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?eu7cna");
+  src: url("fonts/icomoon.eot?eu7cna#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?eu7cna") format("truetype"), url("fonts/icomoon.woff?eu7cna") format("woff"), url("fonts/icomoon.svg?eu7cna#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
@@ -18,6 +18,18 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-menu3:before {
+  content: ""; }
+
+.icon-search:before {
+  content: ""; }
+
+.icon-shopping-cart2:before {
+  content: ""; }
+
+.icon-x:before {
+  content: ""; }
 
 .icon-add-to-list:before {
   content: ""; }
@@ -115,45 +127,6 @@
 .icon-bookmark:before {
   content: ""; }
 
-.icon-bookmarks:before {
-  content: ""; }
-
-.icon-chevron-down:before {
-  content: ""; }
-
-.icon-chevron-left:before {
-  content: ""; }
-
-.icon-chevron-right:before {
-  content: ""; }
-
-.icon-chevron-small-down:before {
-  content: ""; }
-
-.icon-chevron-small-left:before {
-  content: ""; }
-
-.icon-chevron-small-right:before {
-  content: ""; }
-
-.icon-chevron-small-up:before {
-  content: ""; }
-
-.icon-chevron-thin-down:before {
-  content: ""; }
-
-.icon-chevron-thin-left:before {
-  content: ""; }
-
-.icon-chevron-thin-right:before {
-  content: ""; }
-
-.icon-chevron-thin-up:before {
-  content: ""; }
-
-.icon-chevron-up:before {
-  content: ""; }
-
 .icon-chevron-with-circle-down:before {
   content: ""; }
 
@@ -166,42 +139,6 @@
 .icon-chevron-with-circle-up:before {
   content: ""; }
 
-.icon-cloud:before {
-  content: ""; }
-
-.icon-controller-fast-forward:before {
-  content: ""; }
-
-.icon-controller-jump-to-start:before {
-  content: ""; }
-
-.icon-controller-next:before {
-  content: ""; }
-
-.icon-controller-paus:before {
-  content: ""; }
-
-.icon-controller-play:before {
-  content: ""; }
-
-.icon-controller-record:before {
-  content: ""; }
-
-.icon-controller-stop:before {
-  content: ""; }
-
-.icon-controller-volume:before {
-  content: ""; }
-
-.icon-dot-single:before {
-  content: ""; }
-
-.icon-dots-three-horizontal:before {
-  content: ""; }
-
-.icon-dots-three-vertical:before {
-  content: ""; }
-
 .icon-dots-two-horizontal:before {
   content: ""; }
 
@@ -210,45 +147,6 @@
 
 .icon-download:before {
   content: ""; }
-
-.icon-emoji-flirt:before {
-  content: ""; }
-
-.icon-flow-branch:before {
-  content: ""; }
-
-.icon-flow-cascade:before {
-  content: ""; }
-
-.icon-flow-line:before {
-  content: ""; }
-
-.icon-flow-parallel:before {
-  content: ""; }
-
-.icon-flow-tree:before {
-  content: ""; }
-
-.icon-install:before {
-  content: ""; }
-
-.icon-layers:before {
-  content: ""; }
-
-.icon-open-book:before {
-  content: ""; }
-
-.icon-resize-100:before {
-  content: ""; }
-
-.icon-resize-full-screen:before {
-  content: ""; }
-
-.icon-save:before {
-  content: ""; }
-
-.icon-select-arrows:before {
-  content: ""; }
 
 .icon-sound-mute:before {
   content: ""; }
@@ -259,45 +157,6 @@
 .icon-trash:before {
   content: ""; }
 
-.icon-triangle-down:before {
-  content: ""; }
-
-.icon-triangle-left:before {
-  content: ""; }
-
-.icon-triangle-right:before {
-  content: ""; }
-
-.icon-triangle-up:before {
-  content: ""; }
-
-.icon-uninstall:before {
-  content: ""; }
-
-.icon-upload-to-cloud:before {
-  content: ""; }
-
-.icon-upload:before {
-  content: ""; }
-
-.icon-add-user:before {
-  content: ""; }
-
-.icon-address:before {
-  content: ""; }
-
-.icon-adjust:before {
-  content: ""; }
-
-.icon-air:before {
-  content: ""; }
-
-.icon-aircraft-landing:before {
-  content: ""; }
-
-.icon-aircraft-take-off:before {
-  content: ""; }
-
 .icon-aircraft:before {
   content: ""; }
 
@@ -306,45 +165,6 @@
 
 .icon-align-horizontal-middle:before {
   content: ""; }
-
-.icon-align-left:before {
-  content: ""; }
-
-.icon-align-right:before {
-  content: ""; }
-
-.icon-align-top:before {
-  content: ""; }
-
-.icon-align-vertical-middle:before {
-  content: ""; }
-
-.icon-archive:before {
-  content: ""; }
-
-.icon-area-graph:before {
-  content: ""; }
-
-.icon-attachment:before {
-  content: ""; }
-
-.icon-awareness-ribbon:before {
-  content: ""; }
-
-.icon-back-in-time:before {
-  content: ""; }
-
-.icon-back:before {
-  content: ""; }
-
-.icon-bar-graph:before {
-  content: ""; }
-
-.icon-battery:before {
-  content: ""; }
-
-.icon-beamed-note:before {
-  content: ""; }
 
 .icon-bell:before {
   content: ""; }
@@ -1174,6 +994,15 @@
 .icon-youtube:before {
   content: ""; }
 
+.icon-bars:before {
+  content: ""; }
+
+.icon-navicon:before {
+  content: ""; }
+
+.icon-reorder:before {
+  content: ""; }
+
 .icon-menu:before {
   content: ""; }
 
@@ -1184,11 +1013,11 @@
 /* COLORES */
 .fg-dark, .search-bar .input-search {
   color: #222222; }
-.fg-gray, .navbar-menu--line .nav-link, .search-bar .input-search:focus {
+.fg-gray, .btn--outline, .btn--outline:hover, .navbar-menu--line .nav-link, .search-bar .input-search:focus {
   color: #bcbcbc; }
 .fg-clear, .search-bar .input-search::placeholder {
   color: #ECECEC; }
-.fg-white {
+.fg-white, .btn--flat {
   color: #ffffff; }
 .fg-main, .navbar-menu--simple .nav-link:hover, .navbar-menu--simple .active .nav-link {
   color: #BE86B9; }
@@ -1196,7 +1025,7 @@
 .bg-dark, .backdrop, .backdrop-top, .topbar {
   background: #222222;
   color: #ffffff; }
-.bg-gray {
+.bg-gray, .btn--outline:hover {
   background: #bcbcbc;
   color: #ffffff; }
 .bg-clear {
@@ -1205,7 +1034,7 @@
 .bg-white, .navbar.navbar-fixed.bg-white .navbar-content, .navbar.navbar-fixed.bg-white .navbar-item-logo, .navbar.search-is-open .navbar-content, .navbar.navbar-logo--top.search-is-open .navbar-item-logo {
   background: #ffffff;
   color: #222222; }
-.bg-main, .navbar-menu--line .nav-link:after, .navbar-menu--back .nav-menu-item .nav-link:hover, .navbar-menu--back .nav-menu-item .navbar-menu--simple .active .nav-link, .navbar-menu--simple .active .navbar-menu--back .nav-menu-item .nav-link, .navbar-menu--back .nav-menu-item.active .nav-link, .menu-movil {
+.bg-main, .btn--flat, .navbar-menu--line .nav-link:after, .navbar-menu--back .nav-menu-item .nav-link:hover, .navbar-menu--back .nav-menu-item .navbar-menu--simple .active .nav-link, .navbar-menu--simple .active .navbar-menu--back .nav-menu-item .nav-link, .navbar-menu--back .nav-menu-item.active .nav-link, .menu-movil {
   background: #BE86B9;
   color: #ffffff; }
 
@@ -1393,14 +1222,20 @@ ul {
   font-weight: 400;
   text-align: center;
   vertical-align: middle; }
-  .btn:hover {
-    background: #ac65a6; }
   .btn--small {
-    padding: 8px 16px;
+    padding: 6px 12px;
     font-size: 12px; }
   .btn--big {
     padding: 15px 30px;
     font-size: 15px; }
+  .btn--flat:hover {
+    background: #ac65a6; }
+  .btn--outline {
+    border-width: 1.5px;
+    border-color: #bcbcbc;
+    border-style: solid; }
+    .btn--outline:hover {
+      border-color: transparent; }
 
 .background {
   z-index: -1;
@@ -1429,10 +1264,10 @@ ul {
 
 .icon {
   vertical-align: middle;
-  font-size: 25px; }
+  font-size: 20px; }
   @media only screen and (max-width: 479px) {
     .icon {
-      font-size: 22px; } }
+      font-size: 17px; } }
 
 .backdrop, .backdrop-top {
   display: none;
@@ -1583,10 +1418,10 @@ ul {
       margin: 5px;
       vertical-align: middle;
       display: inline-block;
-      height: 25px; }
+      height: 26px; }
       @media only screen and (max-width: 479px) {
         .navbar .navbar-inner .navbar-item-utiles .utiles-item {
-          height: 22px; } }
+          height: 26px; } }
       @media only screen and (max-width: 479px) {
         .navbar .navbar-inner .navbar-item-utiles .utiles-item {
           margin: 0 2px; } }
@@ -1596,10 +1431,10 @@ ul {
       z-index: 99;
       position: relative;
       overflow: hidden;
-      width: 25px; }
+      width: 20px; }
       @media only screen and (max-width: 479px) {
         .navbar .navbar-inner .navbar-item-utiles .btn-menu {
-          width: 22px; } }
+          width: 17px; } }
       @media only screen and (min-width: 960px) {
         .navbar .navbar-inner .navbar-item-utiles .btn-menu {
           display: none; } }
@@ -1617,10 +1452,10 @@ ul {
     .navbar .navbar-inner .navbar-item-utiles .btn-search {
       position: relative;
       overflow: hidden;
-      width: 25px; }
+      width: 20px; }
       @media only screen and (max-width: 479px) {
         .navbar .navbar-inner .navbar-item-utiles .btn-search {
-          width: 22px; } }
+          width: 17px; } }
       .navbar .navbar-inner .navbar-item-utiles .btn-search .btn-open-search, .navbar .navbar-inner .navbar-item-utiles .btn-search .btn-close-search {
         position: absolute;
         left: 0; }

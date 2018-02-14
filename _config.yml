@@ -29,7 +29,7 @@ header:
     position: 'fixed'
   hero: 'true'
   top-bar: 'false'
-  container: ''
+  container: 'container-fluid'
 
 no-hero:
   header:
