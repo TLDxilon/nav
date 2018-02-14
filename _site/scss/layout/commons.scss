@@ -43,15 +43,18 @@
 
 
     .navbar-item-menu{
-      @extend .padding-lr-l;
       @media #{$smartphones}{
         display: none;
       }
       @media #{$tablets}{
         display: none;
+        @extend .padding-lr-l;
       }
       @media #{$laptop}{
         display: none;
+      }
+      @media #{$big}{
+        @extend .padding-lr-l;
       }
       .nav-menu-item{
         display: inline-block;
@@ -74,16 +77,13 @@
       }
     }
     .navbar-item-utiles{
-      @extend .padding-lr-l;
-      @media #{$smartphones}{
-
+      @media #{$big}{
+        @extend .padding-lr-l;
       }
       @media #{$tablets}{
-
+        @extend .padding-lr-l;
       }
-      @media #{$laptop}{
 
-      }
       .utiles-item{
         margin: 5px;
         vertical-align: middle;

@@ -77,7 +77,7 @@
       }
     }
     .navbar-item-utiles{
-      @media #{$bio}{
+      @media #{$big}{
         @extend .padding-lr-l;
       }
       @media #{$tablets}{
