@@ -49,12 +49,14 @@ $(document).ready(function(){
         if ($design.hasClass('page-is-moving')) {
             $design.removeClass('page-is-static');
             $menumobile.addClass('display-block');
+            $menumobile.css('z-index','5');
             $navBar.removeClass('search-is-open');
 
         } else{
-            $$design.removeClass('page-is-moving');
+            $design.removeClass('page-is-moving');
             $design.addClass('page-is-static');
-            $menumobile.css('display','none');
+            $menumobile.css('z-index','-6');
+
 
         }
     };
@@ -76,12 +78,6 @@ $(document).ready(function(){
 
     };
 
-    $backdrop.on('click', function(){
-        $(this).css('opacity', '0');
-        $navBar.removeClass('search-is-open');
-
-    });
-
 
     $('.js-search-toogle').on('click', function(){
         toogleSearch();
@@ -92,6 +88,11 @@ $(document).ready(function(){
     });
 
 
+    $backdrop.on('click', function(){
+        $(this).css('opacity', '0');
+        $navBar.removeClass('search-is-open');
+
+    });
 
 
 })
