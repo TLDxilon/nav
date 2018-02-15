@@ -1,12 +1,14 @@
 $(document).ready(function(){
 
     var height_topbar = $('.topbar').outerHeight(true);
-    var height_logo = $('.navbar-logo--top .navbar-item-logo').outerHeight(true);
+    var height_logo = $('.navbar-logo--top .navbar-item--logo, .navigation-bottom .navbar-item--logo').outerHeight(true);
     var height_nav = $('.navbar-content').outerHeight(true);
+    var height_over_menu = $('.navbar-content').offset().top;
     var lastScrollPosition = 0;
 
     var $searchBar = $('.search-bar');
     var $navBar = $('.navbar');
+    var $navBarContent = $('.navbar-content');
     var $backdrop = $('.backdrop');
     var $menumobile = $('.menu-mobile');
     var $design = $('.design');
@@ -15,15 +17,15 @@ $(document).ready(function(){
 
 
     $(window).on('scroll', function(){
-        if ( $(window).scrollTop() > height_logo + height_topbar ){
-            $navBar.addClass('navbar-fixed bg-white');
+        if ( $(window).scrollTop() > height_over_menu ){
+            $navBarContent.addClass('navbar-fixed bg-white');
         } else {
-            $navBar.removeClass('navbar-fixed bg-white');
+            $navBarContent.removeClass('navbar-fixed bg-white');
         }
 
         //Hago que suba al llegar a 600
-        if ($(window).scrollTop() > 600) {
-            $navBar.addClass('is-hide');
+        if ($(window).scrollTop() > 1600) {
+            $navBarContent.addClass('is-hide');
         } else  {
         }
 
@@ -31,7 +33,7 @@ $(document).ready(function(){
         var newScrollPosition = window.scrollY;
 
         if (newScrollPosition < lastScrollPosition){
-            $navBar.removeClass('is-hide');
+            $navBarContent.removeClass('is-hide');
         }else{
 
         }
@@ -39,7 +41,7 @@ $(document).ready(function(){
     });
 
 
-    $('.content, .hero-content').css('padding-top', (height_topbar + height_logo + height_nav) + 'px');
+    $('.fix-header-padding').css('padding-top', (height_topbar + height_logo + height_nav) + 'px');
 
 
 
@@ -49,7 +51,6 @@ $(document).ready(function(){
         if ($design.hasClass('page-is-moving')) {
             $design.removeClass('page-is-static');
             $menumobile.addClass('display-block');
-          // $menumobile.css('z-index','5');
             $navBar.removeClass('search-is-open');
 
         } else{
@@ -63,10 +64,10 @@ $(document).ready(function(){
 
     var toogleSearch = function(){
 
-        $navBar.toggleClass('search-is-open');
+        $navBarContent.toggleClass('search-is-open');
 
-        if ($navBar.hasClass('search-is-open')) {
-            $navBar.find('input').focus();
+        if ($navBarContent.hasClass('search-is-open')) {
+            $navBarContent.find('input').focus();
             $backdrop.css('display', 'block');
             $searchBar.css('opacity', '1');
 

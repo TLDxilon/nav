@@ -26,40 +26,19 @@ iconlinkedin: '#'
 logo-left:
   header:
     logo:
-      position: 'left'
+      position: 'top'
+      align: 'left'
       size: 'm'
-      padding: 'xs'
+      padding: 's'
     menu:
-      position: 'right'
+      align: 'right'
       style: 'menu-style-back'
     hero: 'true'
     top-bar: 'false'
     container: 'container-fluid'
+    navigation: 'bottom'
 
 
-logo-center:
-  header:
-    logo:
-      position: 'top'
-      size: 'm'
-      padding: 'l'
-    menu:
-      position: 'center'
-    hero: 'true'
-    top-bar: 'false'
-
-
-
-logo-right:
-  header:
-    logo:
-      position: 'right'
-      size: 'm'
-    menu:
-      position: 'left'
-    hero: 'true'
-    top-bar: 'false'
-    container: 'container'
 
 
 

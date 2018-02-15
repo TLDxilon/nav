@@ -2,6 +2,7 @@
 @import "variables";
 @import "elements";
 @import "menu-styles";
+@import "navigation";
 //@import "iconos-css";
 
 
@@ -9,131 +10,17 @@
 .navbar{
   position: absolute;
   width:100%;
-  .navbar-content {
-    @include transition(transform .3s ease, background .3s ease);
-  }
-  &.navbar-fixed {
-    .navbar-content {
-      position: fixed;
-      top: 0;
-      width: 100%;
-    }
-    &.bg-white{
-      .navbar-content, .navbar-item--logo{
-        @extend .bg-white;
+  &.bg-white {
+    .navbar-item--logo {
+      @extend .bg-white;
 
-      }
     }
   }
-
-  &.is-hide{
-    .navbar-content{
-      @include transform(translate(0, -100%));
-      @include transition(transform 0.3s ease-out);
-    }
-
-  }
-
-  .navbar-inner{
-    @extend .flexbox-row-nowrap;
-    @include justify-content(center);
-    @include align-items(center);
-
-
-    .navbar-item--menu{
-      @extend .padding-lr-l;
-      @media #{$smartphones}{
-        display: none;
-        padding-left: 0;
-        padding-right: 0;
-      }
-      @media #{$tablets}{
-        display: none;
-        padding-left: 0;
-        padding-right: 0;
-      }
-      @media #{$laptop}{
-        display: none;
-      }
-      @media #{$big}{
-
-      }
-
-    }
-    .navbar-item--logo{
-      @media #{$smartphones}{
-
-      }
-      @media #{$tablets}{
-
-      }
-      @media #{$laptop}{
-
-      }
-    }
-    .navbar-item--tools{
-      @extend .padding-lr-l;
-      @media #{$smartphones}{
-        padding-left: 0;
-        padding-right: 0;
-      }
-      @media #{$tablets}{
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      .tools-item{
-        margin: 5px;
-        vertical-align: middle;
-        display: inline-block;
-        height: 30px;
-
-
-        @media #{$smartphones}{
-          margin: 0 2px;
-        }
-
-      }
-
-
-
-    }
-
-
-  }
-
-
-
-  &.search-is-open {
-
-    .navbar-content{
+  &.search-is-open{
     @extend .bg-white;
-
-    }
-        .btn-search{
-          &::after{
-
-          }
-          &::before, &::after{
-            opacity: 0;
-          }
-          span{
-            &::before{
-              @include rotate(135);
-            }
-            &::after{
-              @include rotate(45);
-
-            }
-            &::before, &::after{
-              opacity: 1;
-              @include transition(opacity 0.3s, transform 0.3s);
-            }
-         }
-    }
+  }
 
 
-}
 
 
   &.navbar-logo{
@@ -201,7 +88,102 @@
 }
 
 
+.navbar-content {
+  @include transition(transform .3s ease, background .3s ease);
+  &.navbar-fixed {
 
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    &.bg-white{
+
+      @extend .bg-white;
+
+
+    }
+    &.is-hide{
+      @include transform(translate(0, -100%));
+      @include transition(transform 0.3s ease-out);
+    }
+
+
+  }
+
+  &.search-is-open{
+    @extend .bg-white;
+  }
+  .navbar-inner{
+    @extend .flexbox-row-nowrap;
+    @include justify-content(center);
+    @include align-items(center);
+
+
+    .navbar-item--menu{
+      @extend .padding-lr-l;
+      @media #{$smartphones}{
+        display: none;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      @media #{$tablets}{
+        display: none;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      @media #{$laptop}{
+        display: none;
+      }
+      @media #{$big}{
+
+      }
+
+    }
+    .navbar-item--logo{
+      @media #{$smartphones}{
+
+      }
+      @media #{$tablets}{
+
+      }
+      @media #{$laptop}{
+
+      }
+    }
+    .navbar-item--tools{
+      @extend .padding-lr-l;
+      @media #{$smartphones}{
+        padding-left: 0;
+        padding-right: 0;
+      }
+      @media #{$tablets}{
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .tools-item{
+        margin: 5px;
+        vertical-align: middle;
+        display: inline-block;
+        height: 30px;
+
+
+        @media #{$smartphones}{
+          margin: 0 2px;
+        }
+
+      }
+
+
+
+    }
+
+
+  }
+  .navigation-bottom &{
+    @extend .bg-dark;
+  }
+}
 
 .btn-menu{
   z-index:99;
@@ -239,7 +221,6 @@
     }
   }
 }
-
 
 .btn-search {
   position: relative;
@@ -306,13 +287,11 @@
 }
 
 
-
-
-
 .search-bar{
+  @extend .padding-tb-xs;
+  position: relative;
   height: 0;
   opacity: 0;
-  visibility: hidden;
   width: 100%;
   @include transition(opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s);
   .search-is-open & {
@@ -320,6 +299,9 @@
     opacity: 0.95;
     visibility: visible;
     @include transition(opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s);
+  }
+  .navigation-bottom &{
+    position: absolute;
   }
   .form-search-item{
     display: inline-block;
@@ -357,6 +339,7 @@
     @extend .padding-s;
   }
 
+
 }
 
 .options{
@@ -366,6 +349,9 @@
 
 
 }
+
+
+
 
 
 .overflow-hidden{
