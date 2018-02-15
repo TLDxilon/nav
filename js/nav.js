@@ -76,12 +76,6 @@ $(document).ready(function(){
 
     };
 
-    $backdrop.on('click', function(){
-        $(this).css('opacity', '0');
-        $navBar.removeClass('search-is-open');
-
-    });
-
 
     $('.js-search-toogle').on('click', function(){
         toogleSearch();
@@ -92,6 +86,11 @@ $(document).ready(function(){
     });
 
 
+    $backdrop.on('click', function(){
+        $(this).css('opacity', '0');
+        $navBar.removeClass('search-is-open');
+
+    });
 
 
 })
