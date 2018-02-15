@@ -22,17 +22,10 @@
 
 
 <body>
-<div class="design">
-    
-<ul class="menu-movil" id="menu-movil">
-    <li class="nav-menu-item padding-s active"><a class="nav-link fg-gray" href="#">Home</a></li>
-    <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">About</a></li>
-    <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">Products</a></li>
-    <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">News </a></li>
-    <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">Contact</a></li>
-</ul>
 
-    <header class="header position-relative page-is-static">
+
+    <div class="design page-is-static">
+    <header class="header position-relative">
 
         
         <div class="backdrop">
@@ -48,7 +41,7 @@
                     <div class="navbar-inner">
 
                         
-                        <div class="navbar-item navbar-item-logo padding-tb-xs">
+                        <div class="navbar-item navbar-item--logo padding-tb-xs">
                             
     <a href="/"><img class="branding-logo" src="img/logo2.png">
 
@@ -56,7 +49,7 @@
                         </div>
                         
                         
-<nav class="navbar-item navbar-item-menu navbar-menu--back">
+<nav class="navbar-item navbar-item--menu menu-style-back">
     <ul class="flex-align-right" >
         <li class="nav-menu-item active"><a class="nav-link fg-gray" href="#"><span class="">Home</span></a></li>
         <li class="nav-menu-item"><a class="nav-link fg-gray" href="#"><span class="">Products</span></a></li>
@@ -65,28 +58,30 @@
     </ul>
 
 </nav>
-                        <div class="navbar-item navbar-item-utiles text-align-right">
+                        <div class="navbar-item navbar-item--tools text-align-right">
     
-    <a class="utiles-item" href="http://linkaloquequieras" ><span class="btn btn--small btn--outline border-radius-l">Login</span></a>
-<a class="utiles-item btn-shop" href="http://linkalacesta"><span class="icon icon-shopping-cart2 fg-gray"></span></a>
+    <div class="navbar-tools">
+    <div class="tools-item" ><a class="btn btn--small btn--outline border-radius-l"  href="http://linkaloquequieras">Login</a></div>
+    <a class="tools-item btn-shop  fg-gray" href="http://linkalacesta"><span class="icon icon-shopping-cart2"></span></a>
+    
 
+    <a class="tools-item btn-search fg-gray js-search-toogle" href="#searchbar">
+        <div class="open-search"><span class="icon icon-search"></span></div>
+        <div class="close-search"><span class="icon icon-x"></span></div>
+    </a>
+
+    
+
+
+    <a class="tools-item btn-menu fg-gray js-menu-toogle">
+        <div class="open-menu"><span class="icon icon-menu3"></span></div>
+        <div class="close-menu" href=""><span class="icon icon-x"></span></div>
+    </a>
 <!--
-<a class="utiles-item btn-search" href="#searchbar">Search<span></span></a>
+<a class="tools-item btn-search" href="#searchbar">Search<span></span></a>
+<a class="tools-item btn-ham" href="#menu-movil">Menu<span></span></a>
 -->
-<a class="utiles-item btn-search" href="#searchbar">
-    <div class="btn-open-search"><span class="icon icon-search fg-gray"></span></div>
-    <div class="btn-close-search"><span class="icon icon-x fg-gray"></span></div>
-</a>
-
-
-<!--
-<a class="utiles-item btn-ham" href="#menu-movil">Menu<span></span></a>
--->
-
-<a class="utiles-item btn-menu">
-    <div class="btn-open-menu"><span class="icon icon-menu3 fg-gray"></span></div>
-    <div class="btn-close-menu" href=""><span class="icon icon-x fg-gray"></span></div>
-</a>
+</div>
 
     
 
@@ -130,7 +125,7 @@
 
     </header>
 
-    <main class="content page-is-static" id="main">
+    <main class="content" id="main">
         <div class="container">
             <div class="padding-l">
                 <div class="options">
@@ -176,20 +171,27 @@
                 <br>
 
                 {"position"=>"left", "size"=>"m", "padding"=>"xs"}<br/>
-                {"position"=>"right", "style"=>"navbar-menu--back"}<br/>
-                navbar-menu--back<br/>
+                {"position"=>"right", "style"=>"menu-style-back"}<br/>
+                menu-style-back<br/>
                 <br/>
             </div>
         </div>
     </main>
 
 
-    <footer class="footer page-is-static padding-tb-l bg-dark text-align-center">
+    <footer class="footer padding-tb-l bg-dark text-align-center">
 Lorem Ipsum dolor sit amet. 989 556 443. info@tldxilon.github.io
 </footer>
 </div>
 
-
+    
+<ul class="menu-mobile" id="menu-mobile">
+    <li class="nav-menu-item padding-s active"><a class="nav-link fg-gray" href="#">Home</a></li>
+    <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">About</a></li>
+    <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">Products</a></li>
+    <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">News </a></li>
+    <li class="nav-menu-item padding-s"><a class="nav-link fg-gray" href="#">Contact</a></li>
+</ul>
 
 </body>
 </html>

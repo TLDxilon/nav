@@ -1,5 +1,5 @@
 
-.navbar-item-menu{
+.navbar-item--menu{
   @include align-self(stretch);
   align-self: stretch;
   ul{
@@ -21,7 +21,7 @@
   font-size: 14px;
   @extend .padding-lr-l;
    span{
-     .navbar-menu--line & {
+     .menu-style-line & {
        position: relative;
        &:after{
          position: absolute;
@@ -43,11 +43,11 @@
      }
      @include align-self(center);
    }
-  .navbar-menu--back .active &{
+  .menu-style-back .active &{
     @extend .bg-main;
     @include transition(background 0.3s ease 0s);
   }
-  .navbar-menu--line .active & {
+  .menu-style-line .active & {
     span{
       &:after{
         opacity:1;
@@ -58,7 +58,7 @@
 
   &:hover{
 
-    .navbar-menu--back &{
+    .menu-style-back &{
       @extend .bg-main;
       @include transition(background 0.3s ease 0s);
 

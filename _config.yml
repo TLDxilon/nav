@@ -6,9 +6,9 @@ fold: nav
 title: "Mi sitio"
 
 
-nav-icons: 'true'
+nav-tools: 'true'
 
-#Nav icons
+#Nav tools
 navbutton:  'http://linkaloquequieras'
 iconshop:  'http://linkalacesta'
 iconsearch: 'true'
@@ -21,11 +21,6 @@ iconpinterest: '#'
 iconlinkedin: '#'
 
 
-options:
-  logo-left:
-  logo-left-2:
-
-
 
 
 logo-left:
@@ -36,7 +31,7 @@ logo-left:
       padding: 'xs'
     menu:
       position: 'right'
-      style: 'navbar-menu--back'
+      style: 'menu-style-back'
     hero: 'true'
     top-bar: 'false'
     container: 'container-fluid'

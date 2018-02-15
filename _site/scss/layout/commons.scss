@@ -19,7 +19,7 @@
       width: 100%;
     }
     &.bg-white{
-      .navbar-content, .navbar-item-logo{
+      .navbar-content, .navbar-item--logo{
         @extend .bg-white;
 
       }
@@ -40,7 +40,7 @@
     @include align-items(center);
 
 
-    .navbar-item-menu{
+    .navbar-item--menu{
       @extend .padding-lr-l;
       @media #{$smartphones}{
         display: none;
@@ -60,7 +60,7 @@
       }
 
     }
-    .navbar-item-logo{
+    .navbar-item--logo{
       @media #{$smartphones}{
 
       }
@@ -71,7 +71,7 @@
 
       }
     }
-    .navbar-item-utiles{
+    .navbar-item--tools{
       @extend .padding-lr-l;
       @media #{$smartphones}{
         padding-left: 0;
@@ -82,7 +82,7 @@
         padding-right: 0;
       }
 
-      .utiles-item{
+      .tools-item{
         margin: 5px;
         vertical-align: middle;
         display: inline-block;
@@ -94,48 +94,6 @@
         }
 
       }
-      .btn-menu {
-        z-index:99;
-        position: relative;
-        overflow: hidden;
-        width: $utiles-icon-size;
-
-        @media #{$big}{
-          display: none;
-        }
-        .btn-open-menu{
-         position: absolute;
-         left: 0;
-        }
-        .btn-close-menu{
-          position: absolute;
-          left: 0;
-          top:0;
-        }
-        .btn-open-menu {
-          opacity: 1;
-        }
-        .btn-close-menu {
-          opacity: 0;
-        }
-      }
-
-      .btn-search {
-        position: relative;
-        overflow: hidden;
-        width: $utiles-icon-size;
-
-        .btn-open-search, .btn-close-search{
-          position: absolute;
-          left:0;
-        }
-        .btn-open-search {
-          opacity: 1;
-        }
-        .btn-close-search {
-          opacity: 0;
-        }
-      }
 
 
 
@@ -143,6 +101,9 @@
 
 
   }
+
+
+
   &.search-is-open {
 
     .navbar-content{
@@ -177,7 +138,7 @@
 
   &.navbar-logo{
    &--left, &--right{
-     .navbar-item-logo {
+     .navbar-item--logo {
 
        @media #{$smartphones}{
          @include flex-basis(50%);
@@ -190,10 +151,10 @@
        }
 
      }
-     .navbar-item-menu {
+     .navbar-item--menu {
        @include flex-grow(1);
      }
-     .navbar-item-utiles {
+     .navbar-item--tools {
 
        @media #{$smartphones}{
          @include flex-basis(50%);
@@ -208,17 +169,17 @@
    }
 
    &--top{
-     .navbar-item-logo{
+     .navbar-item--logo{
        @include transition(transform .3s ease, background .3s ease);
      }
      &.search-is-open{
-       .navbar-item-logo{
+       .navbar-item--logo{
          @extend .bg-white;
 
        }
      }
      .navbar-inner{
-       .navbar-item-menu{
+       .navbar-item--menu{
          margin-right: 25px;
        }
      }
@@ -230,7 +191,7 @@
 
    &--right{
      .navbar-inner{
-       .navbar-item-logo{
+       .navbar-item--logo{
          @include order(3);
        }
      }
@@ -241,6 +202,67 @@
 
 
 
+
+.btn-menu{
+  z-index:99;
+  position: relative;
+  overflow: hidden;
+  width: $tools-icon-size;
+
+  @media #{$big}{
+    display: none;
+  }
+
+  .open-menu, .close-menu{
+    position: absolute;
+    left: 0;
+    top:0;
+  }
+  .open-menu{
+    opacity: 0;
+    @include transition(opacity 0.3s linear);
+    .page-is-moving &{
+      opacity: 0;
+    }
+    .page-is-static &{
+      opacity: 1;
+    }
+  }
+  .close-menu{
+    opacity: 1;
+    @include transition(opacity 0.3s linear);
+    .page-is-moving &{
+      opacity: 1;
+    }
+    .page-is-static &{
+      opacity: 0;
+    }
+  }
+}
+
+
+.btn-search {
+  position: relative;
+  overflow: hidden;
+  width: $tools-icon-size;
+
+  .open-search, .close-search{
+    position: absolute;
+    left:0;
+  }
+  .open-search {
+    opacity: 1;
+    .search-is-open &{
+      opacity: 0;
+    }
+  }
+  .close-search {
+    opacity: 0;
+    .search-is-open &{
+      opacity: 1;
+    }
+  }
+}
 
 .topbar{
   @extend .bg-dark;
@@ -253,14 +275,14 @@
   }
 }
 
-.menu-movil{
+.menu-mobile{
   display: none;
   position: absolute;
   top: 0;
   width: 260px;
   right: 0;
   height:100%;
-  z-index:1;
+  z-index:-6;
   @extend .bg-main;
   .nav-menu-item{
     display: list-item;
@@ -279,32 +301,11 @@
     @include transform(translate(-240px, 0));
   }
 
-  .btn-ham{
-    .btn-open-menu{
-      opacity: 0;
-     @include transition(opacity 1s linear);
-     }
-    .btn-close-menu{
-      opacity: 1;
-      @include transition(opacity 1s linear);
-    }
-  }
+
 
 }
 
-.page-is-static{
-  .btn-ham{
-    .btn-open-menu{
-      opacity: 1;
-     @include transition(opacity 1s linear);
-    }
-    .btn-close-menu{
-      opacity: 0;
-      @include transition(opacity 1s linear);
-    }
-  }
 
-}
 
 
 

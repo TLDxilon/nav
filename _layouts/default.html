@@ -3,10 +3,10 @@
 {% include head.html %}
 
 <body>
-<div class="design">
-    {% include menu-mov.html %}
 
-    <header class="header position-relative page-is-static">
+
+    <div class="design page-is-static">
+    <header class="header position-relative">
 
         {% if site.logo-left.header.top-bar == 'true' %}
         {% include top-bar.html %}
@@ -15,7 +15,7 @@
         <div class="navbar navbar-logo--{{ site.logo-left.header.logo.position }} logo-size-{{ site.logo-left.header.logo.size }} border-bottom" id="navbar">
 
             {% if site.logo-left.header.logo.position == 'top' %}
-            <div class="navbar-item navbar-item-logo padding-tb-{{ site.logo-left.header.logo.padding }}">
+            <div class="navbar-item navbar-item--logo padding-tb-{{ site.logo-left.header.logo.padding }}">
                 {% include {{ site.logo }} image="img/logo2.png" %}
             </div>
             {% else %}
@@ -26,13 +26,13 @@
                     <div class="navbar-inner">
 
                         {% if site.logo-left.header.logo.position == 'left' or site.logo-left.header.logo.position == 'right' %}
-                        <div class="navbar-item navbar-item-logo padding-tb-{{ site.logo-left.header.logo.padding }}">
+                        <div class="navbar-item navbar-item--logo padding-tb-{{ site.logo-left.header.logo.padding }}">
                             {% include {{ site.logo }} image="img/logo2.png"  %}
                         </div>
                         {% else %}
                         {% endif %}
                         {% include menu.html style=site.logo-left.header.menu.style position=site.logo-left.header.menu.position %}
-                        {% include utiles.html %}
+                        {% include tools.html %}
                     </div>
 
 
@@ -51,7 +51,7 @@
 
     </header>
 
-    <main class="content page-is-static" id="main">
+    <main class="content" id="main">
         <div class="container">
             <div class="padding-l">
                 {% include options.html %}
@@ -71,7 +71,7 @@
     {% include footer.html %}
 </div>
 
-
+    {% include menu-mobile.html %}
 
 </body>
 </html>
