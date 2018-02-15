@@ -12,32 +12,22 @@ $(document).ready(function(){
     var $design = $('.design');
 
 
+
+
     $(window).on('scroll', function(){
         if ( $(window).scrollTop() > height_logo + height_topbar ){
             $navBar.addClass('navbar-fixed bg-white');
         } else {
             $navBar.removeClass('navbar-fixed bg-white');
         }
-    });
 
-
-    $('.content, .hero-content').css('padding-top', (height_topbar + height_logo + height_nav) + 'px');
-
-
-
-
-
-
-    $(window).on('scroll', function() {
+        //Hago que suba al llegar a 600
         if ($(window).scrollTop() > 600) {
             $navBar.addClass('is-hide');
         } else  {
-
         }
-    });
 
-
-    window.onscroll = function() {
+        //Hago que baje al darle al scroll hacia arriba
         var newScrollPosition = window.scrollY;
 
         if (newScrollPosition < lastScrollPosition){
@@ -46,7 +36,10 @@ $(document).ready(function(){
 
         }
         lastScrollPosition = newScrollPosition;
-    }
+    });
+
+
+    $('.content, .hero-content').css('padding-top', (height_topbar + height_logo + height_nav) + 'px');
 
 
 
@@ -63,10 +56,7 @@ $(document).ready(function(){
             $design.addClass('page-is-static');
             $menumobile.css('display','none');
 
-
-
         }
-
     };
 
     var toogleSearch = function(){
@@ -76,19 +66,21 @@ $(document).ready(function(){
         if ($navBar.hasClass('search-is-open')) {
             $navBar.find('input').focus();
             $backdrop.css('display', 'block');
-            $backdrop.addClass('opacity-transition1');
             $searchBar.css('opacity', '1');
 
         } else{
             $backdrop.css('display', 'none');
-            $backdrop.removeClass('opacity-transition0');
             $searchBar.css('opacity', '0');
 
         }
 
-
     };
 
+    $backdrop.on('click', function(){
+        $(this).css('opacity', '0');
+        $navBar.removeClass('search-is-open');
+
+    });
 
 
     $('.js-search-toogle').on('click', function(){
@@ -100,12 +92,6 @@ $(document).ready(function(){
     });
 
 
-    $backdrop.click(function(){
-        $(this).css('opacity', '0');
-        $navBar.removeClass('search-is-open');
-        $('.open-search').css('opacity', '1');
-        $('.close-search').css('opacity', '0');
 
-    });
 
 })
