@@ -49,7 +49,7 @@ $(document).ready(function(){
         if ($design.hasClass('page-is-moving')) {
             $design.removeClass('page-is-static');
             $menumobile.addClass('display-block');
-            $menumobile.css('z-index','5');
+          // $menumobile.css('z-index','5');
             $navBar.removeClass('search-is-open');
 
         } else{
