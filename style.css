@@ -1411,7 +1411,8 @@ ul {
 /* Menú con flexbox */
 .navbar {
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  top: -92px; }
   @media only screen and (max-width: 479px) {
     .navbar.navbar-logo--left .navbar-item--logo, .navbar.navbar-logo--right .navbar-item--logo {
       -webkit-flex-basis: 50%;

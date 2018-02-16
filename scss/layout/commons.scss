@@ -10,6 +10,7 @@
 .navbar{
   position: absolute;
   width:100%;
+  top:-92px;
   &.bg-white {
     .navbar-item--logo {
       @extend .bg-white;
