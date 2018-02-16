@@ -26,7 +26,7 @@ iconlinkedin: '#'
 logo-left:
   header:
     logo:
-      position: 'top'
+      position: 'left'
       align: 'left'
       size: 'm'
       padding: 's'
@@ -36,7 +36,7 @@ logo-left:
     hero: 'true'
     top-bar: 'false'
     container: 'container-fluid'
-    navigation: 'bottom'
+    navigation: 'top'
 
 
 
