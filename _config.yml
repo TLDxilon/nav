@@ -28,7 +28,7 @@ logo-left:
     logo:
       position: 'left'
       align: 'left'
-      size: 'm'
+      size: 's'
       padding: 's'
     menu:
       align: 'right'
