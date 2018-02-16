@@ -32,7 +32,7 @@ logo-left:
       padding: 's'
     menu:
       align: 'right'
-      style: 'menu-style-back'
+      style: 'menu-style-line'
     hero: 'true'
     top-bar: 'false'
     container: 'container-fluid'
