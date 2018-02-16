@@ -45,7 +45,7 @@ $(document).ready(function(){
         if ( $(window).scrollTop() > 300 ){
             $navBarContent.addClass('navbar-fixed bg-white');
         } else {
-            $navBarContent.removeClass('navbar-fixed bg-white');
+            $navBarContent.removeClass('is-hide');
         }
 
         //Hago que suba al llegar a 600
