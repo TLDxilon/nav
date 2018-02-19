@@ -15,7 +15,7 @@
         {% if page.navigation == 'top'%}
         {% include backdrop.html %}
         {% endif %}
-        <div class="navbar navbar-logo--{{ page.logo-position }} logo-size-{{ page.logo-size }} border-bottom" id="navbar">
+        <div class="navbar navbar-logo--{{ page.logo-position }} logo-size-{{ page.logo-size }} border-bottom height-nav" id="navbar">
 
             {% if page.logo-position == 'top' or page.logo-position == 'bottom'%}
             <div class="{{ page.container }}">
@@ -36,7 +36,7 @@
                         <div class="navbar-item navbar-item--logo padding-tb-{{ page.logo-padding }}">
                             {% include logo.html %}
                         </div>
-                        {% else%}
+                        {% else %}
                         {% endif %}
                         {% include menu.html style=page.menu-style align=page.menu-align%}
                         {% include tools.html %}

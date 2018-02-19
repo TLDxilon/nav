@@ -2,12 +2,12 @@ $(document).ready(function(){
 
     var height_topbar = $('.topbar').outerHeight(true);
     var height_logo = $('.navbar-logo--top .navbar-item--logo, .navigation-bottom .navbar-item--logo').outerHeight(true);
-    var height_nav = $('.navbar-content').outerHeight(true);
+    var height_nav = $('.height-nav .navbar-content').outerHeight(true);
     var height_over_menu = $('.navbar-content').offset().top;
     var lastScrollPosition = 0;
 
     var $searchBar = $('.search-bar');
-    var $navBar = $('.navbar');
+    var $navBar = $('.height-nav');
     var $navBarExtra = $('.navbar-extra');
     var $navBarContent = $('.navbar-content');
     var $backdrop = $('.backdrop');
