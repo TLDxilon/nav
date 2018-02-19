@@ -2,8 +2,8 @@
 /* Aquí están los estilos bootstrap originales y los míos sustituidos */
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?eu7cna");
-  src: url("fonts/icomoon.eot?eu7cna#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?eu7cna") format("truetype"), url("fonts/icomoon.woff?eu7cna") format("woff"), url("fonts/icomoon.svg?eu7cna#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?oycj35");
+  src: url("fonts/icomoon.eot?oycj35#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?oycj35") format("truetype"), url("fonts/icomoon.woff?oycj35") format("woff"), url("fonts/icomoon.svg?oycj35#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
@@ -27,6 +27,9 @@
 
 .icon-shopping-cart2:before {
   content: ""; }
+
+.icon-user:before {
+  content: ""; }
 
 .icon-x:before {
   content: ""; }
@@ -769,7 +772,7 @@
 .icon-untag:before {
   content: ""; }
 
-.icon-user:before {
+.icon-user2:before {
   content: ""; }
 
 .icon-users:before {
@@ -1031,7 +1034,7 @@
 .bg-clear {
   background: #ECECEC;
   color: #222222; }
-.bg-white, .navbar.bg-white .navbar-item--logo, .navbar.search-is-open, .navbar.navbar-logo--top.search-is-open .navbar-item--logo, .navbar-content.navbar-fixed.bg-white, .navbar-content.search-is-open {
+.bg-white, .navbar.bg-white .navbar-item--logo, .navbar.search-is-open, .navbar.navbar-logo--top.search-is-open .navbar-item--logo, .navbar-content.search-is-open {
   background: #ffffff;
   color: #222222; }
 .bg-main, .btn--flat, .menu-style-line .nav-link span:after, .menu-style-back .active .nav-link, .menu-style-back .nav-link:hover, .menu-mobile {
@@ -1412,7 +1415,7 @@ ul {
 .navbar {
   position: absolute;
   width: 100%;
-  top: -92px; }
+  top: 0; }
   @media only screen and (max-width: 479px) {
     .navbar.navbar-logo--left .navbar-item--logo, .navbar.navbar-logo--right .navbar-item--logo {
       -webkit-flex-basis: 50%;
@@ -1475,20 +1478,6 @@ ul {
   -ms-transition: transform 0.3s ease, background 0.3s ease;
   -o-transition: transform 0.3s ease, background 0.3s ease;
   transition: transform 0.3s ease, background 0.3s ease; }
-  .navbar-content.navbar-fixed {
-    position: fixed;
-    top: 0;
-    width: 100%; }
-    .navbar-content.navbar-fixed.is-hide {
-      -webkit-transform: translate(0, -100%);
-      -moz-transform: translate(0, -100%);
-      -ms-transform: translate(0, -100%);
-      transform: translate(0, -100%);
-      -webkit-transition: transform 0.3s ease-out;
-      -moz-transition: transform 0.3s ease-out;
-      -ms-transition: transform 0.3s ease-out;
-      -o-transition: transform 0.3s ease-out;
-      transition: transform 0.3s ease-out; }
   .navbar-content .navbar-inner {
     -webkit-justify-content: center;
     -moz-justify-content: center;
@@ -1528,6 +1517,30 @@ ul {
       @media only screen and (max-width: 479px) {
         .navbar-content .navbar-inner .navbar-item--tools .tools-item {
           margin: 0 2px; } }
+
+.navbar-extra {
+  position: absolute;
+  top: -90px;
+  width: 100%;
+  -webkit-transition: top 0.6s ease-out;
+  -moz-transition: top 0.6s ease-out;
+  -ms-transition: top 0.6s ease-out;
+  -o-transition: top 0.6s ease-out;
+  transition: top 0.6s ease-out; }
+  .navbar-extra.navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%; }
+    .navbar-extra.navbar-fixed .navbar-content.is-hide {
+      -webkit-transform: translate(0, -100%);
+      -moz-transform: translate(0, -100%);
+      -ms-transform: translate(0, -100%);
+      transform: translate(0, -100%);
+      -webkit-transition: transform 0.3s ease-out;
+      -moz-transition: transform 0.3s ease-out;
+      -ms-transition: transform 0.3s ease-out;
+      -o-transition: transform 0.3s ease-out;
+      transition: transform 0.3s ease-out; }
 
 .btn-menu {
   z-index: 99;

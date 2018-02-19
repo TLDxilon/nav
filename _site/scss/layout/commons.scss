@@ -10,7 +10,7 @@
 .navbar{
   position: absolute;
   width:100%;
-  top:-92px;
+  top:0;
   &.bg-white {
     .navbar-item--logo {
       @extend .bg-white;
@@ -91,25 +91,7 @@
 
 .navbar-content {
   @include transition(transform .3s ease, background .3s ease);
-  &.navbar-fixed {
 
-    position: fixed;
-    top: 0;
-    width: 100%;
-
-    &.bg-white{
-
-      @extend .bg-white;
-
-
-    }
-    &.is-hide{
-      @include transform(translate(0, -100%));
-      @include transition(transform 0.3s ease-out);
-    }
-
-
-  }
 
   &.search-is-open{
     @extend .bg-white;
@@ -185,6 +167,30 @@
     @extend .bg-dark;
   }
 }
+
+
+.navbar-extra{
+  position:absolute;
+  top: -90px;
+  width: 100%;
+  @include transition(top 0.6s ease-out);
+  &.navbar-fixed{
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .navbar-content{
+      &.is-hide{
+        @include transform(translate(0, -100%));
+        @include transition(transform 0.3s ease-out);
+      }
+
+
+    }
+  }
+}
+
 
 .btn-menu{
   z-index:99;

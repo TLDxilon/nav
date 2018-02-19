@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: 'icomoon';
-    src:  url('#{$icomoon-font-path}/icomoon.eot?eu7cna');
-    src:  url('#{$icomoon-font-path}/icomoon.eot?eu7cna#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/icomoon.ttf?eu7cna') format('truetype'),
-    url('#{$icomoon-font-path}/icomoon.woff?eu7cna') format('woff'),
-    url('#{$icomoon-font-path}/icomoon.svg?eu7cna#icomoon') format('svg');
+    src:  url('#{$icomoon-font-path}/icomoon.eot?oycj35');
+    src:  url('#{$icomoon-font-path}/icomoon.eot?oycj35#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/icomoon.ttf?oycj35') format('truetype'),
+    url('#{$icomoon-font-path}/icomoon.woff?oycj35') format('woff'),
+    url('#{$icomoon-font-path}/icomoon.svg?oycj35#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -39,6 +39,11 @@
 .icon-shopping-cart2 {
     &:before {
         content: $icon-shopping-cart2;
+    }
+}
+.icon-user {
+    &:before {
+        content: $icon-user;
     }
 }
 .icon-x {
@@ -1276,9 +1281,9 @@
         content: $icon-untag;
     }
 }
-.icon-user {
+.icon-user2 {
     &:before {
-        content: $icon-user;
+        content: $icon-user2;
     }
 }
 .icon-users {
