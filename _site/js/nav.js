@@ -100,4 +100,21 @@ $(document).ready(function(){
     });
 
 
+    //opciones
+
+    var $changelogoSize = $('.js-logo-size');
+
+    var $data = $('.js-logo-size').data();
+
+    $changelogoSize.each(function(index) {
+        $(this).on("click", function(){
+            $('.branding-logo').attr('class',
+                function(i, c){
+                    return c.replace(/(^|\s)logo-size-\S+/g, '');
+                });
+            alert($data);
+            $('.branding-logo').addClass('logo-size-'+ $data);
+
+        });
+    });
 })

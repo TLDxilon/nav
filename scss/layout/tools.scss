@@ -1,0 +1,102 @@
+
+.tools-item-search {
+  width: 30px;
+}
+
+.tools-item-menu{
+  width:25px;
+  @media #{$big}{
+    display: none;
+  }
+}
+
+
+.btn-menu{
+
+  @media #{$big}{
+    display: none;
+  }
+
+  .open-menu, .close-menu{
+    position: absolute;
+    left: 0;
+    top:0;
+  }
+  .open-menu{
+    opacity: 0;
+    @include transition(opacity 0.3s linear);
+    .page-is-moving &{
+      opacity: 0;
+    }
+    .page-is-static &{
+      opacity: 1;
+    }
+  }
+  .close-menu{
+    opacity: 1;
+    @include transition(opacity 0.3s linear);
+    .page-is-moving &{
+      opacity: 1;
+    }
+    .page-is-static &{
+      opacity: 0;
+    }
+  }
+}
+
+.btn-search {
+
+
+  .open-search, .close-search{
+    position: absolute;
+    left:0;
+    top:0;
+  }
+  .open-search {
+    opacity: 1;
+    .search-is-open &{
+      opacity: 0;
+    }
+  }
+  .close-search {
+    opacity: 0;
+    .search-is-open &{
+      opacity: 1;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+.navbar-item--tools{
+  @extend .padding-lr-l;
+  @media #{$smartphones}{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @media #{$tablets}{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .tools-item{
+    vertical-align: middle;
+    display: inline-block;
+    height: 30px;
+    position: relative;
+    .tools-item-btn{
+      margin: 0 4px;
+
+    }
+
+  }
+
+
+
+}

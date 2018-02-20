@@ -158,20 +158,20 @@ $tools-icon-size: 20px;
 
 .logo-size{
   &-xs{
-    .branding-logo{
+    &.branding-logo{
       width: 100px;
     }
 
   }
   &-s{
-    .branding-logo{
+    &.branding-logo{
       width: 200px;
 
 
    }
   }
   &-m{
-    .branding-logo{
+    &.branding-logo{
       width: 250px;
 
 
@@ -180,7 +180,7 @@ $tools-icon-size: 20px;
   }
 
   &-l{
-    .branding-logo {
+    &.branding-logo {
       width: 300px;
 
 
@@ -188,7 +188,7 @@ $tools-icon-size: 20px;
 
   }
   &-xl{
-    .branding-logo {
+    &.branding-logo {
       width: 350px;
 
 

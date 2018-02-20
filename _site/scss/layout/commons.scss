@@ -3,7 +3,7 @@
 @import "elements";
 @import "menu-styles";
 @import "navigation";
-//@import "iconos-css";
+@import "tools";
 
 
 /* Menú con flexbox */
@@ -54,33 +54,7 @@
 
       }
     }
-    .navbar-item--tools{
-      @extend .padding-lr-l;
-      @media #{$smartphones}{
-        padding-left: 0;
-        padding-right: 0;
-      }
-      @media #{$tablets}{
-        padding-left: 0;
-        padding-right: 0;
-      }
 
-      .tools-item{
-        vertical-align: middle;
-        display: inline-block;
-        height: 30px;
-        .tools-item-btn{
-          margin: 0 3px;
-        }
-        @media #{$smartphones}{
-          margin: 0 2px;
-        }
-
-      }
-
-
-
-    }
 
 
   }
@@ -107,19 +81,21 @@
 
 
 
+
   &.navbar-logo{
+
     &--left{
 
       .navbar-item--logo {
 
         @media #{$smartphones}{
-          @include flex-basis(35%);
+          @include flex-grow(1);
         }
         @media #{$tablets}{
-          @include flex-basis(35%);
+          @include flex-grow(1);
         }
         @media #{$laptop}{
-          @include flex-basis(35%);
+          @include flex-grow(1);
         }
 
       }
@@ -130,12 +106,12 @@
         display: none;
       }
       .tools-right {
-        .btn-menu{
+        .tools-item-btn-menu{
           @media #{$big}{
             display: none;
           }
         }
-        .btn-cta{
+        .tools-item-btn-cta{
           @media #{$smartphones}{
             display: none;
           }
@@ -181,47 +157,46 @@
     }
 
     &--center{
-      .tools-left {
-        @include flex-basis(35%);
-        @media #{$big}{
-          display: none;
-        }
-      }
-      .tools-right {
-        @media #{$smartphones}{
-          .btn-menu, .btn-search, .btn-cta{
-            display: none;
-          }
-        }
-        @media #{$tablets}{
-          .btn-menu, .btn-search, .btn-cta{
-            display: none;
-          }
-        }
-        @media #{$laptop}{
-          .btn-menu, .btn-search, .btn-cta{
-            display: none;
-          }
-        }
-        @media #{$big}{
-          .btn-menu{
-            display: none;
-          }
-        }
-      }
+
       .navbar-item--logo {
         @include order(2);
         @include flex-grow(1);
         @extend .text-align-center;
 
       }
-      .tools-right {
-        @include order(3);
-        @include flex-basis(35%);
-      }
+
       .navbar-item--menu{
         @include flex-basis(35%);
       }
+
+      .tools-left {
+        @include flex-basis(35%);
+        @media #{$big}{
+          display: none;
+        }
+      }
+
+      .tools-right {
+        @include order(3);
+        @include flex-basis(35%);
+        @media #{$smartphones}{
+          .tools-item-menu, .tools-item-btn-cta, .tools-item-search {
+            display: none;
+          }
+        }
+        @media #{$tablets}{
+          .tools-item-menu, .tools-item-btn-cta, .tools-item-search {
+            display: none;
+          }
+        }
+        @media #{$laptop}{
+          .tools-item-menu, .tools-item-btn-cta, .tools-item-search {
+            display: none;
+          }
+        }
+
+      }
+
     }
 
   }
