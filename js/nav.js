@@ -4,11 +4,12 @@ $(document).ready(function(){
     var height_logo = $('.navbar-logo--top .navbar-item--logo, .navigation-bottom .navbar-item--logo').outerHeight(true);
     var height_nav = $('.height-nav .navbar-content').outerHeight(true);
     var height_over_menu = $('.navbar-content').offset().top;
+    var height_header = $('.header').outerHeight(true);
     var lastScrollPosition = 0;
 
     var $searchBar = $('.search-bar');
     var $navBar = $('.height-nav');
-    var $navBarExtra = $('.navbar-extra');
+    var $navBarFixed = $('.navbar-fixed .navbar-content');
     var $navBarContent = $('.navbar-content');
     var $backdrop = $('.backdrop');
     var $menumobile = $('.menu-mobile');
@@ -18,23 +19,24 @@ $(document).ready(function(){
 
 
     $(window).on('scroll', function(){
-         if ( $(window).scrollTop() > height_nav + height_logo ){
-             $navBarExtra.addClass('navbar-fixed');
-         } else {
-             $navBarExtra.removeClass('navbar-fixed');
-         }
+            // if ( $(window).scrollTop() > 600 ){
+            //     $navBarFixed.addClass('is-hide');
+            // } else {
+            //
+            // }
 
-        //Hago que suba al llegar a 600
-        if ($(window).scrollTop() > 1600) {
-            $navBarContent.addClass('is-hide');
-        } else  {
-        }
+
 
         //Hago que baje al darle al scroll hacia arriba
         var newScrollPosition = window.scrollY;
 
         if (newScrollPosition < lastScrollPosition){
-            $navBarContent.removeClass('is-hide');
+            $navBarFixed.removeClass('is-hide');
+        }else{
+
+        }
+        if (newScrollPosition < height_header){
+            $navBarFixed.addClass('is-hide');
         }else{
 
         }

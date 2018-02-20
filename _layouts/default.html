@@ -6,8 +6,9 @@
 
 {% include menu-mobile.html %}
     <div class="design page-is-static">
+        {% include menu-fixed.html %}
     <header class="header position-relative navigation-{{ page.navigation }}">
-  {% include menu-fixed.html %}
+
 
         {% if page.top-bar == 'true' %}
         {% include top-bar.html %}

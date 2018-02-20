@@ -1518,29 +1518,26 @@ ul {
         .navbar-content .navbar-inner .navbar-item--tools .tools-item {
           margin: 0 2px; } }
 
-.navbar-extra {
-  position: absolute;
-  top: -90px;
-  width: 100%;
+.navbar-fixed {
+  z-index: 1;
   -webkit-transition: top 0.6s ease-out;
   -moz-transition: top 0.6s ease-out;
   -ms-transition: top 0.6s ease-out;
   -o-transition: top 0.6s ease-out;
-  transition: top 0.6s ease-out; }
-  .navbar-extra.navbar-fixed {
-    position: fixed;
-    top: 0;
-    width: 100%; }
-    .navbar-extra.navbar-fixed .navbar-content.is-hide {
-      -webkit-transform: translate(0, -100%);
-      -moz-transform: translate(0, -100%);
-      -ms-transform: translate(0, -100%);
-      transform: translate(0, -100%);
-      -webkit-transition: transform 0.3s ease-out;
-      -moz-transition: transform 0.3s ease-out;
-      -ms-transition: transform 0.3s ease-out;
-      -o-transition: transform 0.3s ease-out;
-      transition: transform 0.3s ease-out; }
+  transition: top 0.6s ease-out;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  .navbar-fixed .navbar-content.is-hide {
+    -webkit-transform: translate(0, -100%);
+    -moz-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    -webkit-transition: transform 0.3s ease-out;
+    -moz-transition: transform 0.3s ease-out;
+    -ms-transition: transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out; }
 
 .btn-menu {
   z-index: 99;
