@@ -148,13 +148,13 @@
 
         }
         @media #{$smartphones}{
-          @include flex-basis(50%);
+          @include flex-grow(1);
         }
         @media #{$tablets}{
-          @include flex-basis(50%);
+          @include flex-grow(1);
         }
         @media #{$laptop}{
-          @include flex-basis(50%);
+          @include flex-grow(1);
         }
       }
     }
