@@ -47,15 +47,15 @@ ul{
   margin: 0 auto;
   padding: 0 20px;
   @media #{$laptop}{
-    max-width: 960px;
+    max-width: 100%;
 
   }
   @media #{$tablets}{
-    max-width: 768px;
+    max-width: 100%;
 
   }
   @media #{$smartphones}{
-    max-width: 479px;
+    max-width: 100%;
   }
 
 }

@@ -1227,13 +1227,13 @@ ul {
   padding: 0 20px; }
   @media only screen and (min-width: 768px) and (max-width: 960px) {
     .container {
-      max-width: 960px; } }
+      max-width: 100%; } }
   @media only screen and (min-width: 480px) and (max-width: 768px) {
     .container {
-      max-width: 768px; } }
+      max-width: 100%; } }
   @media only screen and (max-width: 479px) {
     .container {
-      max-width: 479px; } }
+      max-width: 100%; } }
 
 .container-fluid {
   max-width: 100%;
