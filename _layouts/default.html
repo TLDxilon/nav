@@ -4,9 +4,9 @@
 
 <body>
 
-{% include menu-mobile.html %}
+{% include menu/menu-mobile.html %}
     <div class="design page-is-static">
-        {% include menu-fixed.html %}
+        {% include menu/menu-fixed.html %}
     <header class="header position-relative navigation-{{ page.navigation }}">
 
 
@@ -31,17 +31,7 @@
             <div class="navbar-content">
                 <div class="navbar-content-bar">
                 <div class="{{ page.container }}">
-                    <div class="navbar-inner">
-
-                        {% if page.logo-position == 'left' or page.logo-position == 'right' %}
-                        <div class="navbar-item navbar-item--logo padding-tb-{{ page.logo-padding }}">
-                            {% include logo.html %}
-                        </div>
-                        {% else %}
-                        {% endif %}
-                        {% include menu.html style=page.menu-style align=page.menu-align%}
-                        {% include tools.html %}
-                    </div>
+                    {% include menu/nav-inner.html %}
 
 
                 </div>
@@ -60,27 +50,7 @@
 
 
         {% if page.navigation == 'bottom'%}
-        <div class="navbar-content">
-            <div class="navbar-content-bar">
-                <div class="{{ page.container }}">
-                    <div class="navbar-inner">
-
-                        {% if page.logo-position == 'left' or page.logo.position == 'right' or page.navigation == 'top'%}
-                        <div class="navbar-item navbar-item--logo padding-tb-{{ page.logo-padding }}">
-                            {% include {{ site.logo }}  %}
-                        </div>
-                        {% else %}
-                        {% endif %}
-                        {% include menu.html style=page.menu-style align=page.menu-align%}
-                        {% include tools.html %}
-                    </div>
-
-
-                </div>
-
-                {% include search-bar.html %}
-            </div>
-        </div>
+        include menu/navigation-bottom.html
         {% else %}
         {% endif %}
     </header>
@@ -90,8 +60,12 @@
             <div class="padding-l">
                 {% include options.html %}
                 <br>
-
+                {{  site.name  }}
+                {{  page.ecommerce }}
+                {{  page.button-cta-1 }}
+                {{  page.button-cta-1-title }}
                 {% include content.html %}
+
 
             </div>
         </div>

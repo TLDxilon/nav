@@ -19,27 +19,26 @@ $(document).ready(function(){
 
 
     $(window).on('scroll', function(){
-            // if ( $(window).scrollTop() > 600 ){
-            //     $navBarFixed.addClass('is-hide');
-            // } else {
-            //
-            // }
-
-
-
-        //Hago que baje al darle al scroll hacia arriba
+        // Hago que baje al darle al scroll hacia arriba
         var newScrollPosition = window.scrollY;
 
+        // Muestro la navegación al subir
         if (newScrollPosition < lastScrollPosition){
-            $navBarFixed.removeClass('is-hide');
-        }else{
+
+            // Oculta la navegación cuando está a la altura de la cabecera
+            if (newScrollPosition < height_header){
+                $navBarFixed.addClass('is-hide');
+            } else {
+                $navBarFixed.removeClass('is-hide');
+            }
 
         }
-        if (newScrollPosition < height_header){
+
+        // Oculto la navegación al bajar
+        if (newScrollPosition > lastScrollPosition){
             $navBarFixed.addClass('is-hide');
-        }else{
-
         }
+
         lastScrollPosition = newScrollPosition;
     });
 

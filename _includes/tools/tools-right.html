@@ -1,0 +1,11 @@
+<div class="navbar-item navbar-item--tools tools-right text-align-right">
+    <div class="navbar-tools">
+        {% if page.button-cta-1 == 'true' %} {% include tools/elements/cta.html %} {% endif %}
+        {% if page.ecommerce == 'true' %} {% include tools/elements/e-commerce.html %}  {% endif %}
+        {% if page.iconsearch == 'true' %} {% include tools/elements/search.html %}  {% endif %}
+        {% include tools/elements/btn-menu.html %}
+
+
+    </div>
+
+</div>

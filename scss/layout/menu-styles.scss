@@ -61,11 +61,21 @@
     .menu-style-back &{
       @extend .bg-main;
       @include transition(background 0.3s ease 0s);
-
     }
 
   }
-
+  &.btn-cta{
+    &:hover {
+      background: none;
+    }
+    &:after{
+      opacity: 0;
+    }
+    &:hover:after{
+      opacity: 0;
+      height:0;
+    }
+  }
 }
 
 

@@ -7,86 +7,7 @@
 
 
 /* Menú con flexbox */
-.navbar{
-  position: absolute;
-  width:100%;
-  top:0;
-  &.bg-white {
-    .navbar-item--logo {
-      @extend .bg-white;
 
-    }
-  }
-  &.search-is-open{
-    @extend .bg-white;
-  }
-
-
-
-
-  &.navbar-logo{
-   &--left, &--right{
-     .navbar-item--logo {
-
-       @media #{$smartphones}{
-         @include flex-basis(50%);
-       }
-       @media #{$tablets}{
-         @include flex-basis(50%);
-       }
-       @media #{$laptop}{
-         @include flex-basis(50%);
-       }
-
-     }
-     .navbar-item--menu {
-       @include flex-grow(1);
-     }
-     .navbar-item--tools {
-
-       @media #{$smartphones}{
-         @include flex-basis(50%);
-       }
-       @media #{$tablets}{
-         @include flex-basis(50%);
-       }
-       @media #{$laptop}{
-         @include flex-basis(50%);
-       }
-     }
-   }
-
-   &--top{
-     .navbar-item--logo{
-       @include transition(transform .3s ease, background .3s ease);
-     }
-     &.search-is-open{
-       .navbar-item--logo{
-         @extend .bg-white;
-
-       }
-     }
-     .navbar-inner{
-       .navbar-item--menu{
-         margin-right: 25px;
-       }
-     }
-
-
-
-
-   }
-
-   &--right{
-     .navbar-inner{
-       .navbar-item--logo{
-         @include order(3);
-       }
-     }
-
-   }
- }
-}
 
 
 .navbar-content {
@@ -145,12 +66,12 @@
       }
 
       .tools-item{
-        margin: 5px;
         vertical-align: middle;
         display: inline-block;
         height: 30px;
-
-
+        .tools-item-btn{
+          margin: 0 3px;
+        }
         @media #{$smartphones}{
           margin: 0 2px;
         }
@@ -169,9 +90,148 @@
 }
 
 
+.navbar{
+  position: absolute;
+  width:100%;
+  top:0;
+  &.bg-white {
+    .navbar-item--logo {
+      @extend .bg-white;
+
+    }
+  }
+  &.search-is-open{
+    @extend .bg-white;
+  }
+
+
+
+
+  &.navbar-logo{
+    &--left{
+
+      .navbar-item--logo {
+
+        @media #{$smartphones}{
+          @include flex-basis(35%);
+        }
+        @media #{$tablets}{
+          @include flex-basis(35%);
+        }
+        @media #{$laptop}{
+          @include flex-basis(35%);
+        }
+
+      }
+      .navbar-item--menu {
+        @include flex-grow(1);
+      }
+      .tools-left {
+        display: none;
+      }
+      .tools-right {
+        .btn-menu{
+          @media #{$big}{
+            display: none;
+          }
+        }
+        .btn-cta{
+          @media #{$smartphones}{
+            display: none;
+          }
+          @media #{$tablets}{
+            display: none;
+          }
+          @media #{$laptop}{
+            display: none;
+          }
+
+        }
+        @media #{$smartphones}{
+          @include flex-basis(50%);
+        }
+        @media #{$tablets}{
+          @include flex-basis(50%);
+        }
+        @media #{$laptop}{
+          @include flex-basis(50%);
+        }
+      }
+    }
+
+    &--top{
+      .navbar-item--logo{
+        @include transition(transform .3s ease, background .3s ease);
+      }
+      &.search-is-open{
+        .navbar-item--logo{
+          @extend .bg-white;
+
+        }
+      }
+      .navbar-inner{
+        .navbar-item--menu{
+          margin-right: 25px;
+        }
+      }
+
+
+
+
+    }
+
+    &--center{
+      .tools-left {
+        @include flex-basis(35%);
+        @media #{$big}{
+          display: none;
+        }
+      }
+      .tools-right {
+        @media #{$smartphones}{
+          .btn-menu, .btn-search, .btn-cta{
+            display: none;
+          }
+        }
+        @media #{$tablets}{
+          .btn-menu, .btn-search, .btn-cta{
+            display: none;
+          }
+        }
+        @media #{$laptop}{
+          .btn-menu, .btn-search, .btn-cta{
+            display: none;
+          }
+        }
+        @media #{$big}{
+          .btn-menu{
+            display: none;
+          }
+        }
+      }
+      .navbar-item--logo {
+        @include order(2);
+        @include flex-grow(1);
+        @extend .text-align-center;
+
+      }
+      .tools-right {
+        @include order(3);
+        @include flex-basis(35%);
+      }
+      .navbar-item--menu{
+        @include flex-basis(35%);
+      }
+    }
+
+  }
+}
+
+
+
+
 .navbar-fixed{
-    z-index:1;
-    @include transition(top 0.6s ease-out);
+
     position: fixed;
     top: 0;
     width: 100%;
@@ -179,7 +239,7 @@
     .navbar-content{
       &.is-hide{
         @include transform(translate(0, -100%));
-        @include transition(transform 0.3s ease-out);
+        @include transition(transform 0.4s ease-out);
       }
 
 
@@ -188,65 +248,6 @@
 }
 
 
-.btn-menu{
-  z-index:99;
-  position: relative;
-  overflow: hidden;
-  width: $tools-icon-size;
-
-  @media #{$big}{
-    display: none;
-  }
-
-  .open-menu, .close-menu{
-    position: absolute;
-    left: 0;
-    top:0;
-  }
-  .open-menu{
-    opacity: 0;
-    @include transition(opacity 0.3s linear);
-    .page-is-moving &{
-      opacity: 0;
-    }
-    .page-is-static &{
-      opacity: 1;
-    }
-  }
-  .close-menu{
-    opacity: 1;
-    @include transition(opacity 0.3s linear);
-    .page-is-moving &{
-      opacity: 1;
-    }
-    .page-is-static &{
-      opacity: 0;
-    }
-  }
-}
-
-.btn-search {
-  position: relative;
-  overflow: hidden;
-  width: $tools-icon-size;
-
-  .open-search, .close-search{
-    position: absolute;
-    left:0;
-  }
-  .open-search {
-    opacity: 1;
-    .search-is-open &{
-      opacity: 0;
-    }
-  }
-  .close-search {
-    opacity: 0;
-    .search-is-open &{
-      opacity: 1;
-    }
-  }
-}
 
 .topbar{
   @extend .bg-dark;

@@ -1,0 +1,15 @@
+<div class="navbar-inner">
+
+    {% include tools/tools-left.html %}
+
+
+    {% if page.logo-position == 'left' or page.logo-position == 'center' %}
+    <div class="navbar-item navbar-item--logo padding-tb-{{ page.logo-padding }}">
+        {% include logo.html %}
+    </div>
+    {% else %}
+    {% endif %}
+    {% include menu/menu.html style=page.menu-style align=page.menu-align%}
+
+    {% include tools/tools-right.html %}
+</div>

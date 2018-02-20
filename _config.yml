@@ -9,13 +9,8 @@ fold: nav
 title: "Mi sitio"
 
 
-nav-tools: 'true'
 
-#Nav tools
-navbutton:  'http://linkaloquequieras'
-ecommerce:  'true'
-iconsearch: 'true'
-iconuser: 'true'
+
 
 
 icontwitter: '#'
