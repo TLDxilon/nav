@@ -46,12 +46,9 @@ ul{
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 20px;
-  @media #{$laptop}{
-    max-width: 960px;
 
-  }
   @media #{$tablets}{
-    max-width: 768px;
+    max-width: 960px;
 
   }
   @media #{$smartphones}{

@@ -35,9 +35,7 @@
         padding-left: 0;
         padding-right: 0;
       }
-      @media #{$laptop}{
-        display: none;
-      }
+
       @media #{$big}{
 
       }
@@ -50,9 +48,7 @@
       @media #{$tablets}{
 
       }
-      @media #{$laptop}{
 
-      }
     }
 
 
@@ -94,9 +90,7 @@
         @media #{$tablets}{
           @include flex-grow(1);
         }
-        @media #{$laptop}{
-          @include flex-grow(1);
-        }
+
 
       }
       .navbar-item--menu {
@@ -118,9 +112,7 @@
           @media #{$tablets}{
             display: none;
           }
-          @media #{$laptop}{
-            display: none;
-          }
+
 
         }
         @media #{$smartphones}{
@@ -129,9 +121,7 @@
         @media #{$tablets}{
           @include flex-grow(1);
         }
-        @media #{$laptop}{
-          @include flex-grow(1);
-        }
+
       }
     }
 
@@ -189,11 +179,7 @@
             display: none;
           }
         }
-        @media #{$laptop}{
-          .tools-item-menu, .tools-item-btn-cta, .tools-item-search {
-            display: none;
-          }
-        }
+
 
       }
 
@@ -312,9 +298,7 @@
     @media #{$tablets}{
       width: 75%;
     }
-    @media #{$laptop}{
-      width: 75%;
-    }
+
   }
   .icon{
     font-size: 30px;

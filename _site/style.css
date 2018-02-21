@@ -1229,12 +1229,9 @@ ul {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 20px; }
-  @media only screen and (min-width: 768px) and (max-width: 960px) {
+  @media only screen and (min-width: 480px) and (max-width: 960px) {
     .container {
       max-width: 960px; } }
-  @media only screen and (min-width: 480px) and (max-width: 768px) {
-    .container {
-      max-width: 768px; } }
   @media only screen and (max-width: 479px) {
     .container {
       max-width: 479px; } }
@@ -1489,7 +1486,7 @@ ul {
   .navbar-item--tools {
     padding-left: 0;
     padding-right: 0; } }
-@media only screen and (min-width: 480px) and (max-width: 768px) {
+@media only screen and (min-width: 480px) and (max-width: 960px) {
   .navbar-item--tools {
     padding-left: 0;
     padding-right: 0; } }
@@ -1523,14 +1520,11 @@ ul {
         display: none;
         padding-left: 0;
         padding-right: 0; } }
-    @media only screen and (min-width: 480px) and (max-width: 768px) {
+    @media only screen and (min-width: 480px) and (max-width: 960px) {
       .navbar-content .navbar-inner .navbar-item--menu {
         display: none;
         padding-left: 0;
         padding-right: 0; } }
-    @media only screen and (min-width: 768px) and (max-width: 960px) {
-      .navbar-content .navbar-inner .navbar-item--menu {
-        display: none; } }
 
 .navbar {
   position: absolute;
@@ -1542,13 +1536,7 @@ ul {
       -moz-flex-grow: 1;
       -ms-flex-grow: 1;
       flex-grow: 1; } }
-  @media only screen and (min-width: 480px) and (max-width: 768px) {
-    .navbar.navbar-logo--left .navbar-item--logo {
-      -webkit-flex-grow: 1;
-      -moz-flex-grow: 1;
-      -ms-flex-grow: 1;
-      flex-grow: 1; } }
-  @media only screen and (min-width: 768px) and (max-width: 960px) {
+  @media only screen and (min-width: 480px) and (max-width: 960px) {
     .navbar.navbar-logo--left .navbar-item--logo {
       -webkit-flex-grow: 1;
       -moz-flex-grow: 1;
@@ -1567,10 +1555,7 @@ ul {
   @media only screen and (max-width: 479px) {
     .navbar.navbar-logo--left .tools-right .tools-item-btn-cta {
       display: none; } }
-  @media only screen and (min-width: 480px) and (max-width: 768px) {
-    .navbar.navbar-logo--left .tools-right .tools-item-btn-cta {
-      display: none; } }
-  @media only screen and (min-width: 768px) and (max-width: 960px) {
+  @media only screen and (min-width: 480px) and (max-width: 960px) {
     .navbar.navbar-logo--left .tools-right .tools-item-btn-cta {
       display: none; } }
   @media only screen and (max-width: 479px) {
@@ -1579,13 +1564,7 @@ ul {
       -moz-flex-grow: 1;
       -ms-flex-grow: 1;
       flex-grow: 1; } }
-  @media only screen and (min-width: 480px) and (max-width: 768px) {
-    .navbar.navbar-logo--left .tools-right {
-      -webkit-flex-grow: 1;
-      -moz-flex-grow: 1;
-      -ms-flex-grow: 1;
-      flex-grow: 1; } }
-  @media only screen and (min-width: 768px) and (max-width: 960px) {
+  @media only screen and (min-width: 480px) and (max-width: 960px) {
     .navbar.navbar-logo--left .tools-right {
       -webkit-flex-grow: 1;
       -moz-flex-grow: 1;
@@ -1635,10 +1614,7 @@ ul {
     @media only screen and (max-width: 479px) {
       .navbar.navbar-logo--center .tools-right .tools-item-menu, .navbar.navbar-logo--center .tools-right .tools-item-btn-cta, .navbar.navbar-logo--center .tools-right .tools-item-search {
         display: none; } }
-    @media only screen and (min-width: 480px) and (max-width: 768px) {
-      .navbar.navbar-logo--center .tools-right .tools-item-menu, .navbar.navbar-logo--center .tools-right .tools-item-btn-cta, .navbar.navbar-logo--center .tools-right .tools-item-search {
-        display: none; } }
-    @media only screen and (min-width: 768px) and (max-width: 960px) {
+    @media only screen and (min-width: 480px) and (max-width: 960px) {
       .navbar.navbar-logo--center .tools-right .tools-item-menu, .navbar.navbar-logo--center .tools-right .tools-item-btn-cta, .navbar.navbar-logo--center .tools-right .tools-item-search {
         display: none; } }
 
@@ -1738,10 +1714,7 @@ ul {
       .search-bar .input-search {
         width: 75%;
         font-size: 20px; } }
-    @media only screen and (min-width: 480px) and (max-width: 768px) {
-      .search-bar .input-search {
-        width: 75%; } }
-    @media only screen and (min-width: 768px) and (max-width: 960px) {
+    @media only screen and (min-width: 480px) and (max-width: 960px) {
       .search-bar .input-search {
         width: 75%; } }
   .search-bar .icon {
