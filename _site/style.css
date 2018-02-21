@@ -1642,7 +1642,12 @@ ul {
   z-index: 1;
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  -webkit-transition: transform 0.5s ease, z-index 0.5s step-end;
+  -moz-transition: transform 0.5s ease, z-index 0.5s step-end;
+  -ms-transition: transform 0.5s ease, z-index 0.5s step-end;
+  -o-transition: transform 0.5s ease, z-index 0.5s step-end;
+  transition: transform 0.5s ease, z-index 0.5s step-end; }
   .navbar-fixed.is-hide {
     z-index: 0; }
   .navbar-fixed .navbar-content.is-hide {
