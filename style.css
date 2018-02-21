@@ -1014,7 +1014,7 @@
 /* @include transition-delay(0.2s); */
 /*Breakpoints*/
 /* COLORES */
-.fg-dark, .js-option, .search-bar .input-search {
+.fg-dark, .search-bar .input-search, .js-option {
   color: #222222; }
 .fg-gray, .btn--s-outline, .btn--s-outline:hover, .search-bar .input-search:focus {
   color: #bcbcbc; }
@@ -1058,9 +1058,9 @@
 /*CLASES PADDINGS*/
 .padding-xs {
   padding: 5px; }
-.padding-s, .search-bar .input-search, .search-bar .icon {
+.padding-s, .search-bar .input-search, .search-bar .icon, .js-option {
   padding: 10px; }
-.padding-m, .options, .js-option {
+.padding-m, .options {
   padding: 15px; }
 .padding-l {
   padding: 20px; }
@@ -1497,15 +1497,6 @@ ul {
   .navbar-item--tools .tools-item .tools-item-btn {
     margin: 0 4px; }
 
-.options {
-  position: fixed;
-  background: #CCC;
-  left: 0;
-  top: 400px;
-  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); }
-
 /* Menú con flexbox */
 .navbar-content {
   -webkit-transition: transform 0.3s ease, background 0.3s ease;
@@ -1752,5 +1743,14 @@ ul {
 
 .display-block {
   display: block; }
+
+.options {
+  position: fixed;
+  background: #CCC;
+  left: 0;
+  top: 300px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); }
 
 /*# sourceMappingURL=style.css.map */

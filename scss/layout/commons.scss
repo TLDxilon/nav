@@ -336,3 +336,19 @@
 }
 
 
+
+.options{
+  @extend .padding-m;
+  position: fixed;
+  background: #CCC;
+  left: 0;
+  top: 300px;
+  @include box-shadow(0, 0, 15px, rgba(0, 0, 0, 0.7));
+}
+
+
+.js-option{
+  @extend .padding-s;
+  @extend .fg-dark;
+  @extend .bg-gray;
+}
