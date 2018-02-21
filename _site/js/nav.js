@@ -9,6 +9,7 @@ $(document).ready(function(){
 
     var $searchBar = $('.search-bar');
     var $navBar = $('.navbar');
+    var $navBarFixedPre = $('.navbar-fixed');
     var $navBarFixed = $('.navbar-fixed .navbar-content');
     var $navBarContent = $('.navbar-content');
     var $backdrop = $('.backdrop');
@@ -28,8 +29,10 @@ $(document).ready(function(){
             // Oculta la navegación cuando está a la altura de la cabecera
             if (newScrollPosition < height_nav + height_logo){
                 $navBarFixed.addClass('is-hide');
+                $navBarFixedPre.addClass('is-hide');
             } else {
                 $navBarFixed.removeClass('is-hide');
+                $navBarFixedPre.removeClass('is-hide');
             }
 
         }

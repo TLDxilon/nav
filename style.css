@@ -1639,9 +1639,12 @@ ul {
         display: none; } }
 
 .navbar-fixed {
+  z-index: 1;
   position: fixed;
   top: 0;
   width: 100%; }
+  .navbar-fixed.is-hide {
+    z-index: 0; }
   .navbar-fixed .navbar-content.is-hide {
     -webkit-transform: translate(0, -100%);
     -moz-transform: translate(0, -100%);

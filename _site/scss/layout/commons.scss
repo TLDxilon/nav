@@ -206,11 +206,13 @@
 
 
 .navbar-fixed{
-
+  z-index: 1;
     position: fixed;
     top: 0;
     width: 100%;
-
+ &.is-hide{
+   z-index: 0;
+ }
     .navbar-content{
       &.is-hide{
         @include transform(translate(0, -100%));
