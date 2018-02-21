@@ -1,8 +1,26 @@
 .navigation{
   &-bottom{
-    .navbar-item--menu {
-      @include flex-grow(1);
+    .navbar-logo--center{
+      .tools-left{
+        @media #{$big}{
+          visibility: hidden;
+          display: block;
+        }
+      }
+      &.navbar-fixed{
+          .tools-left{
+            @media #{$big}{
+              display:none;
+            }
+          }
+
+      }
     }
+
+
   }
 
 }
+
+
+

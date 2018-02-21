@@ -2,13 +2,13 @@ $(document).ready(function(){
 
     var height_topbar = $('.topbar').outerHeight(true);
     var height_logo = $('.navbar-logo--top .navbar-item--logo, .navigation-bottom .navbar-item--logo').outerHeight(true);
-    var height_nav = $('.navbar .navbar-content').outerHeight(true);
+    var height_nav = $('.height-nav .navbar-content').outerHeight(true);
     var height_over_menu = $('.navbar-content').offset().top;
     var height_header = $('.header').outerHeight(true);
     var lastScrollPosition = 0;
 
     var $searchBar = $('.search-bar');
-    var $navBar = $('.navbar');
+    var $navBar = $('.height-nav');
     var $navBarFixedPre = $('.navbar-fixed');
     var $navBarFixed = $('.navbar-fixed .navbar-content');
     var $navBarContent = $('.navbar-content');
@@ -27,7 +27,7 @@ $(document).ready(function(){
         if (newScrollPosition < lastScrollPosition){
 
             // Oculta la navegación cuando está a la altura de la cabecera
-            if (newScrollPosition < height_nav + height_logo){
+            if (newScrollPosition < height_header){
                 $navBarFixed.addClass('is-hide');
                 $navBarFixedPre.addClass('is-hide');
             } else {
@@ -106,7 +106,8 @@ $(document).ready(function(){
     //opciones
 
     var $changeOption = $('.js-option');
-
+    var $openOptions = $('.open-options');
+    var $closeOptions = $('.close-options');
 
     $changeOption.each(function(index) {
         $(this).on('click', function(){
@@ -132,4 +133,13 @@ $(document).ready(function(){
 
         });
     });
+
+    $openOptions.on('click', function(){
+        $('.options').css('left', '0');
+    });
+    $closeOptions.on('click', function(){
+        $('.options').css('left', '-120px');
+    });
+
+
 });

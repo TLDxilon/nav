@@ -1,15 +1,14 @@
 <div class="navbar-inner">
-
-    {% include tools/tools-left.html %}
-
-
-    {% if page.logo-position == 'left' or page.logo-position == 'center' %}
-    <div class="navbar-item navbar-item--logo padding-tb-{{ page.logo-padding }}">
-        {% include logo.html %}
-    </div>
-    {% else %}
+    {% if page.navigation == 'top' %}
+     {% include tools/tools-left.html %}
+        <div class="navbar-item navbar-item--logo padding-tb-{{ page.logo-padding }}">
+            {% include logo.html %}
+        </div>
+    {% elsif page.navigation == 'bottom'%}
     {% endif %}
-    {% include menu/menu.html style=page.menu-style align=page.menu-align%}
-
+    {% include menu/menu.html style=page.menu-style align=page.menu-align %}
+    {% if page.navigation == 'top' %}
     {% include tools/tools-right.html %}
+    {% elsif page.navigation == 'bottom'%}
+    {% endif %}
 </div>
