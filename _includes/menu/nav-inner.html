@@ -1,11 +1,14 @@
 <div class="navbar-inner">
+
     {% if page.navigation == 'top' %}
      {% include tools/tools-left.html %}
-        <div class="navbar-item navbar-item--logo padding-tb-{{ page.logo-padding }}">
+
             {% include logo.html %}
-        </div>
+
     {% elsif page.navigation == 'bottom'%}
     {% endif %}
+
+
     {% include menu/menu.html style=page.menu-style align=page.menu-align %}
     {% if page.navigation == 'top' %}
     {% include tools/tools-right.html %}
