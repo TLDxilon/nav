@@ -4,7 +4,7 @@
 @import "menu-styles";
 @import "navigation";
 @import "tools";
-
+@import "options";
 
 /* Menú con flexbox */
 
@@ -320,13 +320,6 @@
 
 }
 
-.options{
-
-
-  @extend .padding-m;
-
-
-}
 
 
 

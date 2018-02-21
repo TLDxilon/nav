@@ -83,14 +83,17 @@ ul{
     padding: 15px 30px;
     font-size: 15px;
   }
-  &--flat{
+  &--s-flat{
+    border-width: 1.5px;
+    border-color: $tone-main;
+    border-style: solid;
     @extend .bg-main;
     @extend .fg-white;
     &:hover{
       background: darken($tone-main, 10%);
     }
   }
-  &--outline{
+  &--s-outline{
     @extend .fg-gray;
     border-width: 1.5px;
     border-color: $tone-gray;
@@ -174,4 +177,9 @@ ul{
 
 .z-index1{
   z-index: 1;
+}
+
+
+.hero-content{
+  @include transition(padding 0.3s 0s);
 }

@@ -102,21 +102,31 @@ $(document).ready(function(){
 
     //opciones
 
-    var $changelogoSize = $('.js-logo-size');
-
-    var data = $('.js-logo-size').data('size');
-
-    $changelogoSize.each(function(index) {
-        $(this).on("click", function(){
-
-            $('.branding-logo').attr('class',
-                function(i, c){
-                    return c.replace(/(^|\s)logo-size-\S+/g, '');
-                });
+    var $changeOption = $('.js-option');
 
 
-            $('.branding-logo').addClass('logo-size-'+ data);
+    $changeOption.each(function(index) {
+        $(this).on('click', function(){
+
+            var dataValue         = $(this).data('value');
+            var dataOption        = $(this).data('option');
+            var dataElement       = $(this).data('element');
+            var $element          = $(dataElement);
+
+
+            $element.attr('class', function(i, c){
+                var pattern = '(^|\\s)' + dataOption + '\\S+';
+                var myReg  = new RegExp(pattern, "g");
+                return c.replace(myReg, '');
+            });
+            console.log(dataElement);
+            $element.addClass(dataOption + dataValue);
+            var new_height_topbar = $('.topbar').outerHeight(true);
+            var new_height_logo = $('.navbar-logo--top .navbar-item--logo, .navigation-bottom .navbar-item--logo').outerHeight(true);
+            var new_height_nav = $('.height-nav .navbar-content').outerHeight(true);
+
+            $('.fix-header-padding').css('padding-top', (new_height_topbar + new_height_logo + new_height_nav) + 'px');
 
         });
     });
-})
+});
