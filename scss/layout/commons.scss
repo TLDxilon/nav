@@ -214,7 +214,8 @@
     .navbar-content{
       &.is-hide{
         @include transform(translate(0, -100%));
-        @include transition(transform 0.4s ease-out);
+        @include transition(transform 0.5s ease);
+
       }
 
 
@@ -340,15 +341,30 @@
 .options{
   @extend .padding-m;
   position: fixed;
-  background: #CCC;
+  background: transparentize($tone-gray, 0.05);
   left: 0;
-  top: 200px;
+  bottom: 0;
   @include box-shadow(0, 0, 15px, rgba(0, 0, 0, 0.7));
+  h2{
+    font-size: 16px;
+    font-weight: normal;
+    padding: 4px 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
+  h3{
+    font-size: 12px;
+    font-weight: normal;
+    padding: 4px 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
 }
 
 
 .js-option{
+  font-size: 13px;
   @extend .padding-xs;
   @extend .fg-dark;
-  @extend .bg-gray;
+  @extend .bg-main;
 }

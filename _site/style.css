@@ -1028,7 +1028,7 @@
 .bg-dark, .backdrop, .navigation-bottom .navbar-content, .topbar {
   background: #222222;
   color: #ffffff; }
-.bg-gray, .btn--s-outline:hover, .js-option {
+.bg-gray, .btn--s-outline:hover {
   background: #bcbcbc;
   color: #ffffff; }
 .bg-clear {
@@ -1037,7 +1037,7 @@
 .bg-white, .navbar-content.search-is-open, .navbar.bg-white .navbar-item--logo, .navbar.search-is-open, .navbar.navbar-logo--top.search-is-open .navbar-item--logo {
   background: #ffffff;
   color: #222222; }
-.bg-main, .btn--s-flat, .menu-style-line .nav-link span:after, .menu-style-back .active .nav-link, .menu-style-back .nav-link:hover, .menu-mobile {
+.bg-main, .btn--s-flat, .menu-style-line .nav-link span:after, .menu-style-back .active .nav-link, .menu-style-back .nav-link:hover, .menu-mobile, .js-option {
   background: #BE86B9;
   color: #ffffff; }
 
@@ -1647,11 +1647,11 @@ ul {
     -moz-transform: translate(0, -100%);
     -ms-transform: translate(0, -100%);
     transform: translate(0, -100%);
-    -webkit-transition: transform 0.4s ease-out;
-    -moz-transition: transform 0.4s ease-out;
-    -ms-transition: transform 0.4s ease-out;
-    -o-transition: transform 0.4s ease-out;
-    transition: transform 0.4s ease-out; }
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    transition: transform 0.5s ease; }
 
 .topbar .topbar-item {
   display: inline-block;
@@ -1746,11 +1746,26 @@ ul {
 
 .options {
   position: fixed;
-  background: #CCC;
+  background: rgba(188, 188, 188, 0.95);
   left: 0;
-  top: 200px;
+  bottom: 0;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); }
+  .options h2 {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 4px 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0; }
+  .options h3 {
+    font-size: 12px;
+    font-weight: normal;
+    padding: 4px 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0; }
+
+.js-option {
+  font-size: 13px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,13 +2,13 @@ $(document).ready(function(){
 
     var height_topbar = $('.topbar').outerHeight(true);
     var height_logo = $('.navbar-logo--top .navbar-item--logo, .navigation-bottom .navbar-item--logo').outerHeight(true);
-    var height_nav = $('.height-nav .navbar-content').outerHeight(true);
+    var height_nav = $('.navbar .navbar-content').outerHeight(true);
     var height_over_menu = $('.navbar-content').offset().top;
     var height_header = $('.header').outerHeight(true);
     var lastScrollPosition = 0;
 
     var $searchBar = $('.search-bar');
-    var $navBar = $('.height-nav');
+    var $navBar = $('.navbar');
     var $navBarFixed = $('.navbar-fixed .navbar-content');
     var $navBarContent = $('.navbar-content');
     var $backdrop = $('.backdrop');
@@ -26,7 +26,7 @@ $(document).ready(function(){
         if (newScrollPosition < lastScrollPosition){
 
             // Oculta la navegación cuando está a la altura de la cabecera
-            if (newScrollPosition < height_header){
+            if (newScrollPosition < height_nav + height_logo){
                 $navBarFixed.addClass('is-hide');
             } else {
                 $navBarFixed.removeClass('is-hide');
