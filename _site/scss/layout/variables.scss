@@ -211,11 +211,16 @@ $tools-icon-size: 20px;
 
 .border {
   &-bottom {
-    .navbar-content{
       border-width: 0 0 1px 0;
       border-style: solid;
-      border-color: transparentize($tone-gray, 0.5);
-    }
+      border-color: transparentize($tone-gray, 0.7);
+
+  }
+  &-top {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: transparentize($tone-gray, 0.5);
+
   }
   &-radius {
 
