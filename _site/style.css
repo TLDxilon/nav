@@ -1056,9 +1056,9 @@
   text-transform: uppercase; }
 
 /*CLASES PADDINGS*/
-.padding-xs {
+.padding-xs, .js-option {
   padding: 5px; }
-.padding-s, .search-bar .input-search, .search-bar .icon, .js-option {
+.padding-s, .search-bar .input-search, .search-bar .icon {
   padding: 10px; }
 .padding-m, .options {
   padding: 15px; }
@@ -1748,7 +1748,7 @@ ul {
   position: fixed;
   background: #CCC;
   left: 0;
-  top: 300px;
+  top: 200px;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); }
