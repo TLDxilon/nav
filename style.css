@@ -1058,7 +1058,7 @@
   text-transform: uppercase; }
 
 /*CLASES PADDINGS*/
-.padding-xs, .options .open-options, .options .close-options, .js-option {
+.padding-xs, .options .open-options, .options .close-options {
   padding: 5px; }
 .padding-s, .search-bar .input-search, .search-bar .icon {
   padding: 10px; }
@@ -1757,7 +1757,8 @@ ul {
     top: 30px; }
 
 .js-option {
-  font-size: 13px; }
+  font-size: 13px;
+  padding: 1px; }
 
 @media only screen and (min-width: 960px) {
   .navigation-bottom .navbar-logo--center .tools-left {
