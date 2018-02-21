@@ -104,16 +104,18 @@ $(document).ready(function(){
 
     var $changelogoSize = $('.js-logo-size');
 
-    var $data = $('.js-logo-size').data();
+    var data = $('.js-logo-size').data('size');
 
     $changelogoSize.each(function(index) {
         $(this).on("click", function(){
+
             $('.branding-logo').attr('class',
                 function(i, c){
                     return c.replace(/(^|\s)logo-size-\S+/g, '');
                 });
-            alert($data);
-            $('.branding-logo').addClass('logo-size-'+ $data);
+
+
+            $('.branding-logo').addClass('logo-size-'+ data);
 
         });
     });
