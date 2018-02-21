@@ -323,7 +323,7 @@
 
 
 .options{
-  @extend .padding-m;
+  @extend .padding-xs;
   position: fixed;
   background: transparentize($tone-gray, 0.05);
   left: -100px;

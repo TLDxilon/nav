@@ -1058,11 +1058,11 @@
   text-transform: uppercase; }
 
 /*CLASES PADDINGS*/
-.padding-xs, .options .open-options, .options .close-options {
+.padding-xs, .options, .options .open-options, .options .close-options, .js-option {
   padding: 5px; }
 .padding-s, .search-bar .input-search, .search-bar .icon {
   padding: 10px; }
-.padding-m, .options {
+.padding-m {
   padding: 15px; }
 .padding-l {
   padding: 20px; }
@@ -1757,8 +1757,7 @@ ul {
     top: 30px; }
 
 .js-option {
-  font-size: 13px;
-  padding: 1px; }
+  font-size: 13px; }
 
 @media only screen and (min-width: 960px) {
   .navigation-bottom .navbar-logo--center .tools-left {

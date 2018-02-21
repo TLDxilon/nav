@@ -323,7 +323,7 @@
 
 
 .options{
-  @extend .padding-m;
+  @extend .padding-xs;
   position: fixed;
   background: transparentize($tone-gray, 0.05);
   left: -100px;
@@ -367,7 +367,7 @@
 .js-option{
 
   font-size: 13px;
-  padding: 1px;
+  @extend .padding-xs;
   @extend .fg-dark;
   @extend .bg-main;
 }
