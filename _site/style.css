@@ -1429,15 +1429,6 @@ ul {
 .tools-item-search {
   width: 30px; }
 
-.tools-item-menu {
-  width: 25px; }
-  @media only screen and (min-width: 960px) {
-    .tools-item-menu {
-      display: none; } }
-
-@media only screen and (min-width: 960px) {
-  .btn-menu {
-    display: none; } }
 .btn-menu .open-menu, .btn-menu .close-menu {
   position: absolute;
   left: 0;
@@ -1493,6 +1484,11 @@ ul {
   position: relative; }
   .navbar-item--tools .tools-item .tools-item-btn {
     margin: 0 4px; }
+  .navbar-item--tools .tools-item.tools-item-menu {
+    width: 25px; }
+    @media only screen and (min-width: 960px) {
+      .navbar-item--tools .tools-item.tools-item-menu {
+        display: none; } }
 
 /* Menú con flexbox */
 .navbar-content {
@@ -1551,9 +1547,6 @@ ul {
   @media only screen and (max-width: 479px) {
     .navbar.navbar-logo--left .tools-right .tools-item-btn-cta {
       display: none; } }
-  @media only screen and (min-width: 480px) and (max-width: 960px) {
-    .navbar.navbar-logo--left .tools-right .tools-item-btn-cta {
-      display: none; } }
   @media only screen and (max-width: 479px) {
     .navbar.navbar-logo--left .tools-right {
       -webkit-flex-grow: 1;
@@ -1573,7 +1566,6 @@ ul {
     flex-basis: 35%; }
     @media only screen and (min-width: 960px) {
       .navbar.navbar-logo--center .tools-logo-tools .tools-left {
-        visibility: hidden;
         display: block; } }
   @media only screen and (min-width: 960px) {
     .navbar.navbar-logo--center .tools-logo-tools.navbar-fixed .tools-left {
@@ -1615,7 +1607,10 @@ ul {
       .navbar.navbar-logo--center .tools-right .tools-item-menu, .navbar.navbar-logo--center .tools-right .tools-item-btn-cta, .navbar.navbar-logo--center .tools-right .tools-item-search {
         display: none; } }
     @media only screen and (min-width: 480px) and (max-width: 960px) {
-      .navbar.navbar-logo--center .tools-right .tools-item-menu, .navbar.navbar-logo--center .tools-right .tools-item-btn-cta, .navbar.navbar-logo--center .tools-right .tools-item-search {
+      .navbar.navbar-logo--center .tools-right .tools-item-menu, .navbar.navbar-logo--center .tools-right .tools-item-search {
+        display: none; } }
+    @media only screen and (min-width: 960px) {
+      .navbar.navbar-logo--center .tools-right .tools-item-menu, .navbar.navbar-logo--center .tools-right .tools-item-search {
         display: none; } }
 
 .navbar-fixed {

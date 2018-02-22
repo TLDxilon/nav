@@ -99,9 +99,7 @@
           @media #{$smartphones}{
             display: none;
           }
-          @media #{$tablets}{
-            display: none;
-          }
+
 
 
         }
@@ -122,10 +120,8 @@
         .tools-left{
           @include flex-basis(35%);
           @media #{$big}{
-            visibility: hidden;
             display: block;
           }
-
         }
         &.navbar-fixed{
           .tools-left{
@@ -133,12 +129,8 @@
               display:none;
             }
           }
-
         }
-
-
       }
-
 
       .navbar-item--logo {
         @include order(2);
@@ -167,11 +159,15 @@
           }
         }
         @media #{$tablets}{
-          .tools-item-menu, .tools-item-btn-cta, .tools-item-search {
+          .tools-item-menu, .tools-item-search {
             display: none;
           }
         }
-
+        @media #{$big}{
+          .tools-item-menu, .tools-item-search {
+            display: none;
+          }
+        }
 
       }
 
