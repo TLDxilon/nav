@@ -29,6 +29,10 @@ $(document).ready(function(){
         // Muestro la navegación al subir
         if (newScrollPosition < lastScrollPosition){
 
+            console.log('newScrollPosition',newScrollPosition);
+            console.log('lastScrollPosition',lastScrollPosition);
+            console.log('height_header',height_header);
+
             // Oculta la navegación cuando está a la altura de la cabecera
             if (newScrollPosition < height_header){
                 $navBarFixed.addClass('is-hide');
