@@ -159,9 +159,15 @@ $tools-icon-size: 20px;
 }
 
 .logo-size{
-  &-xs{
+  &-xxs{
     &.branding-logo{
       width: 100px;
+    }
+
+  }
+  &-xs{
+    &.branding-logo{
+      width: 150px;
     }
 
   }

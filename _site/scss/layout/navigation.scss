@@ -15,13 +15,8 @@
     }
     .navbar-item--logo{
       @include flex-grow(1);
-      @media #{$smartphones}{
-        @include flex-grow(1);
-      }
-      @media #{$tablets}{
-        @include flex-grow(1);
-      }
     }
+
     .tools-right{
       @include flex-grow(1);
     }

@@ -16,12 +16,19 @@ h1{
   margin-bottom: 0;
   margin-top: 0;
   font-size:25px;
+
 }
 
 .branding-logo{
   max-width: 100%;
   vertical-align: middle;
   @include transition(transform .3s ease, background .3s ease, width .25s linear);
+  @media #{$smartphones}{
+    max-width: 150px;
+  }
+  @media #{$tablets}{
+    max-width: 200px;
+  }
 }
 
 .design{

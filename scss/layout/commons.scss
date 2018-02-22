@@ -38,12 +38,7 @@
 
     }
     .navbar-item--logo{
-      @media #{$smartphones}{
-
-      }
-      @media #{$tablets}{
-
-      }
+      @include transition(padding .3s ease);
 
     }
 
@@ -81,7 +76,14 @@
           @include flex-grow(1);
         }
 
-
+        @media #{$smartphones}{
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+        @media #{$tablets}{
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
       }
       .navbar-item--menu {
         @include flex-grow(1);
@@ -136,7 +138,14 @@
         @include order(2);
         @include flex-grow(1);
         @extend .text-align-center;
-
+        @media #{$smartphones}{
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+        @media #{$tablets}{
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
       }
 
       .navbar-item--menu{
@@ -203,6 +212,9 @@
   .nav-link{
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+  }
+  .navbar-item--logo{
+      @extend .padding-s;
   }
 }
 
