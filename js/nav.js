@@ -80,7 +80,7 @@ $(document).ready(function(){
         $navBarContent.toggleClass('search-is-open');
 
         if ($navBarContent.hasClass('search-is-open')) {
-            $navBarContent.find('input').focus();
+          //  $navBarContent.find('input').focus();
             $backdrop.css('display', 'block');
             $searchBar.css('opacity', '1');
 
