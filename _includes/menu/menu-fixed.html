@@ -1,14 +1,11 @@
 
-    <div class="navbar-fixed navbar navbar-logo--{{ page.logo-position }} logo-size-{{ page.logo-size }} is-hide " id="navbar">
+    <div class="navbar-fixed navbar navbar-logo--{{ page.logo-position }} is-hide " id="navbar">
         <div class="navbar-content is-hide bg-white border-bottom">
             <div class="navbar-content-bar">
                 <div class="{{ page.container }}">
                     <div class="navbar-inner">
                         {% include tools/tools-left.html %}
-                        <div class="navbar-item navbar-item--logo padding-tb-{{ page.logo-padding }}">
                             {% include logo.html %}
-                        </div>
-
                         {% include menu/menu.html style=page.menu-style align=page.menu-align  %}
                         {% include tools/tools-right.html %}
                     </div>
