@@ -24,8 +24,15 @@
 
 }
 
+.js-navigation-1{
 
+  &.search-is-open{
+    @extend .bg-white;
+  }
+
+}
 
 .js-navigation-2{
   @include transition(padding 0.3s 0s);
 }
+

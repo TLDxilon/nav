@@ -13,9 +13,6 @@
   @include transition(transform .3s ease, background .3s ease);
 
 
-  &.search-is-open{
-    @extend .bg-white;
-  }
   .navbar-inner{
     @extend .flexbox-row-nowrap;
     @include justify-content(center);
@@ -58,19 +55,15 @@
 
 
 .navbar{
-  //position: absolute;
-  //width:100%;
-  //top:0;
+  position: absolute;
+  width:100%;
+  top:0;
   &.bg-white {
     .navbar-item--logo {
       @extend .bg-white;
 
     }
   }
-  &.search-is-open{
-    @extend .bg-white;
-  }
-
 
 
 
@@ -122,44 +115,7 @@
       }
     }
 
-    &--top{
-      .navbar-item--logo{
-        @include transition(transform .3s ease, background .3s ease);
-      }
-      &.search-is-open{
-        .navbar-item--logo{
-          @extend .bg-white;
 
-        }
-      }
-      .navbar-inner{
-        .navbar-item--menu{
-          margin-right: 25px;
-        }
-      }
-      .tools-right {
-        @include order(3);
-        @include flex-basis(35%);
-        @media #{$smartphones}{
-          .tools-item-menu, .tools-item-btn-cta, .tools-item-search {
-            display: none;
-          }
-        }
-        @media #{$tablets}{
-          .tools-item-menu, .tools-item-btn-cta, .tools-item-search {
-            display: none;
-          }
-        }
-
-
-      }
-      .tools-left {
-        @include flex-basis(35%);
-        @media #{$big}{
-          visibility: hidden;
-        }
-      }
-    }
 
     &--center{
       .tools-logo-tools{

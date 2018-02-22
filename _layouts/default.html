@@ -14,9 +14,9 @@
         {% include top-bar.html %}
         {% endif %}
         {% if page.navigation == 'top'%}
-        {% include backdrop.html %}
+
         {% endif %}
-        <div class="navbar navbar-logo--{{ page.logo-position }} bg-{{ page.menu-color }} js-navigation-1 height-nav" id="navbar">
+        <div class="navbar navbar-logo--{{ page.logo-position }} bg-{{ page.menu-color }} height-nav" id="navbar">
 
             {% if page.navigation == 'med' or page.navigation == 'bottom'%}
 
@@ -33,15 +33,16 @@
 
             {% elsif page.navigation == 'med' or page.navigation == 'bottom' %}
             {% endif %}
+            {% if page.navigation == 'med' %}
+
+
+            {% include menu/navigation-bottom.html %}
+
+
+            {% else %}
+            {% endif %}
         </div>
-        {% if page.navigation == 'med' %}
 
-
-        {% include menu/navigation-bottom.html %}
-
-
-        {% else %}
-        {% endif %}
 
         {% if page.hero == 'true' %}
         {% include hero.html %}

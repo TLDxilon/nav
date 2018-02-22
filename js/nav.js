@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
     var height_topbar = $('.topbar').outerHeight(true);
-    var height_logo = $('.navbar-logo--top .navbar-item--logo, .navigation-bottom .navbar-item--logo').outerHeight(true);
-    var height_nav = $('.height-nav .navbar-content').outerHeight(true);
+ //   var height_logo = $('.navbar-logo--top .navbar-item--logo, .navigation-bottom .navbar-item--logo').outerHeight(true);
+    var height_nav = $('.height-nav .js-navigation-1').outerHeight(true);
+    var height_nav_2 = $('.height-nav .js-navigation-2').outerHeight(true);
     var height_over_menu = $('.navbar-content').offset().top;
     var height_header = $('.header').outerHeight(true);
     var lastScrollPosition = 0;
@@ -15,7 +16,9 @@ $(document).ready(function(){
     var $backdrop = $('.backdrop');
     var $menumobile = $('.menu-mobile');
     var $design = $('.design');
-
+    var $fixHeaderPaddingNavTop = $('.navigation-top .fix-header-padding');
+    var $fixHeaderPaddingNavBottom = $('.navigation-bottom .fix-header-padding');
+    var $fixHeaderPaddingNavMed = $('.navigation-med .fix-header-padding');
 
 
 
@@ -45,10 +48,9 @@ $(document).ready(function(){
         lastScrollPosition = newScrollPosition;
     });
 
-    //
-    //
-    //
-    // $('.fix-header-padding').css('padding-top', (height_topbar + height_logo + height_nav) + 'px');
+    $fixHeaderPaddingNavTop.css('padding-top', (height_topbar + height_nav) + 'px');
+    $fixHeaderPaddingNavBottom.css('padding-top', (height_topbar + height_nav) + 'px');
+    $fixHeaderPaddingNavMed.css('padding-top', (height_topbar + height_nav + height_nav_2) + 'px');
 
 
 
@@ -125,11 +127,14 @@ $(document).ready(function(){
             });
             console.log(dataElement);
             $element.addClass(dataOption + dataValue);
-            // var new_height_topbar = $('.topbar').outerHeight(true);
-            // var new_height_logo = $('.navbar-logo--top .navbar-item--logo, .navigation-bottom .navbar-item--logo').outerHeight(true);
-            // var new_height_nav = $('.height-nav .navbar-content').outerHeight(true);
-            //
-            // $('.fix-header-padding').css('padding-top', (new_height_topbar + new_height_logo + new_height_nav) + 'px');
+             var new_height_topbar = $('.topbar').outerHeight(true);
+             var new_height_nav = $('.height-nav .js-navigation-1').outerHeight(true);
+             var new_height_nav_2 = $('.height-nav .js-navigation-2').outerHeight(true);
+
+            $fixHeaderPaddingNavTop.css('padding-top', (new_height_topbar + new_height_nav) + 'px');
+            $fixHeaderPaddingNavBottom.css('padding-top', (new_height_topbar + new_height_nav) + 'px');
+            $fixHeaderPaddingNavMed.css('padding-top', (new_height_topbar +  new_height_nav + new_height_nav_2) + 'px');
+
 
         });
     });
