@@ -120,7 +120,7 @@
     &--center{
       .tools-logo-tools{
         .tools-left{
-          @include flex-basis(25%);
+          @include flex-basis(35%);
           @media #{$smartphones}{
             @include flex-basis(35%);
           }
@@ -167,7 +167,10 @@
 
       .tools-right {
         @include order(3);
-        @include flex-basis(25%);
+        @include flex-basis(35%);
+        .navigation-bottom &{
+
+        }
         @media #{$smartphones}{
           @include flex-basis(35%);
         }
