@@ -68,7 +68,7 @@
     &--left{
 
       .navbar-item--logo {
-
+        @include flex-grow(1);
         @media #{$smartphones}{
           @include flex-grow(1);
         }
@@ -92,6 +92,7 @@
         display: none;
       }
       .tools-right {
+        @include flex-grow(70%);
         .tools-item-btn-menu{
           @media #{$big}{
             display: none;
