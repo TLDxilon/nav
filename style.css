@@ -1668,6 +1668,9 @@ ul {
     -ms-transition: transform 0.5s ease;
     -o-transition: transform 0.5s ease;
     transition: transform 0.5s ease; }
+  .navbar-fixed .nav-link {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important; }
 
 .topbar .topbar-item {
   display: inline-block;

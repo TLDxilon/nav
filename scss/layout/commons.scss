@@ -232,8 +232,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-  @include transition(z-index 0.5s step-end);
- &.is-hide{
+    @include transition(z-index 0.5s step-end);
+    &.is-hide{
    z-index: 0;
  }
     .navbar-content{
@@ -245,6 +245,10 @@
 
 
 
+  }
+  .nav-link{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 }
 
