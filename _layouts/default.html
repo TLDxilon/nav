@@ -60,7 +60,7 @@
         {% endif %}
     </header>
 
-    <main class="content fix-header-padding" id="main">
+    <main class="content {% if page.hero == 'false' %} fix-header-padding  {% elsif  page.hero == 'true'%}{% endif %}" id="main">
         <div class="container">
             <div class="padding-l">
                 {% include options.html %}
