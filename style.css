@@ -1535,7 +1535,8 @@ ul {
 .navbar {
   position: absolute;
   width: 100%;
-  top: 0; }
+  top: 0;
+  display: block; }
   .navbar.navbar-logo--left .navbar-item--logo {
     -webkit-flex-grow: 1;
     -moz-flex-grow: 1;

@@ -34,7 +34,7 @@ $(document).ready(function(){
             console.log('height_header',height_header);
 
             // Oculta la navegación cuando está a la altura de la cabecera
-            if (newScrollPosition < height_header){
+            if (newScrollPosition < 400){
                 $navBarFixed.addClass('is-hide');
                 $navBarFixedPre.addClass('is-hide');
             } else {
