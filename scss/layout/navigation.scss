@@ -1,24 +1,26 @@
+
+
 .navigation{
-  &-bottom{
-    .navbar-logo--center{
-      .tools-left{
-        @media #{$big}{
-          visibility: hidden;
-          display: block;
+  &-bottom, &-med{
+    .navbar-bottom{
+      .navbar-item--menu{
+        @include flex-basis(100%);
+        .nav-link {
+          height: auto;
+          .navbar-fixed &{
+            height: 100%;
+          }
         }
       }
-      &.navbar-fixed{
-          .tools-left{
-            @media #{$big}{
-              display:none;
-            }
-          }
-
-      }
     }
+    .navbar-item--logo{
+      @include flex-basis(60%);
 
-
-  }
+    }
+    .tools-right{
+      @include flex-grow(1);
+    }
+}
 
 }
 

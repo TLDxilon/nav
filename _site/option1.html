@@ -74,11 +74,11 @@
 
                         
 <nav class="navbar-item navbar-item--menu menu-style-back">
-    <ul class="flex-align-right" >
-        <li class="nav-menu-item active"><a class="nav-link fg-gray" href="#"><span class="">Home</span></a></li>
-        <li class="nav-menu-item"><a class="nav-link fg-gray" href="#"><span class="">Products</span></a></li>
-        <li class="nav-menu-item"><a class="nav-link fg-gray" href="#"><span class="">News</span></a></li>
-        <li class="nav-menu-item"><a class="nav-link fg-gray" href="#"><span class="">Contact</span></a></li>
+    <ul class="flex-align-right js-align" >
+        <li class="nav-menu-item active"><a class="nav-link fg-gray padding-tb-" href="#"><span class="">Home</span></a></li>
+        <li class="nav-menu-item"><a class="nav-link fg-gray padding-tb-" href="#"><span class="">Products</span></a></li>
+        <li class="nav-menu-item"><a class="nav-link fg-gray padding-tb-" href="#"><span class="">News</span></a></li>
+        <li class="nav-menu-item"><a class="nav-link fg-gray padding-tb-" href="#"><span class="">Contact</span></a></li>
         <!--<li class="nav-menu-item"><div class="tools-item tools-item-btn-cta">
     <a class="tools-item-btn btn btn--small btn--s-outline border-radius-l js-header-cta1" href="http://linkaloquequieras">Login</a>
 </div>
@@ -156,10 +156,11 @@
             
             
 
+
             <div class="navbar-content border-bottom bg-transparent">
-                <div class="navbar-content-bar">
-                <div class="container">
-                    <div class="navbar-inner">
+    <div class="navbar-content-bar">
+        <div class="container">
+            <div class="navbar-inner">
 
     
      <div class="navbar-item navbar-item--tools tools-left text-align-left">
@@ -197,11 +198,11 @@
 
     
 <nav class="navbar-item navbar-item--menu menu-style-back">
-    <ul class="flex-align-right" >
-        <li class="nav-menu-item active"><a class="nav-link fg-gray" href="#"><span class="">Home</span></a></li>
-        <li class="nav-menu-item"><a class="nav-link fg-gray" href="#"><span class="">Products</span></a></li>
-        <li class="nav-menu-item"><a class="nav-link fg-gray" href="#"><span class="">News</span></a></li>
-        <li class="nav-menu-item"><a class="nav-link fg-gray" href="#"><span class="">Contact</span></a></li>
+    <ul class="flex-align-right js-align" >
+        <li class="nav-menu-item active"><a class="nav-link fg-gray padding-tb-" href="#"><span class="">Home</span></a></li>
+        <li class="nav-menu-item"><a class="nav-link fg-gray padding-tb-" href="#"><span class="">Products</span></a></li>
+        <li class="nav-menu-item"><a class="nav-link fg-gray padding-tb-" href="#"><span class="">News</span></a></li>
+        <li class="nav-menu-item"><a class="nav-link fg-gray padding-tb-" href="#"><span class="">Contact</span></a></li>
         <!--<li class="nav-menu-item"><div class="tools-item tools-item-btn-cta">
     <a class="tools-item-btn btn btn--small btn--s-outline border-radius-l js-header-cta1" href="http://linkaloquequieras">Login</a>
 </div>
@@ -209,7 +210,9 @@
     </ul>
 
 </nav>
+
     
+
     <div class="navbar-item navbar-item--tools tools-right text-align-right">
     <div class="navbar-tools">
          <div class="tools-item tools-item-btn-cta">
@@ -247,13 +250,11 @@
     </div>
 
 </div>
+
     
 </div>
-
-
-                </div>
-
-                <div class="search-bar border-top" id="search-bar">
+        </div>
+        <div class="search-bar border-top" id="search-bar">
     <div class="container">
         <form>
             <span class="form-search-item icon icon-search fg-gray"></span>
@@ -264,10 +265,15 @@
 
 
 </div>
-            </div>
-            </div>
+    </div>
+</div>
+
+
+
             
         </div>
+        
+        
 
         
         
@@ -276,7 +282,7 @@
       <div class="hero-content text-align-center fix-header-padding">
         <h1 class="fg-white text-transform-uppercase">We design and develop </h1>
         <p class="fg-white">Tincidunt et urna purus tristique eros vitae purus tristique eros vitaeTincidunt et urna purus tristique eros vitae purus tristique eros vitaeTincidunt et urna purus tristique eros vitae purus tristique eros vitaeTincidunt et urna purus tristique eros vitae purus tristique eros vitaeTincidunt et urna purus tristique eros vitae purus tristique eros vitae</p>
-          <a class="btn btn--big border-radius-xl bg-main fg-white" href="#" >Start</a>
+          <a class="btn btn--big border-radius-xl bg-main fg-white js-header-cta1" href="#" >Start</a>
     </div>
 </div>
 <div class="background">
@@ -304,6 +310,9 @@
     <h2>Navigation</h2>
     <a href="/nav/option1.html" class="js-option">Top</a>
     <a href="/nav/option2.html" class="js-option">Bottom</a>
+    <a href="/nav/option3.html" class="js-option">Middle</a>
+
+
 
     <h2>Posición del logo</h2>
     <a href="#" class="js-option" data-element=".navbar" data-option="navbar-logo--" data-value="left">Left</a>
@@ -336,35 +345,38 @@
 <a href="#" class="js-option" data-element=".js-navigation-1" data-option="bg-" data-value="dark">4</a>
 <a href="#" class="js-option" data-element=".js-navigation-1" data-option="bg-" data-value="transparent">NO</a>
 
-    <h2>Border bottom</h2>
-    <a href="#" class="js-option" data-element=".navbar-content" data-option="border-" data-value="bottom">YES</a>
-    <a href="#" class="js-option" data-element=".navbar-content" data-option="border-" data-value="">NO</a>
+<h2>Menú align</h2>
+<a href="#" class="js-option" data-element=".js-align" data-option="flex-align-" data-value="left">left</a>
+<a href="#" class="js-option" data-element=".js-align" data-option="flex-align-" data-value="center">center</a>
+<a href="#" class="js-option" data-element=".js-align" data-option="flex-align-" data-value="right">right</a>
+
+<h2>Border bottom</h2>
+<a href="#" class="js-option" data-element=".navbar-content" data-option="border-" data-value="bottom">YES</a>
+<a href="#" class="js-option" data-element=".navbar-content" data-option="border-" data-value="">NO</a>
 
 <h2>Menú 2 color</h2>
-  <a href="#" class="js-option" data-element=".js-navigation-2" data-option="bg-" data-value="main">1</a>
-   <a href="#" class="js-option" data-element=".js-navigation-2" data-option="bg-" data-value="white">2</a>
-  <a href="#" class="js-option" data-element=".js-navigation-2" data-option="bg-" data-value="gray">3</a>
-   <a href="#" class="js-option" data-element=".js-navigation-2" data-option="bg-" data-value="dark">4</a>
-    <a href="#" class="js-option" data-element=".js-navigation-2" data-option="bg-" data-value="transparent">NO</a>
-
-    <h2>Menú 2 padding</h2>
-    <a href="#" class="js-option" data-element=".js-navigation-2" data-option="padding-tb-" data-value="xs">xs</a>
-    <a href="#" class="js-option" data-element=".js-navigation-2" data-option="padding-tb-" data-value="s">s</a>
-    <a href="#" class="js-option" data-element=".js-navigation-2" data-option="padding-tb-" data-value="m">m</a>
-    <a href="#" class="js-option" data-element=".js-navigation-2" data-option="padding-tb-" data-value="l">l</a>
+<a href="#" class="js-option" data-element=".js-navigation-2" data-option="bg-" data-value="main">1</a>
+ <a href="#" class="js-option" data-element=".js-navigation-2" data-option="bg-" data-value="white">2</a>
+<a href="#" class="js-option" data-element=".js-navigation-2" data-option="bg-" data-value="gray">3</a>
+<a href="#" class="js-option" data-element=".js-navigation-2" data-option="bg-" data-value="dark">4</a>
+<a href="#" class="js-option" data-element=".js-navigation-2" data-option="bg-" data-value="transparent">NO</a>
 
 
+
+<h2>Menú 2 padding</h2>
+<a href="#" class="js-option" data-element=".js-navigation-2" data-option="padding-tb-" data-value="xs">xs</a>
+<a href="#" class="js-option" data-element=".js-navigation-2" data-option="padding-tb-" data-value="s">s</a>
+<a href="#" class="js-option" data-element=".js-navigation-2" data-option="padding-tb-" data-value="m">m</a>
+<a href="#" class="js-option" data-element=".js-navigation-2" data-option="padding-tb-" data-value="l">l</a>
 
 <h2>Call to action menú</h2>
-    <h3>Style</h3>
+<h3>Style</h3>
 <a href="#" class="js-option" data-element=".js-header-cta1" data-option="btn--s-" data-value="outline">OUTLINE</a>
 <a href="#" class="js-option" data-element=".js-header-cta1" data-option="btn--s-" data-value="flat">FLAT</a>
-    <h3>Border radius</h3>
-    <a href="#" class="js-option" data-element=".js-header-cta1" data-option="border-radius-" data-value="xs">XS</a>
-    <a href="#" class="js-option" data-element=".js-header-cta1" data-option="border-radius-" data-value="s">S</a>
-    <a href="#" class="js-option" data-element=".js-header-cta1" data-option="border-radius-" data-value="m">M</a>
-    <a href="#" class="js-option" data-element=".js-header-cta1" data-option="border-radius-" data-value="l">L</a>
-    <a href="#" class="js-option" data-element=".js-header-cta1" data-option="border-radius-" data-value="xl">XL</a>
+
+<h3>Border radius</h3>
+<a href="#" class="js-option" data-element=".js-header-cta1" data-option="border-radius-" data-value="xs">NO</a>
+ <a href="#" class="js-option" data-element=".js-header-cta1" data-option="border-radius-" data-value="xl">SÍ</a>
 
 
 </div>

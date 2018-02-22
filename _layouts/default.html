@@ -18,46 +18,30 @@
         {% endif %}
         <div class="navbar navbar-logo--{{ page.logo-position }}  height-nav" id="navbar">
 
-            {% if page.logo-position == 'top' or page.navigation == 'bottom'%}
+            {% if page.navigation == 'med' or page.navigation == 'bottom'%}
+
+            {% include menu/tools-logo-tools.html %}
 
 
-
-                 <div class="navbar-content border-bottom bg-{{ page.menu-color }} js-navigation-1">
-                     <div class="navbar-content-bar">
-                         <div class="{{ page.container }}">
-                             <div class="navbar-inner">
-
-                                 {% include tools/tools-left.html %}
-
-                                 <div class="navbar-item navbar-item--logo padding-tb-{{ page.logo-padding }}">
-                                     {% include logo.html %}
-                                 </div>
-
-                                 {% include tools/tools-right.html %}
-
-                             </div>
-             </div>
-
-          </div>
-             </div>
             {% else %}
             {% endif %}
             {% if page.navigation == 'top'%}
 
-            <div class="navbar-content border-bottom bg-{{ page.menu-color }}">
-                <div class="navbar-content-bar">
-                <div class="{{ page.container }}">
-                    {% include menu/nav-inner.html %}
+
+            {% include menu/navigation-top.html %}
 
 
-                </div>
-
-                {% include search-bar.html %}
-            </div>
-            </div>
-            {% else %}
+            {% elsif page.navigation == 'med' or page.navigation == 'bottom' %}
             {% endif %}
         </div>
+        {% if page.navigation == 'med' %}
+
+
+        {% include menu/navigation-bottom.html %}
+
+
+        {% else %}
+        {% endif %}
 
         {% if page.hero == 'true' %}
         {% include hero.html %}
@@ -65,8 +49,12 @@
 
 
 
-        {% if page.navigation == 'bottom'%}
+        {% if page.navigation == 'bottom' %}
+
+
         {% include menu/navigation-bottom.html %}
+
+
         {% else %}
         {% endif %}
     </header>

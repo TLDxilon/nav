@@ -58,9 +58,9 @@
 
 
 .navbar{
-  position: absolute;
-  width:100%;
-  top:0;
+  //position: absolute;
+  //width:100%;
+  //top:0;
   &.bg-white {
     .navbar-item--logo {
       @extend .bg-white;
@@ -137,13 +137,52 @@
           margin-right: 25px;
         }
       }
+      .tools-right {
+        @include order(3);
+        @include flex-basis(35%);
+        @media #{$smartphones}{
+          .tools-item-menu, .tools-item-btn-cta, .tools-item-search {
+            display: none;
+          }
+        }
+        @media #{$tablets}{
+          .tools-item-menu, .tools-item-btn-cta, .tools-item-search {
+            display: none;
+          }
+        }
 
 
-
-
+      }
+      .tools-left {
+        @include flex-basis(35%);
+        @media #{$big}{
+          visibility: hidden;
+        }
+      }
     }
 
     &--center{
+      .tools-logo-tools{
+        .tools-left{
+          @include flex-basis(35%);
+          @media #{$big}{
+            visibility: hidden;
+            display: block;
+          }
+
+        }
+        &.navbar-fixed{
+          .tools-left{
+            @media #{$big}{
+              display:none;
+            }
+          }
+
+        }
+
+
+      }
+
 
       .navbar-item--logo {
         @include order(2);
@@ -265,9 +304,7 @@
     visibility: visible;
     @include transition(opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s);
   }
-  .navigation-bottom &{
-    position: absolute;
-  }
+
   .form-search-item{
     display: inline-block;
     vertical-align: middle;
@@ -367,7 +404,7 @@
 .js-option{
 
   font-size: 13px;
-  @extend .padding-xs;
+  @extend .padding-s;
   @extend .fg-dark;
   @extend .bg-main;
 }
