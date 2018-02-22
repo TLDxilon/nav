@@ -1060,7 +1060,7 @@
 /*CLASES PADDINGS*/
 .padding-xs, .options, .options .open-options, .options .close-options {
   padding: 0; }
-.padding-s, .search-bar .input-search, .search-bar .icon, .js-option {
+.padding-s, .search-bar .input-search, .search-bar .icon {
   padding: 10px; }
 .padding-m {
   padding: 15px; }
@@ -1790,7 +1790,8 @@ ul {
     top: 30px; }
 
 .js-option {
-  font-size: 13px; }
+  font-size: 13px;
+  padding: 5px; }
 
 .navigation-bottom .navbar-bottom .navbar-item--menu, .navigation-med .navbar-bottom .navbar-item--menu {
   -webkit-flex-basis: 100%;
