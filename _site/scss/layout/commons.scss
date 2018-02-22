@@ -120,7 +120,13 @@
     &--center{
       .tools-logo-tools{
         .tools-left{
-          @include flex-basis(35%);
+          @include flex-basis(25%);
+          @media #{$smartphones}{
+            @include flex-basis(35%);
+          }
+          @media #{$tablets}{
+            @include flex-basis(35%);
+          }
           @media #{$big}{
             display: block;
           }
@@ -161,7 +167,13 @@
 
       .tools-right {
         @include order(3);
-        @include flex-basis(35%);
+        @include flex-basis(25%);
+        @media #{$smartphones}{
+          @include flex-basis(35%);
+        }
+        @media #{$tablets}{
+          @include flex-basis(35%);
+        }
         @media #{$smartphones}{
           .tools-item-menu, .tools-item-btn-cta, .tools-item-search {
             display: none;
