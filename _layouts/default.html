@@ -33,7 +33,7 @@
 
             {% elsif page.navigation == 'med' or page.navigation == 'bottom' %}
             {% endif %}
-            {% if page.navigation == 'med' %}
+            {% if page.navigation == 'med' or  page.navigation == 'bottom' and page.hero == 'false'%}
 
 
             {% include menu/navigation-bottom.html %}
@@ -50,7 +50,7 @@
 
 
 
-        {% if page.navigation == 'bottom' %}
+        {% if page.navigation == 'bottom' and page.hero == 'true'%}
 
 
         {% include menu/navigation-bottom.html %}
